@@ -1,0 +1,11 @@
+body {
+	font-family: $sm-body-font-family;
+}
+
+a {
+	color: $sm-anchor-color;
+
+	&:hover {
+		color: $sm-anchor-color--hover;
+	}
+}
