@@ -3,7 +3,7 @@
  * Displays header media
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
+ * @subpackage Systemorph_2018
  * @since 1.0
  * @version 1.0
  */

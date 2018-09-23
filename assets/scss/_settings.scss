@@ -1,10 +1,12 @@
 $sm-images : "images";
 
 $sm-palette : (
-	primary : #ccc
+	primary : #101F30
 );
 
 $sm-body-font-family : ("Tajawal", Arial, sans-serif);
 
 $sm-anchor-color : #2B5FAE;
 $sm-anchor-color--hover : #2B5FAE;
+
+$sm-footer-bcolor : map-get($sm-palette, primary);

@@ -3,20 +3,20 @@
  * Template part for displaying pages on front page
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
+ * @subpackage Systemorph_2018
  * @since 1.0
  * @version 1.0
  */
 
-global $twentyseventeencounter;
+global $systemorphcounter;
 
 ?>
 
-<article id="panel<?php echo $twentyseventeencounter; ?>" <?php post_class( 'twentyseventeen-panel ' ); ?> >
+<article id="panel<?php echo $systemorphcounter; ?>" <?php post_class( 'systemorph-panel ' ); ?> >
 
 	<?php
 	if ( has_post_thumbnail() ) :
-		$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'twentyseventeen-featured-image' );
+		$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'systemorph-featured-image' );
 
 		// Calculate aspect ratio: h / w * 100%.
 		$ratio = $thumbnail[2] / $thumbnail[1] * 100;
@@ -33,7 +33,7 @@ global $twentyseventeencounter;
 			<header class="entry-header">
 				<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
 
-				<?php twentyseventeen_edit_link( get_the_ID() ); ?>
+				<?php systemorph_edit_link( get_the_ID() ); ?>
 
 			</header><!-- .entry-header -->
 
@@ -42,7 +42,7 @@ global $twentyseventeencounter;
 					/* translators: %s: Name of current post */
 					the_content(
 						sprintf(
-							__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
+							__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'systemorph' ),
 							get_the_title()
 						)
 					);
