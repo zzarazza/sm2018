@@ -23,13 +23,19 @@
 		width: 100%;
 		height: 100%;
 	}
+
+	@include mq($from: tablet-l) {
+		display: none;
+	}
 }
 
 .menu-top-menu-container {
+	padding: 27px 0;
+
 	.menu {
 		margin: 0;
 		float: right;
-		padding-top: 0;
+		padding: 0;
 		list-style: none;
 		display: flex;
 

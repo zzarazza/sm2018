@@ -10,3 +10,11 @@ $sm-anchor-color : #2B5FAE;
 $sm-anchor-color--hover : #2B5FAE;
 
 $sm-footer-bcolor : map-get($sm-palette, primary);
+
+$mq-breakpoints: (
+    mobile:  320px,
+    tablet:  768px,
+    tablet-l : 1024px,
+    desktop: 1200px,
+    wide:    1400px
+)
