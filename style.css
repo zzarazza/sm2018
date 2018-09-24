@@ -457,10 +457,17 @@ a {
       .menu-bottom-menu-container .menu > .menu-item {
         flex: 0 1 23.5%; } }
 
-.menu-bottom-menu-container .menu-item a {
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: 300; }
+.menu-bottom-menu-container .sub-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.menu-bottom-menu-container .menu-item {
+  margin-bottom: 20px; }
+  .menu-bottom-menu-container .menu-item a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 300; }
 
 .menu-bottom-menu-container .footer-link-header > a {
   font-size: 16px;
