@@ -471,7 +471,9 @@ a {
 
 .menu-bottom-menu-container .footer-link-header > a {
   font-size: 16px;
-  cursor: default; }
+  cursor: default;
+  display: block;
+  margin-bottom: 11px; }
 
 .site-header:after {
   content: "";
