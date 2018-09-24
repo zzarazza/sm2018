@@ -12,50 +12,25 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-	<?php
-	if ( is_sticky() && is_home() ) :
-		echo systemorph_get_svg( array( 'icon' => 'thumb-tack' ) );
-	endif;
-	?>
-	<header class="entry-header">
+<article id="team_member_<?php the_ID(); ?>" <?php post_class("team-member"); ?>>
+	<header class="t-m-header">
 		<?php if ( '' !== get_the_post_thumbnail() && ! is_single() ) : ?>
-			<div class="post-thumbnail">
-				<?php the_post_thumbnail( 'systemorph-featured-image' ); ?>
+			<div class="t-m-image">
+				<?php the_post_thumbnail( 'systemorph-team-member' ); ?>
 			</div><!-- .post-thumbnail -->
 		<?php endif; ?>
 		<?php
-			the_title( '<h2 class="entry-title">', '</h2>' );
-			echo '<h3>' . rwmb_meta( 'team_member_position' ) . '</h3>';
+			the_title( '<h2 class="t-m-name">', '</h2>' );
+			echo '<h3 class="t-m-position">' . rwmb_meta( 'team_member_position' ) . '</h3>';
 		?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="t-m-info">
 		<?php
 		/* translators: %s: Name of current post */
-		the_content(
-			sprintf(
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'systemorph' ),
-				get_the_title()
-			)
-		);
+		the_content();
 
-		wp_link_pages(
-			array(
-				'before'      => '<div class="page-links">' . __( 'Pages:', 'systemorph' ),
-				'after'       => '</div>',
-				'link_before' => '<span class="page-number">',
-				'link_after'  => '</span>',
-			)
-		);
 		?>
 	</div><!-- .entry-content -->
 
-	<?php
-	if ( is_single() ) {
-		systemorph_entry_footer();
-	}
-	?>
-
-</article><!-- #post-## -->
+</article><!-- #team_member_-## -->

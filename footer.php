@@ -18,6 +18,10 @@
 
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class="wrap">
+				<?php if ( has_nav_menu( 'bottom' ) ) : ?>
+					<?php get_template_part( 'template-parts/navigation/navigation', 'bottom' ); ?>
+				<?php endif; ?>
+
 				<?php
 				get_template_part( 'template-parts/footer/footer', 'widgets' );
 

@@ -1,0 +1,99 @@
+.post-type-archive-management-team {
+	.page-header {
+		text-align: center;
+		margin-bottom: 130px;
+	}
+
+	.page-title {
+		margin-bottom: 0;
+	}
+
+	.page-description {
+		font-size: 20px;
+		line-height: 1.15;
+		font-weight: 300;
+		margin: 0 auto;
+		max-width: 67ch;
+	}
+
+	.site-main {
+		@include mq($from: tablet) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+	}
+}
+
+.team-member {
+	box-shadow: 0 0 3px rgba(black,0.1) ,3px 3px 10px rgba(black,0.1);
+	border-radius: 9px;
+	padding: 25px;
+	box-sizing: border-box;
+
+	@include mq($from: tablet) {
+		flex: 0 1 48%;
+
+		&:first-child {
+			flex-basis: 100%;
+		}
+	}
+
+	& + & {
+		margin-top: 100px;
+	}
+
+	@include mq($from: tablet) {
+		padding: 40px;
+	}
+
+	@include mq($from: desktop) {
+		padding: 50px;
+	}
+
+	.t-m-header {
+		text-align: center;
+	}
+
+	.t-m-name {
+		font-size: 25px;
+		font-weight: 400;
+		margin: 0;
+
+		+ .t-m-position {
+			margin-top: 11px;
+		}
+	}
+
+	.t-m-position {
+		font-size: 20px;
+		font-weight: 300;
+	}
+
+	.t-m-image {
+		width: 155px;
+		height: 155px;
+		margin: -(30px + 25px) auto 32px;
+
+		@include mq($from: tablet) {
+			margin-top: -(30px + 40px);
+		}
+
+		@include mq($from: desktop) {
+			margin-top: -(30px + 50px);
+		}
+
+		img {
+			display: block;
+			border-radius: 100%;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.t-m-info {
+		font-size: 20px;
+		line-height: 1.15;
+		font-weight: 300;
+	}
+} // team_member

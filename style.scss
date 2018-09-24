@@ -7,13 +7,13 @@
 	Text Domain: sm2018
 */
 
-@import url('https://fonts.googleapis.com/css?family=Tajawal:300,400,500,700,800');
-
 @import "assets/scss/normalise";
 @import "assets/scss/settings";
 @import "assets/scss/mq";
 
 @import "assets/scss/base";
+
+@import "assets/scss/team-member";
 
 .menu-toggle {
 	width: 24px;
@@ -26,19 +26,75 @@
 }
 
 .menu-top-menu-container {
-	display: none;
+	.menu {
+		margin: 0;
+		float: right;
+		padding-top: 0;
+		list-style: none;
+		display: flex;
+
+		> .menu-item {
+			margin-left: 46px;
+
+			> a {
+				font-size: 12px;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+			}
+		}
+
+		.sub-menu,
+		.dropdown-toggle,
+		.icon {
+			display: none;
+		}
+	}
+
+	.menu-item {
+		a {
+			text-decoration: none;
+			color: black;
+		}
+	}
+}
+
+.site-header:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.site-content {
+	margin-bottom: 50px;
 }
 
 .wrap {
 	padding-left: 33px;
 	padding-right: 33px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1046px;
+}
+
+%main-title {
+	font-size: 40px;
+	font-weight: 300;
+	line-height: 1.125;
+
+	@include mq($from: tablet) {
+		font-size: 50px;
+	}
+}
+
+.page-header {
+	.page-title {
+		@extend %main-title;
+	}
 }
 
 .entry-header {
 	.entry-title {
-		font-size: 40px;
-		font-weight: 300;
-		line-height: 1.125;
+		@extend %main-title;
 
 		strong {
 			font-weight: 300;
@@ -59,4 +115,10 @@
 
 .site-footer {
 	background-color: $sm-footer-bcolor;
+	padding-top: 50px;
+	padding-bottom: 100px;
+
+	a {
+		color: white;
+	}
 }

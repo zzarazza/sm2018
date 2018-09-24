@@ -15,7 +15,4 @@
 		the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );
 	}
 	?>
-	<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'systemorph' ) ); ?>" class="imprint">
-		<?php printf( __( 'Proudly powered by %s', 'systemorph' ), 'WordPress' ); ?>
-	</a>
 </div><!-- .site-info -->

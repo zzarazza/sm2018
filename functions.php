@@ -52,6 +52,7 @@ function systemorph_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	add_image_size( 'systemorph-featured-image', 2000, 1200, true );
+	add_image_size( 'systemorph-team-member', 310, 310, true );
 
 	add_image_size( 'systemorph-thumbnail-avatar', 100, 100, true );
 
@@ -275,12 +276,12 @@ function systemorph_fonts_url() {
 	 * supported by Libre Franklin, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$libre_franklin = _x( 'on', 'Libre Franklin font: on or off', 'systemorph' );
+	$custom_font = _x( 'on', 'Custom font: on or off', 'systemorph' );
 
-	if ( 'off' !== $libre_franklin ) {
+	if ( 'off' !== $custom_font ) {
 		$font_families = array();
 
-		$font_families[] = 'Libre Franklin:300,300i,400,400i,600,600i,800,800i';
+		$font_families[] = 'Tajawal:300,300i,400,400i,500,700,800';
 
 		$query_args = array(
 			'family' => urlencode( implode( '|', $font_families ) ),
@@ -586,6 +587,22 @@ function systemorph_widget_tag_cloud_args( $args ) {
 	return $args;
 }
 add_filter( 'widget_tag_cloud_args', 'systemorph_widget_tag_cloud_args' );
+
+add_action( 'pre_get_posts', 'systemorph_management_team_query' );
+
+function systemorph_management_team_query( $query ) {
+
+    if ( ! is_admin() && $query->is_main_query() ) {
+
+        if ( is_post_type_archive( 'management-team' ) ) {
+
+            $query->set('posts_per_page', -1 );
+            $query->set('orderby', 'menu_order' );
+            $query->set('order', 'ASC' );
+
+        }
+    }
+}
 
 /**
  * Implement the Custom Header feature.
