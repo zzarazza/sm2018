@@ -19,10 +19,12 @@
 				<?php the_post_thumbnail( 'systemorph-team-member' ); ?>
 			</div><!-- .post-thumbnail -->
 		<?php endif; ?>
+			<div>
 		<?php
 			the_title( '<h2 class="t-m-name">', '</h2>' );
 			echo '<h3 class="t-m-position">' . rwmb_meta( 'team_member_position' ) . '</h3>';
 		?>
+			</div>
 	</header><!-- .entry-header -->
 
 	<div class="t-m-info">

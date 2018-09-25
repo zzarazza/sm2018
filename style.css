@@ -305,8 +305,30 @@ template {
 [hidden] {
   display: none; }
 
+.site-header:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.site-branding .custom-logo {
+  position: absolute;
+  top: 0;
+  left: -999px;
+  height: 1px;
+  width: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; }
+
 body {
-  font-family: "Tajawal", Arial, sans-serif; }
+  font-family: "Tajawal", Arial, sans-serif;
+  overflow-x: hidden; }
+
+.wrap {
+  padding-left: 33px;
+  padding-right: 33px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 980px; }
 
 a {
   color: #2B5FAE; }
@@ -345,9 +367,103 @@ a {
   z-index: 100000;
   /* Above WP toolbar. */ }
 
+.menu-toggle {
+  width: 24px;
+  height: 24px; }
+  .menu-toggle svg {
+    width: 100%;
+    height: 100%; }
+  @media (min-width: 64em) {
+    .menu-toggle {
+      display: none; } }
+
+.navigation-top {
+  padding: 20px 0 14px;
+  margin-right: -5px; }
+  .navigation-top .wrap {
+    display: flex;
+    justify-content: space-between; }
+  .navigation-top .menu {
+    margin: 0;
+    float: right;
+    padding: 0;
+    list-style: none;
+    display: flex; }
+    .navigation-top .menu > .menu-item {
+      margin-left: 36px; }
+      .navigation-top .menu > .menu-item > a {
+        font-size: 12px;
+        line-height: 29px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        display: block;
+        padding-left: 5px;
+        padding-right: 5px; }
+    .navigation-top .menu .sub-menu,
+    .navigation-top .menu .dropdown-toggle,
+    .navigation-top .menu .icon {
+      display: none; }
+  .navigation-top .menu-item a {
+    text-decoration: none;
+    color: black; }
+
+.site-branding .custom-logo-link {
+  width: 150px;
+  height: 22px;
+  background-image: url("assets/images/systemorph.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: auto 22px;
+  display: block; }
+
+.site-footer {
+  background-color: #101F30;
+  padding-top: 50px;
+  padding-bottom: 100px; }
+  .site-footer a {
+    color: white; }
+
+.footer-navigation .menu {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  @media (min-width: 48em) {
+    .footer-navigation .menu {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      .footer-navigation .menu > .menu-item {
+        flex: 0 1 48.5%; } }
+  @media (min-width: 64em) {
+    .footer-navigation .menu > .menu-item {
+      flex-basis: 23.5%; } }
+
+.footer-navigation .sub-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.footer-navigation .menu-item {
+  margin-bottom: 20px; }
+  .footer-navigation .menu-item a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 300; }
+
+.footer-navigation .footer-link-header > a {
+  font-size: 16px;
+  cursor: default;
+  display: block;
+  margin-bottom: 11px; }
+
 .post-type-archive-management-team .page-header {
   text-align: center;
-  margin-bottom: 130px; }
+  margin-top: 30px;
+  margin-bottom: 100px; }
+  @media (min-width: 48em) {
+    .post-type-archive-management-team .page-header {
+      margin-top: 60px;
+      margin-bottom: 150px; } }
 
 .post-type-archive-management-team .page-title {
   margin-bottom: 0; }
@@ -357,9 +473,9 @@ a {
   line-height: 1.15;
   font-weight: 300;
   margin: 0 auto;
-  max-width: 67ch; }
+  max-width: 70ch; }
 
-@media (min-width: 48em) {
+@media (min-width: 64em) {
   .post-type-archive-management-team .site-main {
     display: flex;
     flex-wrap: wrap;
@@ -370,11 +486,22 @@ a {
   border-radius: 9px;
   padding: 25px;
   box-sizing: border-box; }
-  @media (min-width: 48em) {
+  @media (min-width: 64em) {
     .team-member {
       flex: 0 1 48%; }
       .team-member:first-child {
-        flex-basis: 100%; } }
+        flex-basis: 100%; }
+        .team-member:first-child .t-m-header {
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          .team-member:first-child .t-m-header > div {
+            text-align: left; }
+        .team-member:first-child .t-m-position {
+          margin-top: 8px;
+          margin-bottom: 10px; }
+        .team-member:first-child .t-m-image {
+          margin: 0 30px 21px 0 !important; } }
   .team-member + .team-member {
     margin-top: 100px; }
   @media (min-width: 48em) {
@@ -413,82 +540,11 @@ a {
     font-size: 20px;
     line-height: 1.15;
     font-weight: 300; }
-
-.menu-toggle {
-  width: 24px;
-  height: 24px; }
-  .menu-toggle svg {
-    width: 100%;
-    height: 100%; }
-  @media (min-width: 64em) {
-    .menu-toggle {
-      display: none; } }
-
-.menu-top-menu-container {
-  padding: 27px 0; }
-  .menu-top-menu-container .menu {
-    margin: 0;
-    float: right;
-    padding: 0;
-    list-style: none;
-    display: flex; }
-    .menu-top-menu-container .menu > .menu-item {
-      margin-left: 46px; }
-      .menu-top-menu-container .menu > .menu-item > a {
-        font-size: 12px;
-        text-transform: uppercase;
-        letter-spacing: 2px; }
-    .menu-top-menu-container .menu .sub-menu,
-    .menu-top-menu-container .menu .dropdown-toggle,
-    .menu-top-menu-container .menu .icon {
-      display: none; }
-  .menu-top-menu-container .menu-item a {
-    text-decoration: none;
-    color: black; }
-
-.menu-bottom-menu-container .menu {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-  @media (min-width: 48em) {
-    .menu-bottom-menu-container .menu {
-      display: flex;
-      justify-content: space-between; }
-      .menu-bottom-menu-container .menu > .menu-item {
-        flex: 0 1 23.5%; } }
-
-.menu-bottom-menu-container .sub-menu {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-
-.menu-bottom-menu-container .menu-item {
-  margin-bottom: 20px; }
-  .menu-bottom-menu-container .menu-item a {
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 300; }
-
-.menu-bottom-menu-container .footer-link-header > a {
-  font-size: 16px;
-  cursor: default;
-  display: block;
-  margin-bottom: 11px; }
-
-.site-header:after {
-  content: "";
-  display: table;
-  clear: both; }
+    .team-member .t-m-info p:last-child {
+      margin-bottom: 0; }
 
 .site-content {
   margin-bottom: 50px; }
-
-.wrap {
-  padding-left: 33px;
-  padding-right: 33px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1046px; }
 
 .page-header .page-title, .entry-header .entry-title {
   font-size: 40px;
@@ -508,10 +564,3 @@ a {
 .entry-content p {
   font-size: 20px;
   line-height: 1.15; }
-
-.site-footer {
-  background-color: #101F30;
-  padding-top: 50px;
-  padding-bottom: 100px; }
-  .site-footer a {
-    color: white; }

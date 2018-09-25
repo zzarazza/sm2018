@@ -1,0 +1,56 @@
+.site-footer {
+	background-color: $sm-footer-bcolor;
+	padding-top: 50px;
+	padding-bottom: 100px;
+
+	a {
+		color: white;
+	}
+}
+
+.footer-navigation {
+	.menu {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		@include mq($from: tablet) {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+
+			> .menu-item {
+				flex: 0 1 48.5%;
+			}
+		}
+
+		@include mq($from: tablet-l) {
+			> .menu-item {
+				flex-basis: 23.5%;
+			}
+		}
+	}
+
+	.sub-menu {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.menu-item {
+		margin-bottom: 20px;
+
+		a {
+			text-decoration: none;
+			font-size: 20px;
+			font-weight: 300;
+		}
+	}
+
+	.footer-link-header > a {
+		font-size: 16px;
+		cursor: default;
+		display: block;
+		margin-bottom: 11px;
+	}
+}

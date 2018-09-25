@@ -10,117 +10,20 @@
 @import "assets/scss/normalise";
 @import "assets/scss/settings";
 @import "assets/scss/mq";
+@import "assets/scss/helpers";
 
 @import "assets/scss/base";
+@import "assets/scss/header";
+@import "assets/scss/footer";
 
 @import "assets/scss/team-member";
 
-.menu-toggle {
-	width: 24px;
-	height: 24px;
-
-	svg {
-		width: 100%;
-		height: 100%;
-	}
-
-	@include mq($from: tablet-l) {
-		display: none;
-	}
-}
-
-.menu-top-menu-container {
-	padding: 27px 0;
-
-	.menu {
-		margin: 0;
-		float: right;
-		padding: 0;
-		list-style: none;
-		display: flex;
-
-		> .menu-item {
-			margin-left: 46px;
-
-			> a {
-				font-size: 12px;
-				text-transform: uppercase;
-				letter-spacing: 2px;
-			}
-		}
-
-		.sub-menu,
-		.dropdown-toggle,
-		.icon {
-			display: none;
-		}
-	}
-
-	.menu-item {
-		a {
-			text-decoration: none;
-			color: black;
-		}
-	}
-}
-
-.menu-bottom-menu-container {
-	.menu {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-
-		@include mq($from: tablet) {
-			display: flex;
-			justify-content: space-between;
-
-			> .menu-item {
-				flex: 0 1 23.5%;
-			}
-		}
-	}
-
-	.sub-menu {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-	}
-
-	.menu-item {
-		margin-bottom: 20px;
-
-		a {
-			text-decoration: none;
-			font-size: 20px;
-			font-weight: 300;
-		}
-	}
-
-	.footer-link-header > a {
-		font-size: 16px;
-		cursor: default;
-		display: block;
-		margin-bottom: 11px;
-	}
-}
-
-.site-header:after {
-	content: "";
-	display: table;
-	clear: both;
-}
 
 .site-content {
 	margin-bottom: 50px;
 }
 
-.wrap {
-	padding-left: 33px;
-	padding-right: 33px;
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 1046px;
-}
+
 
 %main-title {
 	font-size: 40px;
@@ -156,15 +59,5 @@
 	p {
 		font-size: 20px;
 		line-height: 1.15;
-	}
-}
-
-.site-footer {
-	background-color: $sm-footer-bcolor;
-	padding-top: 50px;
-	padding-bottom: 100px;
-
-	a {
-		color: white;
 	}
 }
