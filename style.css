@@ -399,6 +399,18 @@ a {
         display: block;
         padding-left: 5px;
         padding-right: 5px; }
+    .navigation-top .menu .current-menu-ancestor > a,
+    .navigation-top .menu .current-menu-parent > a {
+      position: relative; }
+      .navigation-top .menu .current-menu-ancestor > a:after,
+      .navigation-top .menu .current-menu-parent > a:after {
+        content: "";
+        position: absolute;
+        left: 5px;
+        right: 5px;
+        bottom: 4px;
+        height: 1px;
+        background-color: black; }
     .navigation-top .menu .sub-menu,
     .navigation-top .menu .dropdown-toggle,
     .navigation-top .menu .icon {
