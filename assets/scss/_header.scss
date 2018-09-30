@@ -85,20 +85,7 @@
 		.current-menu-parent {
 			> a {
 				position: relative;
-
-				&:after {
-					content: "";
-					position: absolute;
-					left: 5px;
-					right: 5px;
-					bottom: 4px;
-					height: 1px;
-					background-color: black;
-
-					.home & {
-						background-color: white;
-					}
-				}
+				font-weight: 700;
 			}
 		}
 

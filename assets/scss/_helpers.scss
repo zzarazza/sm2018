@@ -15,3 +15,11 @@
 	clip: rect(1px, 1px, 1px, 1px);
 	white-space: nowrap;
 }
+
+@mixin placeholder {
+	&::-webkit-input-placeholder { @content }
+	&:-moz-placeholder           { @content }
+	&::-moz-placeholder          { @content }
+	&:-ms-input-placeholder      { @content }
+	&::placeholder               { @content }
+}

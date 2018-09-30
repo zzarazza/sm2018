@@ -448,19 +448,8 @@ a {
         top: 73px; }
     .navigation-top .menu .current-menu-ancestor > a,
     .navigation-top .menu .current-menu-parent > a {
-      position: relative; }
-      .navigation-top .menu .current-menu-ancestor > a:after,
-      .navigation-top .menu .current-menu-parent > a:after {
-        content: "";
-        position: absolute;
-        left: 5px;
-        right: 5px;
-        bottom: 4px;
-        height: 1px;
-        background-color: black; }
-        .home .navigation-top .menu .current-menu-ancestor > a:after, .home
-        .navigation-top .menu .current-menu-parent > a:after {
-          background-color: white; }
+      position: relative;
+      font-weight: 700; }
     .navigation-top .menu .sub-menu {
       position: absolute;
       left: -999em;
@@ -780,3 +769,58 @@ a {
     font-size: 25px;
     line-height: 1.08;
     margin: 1.08em 0; } }
+
+@media (min-width: 48em) {
+  .wpcf7-form {
+    max-width: 60%; } }
+
+@media (min-width: 64em) {
+  .wpcf7-form {
+    max-width: 40%; } }
+
+.wpcf7-form .form-el {
+  margin: 40px 0;
+  position: relative; }
+  .wpcf7-form .form-el label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px; }
+  .wpcf7-form .form-el input,
+  .wpcf7-form .form-el textarea {
+    font-size: 16px;
+    padding: 14px 20px 12px;
+    border: 1px solid #101F30;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 100%; }
+    .wpcf7-form .form-el input::-webkit-input-placeholder,
+    .wpcf7-form .form-el textarea::-webkit-input-placeholder {
+      color: #a6a6a6; }
+    .wpcf7-form .form-el input:-moz-placeholder,
+    .wpcf7-form .form-el textarea:-moz-placeholder {
+      color: #a6a6a6; }
+    .wpcf7-form .form-el input::-moz-placeholder,
+    .wpcf7-form .form-el textarea::-moz-placeholder {
+      color: #a6a6a6; }
+    .wpcf7-form .form-el input:-ms-input-placeholder,
+    .wpcf7-form .form-el textarea:-ms-input-placeholder {
+      color: #a6a6a6; }
+    .wpcf7-form .form-el input::placeholder,
+    .wpcf7-form .form-el textarea::placeholder {
+      color: #a6a6a6; }
+    .wpcf7-form .form-el input.wpcf7-not-valid,
+    .wpcf7-form .form-el textarea.wpcf7-not-valid {
+      border-color: #cc1300; }
+  .wpcf7-form .form-el textarea {
+    resize: vertical; }
+  .wpcf7-form .form-el .wpcf7-form-control-wrap {
+    display: block; }
+  .wpcf7-form .form-el .wpcf7-not-valid-tip {
+    position: absolute;
+    width: 100%;
+    bottom: -24px;
+    font-size: 14px;
+    color: #cc1300; }
+
+.wpcf7-form .form-ctr {
+  margin: 62px 0; }
