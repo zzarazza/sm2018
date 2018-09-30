@@ -17,8 +17,10 @@ body {
 		padding-top: 0;
 	}
 
-	.site-content > .wrap {
-		overflow-x: hidden;
+	@include mq($until: tablet) {
+		.site-content > .wrap {
+			overflow-x: hidden;
+		}
 	}
 }
 

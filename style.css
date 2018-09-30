@@ -333,8 +333,9 @@ body {
   padding-top: 73px; }
   .home .site-content-contain {
     padding-top: 0; }
-  .site-content-contain .site-content > .wrap {
-    overflow-x: hidden; }
+  @media (max-width: 47.99em) {
+    .site-content-contain .site-content > .wrap {
+      overflow-x: hidden; } }
 
 .wrap {
   padding-left: 33px;
