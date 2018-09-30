@@ -34,33 +34,12 @@ function systemorph_body_classes( $classes ) {
 		$classes[] = 'systemorph-front-page';
 	}
 
-	// Add a class if there is a custom header.
-	if ( has_header_image() ) {
-		$classes[] = 'has-header-image';
-	}
-
 	// Add class if sidebar is used.
 	if ( is_active_sidebar( 'sidebar-1' ) && ! is_page() ) {
 		$classes[] = 'has-sidebar';
 	}
 
-	// Add class for one or two column page layouts.
-	if ( is_page() || is_archive() ) {
-		if ( 'one-column' === get_theme_mod( 'page_layout' ) ) {
-			$classes[] = 'page-one-column';
-		} else {
-			$classes[] = 'page-two-column';
-		}
-	}
-
-	// Add class if the site title and tagline is hidden.
-	if ( 'blank' === get_header_textcolor() ) {
-		$classes[] = 'title-tagline-hidden';
-	}
-
-	// Get the colorscheme or the default if there isn't one.
-	$colors    = systemorph_sanitize_colorscheme( get_theme_mod( 'colorscheme', 'light' ) );
-	$classes[] = 'colors-' . $colors;
+	$classes[] = rwmb_meta( 'page_settings_custom_class' );
 
 	return $classes;
 }

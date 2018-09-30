@@ -10,8 +10,8 @@ $sm-palette : (
 $sm-body-font-family : ("Tajawal", Arial, sans-serif)  !default;
 $sm-body-font-color : map-get($sm-palette, primary)  !default;
 
-$sm-anchor-color : #2B5FAE  !default;
-$sm-anchor-color--hover : #2B5FAE  !default;
+$sm-anchor-color : map-get($sm-palette, primary) !default;
+$sm-anchor-color--hover : map-get($sm-palette, primary) !default;
 
 $sm-button-font-size : 20px !default;
 $sm-button-padding : (14px 20px 8px) !default;

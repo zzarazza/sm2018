@@ -23,3 +23,10 @@
 	&:-ms-input-placeholder      { @content }
 	&::placeholder               { @content }
 }
+
+@mixin full-width {
+	margin-left: -999em;
+	margin-right: -999em;
+	padding-left: 999em;
+	padding-right: 999em;
+}
