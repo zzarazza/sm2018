@@ -319,8 +319,13 @@ template {
   clip: rect(1px, 1px, 1px, 1px);
   white-space: nowrap; }
 
+html {
+  background-color: #101F30; }
+
 body {
   font-family: "Tajawal", Arial, sans-serif;
+  background-color: white;
+  color: #101F30;
   overflow-x: hidden; }
 
 .site-content-contain {
@@ -662,12 +667,11 @@ a {
 
 .page-title, .entry-header .entry-title {
   font-size: 40px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1; }
   @media (min-width: 48em) {
     .page-title, .entry-header .entry-title {
-      font-size: 50px;
-      font-weight: 300; } }
+      font-size: 50px; } }
   @media (min-width: 64em) {
     .page-title, .entry-header .entry-title {
       line-height: 1.125; } }
@@ -679,10 +683,59 @@ a {
   display: block;
   margin-bottom: .92em; }
 
-.entry-content p {
+.entry-content .main-points {
+  list-style: none;
+  padding: 0;
+  font-size: 20px;
+  color: #2e3641; }
+
+.entry-content .callout {
+  padding: 38px 35px;
+  margin-left: -33px;
+  margin-right: -33px;
+  margin-bottom: 47px; }
+  .entry-content .callout-inverse {
+    background-color: #101F30;
+    color: white; }
+    .entry-content .callout-inverse a {
+      color: white; }
+
+.entry-content p,
+.entry-content ul,
+.entry-content ol {
   font-size: 20px;
   line-height: 1.15;
   margin: 1.15em 0; }
+
+.entry-content h2 {
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: .96em; }
+
+.entry-content .special-points {
+  list-style: none;
+  padding: 0; }
+
+.special-points {
+  margin: 40px 0; }
+  .special-points .has-icon:before {
+    content: "";
+    display: block;
+    margin-bottom: 15px;
+    width: 52px;
+    height: 52px;
+    border-radius: 100%;
+    background-color: #009cde; }
+  .special-points li {
+    margin-bottom: 40px; }
+  .special-points h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0; }
+  .special-points p {
+    font-weight: 300;
+    margin: 0; }
 
 .home .hero {
   background-repeat: no-repeat;

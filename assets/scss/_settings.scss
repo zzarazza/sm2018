@@ -2,11 +2,13 @@ $sm-images : "assets/images"  !default;
 
 $sm-palette : (
 	primary : #101F30,
+	secondary : #2e3641,
 	alert : #cc1300,
 	brand-blue: #009cde
 )  !default;
 
 $sm-body-font-family : ("Tajawal", Arial, sans-serif)  !default;
+$sm-body-font-color : map-get($sm-palette, primary)  !default;
 
 $sm-anchor-color : #2B5FAE  !default;
 $sm-anchor-color--hover : #2B5FAE  !default;

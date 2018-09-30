@@ -1,5 +1,11 @@
+html {
+	background-color: map-get($sm-palette, primary);
+}
+
 body {
 	font-family: $sm-body-font-family;
+	background-color: white;
+	color: $sm-body-font-color;
 	overflow-x: hidden;
 }
 
