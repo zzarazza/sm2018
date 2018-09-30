@@ -577,6 +577,12 @@ a {
 
 .footer-navigation .footer-link-header {
   margin-bottom: 72px; }
+  @media (min-width: 48em) {
+    .footer-navigation .footer-link-header {
+      margin-bottom: 50px; } }
+  @media (min-width: 64em) {
+    .footer-navigation .footer-link-header {
+      margin-bottom: 27px; } }
   .footer-navigation .footer-link-header > a {
     font-size: 16px;
     cursor: default;
