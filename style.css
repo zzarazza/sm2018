@@ -573,7 +573,10 @@ a {
     font-size: 20px;
     line-height: 1.15;
     font-weight: 300;
-    display: block; }
+    display: block;
+    cursor: pointer; }
+    .footer-navigation .menu-item a:hover {
+      opacity: 0.75; }
 
 .footer-navigation .footer-link-header {
   margin-bottom: 72px; }

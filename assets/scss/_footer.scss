@@ -94,6 +94,11 @@
 			line-height: 1.15;
 			font-weight: 300;
 			display: block;
+			cursor: pointer;
+
+			&:hover {
+				opacity: 0.75;
+			}
 		}
 	}
 
