@@ -86,17 +86,17 @@ function systemorph_setup() {
 	 *
 	 * See: https://codex.wordpress.org/Post_Formats
 	 */
-	add_theme_support(
-		'post-formats', array(
-			'aside',
-			'image',
-			'video',
-			'quote',
-			'link',
-			'gallery',
-			'audio',
-		)
-	);
+	// add_theme_support(
+	// 	'post-formats', array(
+	// 		'aside',
+	// 		'image',
+	// 		'video',
+	// 		'quote',
+	// 		'link',
+	// 		'gallery',
+	// 		'audio',
+	// 	)
+	// );
 
 	// Add theme support for Custom Logo.
 	add_theme_support(
@@ -628,3 +628,6 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  * SVG icons functions and filters.
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
+
+require get_parent_theme_file_path( '/inc/meta-settings.php' );
+require get_parent_theme_file_path( '/inc/meta-boxes.php' );

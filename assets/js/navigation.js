@@ -11,14 +11,14 @@
 	function initMainNavigation( container ) {
 
 		// Add dropdown toggle that displays child menu items.
-		var dropdownToggle = $( '<button />', { 'class': 'dropdown-toggle', 'aria-expanded': false })
-			.append( systemorphScreenReaderText.icon )
-			.append( $( '<span />', { 'class': 'screen-reader-text', text: systemorphScreenReaderText.expand }) );
+		// var dropdownToggle = $( '<button />', { 'class': 'dropdown-toggle', 'aria-expanded': false })
+		// 	.append( systemorphScreenReaderText.icon )
+		// 	.append( $( '<span />', { 'class': 'screen-reader-text', text: systemorphScreenReaderText.expand }) );
 
-		container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( dropdownToggle );
+		// container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( dropdownToggle );
 
 		// Set the active submenu dropdown toggle button initial state.
-		container.find( '.current-menu-ancestor > button' )
+		container.find( '.current-menu-ancestor > a' )
 			.addClass( 'toggled-on' )
 			.attr( 'aria-expanded', 'true' )
 			.find( '.screen-reader-text' )
@@ -26,7 +26,7 @@
 		// Set the active submenu initial state.
 		container.find( '.current-menu-ancestor > .sub-menu' ).addClass( 'toggled-on' );
 
-		container.find( '.dropdown-toggle' ).click( function( e ) {
+		container.find( '.top-link-header > a' ).click( function( e ) {
 			var _this = $( this ),
 				screenReaderSpan = _this.find( '.screen-reader-text' );
 
@@ -60,6 +60,7 @@
 
 		menuToggle.on( 'click.systemorph', function() {
 			siteNavContain.toggleClass( 'toggled-on' );
+			masthead.toggleClass( 'menu--open' );
 
 			$( this ).attr( 'aria-expanded', siteNavContain.hasClass( 'toggled-on' ) );
 		});
@@ -89,6 +90,7 @@
 							e.preventDefault();
 							el.toggleClass( 'focus' );
 							el.siblings( '.focus' ).removeClass( 'focus' );
+							masthead.addClass( 'menu--open' );
 						}
 					});
 
@@ -104,6 +106,7 @@
 
 		siteNavigation.find( 'a' ).on( 'focus.systemorph blur.systemorph', function() {
 			$( this ).parents( '.menu-item, .page_item' ).toggleClass( 'focus' );
+			masthead.toggleClass( 'menu--open' );
 		});
 	})();
 })( jQuery );

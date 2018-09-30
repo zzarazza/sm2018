@@ -7,7 +7,7 @@
 		"uuidString": "17E2361A-470A-41EA-8D71-687D258B6D0B"
 		}
 	],
-"creatorBuild": "28795",
+"creatorBuild": "28901",
 "files": {
 	"/404.php": {
 		"cB": 0,
@@ -30,21 +30,21 @@
 		"oAP": "/archive.php",
 		"oF": 0
 		},
-	"/assets/images/logo.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/images/logo.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
 	"/assets/images/svg-icons.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
 		"oAP": "/assets/images/svg-icons.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/systemorph-white.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/systemorph-white.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -77,16 +77,6 @@
 		"oA": 1,
 		"oAP": "/assets/js/customize-preview-min.js",
 		"oF": 1,
-		"sC": 3,
-		"tS": 0
-		},
-	"/assets/js/global-min.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/assets/js/global-min-min.js",
-		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
@@ -312,6 +302,20 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/inc/icon-functions.php",
+		"oF": 0
+		},
+	"/inc/meta-boxes.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/inc/meta-boxes.php",
+		"oF": 0
+		},
+	"/inc/meta-settings.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/inc/meta-settings.php",
 		"oF": 0
 		},
 	"/inc/template-functions.php": {

@@ -9,10 +9,8 @@
  */
 
 ?>
-<div class="site-info">
-	<?php
-	if ( function_exists( 'the_privacy_policy_link' ) ) {
-		the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );
-	}
-	?>
-</div><!-- .site-info -->
+<div class="site-branding">
+	<?php the_systemorph_address(); ?>
+	<?php the_systemorph_contact_info(); ?>
+	<?php the_custom_logo(); ?>
+</div><!-- .site-branding -->

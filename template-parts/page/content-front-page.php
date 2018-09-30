@@ -19,34 +19,30 @@
 		$ratio = $thumbnail[2] / $thumbnail[1] * 100;
 		?>
 
-		<div class="panel-image" style="background-image: url(<?php echo esc_url( $thumbnail[0] ); ?>);">
-			<div class="panel-image-prop" style="padding-top: <?php echo esc_attr( $ratio ); ?>%"></div>
-		</div><!-- .panel-image -->
+		<div class="hero" style="background-image: url(<?php echo esc_url( $thumbnail[0] ); ?>);">
+			<div class="hero-prop" style="padding-top: <?php echo esc_attr( $ratio ); ?>%"></div>
+			<div class="wrap">
+				<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
+				<?php
+					$subTitle = rwmb_meta( 'home_hero_subtitle' );
+					if ($subTitle) :
+						echo "<h3 class=\"page-subtitle\">$subTitle</h3>";
+					endif;
+					$linkTo = rwmb_meta( 'home_hero_link' );
+					$buttonCaption = rwmb_meta( 'home_hero_button_caption' );
+					if ($linkTo && $buttonCaption) :
+						echo '<a class="button" href=">' . get_post_permalink($linkTo) . '">' . $buttonCaption . '</a>';
+					endif;
+				?>
+			</div>
+		</div><!-- .hero -->
 
 	<?php endif; ?>
 
-	<div class="panel-content">
-		<div class="wrap">
-			<header class="entry-header">
-				<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
-
-				<?php systemorph_edit_link( get_the_ID() ); ?>
-
-			</header><!-- .entry-header -->
-
-			<div class="entry-content">
-				<?php
-					/* translators: %s: Name of current post */
-					the_content(
-						sprintf(
-							__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'systemorph' ),
-							get_the_title()
-						)
-					);
-				?>
-			</div><!-- .entry-content -->
-
-		</div><!-- .wrap -->
-	</div><!-- .panel-content -->
+	<div class="wrap">
+		<div class="entry-content">
+			<?php the_content(); ?>
+		</div><!-- .entry-content -->
+	</div><!-- .wrap -->
 
 </article><!-- #post-## -->

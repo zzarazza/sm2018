@@ -3,6 +3,14 @@ body {
 	overflow-x: hidden;
 }
 
+.site-content-contain {
+	padding-top: 73px;
+
+	.home & {
+		padding-top: 0;
+	}
+}
+
 .wrap {
 	padding-left: 33px;
 	padding-right: 33px;
@@ -50,4 +58,32 @@ a {
 	top: 5px;
 	width: auto;
 	z-index: 100000; /* Above WP toolbar. */
+}
+
+.button {
+	background-color: $sm-button-bcolor;
+	color: $sm-button-color;
+	border-radius: 5px;
+	font-size: $sm-button-font-size;
+	padding: $sm-button-padding;
+	text-decoration: none;
+	display: inline-block;
+	min-width: 170px;
+	text-align: center;
+	box-sizing: border-box;
+	line-height: 1.375;
+
+	@if ($sm-button-box-shadow) {
+		box-shadow: $sm-button-box-shadow;
+	}
+
+	&:hover {
+		background-color: $sm-button-bcolor--hover;
+		color: $sm-button-color--hover;
+	}
+
+	&:active {
+		background-color: $sm-button-bcolor--active;
+		color: $sm-button-color--active;
+	}
 }

@@ -323,6 +323,11 @@ body {
   font-family: "Tajawal", Arial, sans-serif;
   overflow-x: hidden; }
 
+.site-content-contain {
+  padding-top: 73px; }
+  .home .site-content-contain {
+    padding-top: 0; }
+
 .wrap {
   padding-left: 33px;
   padding-right: 33px;
@@ -367,6 +372,37 @@ a {
   z-index: 100000;
   /* Above WP toolbar. */ }
 
+.button {
+  background-color: #009cde;
+  color: white;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 14px 20px 8px;
+  text-decoration: none;
+  display: inline-block;
+  min-width: 170px;
+  text-align: center;
+  box-sizing: border-box;
+  line-height: 1.375;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); }
+  .button:hover {
+    background-color: #008ac5;
+    color: white; }
+  .button:active {
+    background-color: #0281b7;
+    color: white; }
+
+.site-header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10; }
+  .site-header.menu--open {
+    background-color: white; }
+  .home .site-header.menu--open {
+    background-color: rgba(0, 0, 0, 0.4); }
+
 .menu-toggle {
   width: 24px;
   height: 24px; }
@@ -381,11 +417,13 @@ a {
   display: none; }
 
 .navigation-top {
-  padding: 20px 0 14px;
-  margin-right: -5px; }
+  padding: 20px 0 14px; }
   .navigation-top .wrap {
     display: flex;
     justify-content: space-between; }
+  @media (max-width: 63.99em) {
+    .navigation-top .menu-top-menu-container {
+      display: none; } }
   .navigation-top .menu {
     margin: 0;
     float: right;
@@ -402,6 +440,12 @@ a {
         display: block;
         padding-left: 5px;
         padding-right: 5px; }
+        .home .navigation-top .menu > .menu-item > a {
+          color: white; }
+      .navigation-top .menu > .menu-item.focus > .sub-menu {
+        left: 0;
+        right: 0;
+        top: 73px; }
     .navigation-top .menu .current-menu-ancestor > a,
     .navigation-top .menu .current-menu-parent > a {
       position: relative; }
@@ -414,13 +458,41 @@ a {
         bottom: 4px;
         height: 1px;
         background-color: black; }
-    .navigation-top .menu .sub-menu,
-    .navigation-top .menu .dropdown-toggle,
-    .navigation-top .menu .icon {
-      display: none; }
+        .home .navigation-top .menu .current-menu-ancestor > a:after, .home
+        .navigation-top .menu .current-menu-parent > a:after {
+          background-color: white; }
+    .navigation-top .menu .sub-menu {
+      position: absolute;
+      left: -999em;
+      padding: 0;
+      top: 100%;
+      background-color: white;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 68px 0 88px;
+      box-shadow: 0 25px 50px -25px rgba(0, 0, 0, 0.25), 0 1px 5px -1px rgba(0, 0, 0, 0.05); }
+      .home .navigation-top .menu .sub-menu {
+        background-color: rgba(0, 0, 0, 0.4); }
+        .home .navigation-top .menu .sub-menu a {
+          color: white; }
+      .navigation-top .menu .sub-menu > .menu-item {
+        margin: 17px 0; }
+        @media (min-width: 75em) {
+          .navigation-top .menu .sub-menu > .menu-item {
+            margin-left: 30px;
+            margin-right: 30px; } }
+        .navigation-top .menu .sub-menu > .menu-item a {
+          font-size: 20px; }
+          .navigation-top .menu .sub-menu > .menu-item a:hover {
+            text-decoration: underline; }
   .navigation-top .menu-item a {
     text-decoration: none;
-    color: black; }
+    color: #101F30;
+    padding: 5px;
+    display: inline-block;
+    font-weight: 300; }
 
 .site-branding .custom-logo-link {
   width: 150px;
@@ -430,13 +502,44 @@ a {
   background-repeat: no-repeat;
   background-size: auto 22px;
   display: block; }
+  .home .site-branding .custom-logo-link {
+    background-image: url("assets/images/systemorph-white.svg"); }
 
 .site-footer {
   background-color: #101F30;
+  color: white;
   padding-top: 50px;
   padding-bottom: 100px; }
+  @media (min-width: 48em) {
+    .site-footer {
+      padding-bottom: 128px; } }
+  @media (min-width: 75em) {
+    .site-footer {
+      padding-bottom: 52px; } }
   .site-footer a {
     color: white; }
+  .site-footer .site-branding {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 62px;
+    margin-top: 52px;
+    line-height: 1.15;
+    font-size: 20px; }
+    @media (min-width: 48em) {
+      .site-footer .site-branding {
+        margin-top: 27px;
+        padding-top: 59px; } }
+    .site-footer .site-branding .custom-logo-link {
+      margin-top: 32px;
+      opacity: 0.2;
+      background-image: url("assets/images/systemorph-white.svg"); }
+      @media (min-width: 75em) {
+        .site-footer .site-branding .custom-logo-link {
+          margin-top: 62px; } }
+    .site-footer .site-branding address {
+      font-style: normal; }
+    .site-footer .site-branding span,
+    .site-footer .site-branding address {
+      display: block; }
 
 .footer-navigation .menu {
   margin: 0;
@@ -457,19 +560,26 @@ a {
   margin: 0;
   padding: 0;
   list-style: none; }
+  .footer-navigation .sub-menu > .menu-item > a {
+    display: block;
+    padding: 2px 0; }
 
 .footer-navigation .menu-item {
-  margin-bottom: 20px; }
+  margin-bottom: 25px; }
   .footer-navigation .menu-item a {
     text-decoration: none;
     font-size: 20px;
-    font-weight: 300; }
+    line-height: 1.15;
+    font-weight: 300;
+    display: block; }
 
-.footer-navigation .footer-link-header > a {
-  font-size: 16px;
-  cursor: default;
-  display: block;
-  margin-bottom: 11px; }
+.footer-navigation .footer-link-header {
+  margin-bottom: 72px; }
+  .footer-navigation .footer-link-header > a {
+    font-size: 16px;
+    cursor: default;
+    display: block;
+    margin-bottom: 21px; }
 
 .post-type-archive-management-team .page-header {
   text-align: center;
@@ -561,13 +671,17 @@ a {
 .site-content {
   margin-bottom: 50px; }
 
-.page-header .page-title, .entry-header .entry-title {
+.page-title, .entry-header .entry-title {
   font-size: 40px;
-  font-weight: 300;
-  line-height: 1.125; }
+  font-weight: 400;
+  line-height: 1; }
   @media (min-width: 48em) {
-    .page-header .page-title, .entry-header .entry-title {
-      font-size: 50px; } }
+    .page-title, .entry-header .entry-title {
+      font-size: 50px;
+      font-weight: 300; } }
+  @media (min-width: 64em) {
+    .page-title, .entry-header .entry-title {
+      line-height: 1.125; } }
 
 .entry-header .entry-title strong {
   font-weight: 300;
@@ -578,4 +692,91 @@ a {
 
 .entry-content p {
   font-size: 20px;
-  line-height: 1.15; }
+  line-height: 1.15;
+  margin: 1.15em 0; }
+
+.home .hero {
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  height: 80vh; }
+  .home .hero:after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 11%;
+    width: 120%;
+    bottom: -6%;
+    right: -20px;
+    transform: rotate(357deg); }
+  .home .hero .wrap {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-100%);
+    margin-top: 73px; }
+    @media (min-width: 48em) {
+      .home .hero .wrap {
+        margin-top: 142px; } }
+  .home .hero .page-title {
+    color: white;
+    margin-top: 0;
+    margin-bottom: 6px; }
+    @media (min-width: 48em) {
+      .home .hero .page-title {
+        max-width: 70%; } }
+    @media (min-width: 64em) {
+      .home .hero .page-title {
+        max-width: 50%;
+        line-height: 1; } }
+  .home .hero .page-subtitle {
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    margin: 6px 0; }
+    @media (min-width: 48em) {
+      .home .hero .page-subtitle {
+        font-size: 25px;
+        line-height: 1.08;
+        margin: 10px 0;
+        max-width: 60%; } }
+  .home .hero .button {
+    margin-top: 24px; }
+    @media (min-width: 48em) {
+      .home .hero .button {
+        margin-top: 12px; } }
+
+.home .entry-content h2,
+.home .entry-content h3 {
+  text-align: center;
+  color: #2e3641; }
+
+.home .entry-content h2 {
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 6px; }
+  @media (min-width: 48em) {
+    .home .entry-content h2 {
+      font-size: 40px;
+      line-height: 1;
+      margin-top: 125px; } }
+
+.home .entry-content h3 {
+  font-size: 20px;
+  line-height: 1.15;
+  font-weight: 300;
+  margin-top: 6px;
+  margin-bottom: 119px; }
+  @media (min-width: 48em) {
+    .home .entry-content h3 {
+      font-size: 25px;
+      line-height: 1;
+      margin-bottom: 60px; } }
+
+@media (min-width: 48em) {
+  .home .entry-content p {
+    font-size: 25px;
+    line-height: 1.08;
+    margin: 1.08em 0; } }

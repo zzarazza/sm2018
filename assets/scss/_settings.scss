@@ -1,13 +1,24 @@
 $sm-images : "assets/images"  !default;
 
 $sm-palette : (
-	primary : #101F30
+	primary : #101F30,
+	brand-blue: #009cde
 )  !default;
 
 $sm-body-font-family : ("Tajawal", Arial, sans-serif)  !default;
 
 $sm-anchor-color : #2B5FAE  !default;
 $sm-anchor-color--hover : #2B5FAE  !default;
+
+$sm-button-font-size : 20px !default;
+$sm-button-padding : (14px 20px 8px) !default;
+$sm-button-color : white !default;
+$sm-button-color--hover : $sm-button-color !default;
+$sm-button-color--active : $sm-button-color !default;
+$sm-button-bcolor : map-get($sm-palette, brand-blue)  !default;
+$sm-button-bcolor--hover : darken(map-get($sm-palette, brand-blue),5%)  !default;
+$sm-button-bcolor--active : adjust-color(map-get($sm-palette, brand-blue), $lightness: -7.2%, $saturation: -2.2%) !default;
+$sm-button-box-shadow : (2px 2px 10px rgba(black,0.2)) !default;
 
 $sm-footer-bcolor : map-get($sm-palette, primary)  !default;
 
