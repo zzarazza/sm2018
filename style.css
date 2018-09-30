@@ -759,6 +759,10 @@ a {
   width: 100%;
   margin-top: 70px;
   margin-bottom: 70px; }
+  @media (min-width: 75em) {
+    .entry-content .wp-block-image {
+      margin-top: 110px;
+      margin-bottom: 110px; } }
   @media (max-width: 47.99em) {
     .entry-content .wp-block-image.img-ifrs17-mockup {
       width: 482px; }
