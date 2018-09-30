@@ -88,12 +88,15 @@
 		margin-right: -33px;
 		margin-bottom: 47px;
 
+		@include mq($from: tablet-l) {
+			@include full-width;
+		}
+
 		@include mq($from: desktop) {
 			font-size: 25px;
 			padding-top: 67px;
 			padding-bottom: 67px;
 			margin-bottom: 60px;
-			@include full-width;
 		}
 
 		&-inverse {

@@ -717,16 +717,18 @@ a {
   margin-left: -33px;
   margin-right: -33px;
   margin-bottom: 47px; }
+  @media (min-width: 64em) {
+    .entry-content .callout {
+      margin-left: -999em;
+      margin-right: -999em;
+      padding-left: 999em;
+      padding-right: 999em; } }
   @media (min-width: 75em) {
     .entry-content .callout {
       font-size: 25px;
       padding-top: 67px;
       padding-bottom: 67px;
-      margin-bottom: 60px;
-      margin-left: -999em;
-      margin-right: -999em;
-      padding-left: 999em;
-      padding-right: 999em; } }
+      margin-bottom: 60px; } }
   .entry-content .callout-inverse {
     background-color: #101F30;
     color: white; }
