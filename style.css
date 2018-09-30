@@ -753,7 +753,8 @@ a {
 
 .entry-content .special-points {
   list-style: none;
-  padding: 0; }
+  padding: 0;
+  margin: 40px 0; }
   @media (min-width: 75em) {
     .entry-content .special-points {
       margin-top: 51px; } }
@@ -795,41 +796,45 @@ a {
 .has-icon.icon-globe:before {
   background-image: url("assets/images/icon-globe.svg"); }
 
-.special-points {
-  margin: 40px 0; }
+@media (min-width: 64em) {
+  .special-points {
+    display: flex;
+    flex-wrap: wrap; } }
+
+@media (min-width: 48em) {
+  .special-points > li {
+    padding-left: 70px;
+    padding-right: 70px;
+    position: relative; }
+    .special-points > li.has-icon:before {
+      position: absolute;
+      left: 0; } }
+
+@media (min-width: 64em) {
+  .special-points > li {
+    width: 50%;
+    box-sizing: border-box; } }
+
+.special-points .has-icon:before {
+  background-color: #009cde; }
+
+.special-points li {
+  margin-bottom: 40px; }
+  @media (min-width: 75em) {
+    .special-points li {
+      margin-bottom: 77px; } }
+
+.special-points h3 {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0; }
   @media (min-width: 64em) {
-    .special-points {
-      display: flex;
-      flex-wrap: wrap; } }
-  @media (min-width: 48em) {
-    .special-points > li {
-      padding-left: 70px;
-      padding-right: 70px;
-      position: relative; }
-      .special-points > li.has-icon:before {
-        position: absolute;
-        left: 0; } }
-  @media (min-width: 64em) {
-    .special-points > li {
-      width: 50%;
-      box-sizing: border-box; } }
-  .special-points .has-icon:before {
-    background-color: #009cde; }
-  .special-points li {
-    margin-bottom: 40px; }
-    @media (min-width: 75em) {
-      .special-points li {
-        margin-bottom: 77px; } }
-  .special-points h3 {
-    font-size: 20px;
-    font-weight: 400;
-    margin: 0; }
-    @media (min-width: 64em) {
-      .special-points h3 {
-        margin-top: 10px; } }
-  .special-points p {
-    font-weight: 300;
-    margin: 0; }
+    .special-points h3 {
+      margin-top: 10px; } }
+
+.special-points p {
+  font-weight: 300;
+  margin: 0; }
 
 .home .hero {
   background-repeat: no-repeat;

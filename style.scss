@@ -133,6 +133,7 @@
 	.special-points {
 		list-style: none;
 		padding: 0;
+		margin: 40px 0;
 
 		@include mq($from: desktop) {
 			margin-top: 51px;
@@ -177,7 +178,6 @@ $sm-icons : (user, users, idea, refresh, list, globe);
 }
 
 .special-points {
-	margin: 40px 0;
 
 	@include mq($from: tablet-l) {
 		display: flex;
