@@ -705,10 +705,10 @@ a {
     content: "";
     position: absolute;
     background-color: white;
-    height: 11%;
+    height: 20vh;
     width: 120%;
-    bottom: -6%;
-    right: -20px;
+    bottom: -10vh;
+    right: -20%;
     transform: rotate(357deg); }
   .home .hero .wrap {
     position: absolute;
