@@ -7,6 +7,7 @@ body {
 	background-color: white;
 	color: $sm-body-font-color;
 	overflow-x: hidden;
+	width: 100%;
 }
 
 .site-content-contain {
@@ -15,6 +16,10 @@ body {
 	.home & {
 		padding-top: 0;
 	}
+
+	.site-content > .wrap {
+		overflow-x: hidden;
+	}
 }
 
 .wrap {
@@ -22,7 +27,12 @@ body {
 	padding-right: 33px;
 	margin-left: auto;
 	margin-right: auto;
-	max-width: $sm-max-width;
+	max-width: 100%;
+	box-sizing: border-box;
+
+	@include mq($from: tablet) {
+		max-width: $sm-max-width;
+	}
 }
 
 a {

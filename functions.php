@@ -604,6 +604,12 @@ function systemorph_management_team_query( $query ) {
     }
 }
 
+function systemorph_disable_srcset( $sources ) {
+    return false;
+}
+
+add_filter( 'wp_calculate_image_srcset', 'systemorph_disable_srcset' );
+
 /**
  * Implement the Custom Header feature.
  */

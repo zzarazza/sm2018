@@ -39,6 +39,17 @@
 	@extend %main-title;
 }
 
+%has-icon {
+	content: "";
+	display: block;
+	margin-bottom: 15px;
+	width: 52px;
+	height: 52px;
+	border-radius: 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
 
 .entry-header {
 	.entry-title {
@@ -112,6 +123,7 @@
 		text-transform: uppercase;
 		font-size: 25px;
 		font-weight: 400;
+		margin-top: 1.6em;
 		margin-bottom: .96em;
 	}
 
@@ -121,6 +133,29 @@
 
 		@include mq($from: desktop) {
 			margin-top: 51px;
+		}
+	}
+
+	.wp-block-image {
+		width: 100%;
+		margin-top: 70px;
+		margin-bottom: 70px;
+
+		&.img-ifrs17-mockup {
+			@include mq($until: tablet) {
+				width: 482px;
+
+				img {
+					transform: translateX(12%);
+				}
+			}
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
+			display: block;
+			margin: 0 auto;
 		}
 	}
 }
@@ -139,12 +174,12 @@ $sm-icons : (user, users, idea, refresh, list, globe);
 	@include mq($from: tablet-l) {
 		display: flex;
 		flex-wrap: wrap;
+	}
 
-		> li {
-			width: 50%;
+	> li {
+		@include mq($from: tablet) {
 			padding-left: 70px;
 			padding-right: 70px;
-			box-sizing: border-box;
 			position: relative;
 
 			&.has-icon {
@@ -154,19 +189,17 @@ $sm-icons : (user, users, idea, refresh, list, globe);
 				}
 			}
 		}
+
+		@include mq($from: tablet-l) {
+			width: 50%;
+			box-sizing: border-box;
+		}
 	}
 
 	.has-icon {
 		&:before {
-			content: "";
-			display: block;
-			margin-bottom: 15px;
-			width: 52px;
-			height: 52px;
-			border-radius: 100%;
+			@extend %has-icon;
 			background-color: map-get($sm-palette,brand-blue);
-			background-repeat: no-repeat;
-			background-position: 0 0;
 		}
 	}
 
@@ -303,6 +336,24 @@ $sm-icons : (user, users, idea, refresh, list, globe);
 				line-height: 1.08;
 				margin: 1.08em 0;
 			}
+		}
+	}
+}
+
+body.has-title-icon {
+	h1.entry-title:before {
+		@extend %has-icon;
+		background-color: #e1e1e1;
+		margin-bottom: 15px;
+
+		@include mq($from: tablet-l) {
+			margin-bottom: 12px;
+		}
+	}
+
+	&.page-ifrs17 {
+		h1.entry-title:before {
+			background-image: url("#{$sm-images}/icon-idea.svg");
 		}
 	}
 }
