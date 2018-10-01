@@ -11,11 +11,7 @@
 ?>
 <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'systemorph' ); ?>">
 	<button class="menu-toggle" aria-controls="top-menu" aria-expanded="false">
-		<?php
-		echo systemorph_get_svg( array( 'icon' => 'bars' ) );
-		echo systemorph_get_svg( array( 'icon' => 'close' ) );
-		_e( 'Menu', 'systemorph' );
-		?>
+		<?php _e( 'Menu', 'systemorph' ); ?>
 	</button>
 
 	<?php

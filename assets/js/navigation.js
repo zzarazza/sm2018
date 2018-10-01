@@ -34,6 +34,8 @@
 			_this.toggleClass( 'toggled-on' );
 			_this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
 
+			_this.parents('#masthead').toggleClass( 'menu--open' );
+
 			_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
 
 			screenReaderSpan.text( screenReaderSpan.text() === systemorphScreenReaderText.expand ? systemorphScreenReaderText.collapse : systemorphScreenReaderText.expand );
@@ -87,10 +89,11 @@
 						var el = $( this ).parent( 'li' );
 
 						if ( ! el.hasClass( 'focus' ) ) {
+							masthead.addClass( 'menu--open' );
 							e.preventDefault();
 							el.toggleClass( 'focus' );
 							el.siblings( '.focus' ).removeClass( 'focus' );
-							masthead.addClass( 'menu--open' );
+
 						}
 					});
 
