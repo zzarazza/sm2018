@@ -529,7 +529,7 @@ a {
         margin: 12px 0; }
         @media (min-width: 64em) {
           .navigation-top .menu .sub-menu > .menu-item {
-            margin: 17px 0; } }
+            margin: 17px 20px; } }
         @media (min-width: 75em) {
           .navigation-top .menu .sub-menu > .menu-item {
             margin-left: 30px;

@@ -177,7 +177,7 @@
 				margin: 12px 0;
 
 				@include mq($from: tablet-l) {
-					margin: 17px 0;
+					margin: 17px 20px;
 				}
 
 				@include mq($from: desktop) {
