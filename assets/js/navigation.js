@@ -26,19 +26,37 @@
 		// Set the active submenu initial state.
 		container.find( '.current-menu-ancestor > .sub-menu' ).addClass( 'toggled-on' );
 
-		container.find( '.top-link-header > a' ).click( function( e ) {
-			var _this = $( this ),
-				screenReaderSpan = _this.find( '.screen-reader-text' );
 
-			e.preventDefault();
-			_this.toggleClass( 'toggled-on' );
-			_this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
+		$( 'body' ).click( function( e ) {
+			var _this = $( e.target );
 
-			// _this.parents('#masthead').toggleClass( 'menu--open' );
+			if (!_this.is(menuToggle)){
+				var isTopMenuClicked = _this.is(masthead) || _this.parents("#masthead").length;
+				var isTopMenuLinkClicked = _this.is(container.find( '.top-link-header > a' ));
+				var shouldOpenMenu =  isTopMenuLinkClicked && !_this.parents( '.menu-item, .page_item' ).hasClass('focus') || window.matchMedia('(max-width: 1024px)').matches;
 
-			_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
+				if (!isTopMenuClicked || isTopMenuLinkClicked){
+					masthead.find( '.menu-item, .page_item' ).removeClass('focus');
+					masthead.removeClass( 'menu--open' );
+				}
 
-			screenReaderSpan.text( screenReaderSpan.text() === systemorphScreenReaderText.expand ? systemorphScreenReaderText.collapse : systemorphScreenReaderText.expand );
+				if (isTopMenuLinkClicked){
+					_this.toggleClass( 'toggled-on' );
+					_this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
+					e.preventDefault();
+
+					_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
+
+					if (shouldOpenMenu){
+						var screenReaderSpan = _this.find( '.screen-reader-text' );
+
+						masthead.addClass( 'menu--open' );
+						_this.parents( '.menu-item, .page_item' ).addClass( 'focus' );
+
+						screenReaderSpan.text( screenReaderSpan.text() === systemorphScreenReaderText.expand ? systemorphScreenReaderText.collapse : systemorphScreenReaderText.expand );
+					}
+				}
+			}
 		});
 	}
 
@@ -107,9 +125,9 @@
 			toggleFocusClassTouchScreen();
 		}
 
-		siteNavigation.find( 'a' ).on( 'focus.systemorph blur.systemorph', function() {
+		/*siteNavigation.find( 'a' ).on( 'focus.systemorph blur.systemorph', function() {
 			$( this ).parents( '.menu-item, .page_item' ).toggleClass( 'focus' );
 			masthead.toggleClass( 'menu--open' );
-		});
+		});*/
 	})();
 })( jQuery );

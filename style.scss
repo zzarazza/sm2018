@@ -251,6 +251,7 @@ $sm-icons : (user, users, idea, refresh, list, globe, email, info);
 
 .home {
 	.hero {
+		background-color: #62a6b2;
 		background-repeat: no-repeat;
 		background-size: cover;
 		overflow: hidden;
@@ -291,7 +292,7 @@ $sm-icons : (user, users, idea, refresh, list, globe, email, info);
 			}
 
 			@include mq($from: tablet-l) {
-				max-width: 50%;
+				max-width: 60%;
 				line-height: 1;
 			}
 		}

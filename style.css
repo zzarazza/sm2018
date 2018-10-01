@@ -915,6 +915,7 @@ a {
   margin: 0; }
 
 .home .hero {
+  background-color: #62a6b2;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -948,7 +949,7 @@ a {
         max-width: 70%; } }
     @media (min-width: 64em) {
       .home .hero .page-title {
-        max-width: 50%;
+        max-width: 60%;
         line-height: 1; } }
   .home .hero .page-subtitle {
     color: white;
