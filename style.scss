@@ -52,8 +52,12 @@
 
 
 .entry-header {
+	margin-top: 40px;
+	margin-bottom: 60px;
+
 	.entry-title {
 		@extend %main-title;
+		margin: 0;
 
 		@include mq($from: tablet) {
 			max-width: 70%;
@@ -66,6 +70,12 @@
 			display: block;
 			margin-bottom: .92em;
 		}
+	}
+
+	.page-subtitle {
+		font-size: 20px;
+		font-weight: 300;
+		margin: 0;
 	}
 }
 
@@ -173,7 +183,7 @@
 	}
 }
 
-$sm-icons : (user, users, idea, refresh, list, globe);
+$sm-icons : (user, users, idea, refresh, list, globe, email, info);
 
 @each $i in $sm-icons {
 	.has-icon.icon-#{$i}:before {
@@ -363,14 +373,16 @@ body.has-title-icon {
 		}
 	}
 
-	&.page-ifrs17 {
-		h1.entry-title:before {
-			background-image: url("#{$sm-images}/icon-idea.svg");
+	@each $i in $sm-icons {
+		&.icon-#{$i} h1.entry-title:before  {
+			background-image: url("#{$sm-images}/icon-#{$i}.svg");
 		}
 	}
 }
 
 .wpcf7-form {
+	margin-bottom: 62px;
+
 	@include mq($from: tablet) {
 		max-width: 60%;
 	}
@@ -425,6 +437,11 @@ body.has-title-icon {
 	}
 
 	.form-ctr {
-		margin: 62px 0;
+		margin: 62px 0 32px;
+	}
+
+	.wpcf7-response-output {
+		margin: 20px 0 0;
+		padding: 10px 20px;
 	}
 }
