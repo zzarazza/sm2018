@@ -392,6 +392,7 @@ a {
 .button {
   background-color: #009cde;
   color: white;
+  border: 0 none;
   border-radius: 5px;
   font-size: 20px;
   padding: 13px 20px 10px;
