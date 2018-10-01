@@ -34,7 +34,7 @@
 			_this.toggleClass( 'toggled-on' );
 			_this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
 
-			_this.parents('#masthead').toggleClass( 'menu--open' );
+			// _this.parents('#masthead').toggleClass( 'menu--open' );
 
 			_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
 

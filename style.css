@@ -555,8 +555,9 @@ a {
   display: block; }
   .home .site-branding .custom-logo-link {
     background-image: url("assets/images/systemorph-white.svg"); }
-  .home .menu--open .site-branding .custom-logo-link {
-    background-image: url("assets/images/systemorph.svg"); }
+  @media (max-width: 63.99em) {
+    .home .menu--open .site-branding .custom-logo-link {
+      background-image: url("assets/images/systemorph.svg"); } }
 
 .site-footer {
   background-color: #101F30;

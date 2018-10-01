@@ -226,7 +226,9 @@
 		}
 
 		.home .menu--open & {
-			background-image: url("#{$sm-images}/systemorph.svg");
+			@include mq($until: tablet-l) {
+				background-image: url("#{$sm-images}/systemorph.svg");
+			}
 		}
 	}
 
