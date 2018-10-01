@@ -394,7 +394,7 @@ a {
   color: white;
   border-radius: 5px;
   font-size: 20px;
-  padding: 14px 20px 8px;
+  padding: 13px 20px 10px;
   text-decoration: none;
   display: inline-block;
   min-width: 170px;
@@ -811,6 +811,8 @@ a {
   font-weight: 400;
   margin-top: 1.6em;
   margin-bottom: .96em; }
+  .home .entry-content h2 {
+    text-transform: none; }
 
 .entry-content .special-points {
   list-style: none;
