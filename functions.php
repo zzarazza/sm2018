@@ -610,6 +610,12 @@ function systemorph_disable_srcset( $sources ) {
 
 add_filter( 'wp_calculate_image_srcset', 'systemorph_disable_srcset' );
 
+function sm_admin_styles() {
+    wp_register_style( 'add-admin-stylesheet', get_theme_file_uri( '/assets/css/admin.css' ) );
+    wp_enqueue_style( 'add-admin-stylesheet' );
+}
+add_action('admin_enqueue_scripts', 'sm_admin_styles');
+
 /**
  * Implement the Custom Header feature.
  */
@@ -637,3 +643,4 @@ require get_parent_theme_file_path( '/inc/icon-functions.php' );
 
 require get_parent_theme_file_path( '/inc/meta-settings.php' );
 require get_parent_theme_file_path( '/inc/meta-boxes.php' );
+require get_parent_theme_file_path( '/inc/shortcodes.php' );

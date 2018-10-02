@@ -258,6 +258,10 @@ $sm-icons : (user, users, idea, refresh, list, globe, email, info);
 		position: relative;
 		height: 80vh;
 
+		@include mq($from: tablet-l) {
+			min-height: 660px;
+		}
+
 		&:after {
 			content: "";
 			position: absolute;
@@ -327,7 +331,7 @@ $sm-icons : (user, users, idea, refresh, list, globe, email, info);
 			color: #2e3641;
 		}
 
-		h2 {
+		h2:not([class]) {
 			font-size: 30px;
 			font-weight: 400;
 			margin-bottom: 6px;
@@ -380,6 +384,37 @@ body.has-title-icon {
 		}
 	}
 }
+
+.sm-partners {
+	text-align: center;
+	padding: 100px 0;
+
+	.block-title {
+		font-size: 20px;
+		font-weight: 300;
+		margin: 0 0 25px;
+	}
+
+	.partner-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	.partner-item {
+		margin: 25px 50px;
+
+		img {
+			display: block;
+			width: 190px;
+			height: auto;
+		}
+	}
+} // .sm-partners
 
 .wpcf7-form {
 	margin-bottom: 62px;
