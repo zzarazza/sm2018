@@ -420,6 +420,13 @@
 		"oAP": "/inc/custom-header.php",
 		"oF": 0
 		},
+	"/inc/custom_post_types.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/inc/custom_post_types.php",
+		"oF": 0
+		},
 	"/inc/customizer.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -446,6 +453,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/inc/meta-settings.php",
+		"oF": 0
+		},
+	"/inc/meta_boxes.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/inc/meta_boxes.php",
 		"oF": 0
 		},
 	"/inc/shortcodes.php": {

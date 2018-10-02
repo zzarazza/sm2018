@@ -641,6 +641,9 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
 
+require get_parent_theme_file_path( '/inc/custom_post_types.php' );
+require get_parent_theme_file_path( '/inc/meta_boxes.php' );
+
 require get_parent_theme_file_path( '/inc/meta-settings.php' );
 require get_parent_theme_file_path( '/inc/meta-boxes.php' );
 require get_parent_theme_file_path( '/inc/shortcodes.php' );

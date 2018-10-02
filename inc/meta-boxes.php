@@ -28,3 +28,30 @@ function the_systemorph_page_subtitle() {
  		echo "<h2 class=\"page-subtitle\">$rwmbMeta</h2>";
  	endif;
 }
+
+function the_systemorph_more_info() {
+	$rwmbMeta = rwmb_meta( 'sm_more_info', array( 'object_type' => 'setting' ), 'sm_preferences' );
+	if ($rwmbMeta) :
+		echo "<div class=\"footer-extra-block sm-more-info has-icon icon-info\">";
+			echo "<h3>" . $rwmbMeta["sm_more_info_headline"] . "</h3>";
+			echo "<p>" . $rwmbMeta["sm_more_info_text"] . "</p>";
+			echo "<a href=\"" . $rwmbMeta["sm_more_info_link_to_page"] . "\" class=\"button\">" . $rwmbMeta["sm_more_info_button_text"] . "</a>";
+		echo "</div>";
+	endif;
+}
+
+function the_systemorph_get_in_touch() {
+	$rwmbMeta = rwmb_meta( 'sm_get_in_touch', array( 'object_type' => 'setting' ), 'sm_preferences' );
+	if ($rwmbMeta) :
+		echo "<div class=\"footer-extra-block sm-get-in-touch has-icon icon-email\">";
+			echo "<h3>" . $rwmbMeta["sm_get_in_touch_headline"] . "</h3>";
+			echo "<p>" . $rwmbMeta["sm_get_in_touch_text"] . "</p>";
+			echo "<a href=\"" . $rwmbMeta["sm_get_in_touch_link_to_page"] . "\" class=\"button\">" . $rwmbMeta["sm_get_in_touch_button_text"] . "</a>";
+		echo "</div>";
+	endif;
+}
+
+function the_systemorph_footer_extra() {
+	the_systemorph_more_info();
+	the_systemorph_get_in_touch();
+}

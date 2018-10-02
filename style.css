@@ -645,6 +645,19 @@ a {
     display: block;
     margin-bottom: 21px; }
 
+.footer-extra {
+  background-color: #f9f9f9;
+  padding: 58px 0; }
+  @media (min-width: 48em) {
+    .footer-extra .wrap {
+      display: flex; } }
+  @media (min-width: 48em) {
+    .footer-extra .footer-extra-block {
+      width: 50%; } }
+  .footer-extra .footer-extra-block h3 {
+    font-size: 25px;
+    font-weight: 300; }
+
 .post-type-archive-management-team .page-header {
   text-align: center;
   margin-top: 30px;

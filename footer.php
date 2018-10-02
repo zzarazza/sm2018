@@ -15,7 +15,11 @@
 ?>
 
 		</div><!-- #content -->
-
+		<div class="footer-extra">
+			<div class="wrap">
+				<?php the_systemorph_footer_extra(); ?>
+			</div>
+		</div>
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class="wrap">
 				<?php if ( has_nav_menu( 'bottom' ) ) : ?>
