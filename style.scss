@@ -89,6 +89,10 @@
 
 		@include mq($from: desktop) {
 			margin-bottom: 52px;
+
+			+ .wp-block-separator {
+				margin-top: -22px;
+			}
 		}
 	}
 
@@ -363,6 +367,12 @@ $sm-icons : (user, users, idea, refresh, list, globe, email, info, chart);
 				line-height: 1.08;
 				margin: 1.08em 0;
 			}
+		}
+
+		.wp-block-separator {
+			margin: 30px -30px;
+			border-top: 1px solid #e1e1e1;
+			border-bottom: 0 none;
 		}
 	}
 }

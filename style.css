@@ -793,7 +793,9 @@ a {
   color: #2e3641; }
   @media (min-width: 75em) {
     .entry-content .main-points {
-      margin-bottom: 52px; } }
+      margin-bottom: 52px; }
+      .entry-content .main-points + .wp-block-separator {
+        margin-top: -22px; } }
 
 .entry-content .callout {
   padding: 38px 35px;
@@ -1019,6 +1021,11 @@ a {
     font-size: 25px;
     line-height: 1.08;
     margin: 1.08em 0; } }
+
+.home .entry-content .wp-block-separator {
+  margin: 30px -30px;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 0 none; }
 
 body.has-title-icon h1.entry-title:before {
   background-color: #e1e1e1;
