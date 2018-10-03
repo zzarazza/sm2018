@@ -183,7 +183,7 @@
 	}
 }
 
-$sm-icons : (user, users, idea, refresh, list, globe, email, info);
+$sm-icons : (user, users, idea, refresh, list, globe, email, info, chart);
 
 @each $i in $sm-icons {
 	.has-icon.icon-#{$i}:before {

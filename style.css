@@ -887,6 +887,9 @@ a {
 .has-icon.icon-info:before {
   background-image: url("assets/images/icon-info.svg"); }
 
+.has-icon.icon-chart:before {
+  background-image: url("assets/images/icon-chart.svg"); }
+
 @media (min-width: 64em) {
   .special-points {
     display: flex;
@@ -1047,6 +1050,9 @@ body.has-title-icon.icon-email h1.entry-title:before {
 
 body.has-title-icon.icon-info h1.entry-title:before {
   background-image: url("assets/images/icon-info.svg"); }
+
+body.has-title-icon.icon-chart h1.entry-title:before {
+  background-image: url("assets/images/icon-chart.svg"); }
 
 .sm-partners {
   text-align: center;

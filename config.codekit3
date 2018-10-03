@@ -30,16 +30,6 @@
 		"oAP": "/archive.php",
 		"oF": 0
 		},
-	"/assets/css/admin-min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/assets/css/admin-min-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"/assets/css/admin.css": {
 		"aP": 1,
 		"bl": 0,
@@ -49,6 +39,16 @@
 		"oAP": "/assets/css/admin-min.css",
 		"oF": 0,
 		"oS": 3
+		},
+	"/assets/images/icon-chart.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icon-chart.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
 		},
 	"/assets/images/icon-close.svg": {
 		"ft": 2097152,
