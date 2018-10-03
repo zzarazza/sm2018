@@ -185,6 +185,12 @@
 			margin: 0 auto;
 		}
 	}
+
+	.wp-block-separator {
+		margin: 30px -30px;
+		border-top: 1px solid #e1e1e1;
+		border-bottom: 0 none;
+	}
 }
 
 $sm-icons : (user, users, idea, refresh, list, globe, email, info, chart);
@@ -367,12 +373,6 @@ $sm-icons : (user, users, idea, refresh, list, globe, email, info, chart);
 				line-height: 1.08;
 				margin: 1.08em 0;
 			}
-		}
-
-		.wp-block-separator {
-			margin: 30px -30px;
-			border-top: 1px solid #e1e1e1;
-			border-bottom: 0 none;
 		}
 	}
 }

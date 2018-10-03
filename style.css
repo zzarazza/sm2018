@@ -865,6 +865,11 @@ a {
     display: block;
     margin: 0 auto; }
 
+.entry-content .wp-block-separator {
+  margin: 30px -30px;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 0 none; }
+
 .has-icon.icon-user:before {
   background-image: url("assets/images/icon-user.svg"); }
 
@@ -1021,11 +1026,6 @@ a {
     font-size: 25px;
     line-height: 1.08;
     margin: 1.08em 0; } }
-
-.home .entry-content .wp-block-separator {
-  margin: 30px -30px;
-  border-top: 1px solid #e1e1e1;
-  border-bottom: 0 none; }
 
 body.has-title-icon h1.entry-title:before {
   background-color: #e1e1e1;
