@@ -124,7 +124,12 @@
 
 .footer-extra {
 	background-color: #f9f9f9;
-	padding: 58px 0;
+	padding: 58px 0 66px;
+
+	@include mq($from: tablet-l) {
+		padding-top: 78px;
+		padding-bottom: 54px;
+	}
 
 	.wrap {
 		@include mq($from: tablet) {
@@ -137,9 +142,61 @@
 			width: 50%;
 		}
 
+		@include mq($from: tablet-l) {
+			padding-left: 80px;
+			position: relative;
+		}
+
+		h3,
+		p {
+			max-width: 300px;
+		}
+
 		h3 {
 			font-size: 25px;
+			font-weight: 400;
+			margin-bottom: 4px;
+
+			@include mq($from: tablet-l) {
+				margin-top: 0;
+			}
+		}
+
+		p {
+			font-size: 20px;
+			line-height: 1.15;
+			margin: 4px 0;
 			font-weight: 300;
+
+			@include mq($from: tablet) {
+				min-height: 2.35em;
+			}
+		}
+
+		.button {
+			margin-top: 22px;
+
+			@include mq($from: tablet-l) {
+				margin-top: 20px;
+			}
+		}
+
+		+ .footer-extra-block {
+			@include mq($until: tablet) {
+				margin-top: 72px;
+			}
+		}
+	}
+
+	.has-icon {
+		&:before {
+			@extend %has-icon;
+			background-color: #e1e1e1;
+
+			@include mq($from: tablet-l) {
+				position: absolute;
+				left: 0;
+			}
 		}
 	}
 }
