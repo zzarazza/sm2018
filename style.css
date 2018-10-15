@@ -1208,3 +1208,11 @@ section.full-width {
   padding-right: 999em;
   height: 296px;
   background-color: #101F30; }
+  @media (min-width: 64em) {
+    .sm-featured {
+      height: 285px; } }
+  .page-financial-reporting .sm-featured {
+    background-image: url("assets/images/featured/flexible-reporting-d.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%; }

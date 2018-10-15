@@ -40,6 +40,28 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"/assets/images/featured/featured-flexible-reporting-d.jpg": {
+		"ft": 16384,
+		"iS": 70273,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/images/featured/featured-flexible-reporting-d.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/images/featured/featured-flexible-reporting-m.jpg": {
+		"ft": 16384,
+		"iS": 36603,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/images/featured/featured-flexible-reporting-m.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/assets/images/icon-chart.svg": {
 		"ft": 2097152,
 		"miP": 0,
