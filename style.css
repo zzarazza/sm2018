@@ -1207,7 +1207,9 @@ section.full-width {
   padding-left: 999em;
   padding-right: 999em;
   height: 296px;
-  background-color: #101F30; }
+  background-color: #101F30;
+  margin-top: 25px;
+  margin-bottom: 25px; }
   @media (min-width: 64em) {
     .sm-featured {
       height: 285px; } }

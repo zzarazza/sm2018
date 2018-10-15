@@ -512,6 +512,8 @@ section.full-width {
 	@include full-width;
 	height: 296px;
 	background-color: map-get($sm-palette, primary);
+	margin-top: 25px;
+	margin-bottom: 25px;
 
 	@include mq($from: tablet-l) {
 		height: 285px;
