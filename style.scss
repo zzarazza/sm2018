@@ -507,3 +507,9 @@ section.full-width {
 		padding-bottom: 60px;
 	}
 }
+
+.sm-featured {
+	@include full-width;
+	height: 296px;
+	background-color: map-get($sm-palette, primary);
+}
