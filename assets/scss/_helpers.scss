@@ -30,3 +30,15 @@
 	padding-left: 999em;
 	padding-right: 999em;
 }
+
+.show-for-mobile {
+	@include mq($from: tablet) {
+		display: none;
+	}
+}
+
+.show-for-tablet {
+	@include mq($until: tablet) {
+		display: none;
+	}
+}

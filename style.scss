@@ -491,3 +491,8 @@ body.has-title-icon {
 		padding: 10px 20px;
 	}
 }
+
+section.highlighted {
+	background-color: map-get($sm-palette, primary);
+	color: white;
+}

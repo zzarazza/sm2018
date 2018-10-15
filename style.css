@@ -319,6 +319,14 @@ template {
   clip: rect(1px, 1px, 1px, 1px);
   white-space: nowrap; }
 
+@media (min-width: 48em) {
+  .show-for-mobile {
+    display: none; } }
+
+@media (max-width: 47.99em) {
+  .show-for-tablet {
+    display: none; } }
+
 html {
   background-color: #101F30; }
 
@@ -1139,3 +1147,7 @@ body.has-title-icon.icon-chart h1.entry-title:before {
   .wpcf7-form .wpcf7-response-output {
     margin: 20px 0 0;
     padding: 10px 20px; }
+
+section.highlighted {
+  background-color: #101F30;
+  color: white; }
