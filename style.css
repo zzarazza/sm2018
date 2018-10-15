@@ -1212,7 +1212,9 @@ section.full-width {
   margin-bottom: 25px; }
   @media (min-width: 64em) {
     .sm-featured {
-      height: 285px; } }
+      height: 285px;
+      margin-top: 55px;
+      margin-bottom: 55px; } }
   .page-financial-reporting .sm-featured {
     background-image: url("assets/images/featured/featured-flexible-reporting-d.jpg");
     background-position: center;
