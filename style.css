@@ -1151,3 +1151,15 @@ body.has-title-icon.icon-chart h1.entry-title:before {
 section.highlighted {
   background-color: #101F30;
   color: white; }
+
+section.full-width {
+  margin-left: -999em;
+  margin-right: -999em;
+  padding-left: 999em;
+  padding-right: 999em;
+  padding-top: 40px;
+  padding-bottom: 40px; }
+  @media (min-width: 64em) {
+    section.full-width {
+      padding-top: 60px;
+      padding-bottom: 60px; } }

@@ -496,3 +496,14 @@ section.highlighted {
 	background-color: map-get($sm-palette, primary);
 	color: white;
 }
+
+section.full-width {
+	@include full-width;
+	padding-top: 40px;
+	padding-bottom: 40px;
+
+	@include mq($from: tablet-l) {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+}
