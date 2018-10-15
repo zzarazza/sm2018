@@ -321,11 +321,11 @@ template {
 
 @media (min-width: 48em) {
   .show-for-mobile {
-    display: none; } }
+    display: none !important; } }
 
 @media (max-width: 47.99em) {
   .show-for-tablet {
-    display: none; } }
+    display: none !important; } }
 
 html {
   background-color: #101F30; }

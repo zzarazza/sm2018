@@ -33,12 +33,12 @@
 
 .show-for-mobile {
 	@include mq($from: tablet) {
-		display: none;
+		display: none !important;
 	}
 }
 
 .show-for-tablet {
 	@include mq($until: tablet) {
-		display: none;
+		display: none !important;
 	}
 }
