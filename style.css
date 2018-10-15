@@ -539,7 +539,7 @@ a {
         @media (min-width: 64em) {
           .navigation-top .menu .sub-menu > .menu-item {
             margin: 17px 20px; } }
-        @media (min-width: 75em) {
+        @media (min-width: 73.125em) {
           .navigation-top .menu .sub-menu > .menu-item {
             margin-left: 30px;
             margin-right: 30px; } }
@@ -576,7 +576,7 @@ a {
   @media (min-width: 48em) {
     .site-footer {
       padding-bottom: 128px; } }
-  @media (min-width: 75em) {
+  @media (min-width: 73.125em) {
     .site-footer {
       padding-bottom: 52px; } }
   .site-footer a {
@@ -595,7 +595,7 @@ a {
       margin-top: 32px;
       opacity: 0.2;
       background-image: url("assets/images/systemorph-white.svg"); }
-      @media (min-width: 75em) {
+      @media (min-width: 73.125em) {
         .site-footer .site-branding .custom-logo-link {
           margin-top: 62px; } }
     .site-footer .site-branding address {
@@ -754,7 +754,7 @@ a {
   @media (min-width: 48em) {
     .team-member {
       padding: 40px; } }
-  @media (min-width: 75em) {
+  @media (min-width: 73.125em) {
     .team-member {
       padding: 50px; } }
   .team-member .t-m-header {
@@ -775,7 +775,7 @@ a {
     @media (min-width: 48em) {
       .team-member .t-m-image {
         margin-top: -70px; } }
-    @media (min-width: 75em) {
+    @media (min-width: 73.125em) {
       .team-member .t-m-image {
         margin-top: -80px; } }
     .team-member .t-m-image img {
@@ -836,7 +836,7 @@ a {
   margin: 10px 0 26px;
   font-size: 20px;
   color: #2e3641; }
-  @media (min-width: 75em) {
+  @media (min-width: 73.125em) {
     .entry-content .main-points {
       margin-bottom: 52px; }
       .entry-content .main-points + .wp-block-separator {
@@ -853,7 +853,7 @@ a {
       margin-right: -999em;
       padding-left: 999em;
       padding-right: 999em; } }
-  @media (min-width: 75em) {
+  @media (min-width: 73.125em) {
     .entry-content .callout {
       font-size: 25px;
       padding-top: 67px;
@@ -887,7 +887,7 @@ a {
   list-style: none;
   padding: 0;
   margin: 40px 0; }
-  @media (min-width: 75em) {
+  @media (min-width: 73.125em) {
     .entry-content .special-points {
       margin-top: 51px; } }
 
@@ -895,7 +895,7 @@ a {
   width: 100%;
   margin-top: 70px;
   margin-bottom: 70px; }
-  @media (min-width: 75em) {
+  @media (min-width: 73.125em) {
     .entry-content .wp-block-image {
       margin-top: 110px;
       margin-bottom: 110px; } }
@@ -966,7 +966,7 @@ a {
 
 .special-points li {
   margin-bottom: 40px; }
-  @media (min-width: 75em) {
+  @media (min-width: 73.125em) {
     .special-points li {
       margin-bottom: 77px; } }
 
@@ -1218,3 +1218,6 @@ section.full-width {
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto 100%; }
+    @media (min-width: 73.125em) {
+      .page-financial-reporting .sm-featured {
+        background-size: 100vw auto; } }
