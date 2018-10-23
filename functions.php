@@ -226,6 +226,11 @@ function systemorph_setup() {
 }
 add_action( 'after_setup_theme', 'systemorph_setup' );
 
+function sm_pages_excerpt() {
+	add_post_type_support( 'page', 'excerpt' );
+}
+add_action( 'init', 'sm_pages_excerpt' );
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -368,20 +373,36 @@ add_action( 'widgets_init', 'systemorph_widgets_init' );
  * @param string $link Link to single post/page.
  * @return string 'Continue reading' link prepended with an ellipsis.
  */
-function systemorph_excerpt_more( $link ) {
+function systemorph_excerpt_more( $link, $ellipsis = true ) {
 	if ( is_admin() ) {
 		return $link;
 	}
 
 	$link = sprintf(
-		'<p class="link-more"><a href="%1$s" class="more-link">%2$s</a></p>',
+		'<a href="%1$s" class="read-more-link">%2$s</a>',
 		esc_url( get_permalink( get_the_ID() ) ),
 		/* translators: %s: Name of current post */
-		sprintf( __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'systemorph' ), get_the_title( get_the_ID() ) )
+		sprintf( __( 'Read more<span class="screen-reader-text"> "%s"</span>', 'systemorph' ), get_the_title( get_the_ID() ) )
 	);
-	return ' &hellip; ' . $link;
+
+	if ($ellipsis) {
+		$link = '&hellip; ' . $link;
+	}
+
+	return $link;
 }
 add_filter( 'excerpt_more', 'systemorph_excerpt_more' );
+
+function systemorph_manual_excerpt_more ( $excerpt ) {
+    global $post;
+
+    if ( has_excerpt( $post->ID ) ) {
+        $excerpt .= systemorph_excerpt_more ( '', false );
+    }
+
+    return $excerpt;
+}
+add_filter( 'get_the_excerpt', 'systemorph_manual_excerpt_more' );
 
 /**
  * Handles JavaScript detection.
