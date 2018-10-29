@@ -223,6 +223,51 @@ function systemorph_setup() {
 	$starter_content = apply_filters( 'systemorph_starter_content', $starter_content );
 
 	add_theme_support( 'starter-content', $starter_content );
+
+	add_theme_support( 'editor-color-palette', array(
+		array(
+			'name'  => __( 'Primary', 'systemorph' ),
+			'slug'  => 'primary',
+			'color'	=> '#101f30',
+		),
+		array(
+			'name'  => __( 'Secondary', 'systemorph' ),
+			'slug'  => 'secondary',
+			'color' => '#2e3641',
+		),
+		array(
+			'name'  => __( 'SM blue', 'systemorph' ),
+			'slug'  => 'sm-blue',
+			'color' => '#009cde',
+		),
+		array(
+			'name'  => __( 'SM purple', 'systemorph' ),
+			'slug'  => 'sm-purple',
+			'color' => '#623a81',
+		),
+		array(
+			'name'  => __( 'Gray', 'systemorph' ),
+			'slug'  => 'gray',
+			'color' => '#a6a6a6',
+		),
+		array(
+			'name'  => __( 'Lavender gray', 'systemorph' ),
+			'slug'  => 'Lavender-gray',
+			'color' => '#a9a7b3',
+		),
+		array(
+			'name'  => __( 'Blue', 'systemorph' ),
+			'slug'  => 'blue',
+			'color' => '#285fae',
+		),
+		array(
+			'name'  => __( 'Red', 'systemorph' ),
+			'slug'  => 'red',
+			'color' => '#cc1300',
+		),
+	) );
+
+	add_theme_support( 'disable-custom-colors' );
 }
 add_action( 'after_setup_theme', 'systemorph_setup' );
 

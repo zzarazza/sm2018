@@ -801,7 +801,7 @@ a {
     .page-title, .entry-header .entry-title {
       font-size: 50px; } }
 
-.footer-extra .has-icon:before, .special-points .has-icon:before, body.has-title-icon h1.entry-title:before {
+.footer-extra .has-icon:before, .special-points .has-icon:before, body.has-title-icon h1.entry-title:before, .wp-block-cgb-block-sm-page .page-block:after {
   content: "";
   display: block;
   margin-bottom: 15px;
@@ -1223,3 +1223,47 @@ section.full-width {
     @media (min-width: 73.125em) {
       .page-financial-reporting .sm-featured {
         background-size: 100vw auto; } }
+
+.wp-block-cgb-block-sm-page .page-block {
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 98px 25px 32px;
+  position: relative; }
+  .wp-block-cgb-block-sm-page .page-block:before {
+    content: "";
+    position: absolute;
+    background-color: #A9A7B3;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 51px;
+    border-radius: 6px 6px 0 0; }
+  .wp-block-cgb-block-sm-page .page-block:after {
+    position: absolute;
+    margin: 0;
+    top: 24px;
+    left: 25px;
+    background-color: #A9A7B3;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16); }
+
+.wp-block-cgb-block-sm-page .page-block-title {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 1.08;
+  margin: 0 0 3px; }
+
+.wp-block-cgb-block-sm-page .page-block-excerpt p {
+  margin-top: 0; }
+
+.wp-block-cgb-block-sm-page .page-block-excerpt p:last-child {
+  margin-bottom: 0; }
+
+.wp-block-cgb-block-sm-page .read-more-link {
+  margin-top: 39px;
+  display: table;
+  text-decoration: none;
+  color: #285fae;
+  font-size: 16px;
+  font-weight: 500; }
+  .wp-block-cgb-block-sm-page .read-more-link:hover {
+    text-decoration: underline; }
