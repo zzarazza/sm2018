@@ -4,7 +4,8 @@ $sm-palette : (
 	primary : #101F30,
 	secondary : #2e3641,
 	alert : #cc1300,
-	brand-blue: #009cde,
+	sm-blue: #009cde,
+	sm-purple : #623a81,
 	gray : #a6a6a6,
 	gray-light : #A9A7B3,
 	blue : #285fae
@@ -21,9 +22,9 @@ $sm-button-padding : (13px 20px 10px) !default;
 $sm-button-color : white !default;
 $sm-button-color--hover : $sm-button-color !default;
 $sm-button-color--active : $sm-button-color !default;
-$sm-button-bcolor : map-get($sm-palette, brand-blue)  !default;
-$sm-button-bcolor--hover : darken(map-get($sm-palette, brand-blue),5%)  !default;
-$sm-button-bcolor--active : adjust-color(map-get($sm-palette, brand-blue), $lightness: -7.2%, $saturation: -2.2%) !default;
+$sm-button-bcolor : map-get($sm-palette, sm-blue)  !default;
+$sm-button-bcolor--hover : darken(map-get($sm-palette, sm-blue),5%)  !default;
+$sm-button-bcolor--active : adjust-color(map-get($sm-palette, sm-blue), $lightness: -7.2%, $saturation: -2.2%) !default;
 $sm-button-box-shadow : (2px 2px 10px rgba(black,0.2)) !default;
 
 $sm-footer-bcolor : map-get($sm-palette, primary)  !default;

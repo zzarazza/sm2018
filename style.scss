@@ -196,7 +196,7 @@
 $sm-icons : (user, users, idea, refresh, list, globe, email, info, chart);
 
 @each $i in $sm-icons {
-	.has-icon.icon-#{$i}:before {
+	.has-icon.icon-#{$i}:after {
 		background-image: url("#{$sm-images}/icon-#{$i}.svg");
 	}
 }
@@ -559,6 +559,15 @@ section.full-width {
 			left: 25px;
 			background-color: map-get($sm-palette, gray-light);
 			box-shadow: 0 3px 6px rgba(black,0.16);
+		}
+	}
+
+	@each $n,$c in $sm-palette {
+		&.has-bgcolor-#{$n} .page-block {
+			&:before,
+			&:after {
+				background-color: $c;
+			}
 		}
 	}
 

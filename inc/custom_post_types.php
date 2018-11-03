@@ -84,7 +84,7 @@ function sm_register_post_type_case_study() {
 		'show_in_nav_menus' => true,
 		'show_in_menu' => true,
 		'show_in_admin_bar' => false,
-		'show_in_rest' => false,
+		'show_in_rest' => true,
 		'menu_position' => 21,
 		'menu_icon' => 'dashicons-clipboard',
 		'capability_type' => 'post',
