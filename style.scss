@@ -39,18 +39,6 @@
 	@extend %main-title;
 }
 
-%has-icon {
-	content: "";
-	display: block;
-	margin-bottom: 15px;
-	width: 52px;
-	height: 52px;
-	border-radius: 100%;
-	background-repeat: no-repeat;
-	background-position: 0 0;
-}
-
-
 .entry-header {
 	margin-top: 40px;
 	margin-bottom: 60px;
@@ -149,9 +137,6 @@
 	}
 
 	.special-points {
-		list-style: none;
-		padding: 0;
-		margin: 40px 0;
 
 		@include mq($from: desktop) {
 			margin-top: 51px;
@@ -193,53 +178,45 @@
 	}
 }
 
-$sm-icons : (user, users, idea, refresh, list, globe, email, info, chart);
-
-@each $i in $sm-icons {
-	.has-icon.icon-#{$i}:after {
-		background-image: url("#{$sm-images}/icon-#{$i}.svg");
-	}
-}
-
-.special-points {
+.wp-block-sm-custom-list {
+	list-style: none;
+	padding: 0;
+	margin: 40px 0;
 
 	@include mq($from: tablet-l) {
 		display: flex;
 		flex-wrap: wrap;
 	}
 
-	> li {
+	.wp-block-sm-custom-list-item {
+		margin-bottom: 40px;
+
 		@include mq($from: tablet) {
 			padding-left: 70px;
 			padding-right: 70px;
 			position: relative;
-
-			&.has-icon {
-				&:before {
-					position: absolute;
-					left: 0;
-				}
-			}
 		}
 
 		@include mq($from: tablet-l) {
 			width: 50%;
 			box-sizing: border-box;
 		}
-	}
-
-	.has-icon {
-		&:before {
-			@extend %has-icon;
-			background-color: map-get($sm-palette,brand-blue);
-		}
-	}
-
-	li {
-		margin-bottom: 40px;
 
 		@include mq($from: desktop) {
 			margin-bottom: 77px;
+		}
+	}
+
+	.has-icon {
+		position: relative;
+		min-height: 52px;
+
+		.icon {
+			@extend %icon;
+			@include mq($from: tablet) {
+				position: absolute;
+				left: 0;
+			}
 		}
 	}
 
@@ -533,7 +510,7 @@ section.full-width {
 	}
 }
 
-.wp-block-cgb-block-sm-page {
+.wp-block-sm-page-card {
 	.page-block {
 		box-shadow: 3px 3px 10px rgba(black,0.1);
 		border-radius: 6px;
@@ -550,24 +527,20 @@ section.full-width {
 			height: 51px;
 			border-radius: 6px 6px 0 0;
 		}
+	}
 
-		&:after {
-			@extend %has-icon;
-			position: absolute;
-			margin: 0;
-			top: 24px;
-			left: 25px;
-			background-color: map-get($sm-palette, gray-light);
-			box-shadow: 0 3px 6px rgba(black,0.16);
-		}
+	.has-icon .icon {
+		@extend %icon;
+		position: absolute;
+		margin: 0;
+		top: 24px;
+		left: 25px;
+		box-shadow: 0 3px 6px rgba(black,0.16);
 	}
 
 	@each $n,$c in $sm-palette {
-		&.has-bgcolor-#{$n} .page-block {
-			&:before,
-			&:after {
-				background-color: $c;
-			}
+		&.has-bgcolor-#{$n} .page-block:before {
+			background-color: $c;
 		}
 	}
 
@@ -599,5 +572,28 @@ section.full-width {
 		&:hover {
 			text-decoration: underline;
 		}
+	}
+}
+
+.wp-block-sm-wrapper {
+	display: grid;
+	grid-column-gap: 17px;
+
+	> .wp-block-sm-page-card {
+		.page-block {
+			box-sizing: border-box;
+			height: 100%;
+		}
+	}
+
+	&.mobile-columns-1 {
+
+	}
+
+	&.tablet-columns-1 {}
+
+	&.desktop-columns-3 {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: auto;
 	}
 }

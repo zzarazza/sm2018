@@ -42,3 +42,45 @@
 		display: none !important;
 	}
 }
+
+%icon {
+	display: block;
+	margin-bottom: 15px;
+	width: 52px;
+	height: 52px;
+	border-radius: 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: 100% 100%;
+}
+
+@each $n,$v in $sm-palette {
+	.has-icon > .icon-bcolor-#{$n} {
+		background-color: $v;
+	}
+}
+
+@each $i in $sm-icons {
+	.has-icon > .icon-#{$i} {
+		background-image: url("#{$sm-images}/icon-#{$i}.svg");
+	}
+
+	.has-icon > .icon-#{$i}-white {
+		background-image: url("#{$sm-images}/icon-#{$i}-white.svg");
+	}
+
+	.has-icon > .icon-#{$i}-primary {
+		background-image: url("#{$sm-images}/icon-#{$i}-primary.svg");
+	}
+}
+
+%has-icon {
+	content: "";
+	display: block;
+	margin-bottom: 15px;
+	width: 52px;
+	height: 52px;
+	border-radius: 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}

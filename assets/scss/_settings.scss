@@ -7,9 +7,11 @@ $sm-palette : (
 	sm-blue: #009cde,
 	sm-purple : #623a81,
 	gray : #a6a6a6,
-	gray-light : #A9A7B3,
+	lavender-gray : #A9A7B3,
 	blue : #285fae
 )  !default;
+
+$sm-icons : (user, users, idea, refresh, list, globe, email, info, chart, folder) !default;
 
 $sm-body-font-family : ("Tajawal", Arial, sans-serif)  !default;
 $sm-body-font-color : map-get($sm-palette, primary)  !default;

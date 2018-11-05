@@ -212,6 +212,16 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"/assets/js/colors.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "/assets/js/colors-min.js",
+		"oF": 1,
+		"sC": 0,
+		"tS": 0
+		},
 	"/assets/js/customize-controls.js": {
 		"ft": 64,
 		"ma": 0,
