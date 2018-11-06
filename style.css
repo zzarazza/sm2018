@@ -1263,6 +1263,15 @@ a {
   border-top: 1px solid #e1e1e1;
   border-bottom: 0 none; }
 
+.wp-block-image.alignfull img {
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: 100vw;
+  position: relative;
+  right: 50%;
+  width: 100vw; }
+
 .wp-block-sm-custom-list {
   list-style: none;
   padding: 0;
@@ -1690,6 +1699,7 @@ section.alignfull {
   .wp-block-sm-wrapper > .wp-block-sm-page-card .page-block {
     box-sizing: border-box;
     height: 100%; }
-  .wp-block-sm-wrapper.desktop-columns-3 {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto; }
+  @media (min-width: 73.125em) {
+    .wp-block-sm-wrapper.desktop-columns-3 {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto; } }
