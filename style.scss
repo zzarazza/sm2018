@@ -221,19 +221,6 @@
 		}
 	}
 
-	.has-icon {
-		position: relative;
-		min-height: 52px;
-
-		.icon {
-			@extend %icon;
-			@include mq($from: tablet) {
-				position: absolute;
-				left: 0;
-			}
-		}
-	}
-
 	h3 {
 		font-size: 20px;
 		font-weight: 400;
@@ -597,7 +584,14 @@ section.alignfull {
 	display: grid;
 	grid-column-gap: 17px;
 
+	@include mq($until: tablet) {
+		margin-left: -18px;
+		margin-right: -18px;
+	}
+
 	> .wp-block-sm-page-card {
+		margin: 30px 0;
+
 		.page-block {
 			box-sizing: border-box;
 			height: 100%;

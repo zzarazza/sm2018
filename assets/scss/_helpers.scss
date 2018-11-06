@@ -54,6 +54,19 @@
 	background-size: 100% 100%;
 }
 
+.has-icon {
+	position: relative;
+	min-height: 52px;
+
+	.icon {
+		@extend %icon;
+		@include mq($from: tablet) {
+			position: absolute;
+			left: 0;
+		}
+	}
+}
+
 @each $n,$v in $sm-palette {
 	.has-icon > .icon-bcolor-#{$n} {
 		background-color: $v;

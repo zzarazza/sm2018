@@ -189,10 +189,7 @@
 	}
 
 	.has-icon {
-		&:before {
-			@extend %has-icon;
-			background-color: #e1e1e1;
-
+		.icon {
 			@include mq($from: tablet-l) {
 				position: absolute;
 				left: 0;

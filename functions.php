@@ -253,8 +253,13 @@ function systemorph_setup() {
 		),
 		array(
 			'name'  => __( 'Lavender gray', 'systemorph' ),
-			'slug'  => 'Lavender-gray',
+			'slug'  => 'lavender-gray',
 			'color' => '#a9a7b3',
+		),
+		array(
+			'name'  => __( 'Light gray', 'systemorph' ),
+			'slug'  => 'light-gray',
+			'color' => '#e1e1e1',
 		),
 		array(
 			'name'  => __( 'Blue', 'systemorph' ),
