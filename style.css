@@ -340,26 +340,65 @@ template {
 .has-icon > .icon-bcolor-primary {
   background-color: #101F30; }
 
+.bcolor-primary {
+  background-color: #101F30; }
+
 .has-icon > .icon-bcolor-secondary {
+  background-color: #2e3641; }
+
+.bcolor-secondary {
   background-color: #2e3641; }
 
 .has-icon > .icon-bcolor-alert {
   background-color: #cc1300; }
 
+.bcolor-alert {
+  background-color: #cc1300; }
+
 .has-icon > .icon-bcolor-sm-blue {
+  background-color: #009cde; }
+
+.bcolor-sm-blue {
   background-color: #009cde; }
 
 .has-icon > .icon-bcolor-sm-purple {
   background-color: #623a81; }
 
+.bcolor-sm-purple {
+  background-color: #623a81; }
+
 .has-icon > .icon-bcolor-gray {
+  background-color: #a6a6a6; }
+
+.bcolor-gray {
   background-color: #a6a6a6; }
 
 .has-icon > .icon-bcolor-lavender-gray {
   background-color: #A9A7B3; }
 
+.bcolor-lavender-gray {
+  background-color: #A9A7B3; }
+
 .has-icon > .icon-bcolor-blue {
   background-color: #285fae; }
+
+.bcolor-blue {
+  background-color: #285fae; }
+
+.has-icon > .icon-bcolor-white {
+  background-color: #ffffff; }
+
+.bcolor-white {
+  background-color: #ffffff; }
+
+.color-tr-white {
+  color: rgba(255, 255, 255, 0.5); }
+
+.color-white {
+  color: #ffffff; }
+
+.color-primary {
+  color: #101F30; }
 
 .has-icon > .icon-user {
   background-image: url("assets/images/icon-user.svg"); }
@@ -1285,7 +1324,7 @@ section.highlighted {
   background-color: #101F30;
   color: white; }
 
-section.full-width {
+section.alignfull {
   margin-left: -999em;
   margin-right: -999em;
   padding-left: 999em;
@@ -1293,9 +1332,12 @@ section.full-width {
   padding-top: 40px;
   padding-bottom: 40px; }
   @media (min-width: 64em) {
-    section.full-width {
+    section.alignfull {
       padding-top: 60px;
       padding-bottom: 60px; } }
+
+.wp-block-sm-section[class*='color'] * {
+  color: inherit; }
 
 .sm-featured {
   margin-left: -999em;
@@ -1364,6 +1406,9 @@ section.full-width {
 
 .wp-block-sm-page-card.has-bgcolor-blue .page-block:before {
   background-color: #285fae; }
+
+.wp-block-sm-page-card.has-bgcolor-white .page-block:before {
+  background-color: #ffffff; }
 
 .wp-block-sm-page-card .page-block-title {
   font-weight: 400;

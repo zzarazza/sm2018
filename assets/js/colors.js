@@ -40,7 +40,12 @@ const smBgColors = [
 		name  : 'Red',
 		slug  : 'alert',
 		color : '#cc1300'
-	}
+	},
+	{
+		name  : 'White',
+		slug  : 'white',
+		color : '#ffffff'
+	},
 ];
 
 const smIconColors = [

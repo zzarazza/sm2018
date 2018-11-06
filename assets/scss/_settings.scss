@@ -8,8 +8,16 @@ $sm-palette : (
 	sm-purple : #623a81,
 	gray : #a6a6a6,
 	lavender-gray : #A9A7B3,
-	blue : #285fae
+	blue : #285fae,
+	white : #ffffff
 )  !default;
+
+$sm-color-palette : (
+	tr-white: rgba(white,0.5),
+	white: #ffffff,
+	primary: map-get($sm-palette, primary)
+) !default;
+
 
 $sm-icons : (user, users, idea, refresh, list, globe, email, info, chart, folder) !default;
 

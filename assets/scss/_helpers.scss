@@ -58,6 +58,16 @@
 	.has-icon > .icon-bcolor-#{$n} {
 		background-color: $v;
 	}
+
+	.bcolor-#{$n} {
+		background-color: $v;
+	}
+}
+
+@each $n,$v in $sm-color-palette {
+	.color-#{$n} {
+		color: $v;
+	}
 }
 
 @each $i in $sm-icons {

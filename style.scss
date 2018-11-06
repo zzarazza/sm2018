@@ -474,7 +474,7 @@ section.highlighted {
 	color: white;
 }
 
-section.full-width {
+section.alignfull {
 	@include full-width;
 	padding-top: 40px;
 	padding-bottom: 40px;
@@ -483,6 +483,10 @@ section.full-width {
 		padding-top: 60px;
 		padding-bottom: 60px;
 	}
+}
+
+.wp-block-sm-section[class*='color'] * {
+	color: inherit;
 }
 
 .sm-featured {

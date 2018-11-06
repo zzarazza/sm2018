@@ -35,6 +35,7 @@ function systemorph_setup() {
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
+	add_theme_support( 'align-wide' );
 
 	/*
 	 * Let WordPress manage the document title.
@@ -262,8 +263,13 @@ function systemorph_setup() {
 		),
 		array(
 			'name'  => __( 'Red', 'systemorph' ),
-			'slug'  => 'red',
+			'slug'  => 'alert',
 			'color' => '#cc1300',
+		),
+		array(
+			'name'  => __( 'White', 'systemorph' ),
+			'slug'  => 'white',
+			'color' => '#ffffff',
 		),
 	) );
 
