@@ -19,7 +19,39 @@ $sm-color-palette : (
 ) !default;
 
 
-$sm-icons : (user, users, idea, refresh, list, globe, email, info, chart, folder) !default;
+$sm-icons : (
+	add-user,
+	aggregate,
+	chart,
+	check,
+	cloud,
+	email,
+	eye,
+	fire,
+	flag,
+	flexibility,
+	graph,
+	grid,
+	hierarchy,
+	idea,
+	info,
+	layers,
+	layout,
+	list,
+	map,
+	mic,
+	modify,
+	puzzle,
+	ruler,
+	scissors,
+	search,
+	settings,
+	solid-graph,
+	streamline,
+	task,
+	timer,
+	users
+) !default;
 
 $sm-body-font-family : ("Tajawal", Arial, sans-serif)  !default;
 $sm-body-font-color : map-get($sm-palette, primary)  !default;
