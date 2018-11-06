@@ -247,6 +247,11 @@ function systemorph_setup() {
 			'color' => '#623a81',
 		),
 		array(
+			'name'  => __( 'Dark gray', 'systemorph' ),
+			'slug'  => 'dark-gray',
+			'color' => '#383C4B',
+		),
+		array(
 			'name'  => __( 'Gray', 'systemorph' ),
 			'slug'  => 'gray',
 			'color' => '#a6a6a6',

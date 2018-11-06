@@ -375,6 +375,12 @@ template {
 .bcolor-sm-purple {
   background-color: #623a81; }
 
+.has-icon > .icon-bcolor-dark-gray {
+  background-color: #383C4B; }
+
+.bcolor-dark-gray {
+  background-color: #383C4B; }
+
 .has-icon > .icon-bcolor-gray {
   background-color: #a6a6a6; }
 
@@ -1663,6 +1669,9 @@ section.alignfull {
 
 .wp-block-sm-page-card.has-bgcolor-sm-purple .page-block:before {
   background-color: #623a81; }
+
+.wp-block-sm-page-card.has-bgcolor-dark-gray .page-block:before {
+  background-color: #383C4B; }
 
 .wp-block-sm-page-card.has-bgcolor-gray .page-block:before {
   background-color: #a6a6a6; }
