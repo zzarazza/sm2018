@@ -312,14 +312,14 @@
 		}
 	} // .hero
 
-	.entry-content {
+	.wp-block-sm-section.aligncenter {
 		h2,
 		h3 {
 			text-align: center;
 			color: #2e3641;
 		}
 
-		h2:not([class]) {
+		h2 {
 			font-size: 30px;
 			font-weight: 400;
 			margin-bottom: 6px;
@@ -583,16 +583,13 @@ section.alignfull {
 		}
 	}
 
-	&.mobile-columns-1 {
-
-	}
-
-	&.tablet-columns-1 {}
-
-	&.desktop-columns-3 {
-		@include mq($from: desktop) {
-			grid-template-columns: repeat(3, 1fr);
-			grid-template-rows: auto;
+	@for $i from 2 to 4 {
+		&.max-in-row-#{$i} {
+			@include mq($from: desktop) {
+				grid-template-columns: repeat($i, 1fr);
+				grid-template-rows: auto;
+			}
 		}
 	}
+
 }
