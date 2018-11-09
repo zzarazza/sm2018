@@ -60,9 +60,12 @@
 
 	.icon {
 		@extend %icon;
-		@include mq($from: tablet) {
-			position: absolute;
-			left: 0;
+
+		ul & {
+			@include mq($from: tablet) {
+				position: absolute;
+				left: 0;
+			}
 		}
 	}
 }

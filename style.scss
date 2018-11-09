@@ -355,24 +355,6 @@
 	}
 }
 
-body.has-title-icon {
-	h1.entry-title:before {
-		@extend %has-icon;
-		background-color: #e1e1e1;
-		margin-bottom: 15px;
-
-		@include mq($from: tablet-l) {
-			margin-bottom: 12px;
-		}
-	}
-
-	@each $i in $sm-icons {
-		&.icon-#{$i} h1.entry-title:before  {
-			background-image: url("#{$sm-images}/icon-#{$i}.svg");
-		}
-	}
-}
-
 .sm-partners {
 	text-align: center;
 	padding: 100px 0;
@@ -468,11 +450,6 @@ body.has-title-icon {
 		margin: 20px 0 0;
 		padding: 10px 20px;
 	}
-}
-
-section.highlighted {
-	background-color: map-get($sm-palette, primary);
-	color: white;
 }
 
 section.alignfull {

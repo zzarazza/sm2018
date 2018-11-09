@@ -106,6 +106,8 @@ const smIcons = [
 	{ label: 'Fire', value: 'fire' },
 	{ label: 'Flag', value: 'flag' },
 	{ label: 'Flexibility', value: 'flexibility' },
+	{ label: 'Folder', value: 'folder' },
+	{ label: 'Globe', value: 'globe' },
 	{ label: 'Graph', value: 'graph' },
 	{ label: 'Grid', value: 'grid' },
 	{ label: 'Hierarchy', value: 'hierarchy' },
@@ -126,5 +128,6 @@ const smIcons = [
 	{ label: 'Streamline', value: 'streamline' },
 	{ label: 'Task', value: 'task' },
 	{ label: 'Timer', value: 'timer' },
+	{ label: 'User', value: 'user' },
 	{ label: 'Users', value: 'users' }
 ];
