@@ -461,6 +461,14 @@ section.alignfull {
 		padding-top: 60px;
 		padding-bottom: 60px;
 	}
+
+	.wp-block-image.alignfull:last-child {
+		margin-bottom: -40px;
+
+		@include mq($from: tablet-l) {
+			margin-bottom: -60px;
+		}
+	}
 }
 
 .wp-block-sm-section[class*='color'] * {

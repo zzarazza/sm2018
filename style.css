@@ -1493,6 +1493,11 @@ section.alignfull {
     section.alignfull {
       padding-top: 60px;
       padding-bottom: 60px; } }
+  section.alignfull .wp-block-image.alignfull:last-child {
+    margin-bottom: -40px; }
+    @media (min-width: 64em) {
+      section.alignfull .wp-block-image.alignfull:last-child {
+        margin-bottom: -60px; } }
 
 .wp-block-sm-section[class*='color'] * {
   color: inherit; }
