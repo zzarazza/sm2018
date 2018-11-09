@@ -16,6 +16,19 @@ if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 	return;
 }
+define( 'SMCOLORS', array(
+	'primary'        => '#101f30',
+	'secondary'      => '#2e3641',
+	'sm-blue'        => '#009cde',
+	'sm-purple'      => '#623a81',
+	'dark-gray'      => '#383C4B',
+	'gray'           => '#a6a6a6',
+	'lavender-gray'  => '#a9a7b3',
+	'light-gray'     => '#e1e1e1',
+	'blue'           => '#285fae',
+	'alert'          => '#cc1300',
+	'white'          => '#ffffff'
+));
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -225,63 +238,65 @@ function systemorph_setup() {
 
 	add_theme_support( 'starter-content', $starter_content );
 
-	add_theme_support( 'editor-color-palette', array(
+	add_theme_support( 'editor-color-palette',
 		array(
-			'name'  => __( 'Primary', 'systemorph' ),
-			'slug'  => 'primary',
-			'color'	=> '#101f30',
-		),
-		array(
-			'name'  => __( 'Secondary', 'systemorph' ),
-			'slug'  => 'secondary',
-			'color' => '#2e3641',
-		),
-		array(
-			'name'  => __( 'SM blue', 'systemorph' ),
-			'slug'  => 'sm-blue',
-			'color' => '#009cde',
-		),
-		array(
-			'name'  => __( 'SM purple', 'systemorph' ),
-			'slug'  => 'sm-purple',
-			'color' => '#623a81',
-		),
-		array(
-			'name'  => __( 'Dark gray', 'systemorph' ),
-			'slug'  => 'dark-gray',
-			'color' => '#383C4B',
-		),
-		array(
-			'name'  => __( 'Gray', 'systemorph' ),
-			'slug'  => 'gray',
-			'color' => '#a6a6a6',
-		),
-		array(
-			'name'  => __( 'Lavender gray', 'systemorph' ),
-			'slug'  => 'lavender-gray',
-			'color' => '#a9a7b3',
-		),
-		array(
-			'name'  => __( 'Light gray', 'systemorph' ),
-			'slug'  => 'light-gray',
-			'color' => '#e1e1e1',
-		),
-		array(
-			'name'  => __( 'Blue', 'systemorph' ),
-			'slug'  => 'blue',
-			'color' => '#285fae',
-		),
-		array(
-			'name'  => __( 'Red', 'systemorph' ),
-			'slug'  => 'alert',
-			'color' => '#cc1300',
-		),
-		array(
-			'name'  => __( 'White', 'systemorph' ),
-			'slug'  => 'white',
-			'color' => '#ffffff',
-		),
-	) );
+			array(
+				'name'  => __( 'Primary', 'systemorph' ),
+				'slug'  => 'primary',
+				'color'	=> SMCOLORS['primary']
+			),
+			array(
+				'name'  => __( 'Secondary', 'systemorph' ),
+				'slug'  => 'secondary',
+				'color' => SMCOLORS['secondary'],
+			),
+			array(
+				'name'  => __( 'SM blue', 'systemorph' ),
+				'slug'  => 'sm-blue',
+				'color' => SMCOLORS['sm-blue'],
+			),
+			array(
+				'name'  => __( 'SM purple', 'systemorph' ),
+				'slug'  => 'sm-purple',
+				'color' => SMCOLORS['sm-purple'],
+			),
+			array(
+				'name'  => __( 'Dark gray', 'systemorph' ),
+				'slug'  => 'dark-gray',
+				'color' => SMCOLORS['dark-gray'],
+			),
+			array(
+				'name'  => __( 'Gray', 'systemorph' ),
+				'slug'  => 'gray',
+				'color' => SMCOLORS['gray'],
+			),
+			array(
+				'name'  => __( 'Lavender gray', 'systemorph' ),
+				'slug'  => 'lavender-gray',
+				'color' => SMCOLORS['lavender-gray'],
+			),
+			array(
+				'name'  => __( 'Light gray', 'systemorph' ),
+				'slug'  => 'light-gray',
+				'color' => SMCOLORS['light-gray'],
+			),
+			array(
+				'name'  => __( 'Blue', 'systemorph' ),
+				'slug'  => 'blue',
+				'color' => SMCOLORS['blue'],
+			),
+			array(
+				'name'  => __( 'Red', 'systemorph' ),
+				'slug'  => 'alert',
+				'color' => SMCOLORS['alert'],
+			),
+			array(
+				'name'  => __( 'White', 'systemorph' ),
+				'slug'  => 'white',
+				'color' => SMCOLORS['white'],
+			)
+		)
+	);
 
 	add_theme_support( 'disable-custom-colors' );
 }
@@ -697,6 +712,33 @@ function sm_admin_styles() {
     wp_enqueue_style( 'add-admin-stylesheet' );
 }
 add_action('admin_enqueue_scripts', 'sm_admin_styles');
+
+function get_sm_page_icon( $id ) {
+
+	if ( !has_blocks( $id ) ) {
+			return '';
+	}
+
+	$icon = get_post_meta( $id, 'sm_page_icon', true );
+
+	if ( !$icon || $icon == 'none') {
+		return '';
+	}
+
+	$output = '';
+
+	$iconColor = get_post_meta( $id, 'sm_page_icon_color', true );
+	$c = $iconColor ? array_search($iconColor, SMCOLORS) : 'primary';
+
+	$c = ($c == 'tr-white') ? "" : "-$c";
+
+	$iconBColor = get_post_meta( $id, 'sm_page_icon_bcolor', true );
+	$b = $iconBColor ? array_search($iconBColor, SMCOLORS) : 'light-gray';
+
+	$output = "<i class=\"icon icon-$icon$c icon-bcolor-$b\"></i>";
+
+	return $output;
+}
 
 /**
  * Implement the Custom Header feature.

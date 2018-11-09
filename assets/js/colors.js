@@ -58,6 +58,24 @@ const smBgColors = [
 	},
 ];
 
+const smBgIconColors = [
+	{
+		name  : 'SM blue',
+		slug  : 'sm-blue',
+		color : '#009cde'
+	},
+	{
+		name  : 'Light gray',
+		slug  : 'light-gray',
+		color : '#e1e1e1'
+	},
+	{
+		name  : 'White',
+		slug  : 'white',
+		color : '#ffffff'
+	}
+];
+
 const smIconColors = [
 	{
 		name  : 'Transparent white',
@@ -77,6 +95,7 @@ const smIconColors = [
 ];
 
 const smIcons = [
+    { label: 'None', value: 'none' },
     { label: 'Add user', value: 'add-user' },
 	{ label: 'Aggregate', value: 'aggregate' },
 	{ label: 'Chart', value: 'chart' },
