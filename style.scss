@@ -476,7 +476,12 @@ section.alignfull {
 }
 
 .wp-block-sm-section.bcolor-dark-gray {
-	padding: 42px 35px;
+	padding: 42px 33px;
+
+	@include mq($until: tablet-l) {
+		margin-left: -33px;
+		min-height: -33px;
+	}
 
 	@include mq($from: tablet-l) {
 		padding: 55px 57px;

@@ -1521,7 +1521,11 @@ section.alignfull {
   color: inherit; }
 
 .wp-block-sm-section.bcolor-dark-gray {
-  padding: 42px 35px; }
+  padding: 42px 33px; }
+  @media (max-width: 63.99em) {
+    .wp-block-sm-section.bcolor-dark-gray {
+      margin-left: -33px;
+      min-height: -33px; } }
   @media (min-width: 64em) {
     .wp-block-sm-section.bcolor-dark-gray {
       padding: 55px 57px; } }
