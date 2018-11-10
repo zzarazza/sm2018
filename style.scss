@@ -480,6 +480,12 @@ section.alignfull {
 		padding-bottom: 60px;
 	}
 
+	&.aligncenter {
+		border-top: 1px solid $sm-border-color;
+		border-bottom: 1px solid $sm-border-color;
+		text-align: center;
+	}
+
 	> *:first-child {
 		margin-top: 0;
 	}

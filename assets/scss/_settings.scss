@@ -75,6 +75,8 @@ $sm-button-box-shadow : (2px 2px 10px rgba(black,0.2)) !default;
 
 $sm-footer-bcolor : map-get($sm-palette, primary)  !default;
 
+$sm-border-color : map-get($sm-palette, light-gray) !default;
+
 $mq-breakpoints: (
     mobile:    320px,
     tablet:    768px,

@@ -1610,6 +1610,9 @@ section.alignfull {
     .wp-block-sm-section {
       padding-top: 60px;
       padding-bottom: 60px; } }
+  .wp-block-sm-section.aligncenter {
+    border-top: 1px solid #E1E1E1;
+    border-bottom: 1px solid #E1E1E1; }
   .wp-block-sm-section > *:first-child {
     margin-top: 0; }
   .wp-block-sm-section > *:last-child {
