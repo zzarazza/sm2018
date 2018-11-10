@@ -510,6 +510,24 @@ template {
 .has-icon > .icon-flexibility-primary {
   background-image: url("assets/images/icons/icon-flexibility-primary.svg"); }
 
+.has-icon > .icon-folder {
+  background-image: url("assets/images/icons/icon-folder.svg"); }
+
+.has-icon > .icon-folder-white {
+  background-image: url("assets/images/icons/icon-folder-white.svg"); }
+
+.has-icon > .icon-folder-primary {
+  background-image: url("assets/images/icons/icon-folder-primary.svg"); }
+
+.has-icon > .icon-globe {
+  background-image: url("assets/images/icons/icon-globe.svg"); }
+
+.has-icon > .icon-globe-white {
+  background-image: url("assets/images/icons/icon-globe-white.svg"); }
+
+.has-icon > .icon-globe-primary {
+  background-image: url("assets/images/icons/icon-globe-primary.svg"); }
+
 .has-icon > .icon-graph {
   background-image: url("assets/images/icons/icon-graph.svg"); }
 
