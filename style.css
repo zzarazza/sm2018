@@ -1337,6 +1337,10 @@ div.wp-block-button .wp-block-button__link {
   font-size: 20px;
   line-height: 1.15;
   margin: 1.15em 0; }
+  .entry-content p.has-medium-font-size,
+  .entry-content ul.has-medium-font-size,
+  .entry-content ol.has-medium-font-size {
+    font-size: 25px; }
 
 .entry-content h2 {
   text-transform: uppercase;
@@ -1586,6 +1590,10 @@ div.wp-block-button .wp-block-button__link {
     margin: 20px 0 0;
     padding: 10px 20px; }
 
+section.alignwide {
+  margin-left: -33px;
+  margin-right: -33px; }
+
 section.alignfull {
   margin-left: -999em;
   margin-right: -999em;
@@ -1610,9 +1618,16 @@ section.alignfull {
     .wp-block-sm-section {
       padding-top: 60px;
       padding-bottom: 60px; } }
-  .wp-block-sm-section.aligncenter {
+  .wp-block-sm-section.section-lined {
     border-top: 1px solid #E1E1E1;
-    border-bottom: 1px solid #E1E1E1; }
+    border-bottom: 1px solid #E1E1E1;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px; }
+    @media (min-width: 64em) {
+      .wp-block-sm-section.section-lined {
+        margin-top: 130px;
+        margin-bottom: 130px; } }
   .wp-block-sm-section > *:first-child {
     margin-top: 0; }
   .wp-block-sm-section > *:last-child {
