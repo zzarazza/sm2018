@@ -472,6 +472,14 @@ section.alignfull {
 }
 
 .wp-block-sm-section {
+	padding-top: 53px;
+	padding-bottom: 53px;
+
+	@include mq($from: tablet-l) {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+
 	> *:first-child {
 		margin-top: 0;
 	}
