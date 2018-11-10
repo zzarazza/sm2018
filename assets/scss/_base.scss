@@ -111,3 +111,21 @@ a {
 		color: $sm-button-color--active;
 	}
 }
+
+.wp-block-button__link {
+	&.has-background {
+		@each $n,$v in $sm-palette {
+			&.has-#{$n}-background-color {
+				background-color: $v;
+			}
+		}
+	}
+
+	&.has-text-color {
+		@each $n,$v in $sm-color-palette {
+			.has-#{$n}-color {
+				color: $v;
+			}
+		}
+	}
+}

@@ -472,8 +472,12 @@ section.alignfull {
 }
 
 .wp-block-sm-section {
-	*:first-child {
+	> *:first-child {
 		margin-top: 0;
+	}
+
+	> *:last-child {
+		margin-bottom: 0;
 	}
 }
 
