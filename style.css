@@ -1517,6 +1517,9 @@ section.alignfull {
       section.alignfull .wp-block-image.alignfull:last-child {
         margin-bottom: -60px; } }
 
+.wp-block-sm-section *:first-child {
+  margin-top: 0; }
+
 .wp-block-sm-section[class*='color'] * {
   color: inherit; }
 
@@ -1525,7 +1528,7 @@ section.alignfull {
   @media (max-width: 63.99em) {
     .wp-block-sm-section.bcolor-dark-gray {
       margin-left: -33px;
-      min-height: -33px; } }
+      margin-right: -33px; } }
   @media (min-width: 64em) {
     .wp-block-sm-section.bcolor-dark-gray {
       padding: 55px 57px; } }

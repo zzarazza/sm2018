@@ -471,6 +471,12 @@ section.alignfull {
 	}
 }
 
+.wp-block-sm-section {
+	*:first-child {
+		margin-top: 0;
+	}
+}
+
 .wp-block-sm-section[class*='color'] * {
 	color: inherit;
 }
@@ -480,7 +486,7 @@ section.alignfull {
 
 	@include mq($until: tablet-l) {
 		margin-left: -33px;
-		min-height: -33px;
+		margin-right: -33px;
 	}
 
 	@include mq($from: tablet-l) {
