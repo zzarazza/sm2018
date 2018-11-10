@@ -578,12 +578,34 @@ section.alignfull {
 		margin: 30px 0;
 
 		.page-block {
-			box-sizing: border-box;
+			@include mq($from: desktop) {
+				box-sizing: border-box;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+		}
+
+		.page-block-excerpt {
 			height: 100%;
+
+			@include mq($from: desktop) {
+				p {
+					display: flex;
+					height: 100%;
+					flex-direction: column;
+
+					a {
+						margin-top: auto;
+						padding-top: 39px;
+						align-self: flex-start;
+					}
+				}
+			}
 		}
 	}
 
-	@for $i from 2 to 4 {
+	@for $i from 2 through 4 {
 		&.max-in-row-#{$i} {
 			@include mq($from: desktop) {
 				grid-template-columns: repeat($i, 1fr);
