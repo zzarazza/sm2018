@@ -112,7 +112,20 @@ a {
 	}
 }
 
-.wp-block-button__link {
+div.wp-block-button .wp-block-button__link {
+	background-color: $sm-button-bcolor;
+	color: $sm-button-color;
+	border: 0 none;
+	border-radius: 5px;
+	font-size: $sm-button-font-size;
+	padding: $sm-button-padding;
+	text-decoration: none;
+	display: inline-block;
+	min-width: 170px;
+	text-align: center;
+	box-sizing: border-box;
+	line-height: 1.375;
+
 	&.has-background {
 		@each $n,$v in $sm-palette {
 			&.has-#{$n}-background-color {
