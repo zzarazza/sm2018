@@ -130,6 +130,15 @@ div.wp-block-button .wp-block-button__link {
 		@each $n,$v in $sm-palette {
 			&.has-#{$n}-background-color {
 				background-color: $v;
+
+				&:hover,
+				&:focus {
+					background-color: darken($v, 5%);
+				}
+
+				&:active {
+					background-color: adjust-color($v, $lightness: -7.2%, $saturation: -2.2%);
+				}
 			}
 		}
 	}
