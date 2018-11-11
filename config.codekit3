@@ -40,16 +40,6 @@
 		"oF": 0,
 		"oS": 3
 		},
-	"/assets/images/.icon-logo-white~imageoptim.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/images/.icon-logo-white~imageoptim.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
 	"/assets/images/featured/featured-flexible-reporting-d.jpg": {
 		"ft": 16384,
 		"iS": 70273,
@@ -72,16 +62,6 @@
 		"opt": 0,
 		"q": 100
 		},
-	"/assets/images/icon-chart.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/images/icon-chart.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
 	"/assets/images/icon-close.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -92,61 +72,11 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/assets/images/icon-email.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/images/icon-email.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/assets/images/icon-globe.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/images/icon-globe.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/assets/images/icon-idea.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/images/icon-idea.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/assets/images/icon-info.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/images/icon-info.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/assets/images/icon-list.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/images/icon-list.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
 	"/assets/images/icon-logo-white.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/assets/images/icon-logo-white.svg",
+		"oAP": "/assets/images/.icon-logo-white~imageoptim.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -167,16 +97,6 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "/assets/images/icon-menu.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/assets/images/icon-refresh.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/images/icon-refresh.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -922,6 +842,36 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"/assets/images/icons/icon-refresh-primary.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/icon-refresh-primary.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/icons/icon-refresh-white.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/icon-refresh-white.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/icons/icon-refresh.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/icon-refresh.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"/assets/images/icons/icon-ruler-primary.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -1157,6 +1107,36 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "/assets/images/icons/icon-timer.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/icons/icon-user-primary.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/icon-user-primary.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/icons/icon-user-white.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/icon-user-white.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/icons/icon-user.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/icon-user.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,

@@ -147,24 +147,22 @@
 		}
 	}
 
-	.wp-block-image {
+	.mg-ifrs17-mockup {
 		width: 100%;
 		margin-top: 70px;
 		margin-bottom: 70px;
 
+		@include mq($until: tablet) {
+			width: 482px;
+
+			img {
+				transform: translateX(12%);
+			}
+		}
+
 		@include mq($from: desktop) {
 			margin-top: 110px;
 			margin-bottom: 110px;
-		}
-
-		&.img-ifrs17-mockup {
-			@include mq($until: tablet) {
-				width: 482px;
-
-				img {
-					transform: translateX(12%);
-				}
-			}
 		}
 
 		img {
@@ -669,5 +667,12 @@ section.alignfull {
 			}
 		}
 	}
+}
 
+.wp-block-columns {
+	&.has-2-columns {
+		.wp-block-column {
+			max-width: 50%;
+		}
+	}
 }

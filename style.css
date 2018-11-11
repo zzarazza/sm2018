@@ -636,6 +636,15 @@ template {
 .has-icon > .icon-puzzle-primary {
   background-image: url("assets/images/icons/icon-puzzle-primary.svg"); }
 
+.has-icon > .icon-refresh {
+  background-image: url("assets/images/icons/icon-refresh.svg"); }
+
+.has-icon > .icon-refresh-white {
+  background-image: url("assets/images/icons/icon-refresh-white.svg"); }
+
+.has-icon > .icon-refresh-primary {
+  background-image: url("assets/images/icons/icon-refresh-primary.svg"); }
+
 .has-icon > .icon-ruler {
   background-image: url("assets/images/icons/icon-ruler.svg"); }
 
@@ -707,6 +716,15 @@ template {
 
 .has-icon > .icon-timer-primary {
   background-image: url("assets/images/icons/icon-timer-primary.svg"); }
+
+.has-icon > .icon-user {
+  background-image: url("assets/images/icons/icon-user.svg"); }
+
+.has-icon > .icon-user-white {
+  background-image: url("assets/images/icons/icon-user-white.svg"); }
+
+.has-icon > .icon-user-primary {
+  background-image: url("assets/images/icons/icon-user-primary.svg"); }
 
 .has-icon > .icon-users {
   background-image: url("assets/images/icons/icon-users.svg"); }
@@ -1355,20 +1373,20 @@ div.wp-block-button .wp-block-button__link {
   .entry-content .special-points {
     margin-top: 51px; } }
 
-.entry-content .wp-block-image {
+.entry-content .mg-ifrs17-mockup {
   width: 100%;
   margin-top: 70px;
   margin-bottom: 70px; }
+  @media (max-width: 47.99em) {
+    .entry-content .mg-ifrs17-mockup {
+      width: 482px; }
+      .entry-content .mg-ifrs17-mockup img {
+        transform: translateX(12%); } }
   @media (min-width: 73.125em) {
-    .entry-content .wp-block-image {
+    .entry-content .mg-ifrs17-mockup {
       margin-top: 110px;
       margin-bottom: 110px; } }
-  @media (max-width: 47.99em) {
-    .entry-content .wp-block-image.img-ifrs17-mockup {
-      width: 482px; }
-      .entry-content .wp-block-image.img-ifrs17-mockup img {
-        transform: translateX(12%); } }
-  .entry-content .wp-block-image img {
+  .entry-content .mg-ifrs17-mockup img {
     max-width: 100%;
     height: auto;
     display: block;
@@ -1788,3 +1806,6 @@ section.alignfull {
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: auto;
       margin-bottom: 72px; } }
+
+.wp-block-columns.has-2-columns .wp-block-column {
+  max-width: 50%; }
