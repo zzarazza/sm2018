@@ -120,6 +120,7 @@ const smIcons = [
 	{ label: 'Mic', value: 'mic' },
 	{ label: 'Modify', value: 'modify' },
 	{ label: 'Puzzle', value: 'puzzle' },
+	{ label: 'Refresh', value: 'refresh' },
 	{ label: 'Ruler', value: 'ruler' },
 	{ label: 'Scissors', value: 'scissors' },
 	{ label: 'Search', value: 'search' },
