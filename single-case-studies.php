@@ -70,12 +70,6 @@ get_header(); ?>
 
 		</article><!-- #post-## -->
 			<?php
-				the_post_navigation(
-					array(
-						'prev_text' => '<span class="screen-reader-text">' . __( 'Previous Post', 'systemorph' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Previous', 'systemorph' ) . '</span> <span class="nav-title"><span class="nav-title-icon-wrapper">' . systemorph_get_svg( array( 'icon' => 'arrow-left' ) ) . '</span>%title</span>',
-						'next_text' => '<span class="screen-reader-text">' . __( 'Next Post', 'systemorph' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Next', 'systemorph' ) . '</span> <span class="nav-title">%title<span class="nav-title-icon-wrapper">' . systemorph_get_svg( array( 'icon' => 'arrow-right' ) ) . '</span></span>',
-					)
-				);
 
 			endwhile; // End of the loop.
 			?>
