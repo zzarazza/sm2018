@@ -1112,14 +1112,19 @@ div.wp-block-button .wp-block-button__link {
         flex: 0 1 48.5%; } }
   @media (min-width: 64em) {
     .footer-navigation .menu > .menu-item {
-      flex-basis: 18%; }
-      .footer-navigation .menu > .menu-item:first-child, .footer-navigation .menu > .menu-item:last-child {
-        flex-basis: 32%; } }
+      flex-basis: 20%; }
+      .footer-navigation .menu > .menu-item:first-child {
+        flex-basis: 32%; }
+      .footer-navigation .menu > .menu-item:last-child {
+        flex-basis: 28%; } }
 
 .footer-navigation .sub-menu {
   margin: 0;
   padding: 0;
   list-style: none; }
+  @media (min-width: 48em) {
+    .footer-navigation .sub-menu {
+      padding-right: 20px; } }
   .footer-navigation .sub-menu > .menu-item > a {
     display: block;
     padding: 4px 0; }

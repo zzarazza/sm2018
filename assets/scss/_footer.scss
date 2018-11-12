@@ -68,11 +68,14 @@
 		@include mq($from: tablet-l) {
 			> .menu-item {
 				// flex-basis: 23.5%;
-				flex-basis: 18%;
+				flex-basis: 20%;
 
-				&:first-child,
-				&:last-child {
+				&:first-child {
 					flex-basis: 32%;
+				}
+
+				&:last-child {
+					flex-basis: 28%;
 				}
 			}
 		}
@@ -82,6 +85,10 @@
 		margin: 0;
 		padding: 0;
 		list-style: none;
+
+		@include mq($from: tablet) {
+			padding-right: 20px;
+		}
 
 		> .menu-item {
 			> a {
