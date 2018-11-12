@@ -1819,6 +1819,9 @@ section.alignfull {
       grid-template-rows: auto;
       margin-bottom: 72px; } }
 
+.wp-block-columns .wp-block-column > .wp-block-image {
+  max-width: none; }
+
 .wp-block-columns.has-2-columns .wp-block-column {
   max-width: 50%; }
 
