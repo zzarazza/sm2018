@@ -34,6 +34,7 @@ get_header(); ?>
 					$postTypeName = '<strong>' . esc_html($postType->labels->singular_name) . '</strong> ';
 
 					the_title( '<h1 class="entry-title">' . $postTypeName, '</h1>' );
+					the_systemorph_page_subtitle();
 				} elseif ( is_front_page() && is_home() ) {
 					the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
 				} else {
