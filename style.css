@@ -1831,5 +1831,6 @@ section.alignfull {
   .wp-block-quote cite {
     display: block;
     font-style: normal;
-    font-size: 16px;
+    font-size: 20px;
+    line-height: 1.5;
     font-weight: 300; }
