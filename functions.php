@@ -299,6 +299,35 @@ function systemorph_setup() {
 	);
 
 	add_theme_support( 'disable-custom-colors' );
+
+	add_theme_support( 'editor-font-sizes', array(
+	    array(
+	        'name' => __( 'Small', 'systemorph' ),
+			'size' => 16,
+			'slug' => 'small'
+	    ),
+	    array(
+	        'name' => __( 'Normal', 'systemorph' ),
+			'size' => 20,
+			'slug' => 'normal'
+	    ),
+	    array(
+	        'name' => __( 'Medium', 'systemorph' ),
+			'size' => 25,
+			'slug' => 'medium'
+	    ),
+	    array(
+	        'name' => __( 'Large', 'systemorph' ),
+			'size' => 28,
+			'slug' => 'large'
+	    ),
+	    array(
+	        'name' => __( 'Huge', 'systemorph' ),
+			'size' => 36,
+			'slug' => 'huge'
+	    )
+	) );
+	add_theme_support('disable-custom-font-sizes');
 }
 add_action( 'after_setup_theme', 'systemorph_setup' );
 

@@ -125,6 +125,10 @@
 		&.has-medium-font-size {
 			font-size: 25px;
 		}
+
+		&.has-large-font-size {
+			font-size: 28px;
+		}
 	}
 
 
@@ -674,5 +678,29 @@ section.alignfull {
 		.wp-block-column {
 			max-width: 50%;
 		}
+	}
+
+	&.has-3-columns {
+		.wp-block-column {
+			max-width: 33%;
+		}
+	}
+
+	&.has-4-columns {
+		.wp-block-column {
+			max-width: 25%;
+		}
+	}
+}
+
+.wp-block-quote {
+	padding-left: 38px;
+	border-left: 2px solid map-get($sm-palette, sm-purple);
+
+	cite {
+		display: block;
+		font-style: normal;
+		font-size: 16px;
+		font-weight: 300;
 	}
 }
