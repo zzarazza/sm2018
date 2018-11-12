@@ -193,7 +193,9 @@
 }
 
 .wp-block-image {
-	height: auto;
+	img {
+		height: auto;
+	}
 
 	&.alignfull {
 		img {
