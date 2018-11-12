@@ -193,6 +193,8 @@
 }
 
 .wp-block-image {
+	height: auto;
+
 	&.alignfull {
 		img {
 			left: 50%;
@@ -202,6 +204,7 @@
 			position: relative;
 			right: 50%;
 			width: 100vw;
+			display: block;
 		}
 	}
 }
