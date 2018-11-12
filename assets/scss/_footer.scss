@@ -158,6 +158,10 @@
 			cursor: default;
 			display: block;
 			margin-bottom: 21px;
+
+			&:hover {
+				opacity: 1;
+			}
 		}
 	}
 }

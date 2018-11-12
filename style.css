@@ -1239,6 +1239,8 @@ div.wp-block-button .wp-block-button__link {
     cursor: default;
     display: block;
     margin-bottom: 21px; }
+    .footer-navigation .footer-link-header > a:hover {
+      opacity: 1; }
 
 .footer-extra {
   background-color: #f9f9f9;
