@@ -1355,6 +1355,10 @@ div.wp-block-button .wp-block-button__link {
   font-size: 20px;
   line-height: 1.15;
   margin: 1.15em 0; }
+  .entry-content p.has-small-font-size,
+  .entry-content ul.has-small-font-size,
+  .entry-content ol.has-small-font-size {
+    font-size: 16px; }
   .entry-content p.has-medium-font-size,
   .entry-content ul.has-medium-font-size,
   .entry-content ol.has-medium-font-size {
@@ -1363,6 +1367,10 @@ div.wp-block-button .wp-block-button__link {
   .entry-content ul.has-large-font-size,
   .entry-content ol.has-large-font-size {
     font-size: 28px; }
+  .entry-content p.has-huge-font-size,
+  .entry-content ul.has-huge-font-size,
+  .entry-content ol.has-huge-font-size {
+    font-size: 36px; }
 
 .entry-content h2 {
   text-transform: uppercase;
@@ -1821,11 +1829,12 @@ section.alignfull {
   max-width: 25%; }
 
 .wp-block-quote {
-  padding: 27px 38px;
+  padding: 20px 38px 16px;
   margin: 40px 0;
   border-left: 2px solid #623a81; }
   .wp-block-quote p {
-    margin: 0; }
+    margin: 0;
+    font-size: 18px; }
     .wp-block-quote p + p {
       margin-top: 1em; }
   .wp-block-quote cite {
