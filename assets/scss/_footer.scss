@@ -67,7 +67,13 @@
 
 		@include mq($from: tablet-l) {
 			> .menu-item {
-				flex-basis: 23.5%;
+				// flex-basis: 23.5%;
+				flex-basis: 18%;
+
+				&:first-child,
+				&:last-child {
+					flex-basis: 32%;
+				}
 			}
 		}
 	}

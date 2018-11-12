@@ -1112,7 +1112,9 @@ div.wp-block-button .wp-block-button__link {
         flex: 0 1 48.5%; } }
   @media (min-width: 64em) {
     .footer-navigation .menu > .menu-item {
-      flex-basis: 23.5%; } }
+      flex-basis: 18%; }
+      .footer-navigation .menu > .menu-item:first-child, .footer-navigation .menu > .menu-item:last-child {
+        flex-basis: 32%; } }
 
 .footer-navigation .sub-menu {
   margin: 0;
