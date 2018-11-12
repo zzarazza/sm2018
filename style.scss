@@ -691,6 +691,20 @@ section.alignfull {
 	&.has-2-columns {
 		.wp-block-column {
 			max-width: 50%;
+
+			> .wp-block-sm-section {
+				@media (min-width: 600px) {
+					height: 100%;
+				    box-sizing: border-box;
+				    display: flex;
+				    flex-direction: column;
+				    justify-content: center;
+
+				    h2 {
+				    	margin-bottom: 0;
+				    }
+			    }
+			}
 		}
 	}
 
