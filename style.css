@@ -1823,6 +1823,10 @@ section.alignfull {
 .wp-block-quote {
   padding-left: 38px;
   border-left: 2px solid #623a81; }
+  .wp-block-quote p {
+    margin: 0; }
+    .wp-block-quote p + p {
+      margin-top: 1em; }
   .wp-block-quote cite {
     display: block;
     font-style: normal;

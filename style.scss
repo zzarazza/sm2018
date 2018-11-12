@@ -697,6 +697,14 @@ section.alignfull {
 	padding-left: 38px;
 	border-left: 2px solid map-get($sm-palette, sm-purple);
 
+	p {
+		margin: 0;
+
+		+ p {
+			margin-top: 1em;
+		}
+	}
+
 	cite {
 		display: block;
 		font-style: normal;
