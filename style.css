@@ -1461,7 +1461,8 @@ div.wp-block-button .wp-block-button__link {
   background-size: cover;
   overflow: hidden;
   position: relative;
-  height: 80vh; }
+  height: 80vh;
+  min-height: 400px; }
   @media (min-width: 64em) {
     .home .hero {
       min-height: 660px; } }
@@ -1541,7 +1542,6 @@ div.wp-block-button .wp-block-button__link {
 
 @media (min-width: 48em) {
   .home .wp-block-sm-section.aligncenter p {
-    font-size: 25px;
     line-height: 1.08;
     margin: 1.08em 0; } }
 

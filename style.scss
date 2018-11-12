@@ -264,6 +264,7 @@
 		overflow: hidden;
 		position: relative;
 		height: 80vh;
+		min-height: 400px;
 
 		@include mq($from: tablet-l) {
 			min-height: 660px;
@@ -366,7 +367,6 @@
 
 		p {
 			@include mq($from: tablet) {
-				font-size: 25px;
 				line-height: 1.08;
 				margin: 1.08em 0;
 			}
