@@ -695,7 +695,9 @@ section.alignfull {
 
 	&.has-2-columns {
 		.wp-block-column {
-			max-width: 50%;
+			@media (min-width: 600px) {
+				max-width: 50%;
+			}
 
 			> .wp-block-sm-section {
 				@media (min-width: 600px) {
@@ -715,13 +717,21 @@ section.alignfull {
 
 	&.has-3-columns {
 		.wp-block-column {
-			max-width: 33%;
+			@media (min-width: 600px) {
+				max-width: 33%;
+			}
 		}
 	}
 
 	&.has-4-columns {
 		.wp-block-column {
-			max-width: 25%;
+			@media (min-width: 600px) {
+				max-width: 50%;
+			}
+
+			@media (min-width: 1024px) {
+				max-width: 25%;
+			}
 		}
 	}
 }
