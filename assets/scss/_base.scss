@@ -1,5 +1,6 @@
 html {
 	background-color: map-get($sm-palette, primary);
+	overflow-x: hidden;
 }
 
 body {

@@ -736,7 +736,8 @@ template {
   background-image: url("assets/images/icons/icon-users-primary.svg"); }
 
 html {
-  background-color: #101F30; }
+  background-color: #101F30;
+  overflow-x: hidden; }
 
 body {
   font-family: "Tajawal", Arial, sans-serif;
