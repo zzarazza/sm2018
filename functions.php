@@ -550,6 +550,8 @@ function systemorph_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	wp_localize_script( 'systemorph-global', 'ajax_script', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 }
 add_action( 'wp_enqueue_scripts', 'systemorph_scripts' );
 
@@ -668,6 +670,20 @@ function systemorph_management_team_query( $query ) {
 
         }
     }
+}
+
+add_action( 'wp_ajax_nopriv_systemorph_white_papers_success', 'white_papers_success');
+add_action( 'wp_ajax_systemorph_white_papers_success', 'white_papers_success');
+
+function white_papers_success() {
+
+		ob_start();
+       	get_template_part( 'template-parts/page/content', 'white_papers_success');
+		$content = ob_get_clean();
+
+        echo $content;
+
+        wp_die();	
 }
 
 function systemorph_disable_srcset( $sources ) {
