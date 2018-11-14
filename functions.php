@@ -27,6 +27,7 @@ define( 'SMCOLORS', array(
 	'light-gray'     => '#e1e1e1',
 	'blue'           => '#285fae',
 	'alert'          => '#cc1300',
+	'success'        => '#5CB85C',
 	'white'          => '#ffffff'
 ));
 
@@ -289,6 +290,11 @@ function systemorph_setup() {
 				'name'  => __( 'Red', 'systemorph' ),
 				'slug'  => 'alert',
 				'color' => SMCOLORS['alert'],
+			),
+			array(
+				'name'  => __( 'Green', 'systemorph' ),
+				'slug'  => 'success',
+				'color' => SMCOLORS['success'],
 			),
 			array(
 				'name'  => __( 'White', 'systemorph' ),
@@ -743,7 +749,7 @@ function white_papers_success() {
 
         echo $content;
 
-        wp_die();	
+        wp_die();
 }
 
 function systemorph_disable_srcset( $sources ) {

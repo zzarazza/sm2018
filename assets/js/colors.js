@@ -52,6 +52,11 @@ const smBgColors = [
 		color : '#cc1300'
 	},
 	{
+		name  : 'Green',
+		slug  : 'success',
+		color : '#5CB85C'
+	},
+	{
 		name  : 'White',
 		slug  : 'white',
 		color : '#ffffff'
