@@ -10,7 +10,7 @@
 
 ?>
 <article>
-	<header class="entry-header">
+	<header class="entry-header has-icon">
 		<i class="icon icon-check-white icon-bcolor-success"></i>
     	<h1 class="entry-title">Thank you for your interest in the Systemorph white paper.</h1>
   	</header><!-- .entry-header -->
