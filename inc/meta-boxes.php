@@ -57,3 +57,10 @@ function the_systemorph_footer_extra() {
 	the_systemorph_more_info();
 	the_systemorph_get_in_touch();
 }
+
+function the_systemorph_page_attachment() {
+	$rwmbMeta = rwmb_meta( 'sm_page_file_attachment');
+	if ($rwmbMeta) :
+ 		echo $rwmbMeta;
+ 	endif;
+}
