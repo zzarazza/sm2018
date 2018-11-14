@@ -246,4 +246,23 @@
 		$body.addClass( 'has-header-video' );
 	});
 
+	var wpcf7Elm = document.querySelector( '.wpcf7' );
+	wpcf7Elm.addEventListener( 'wpcf7mailsent', function( event ) {
+		if ($('#' + event.detail.id).find('form#contact-form').length > 0) {
+
+			var data = {
+				'action': 'systemorph_white_papers_success',
+				'data': {}
+			};
+
+			$.post(
+				ajax_script.ajax_url,
+				data,
+				function( response ) {
+					$('article').html(response);
+				}
+			);
+        } 
+	}, false );
+
 })( jQuery );
