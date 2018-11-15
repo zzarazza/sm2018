@@ -676,9 +676,10 @@ add_action( 'wp_ajax_nopriv_systemorph_white_papers_success', 'white_papers_succ
 add_action( 'wp_ajax_systemorph_white_papers_success', 'white_papers_success');
 
 function white_papers_success() {
-
+		$post_id = $_REQUEST['post_id'];
 		ob_start();
-       	get_template_part( 'template-parts/page/content', 'white_papers_success');
+		include get_template_directory() . '/template-parts/page/content-white_papers_success.php';
+//       	get_template_part( 'template-parts/page/content', 'white_papers_success');
 		$content = ob_get_clean();
 
         echo $content;
