@@ -1665,6 +1665,13 @@
 		"oAP": "/template-parts/page/content-page.php",
 		"oF": 0
 		},
+	"/template-parts/page/content-white_papers_success.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/template-parts/page/content-white_papers_success.php",
+		"oF": 0
+		},
 	"/template-parts/post/content-audio.php": {
 		"cB": 0,
 		"ft": 8192,

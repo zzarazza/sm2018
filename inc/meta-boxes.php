@@ -60,7 +60,13 @@ function the_systemorph_footer_extra() {
 
 function the_systemorph_page_attachment($post_id = null) {
 	$rwmbMeta = rwmb_meta( 'sm_page_file_attachment', null, $post_id);
+	$output = "";
+
 	if ($rwmbMeta) :
- 		echo $rwmbMeta;
+ 		foreach ( $rwmbMeta as $file ) {
+    		$output = "<a class=\"sm-file-upload\" href=\"" . $file['url'] . "\">" . $file['title'] . "</a>";
+		}
  	endif;
+
+ 	echo $output;
 }

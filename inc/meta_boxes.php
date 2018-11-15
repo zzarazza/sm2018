@@ -271,5 +271,25 @@ function sm_register_meta_boxes( $meta_boxes ) {
 		),
 	);
 
+	$meta_boxes[] = array (
+		'title' => 'File attachment',
+		'id' => 'sm_file_attachment',
+		'post_types' => array(
+			'page',
+			'case-studies',
+		),
+		'context' => 'side',
+		'priority' => 'high',
+		'fields' => array(
+
+			array (
+				'id' => 'sm_page_file_attachment',
+				'type' => 'file_advanced',
+				'name' => 'File attachment',
+				'max_file_uploads' => 1,
+			),
+		),
+	);
+
 	return $meta_boxes;
 } // sm_register_meta_boxes
