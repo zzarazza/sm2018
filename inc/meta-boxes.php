@@ -58,8 +58,8 @@ function the_systemorph_footer_extra() {
 	the_systemorph_get_in_touch();
 }
 
-function the_systemorph_page_attachment() {
-	$rwmbMeta = rwmb_meta( 'sm_page_file_attachment');
+function the_systemorph_page_attachment($post_id = null) {
+	$rwmbMeta = rwmb_meta( 'sm_page_file_attachment', null, $post_id);
 	if ($rwmbMeta) :
  		echo $rwmbMeta;
  	endif;

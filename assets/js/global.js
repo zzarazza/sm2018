@@ -252,7 +252,7 @@
 
 			var data = {
 				'action': 'systemorph_white_papers_success',
-				'data': {}
+				'post_id': event.detail.containerPostId 
 			};
 
 			$.post(

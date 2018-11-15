@@ -16,7 +16,7 @@
   	</header><!-- .entry-header -->
   	<div class="entry-content">
   		<p>You can download it here:</p>
-		<?php the_systemorph_page_attachment(); ?>
+		<?php the_systemorph_page_attachment($post_id); ?>
 	</div>
 </article>
 
