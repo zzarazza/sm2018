@@ -4,11 +4,61 @@ $sm-palette : (
 	primary : #101F30,
 	secondary : #2e3641,
 	alert : #cc1300,
-	brand-blue: #009cde,
+	success : #5CB85C,
+	sm-blue: #009cde,
+	sm-purple : #623a81,
+	dark-gray : #383C4B,
 	gray : #a6a6a6,
-	gray-light : #A9A7B3,
-	blue : #285fae
+	lavender-gray : #A9A7B3,
+	light-gray : #E1E1E1,
+	blue : #285fae,
+	white : #ffffff
 )  !default;
+
+$sm-color-palette : (
+	tr-white: rgba(white,0.5),
+	white: #ffffff,
+	primary: map-get($sm-palette, primary)
+) !default;
+
+
+$sm-icons : (
+	add-user,
+	aggregate,
+	chart,
+	check,
+	cloud,
+	email,
+	eye,
+	fire,
+	flag,
+	flexibility,
+	folder,
+	globe,
+	graph,
+	grid,
+	hierarchy,
+	idea,
+	info,
+	layers,
+	layout,
+	list,
+	map,
+	mic,
+	modify,
+	puzzle,
+	refresh,
+	ruler,
+	scissors,
+	search,
+	settings,
+	solid-graph,
+	streamline,
+	task,
+	timer,
+	user,
+	users
+) !default;
 
 $sm-body-font-family : ("Tajawal", Arial, sans-serif)  !default;
 $sm-body-font-color : map-get($sm-palette, primary)  !default;
@@ -21,12 +71,14 @@ $sm-button-padding : (13px 20px 10px) !default;
 $sm-button-color : white !default;
 $sm-button-color--hover : $sm-button-color !default;
 $sm-button-color--active : $sm-button-color !default;
-$sm-button-bcolor : map-get($sm-palette, brand-blue)  !default;
-$sm-button-bcolor--hover : darken(map-get($sm-palette, brand-blue),5%)  !default;
-$sm-button-bcolor--active : adjust-color(map-get($sm-palette, brand-blue), $lightness: -7.2%, $saturation: -2.2%) !default;
+$sm-button-bcolor : map-get($sm-palette, sm-blue)  !default;
+$sm-button-bcolor--hover : darken(map-get($sm-palette, sm-blue),5%)  !default;
+$sm-button-bcolor--active : adjust-color(map-get($sm-palette, sm-blue), $lightness: -7.2%, $saturation: -2.2%) !default;
 $sm-button-box-shadow : (2px 2px 10px rgba(black,0.2)) !default;
 
 $sm-footer-bcolor : map-get($sm-palette, primary)  !default;
+
+$sm-border-color : map-get($sm-palette, light-gray) !default;
 
 $mq-breakpoints: (
     mobile:    320px,

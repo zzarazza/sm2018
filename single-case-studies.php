@@ -34,6 +34,7 @@ get_header(); ?>
 					$postTypeName = '<strong>' . esc_html($postType->labels->singular_name) . '</strong> ';
 
 					the_title( '<h1 class="entry-title">' . $postTypeName, '</h1>' );
+					the_systemorph_page_subtitle();
 				} elseif ( is_front_page() && is_home() ) {
 					the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
 				} else {
@@ -59,15 +60,6 @@ get_header(); ?>
 						get_the_title()
 					)
 				);
-
-				wp_link_pages(
-					array(
-						'before'      => '<div class="page-links">' . __( 'Pages:', 'systemorph' ),
-						'after'       => '</div>',
-						'link_before' => '<span class="page-number">',
-						'link_after'  => '</span>',
-					)
-				);
 				?>
 			</div><!-- .entry-content -->
 
@@ -79,12 +71,6 @@ get_header(); ?>
 
 		</article><!-- #post-## -->
 			<?php
-				the_post_navigation(
-					array(
-						'prev_text' => '<span class="screen-reader-text">' . __( 'Previous Post', 'systemorph' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Previous', 'systemorph' ) . '</span> <span class="nav-title"><span class="nav-title-icon-wrapper">' . systemorph_get_svg( array( 'icon' => 'arrow-left' ) ) . '</span>%title</span>',
-						'next_text' => '<span class="screen-reader-text">' . __( 'Next Post', 'systemorph' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Next', 'systemorph' ) . '</span> <span class="nav-title">%title<span class="nav-title-icon-wrapper">' . systemorph_get_svg( array( 'icon' => 'arrow-right' ) ) . '</span></span>',
-					)
-				);
 
 			endwhile; // End of the loop.
 			?>

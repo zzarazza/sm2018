@@ -16,6 +16,20 @@ if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 	return;
 }
+define( 'SMCOLORS', array(
+	'primary'        => '#101f30',
+	'secondary'      => '#2e3641',
+	'sm-blue'        => '#009cde',
+	'sm-purple'      => '#623a81',
+	'dark-gray'      => '#383C4B',
+	'gray'           => '#a6a6a6',
+	'lavender-gray'  => '#a9a7b3',
+	'light-gray'     => '#e1e1e1',
+	'blue'           => '#285fae',
+	'alert'          => '#cc1300',
+	'success'        => '#5CB85C',
+	'white'          => '#ffffff'
+));
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -35,6 +49,7 @@ function systemorph_setup() {
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
+	add_theme_support( 'align-wide' );
 
 	/*
 	 * Let WordPress manage the document title.
@@ -224,50 +239,101 @@ function systemorph_setup() {
 
 	add_theme_support( 'starter-content', $starter_content );
 
-	add_theme_support( 'editor-color-palette', array(
+	add_theme_support( 'editor-color-palette',
 		array(
-			'name'  => __( 'Primary', 'systemorph' ),
-			'slug'  => 'primary',
-			'color'	=> '#101f30',
-		),
-		array(
-			'name'  => __( 'Secondary', 'systemorph' ),
-			'slug'  => 'secondary',
-			'color' => '#2e3641',
-		),
-		array(
-			'name'  => __( 'SM blue', 'systemorph' ),
-			'slug'  => 'sm-blue',
-			'color' => '#009cde',
-		),
-		array(
-			'name'  => __( 'SM purple', 'systemorph' ),
-			'slug'  => 'sm-purple',
-			'color' => '#623a81',
-		),
-		array(
-			'name'  => __( 'Gray', 'systemorph' ),
-			'slug'  => 'gray',
-			'color' => '#a6a6a6',
-		),
-		array(
-			'name'  => __( 'Lavender gray', 'systemorph' ),
-			'slug'  => 'Lavender-gray',
-			'color' => '#a9a7b3',
-		),
-		array(
-			'name'  => __( 'Blue', 'systemorph' ),
-			'slug'  => 'blue',
-			'color' => '#285fae',
-		),
-		array(
-			'name'  => __( 'Red', 'systemorph' ),
-			'slug'  => 'red',
-			'color' => '#cc1300',
-		),
-	) );
+			array(
+				'name'  => __( 'Primary', 'systemorph' ),
+				'slug'  => 'primary',
+				'color'	=> SMCOLORS['primary']
+			),
+			array(
+				'name'  => __( 'Secondary', 'systemorph' ),
+				'slug'  => 'secondary',
+				'color' => SMCOLORS['secondary'],
+			),
+			array(
+				'name'  => __( 'SM blue', 'systemorph' ),
+				'slug'  => 'sm-blue',
+				'color' => SMCOLORS['sm-blue'],
+			),
+			array(
+				'name'  => __( 'SM purple', 'systemorph' ),
+				'slug'  => 'sm-purple',
+				'color' => SMCOLORS['sm-purple'],
+			),
+			array(
+				'name'  => __( 'Dark gray', 'systemorph' ),
+				'slug'  => 'dark-gray',
+				'color' => SMCOLORS['dark-gray'],
+			),
+			array(
+				'name'  => __( 'Gray', 'systemorph' ),
+				'slug'  => 'gray',
+				'color' => SMCOLORS['gray'],
+			),
+			array(
+				'name'  => __( 'Lavender gray', 'systemorph' ),
+				'slug'  => 'lavender-gray',
+				'color' => SMCOLORS['lavender-gray'],
+			),
+			array(
+				'name'  => __( 'Light gray', 'systemorph' ),
+				'slug'  => 'light-gray',
+				'color' => SMCOLORS['light-gray'],
+			),
+			array(
+				'name'  => __( 'Blue', 'systemorph' ),
+				'slug'  => 'blue',
+				'color' => SMCOLORS['blue'],
+			),
+			array(
+				'name'  => __( 'Red', 'systemorph' ),
+				'slug'  => 'alert',
+				'color' => SMCOLORS['alert'],
+			),
+			array(
+				'name'  => __( 'Green', 'systemorph' ),
+				'slug'  => 'success',
+				'color' => SMCOLORS['success'],
+			),
+			array(
+				'name'  => __( 'White', 'systemorph' ),
+				'slug'  => 'white',
+				'color' => SMCOLORS['white'],
+			)
+		)
+	);
 
 	add_theme_support( 'disable-custom-colors' );
+
+	add_theme_support( 'editor-font-sizes', array(
+	    array(
+	        'name' => __( 'Small', 'systemorph' ),
+			'size' => 16,
+			'slug' => 'small'
+	    ),
+	    array(
+	        'name' => __( 'Normal', 'systemorph' ),
+			'size' => 20,
+			'slug' => 'normal'
+	    ),
+	    array(
+	        'name' => __( 'Medium', 'systemorph' ),
+			'size' => 25,
+			'slug' => 'medium'
+	    ),
+	    array(
+	        'name' => __( 'Large', 'systemorph' ),
+			'size' => 28,
+			'slug' => 'large'
+	    ),
+	    array(
+	        'name' => __( 'Huge', 'systemorph' ),
+			'size' => 36,
+			'slug' => 'huge'
+	    )
+	) );
+	add_theme_support('disable-custom-font-sizes');
 }
 add_action( 'after_setup_theme', 'systemorph_setup' );
 
@@ -684,7 +750,7 @@ function white_papers_success() {
 
         echo $content;
 
-        wp_die();	
+        wp_die();
 }
 
 function systemorph_disable_srcset( $sources ) {
@@ -698,6 +764,33 @@ function sm_admin_styles() {
     wp_enqueue_style( 'add-admin-stylesheet' );
 }
 add_action('admin_enqueue_scripts', 'sm_admin_styles');
+
+function get_sm_page_icon( $id ) {
+
+	if ( !has_blocks( $id ) ) {
+			return '';
+	}
+
+	$icon = get_post_meta( $id, 'sm_page_icon', true );
+
+	if ( !$icon || $icon == 'none') {
+		return '';
+	}
+
+	$output = '';
+
+	$iconColor = get_post_meta( $id, 'sm_page_icon_color', true );
+	$c = $iconColor ? array_search($iconColor, SMCOLORS) : 'primary';
+
+	$c = ($c == 'tr-white') ? "" : "-$c";
+
+	$iconBColor = get_post_meta( $id, 'sm_page_icon_bcolor', true );
+	$b = $iconBColor ? array_search($iconBColor, SMCOLORS) : 'light-gray';
+
+	$output = "<i class=\"icon icon-$icon$c icon-bcolor-$b\"></i>";
+
+	return $output;
+}
 
 /**
  * Implement the Custom Header feature.

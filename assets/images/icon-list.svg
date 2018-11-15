@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="53" height="53" viewBox="0 0 53 53">
-  <defs>
-    <path id="icon-list-a" d="m17.834 34.00519v-3.6252928h18v3.6252928zm1.8126464-2.6978923v1.7704918h1.7704918v-1.7704918zm-1.8126464-11.7189696h18v3.6252928h-18zm3.5831382 2.6978923v-1.7704918h-1.7704918v1.7704918zm-3.5831382 6.323185v-3.6252927h18v3.6252927zm1.8126464-2.6978923v1.7704918h1.7704918v-1.7704918z"/>
-  </defs>
-  <g fill="none" fill-rule="evenodd" opacity=".5">
-    <use fill="#000" xlink:href="#icon-list-a"/>
-    <use fill="#fff" xlink:href="#icon-list-a"/>
-  </g>
-</svg>

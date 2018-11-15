@@ -1,10 +1,11 @@
 html {
 	background-color: map-get($sm-palette, primary);
+	overflow-x: hidden;
 }
 
 body {
 	font-family: $sm-body-font-family;
-	background-color: white;
+	background-color: #fdfdfe;
 	color: $sm-body-font-color;
 	overflow-x: hidden;
 	width: 100%;
@@ -109,5 +110,45 @@ a {
 	&:active {
 		background-color: $sm-button-bcolor--active;
 		color: $sm-button-color--active;
+	}
+}
+
+div.wp-block-button .wp-block-button__link {
+	background-color: $sm-button-bcolor;
+	color: $sm-button-color;
+	border: 0 none;
+	border-radius: 5px;
+	font-size: $sm-button-font-size;
+	padding: $sm-button-padding;
+	text-decoration: none;
+	display: inline-block;
+	min-width: 170px;
+	text-align: center;
+	box-sizing: border-box;
+	line-height: 1.375;
+
+	&.has-background {
+		@each $n,$v in $sm-palette {
+			&.has-#{$n}-background-color {
+				background-color: $v;
+
+				&:hover,
+				&:focus {
+					background-color: darken($v, 5%);
+				}
+
+				&:active {
+					background-color: adjust-color($v, $lightness: -7.2%, $saturation: -2.2%);
+				}
+			}
+		}
+	}
+
+	&.has-text-color {
+		@each $n,$v in $sm-color-palette {
+			.has-#{$n}-color {
+				color: $v;
+			}
+		}
 	}
 }
