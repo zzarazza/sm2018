@@ -247,22 +247,31 @@
 	});
 
 	var wpcf7Elm = document.querySelector( '.wpcf7' );
-	wpcf7Elm.addEventListener( 'wpcf7mailsent', function( event ) {
-		if ($('#' + event.detail.id).find('form#contact-form').length > 0) {
+	if (wpcf7Elm != null) {
+		wpcf7Elm.addEventListener( 'wpcf7mailsent', function( event ) {
+			if ($('#' + event.detail.id).find('form#contact-form').length > 0) {
 
-			var data = {
-				'action': 'systemorph_white_papers_success',
-				'post_id': event.detail.containerPostId 
-			};
-
-			$.post(
-				ajax_script.ajax_url,
-				data,
-				function( response ) {
-					$('article').html(response);
+				if (typeof ga == 'function') { 
+					ga( 'send', 'event', 'White papers request', 'submit' );
 				}
-			);
-        } 
-	}, false );
+				
+				var data = {
+					'action': 'systemorph_white_papers_success',
+					'post_id': event.detail.containerPostId 
+				};
+
+				var loader = $(wpcf7Elm).find(".ajax-loader");
+				loader.css('visibility', 'visible');
+
+				$.post(
+					ajax_script.ajax_url,
+					data,
+					function( response ) {
+						$('article').html(response);
+					}
+				);
+	        } 
+		}, false );
+	}
 
 })( jQuery );
