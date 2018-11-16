@@ -251,10 +251,17 @@
 		wpcf7Elm.addEventListener( 'wpcf7mailsent', function( event ) {
 			if ($('#' + event.detail.id).find('form#contact-form').length > 0) {
 
+				if (typeof ga == 'function') { 
+					ga( 'send', 'event', 'White papers request', 'submit' );
+				}
+				
 				var data = {
 					'action': 'systemorph_white_papers_success',
 					'post_id': event.detail.containerPostId 
 				};
+
+				var loader = $(wpcf7Elm).find(".ajax-loader");
+				loader.css('visibility', 'visible');
 
 				$.post(
 					ajax_script.ajax_url,
