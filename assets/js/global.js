@@ -247,22 +247,24 @@
 	});
 
 	var wpcf7Elm = document.querySelector( '.wpcf7' );
-	wpcf7Elm.addEventListener( 'wpcf7mailsent', function( event ) {
-		if ($('#' + event.detail.id).find('form#contact-form').length > 0) {
+	if (wpcf7Elm != null) {
+		wpcf7Elm.addEventListener( 'wpcf7mailsent', function( event ) {
+			if ($('#' + event.detail.id).find('form#contact-form').length > 0) {
 
-			var data = {
-				'action': 'systemorph_white_papers_success',
-				'post_id': event.detail.containerPostId 
-			};
+				var data = {
+					'action': 'systemorph_white_papers_success',
+					'post_id': event.detail.containerPostId 
+				};
 
-			$.post(
-				ajax_script.ajax_url,
-				data,
-				function( response ) {
-					$('article').html(response);
-				}
-			);
-        } 
-	}, false );
+				$.post(
+					ajax_script.ajax_url,
+					data,
+					function( response ) {
+						$('article').html(response);
+					}
+				);
+	        } 
+		}, false );
+	}
 
 })( jQuery );
