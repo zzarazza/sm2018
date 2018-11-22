@@ -67,6 +67,7 @@ function systemorph_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	add_image_size( 'systemorph-featured-image', 2000, 1200, true );
+	add_image_size( 'systemorph-blog-thumb', 217, 203, true );
 	add_image_size( 'systemorph-team-member', 310, 310, true );
 
 	add_image_size( 'systemorph-thumbnail-avatar', 100, 100, true );

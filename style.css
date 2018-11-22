@@ -1389,32 +1389,56 @@ div.wp-block-button .wp-block-button__link {
     .team-member .t-m-info p:last-child {
       margin-bottom: 0; }
 
-.blog .content-area,
-.single-post .content-area,
-.category .content-area {
-  display: grid;
-  grid-template-columns: 1fr 200px;
-  grid-column-gap: 20px; }
+.blog .page-title,
+.category .page-title {
+  margin-bottom: 62px; }
 
 .blog .post,
 .category .post {
-  margin: 2em 0; }
+  border-top: 1px solid #E1E1E1;
+  padding: 30px 0; }
   .blog .post .entry-header,
   .category .post .entry-header {
-    margin: 0; }
+    margin-top: 0;
+    margin-bottom: 33px; }
+    @media (min-width: 48em) {
+      .blog .post .entry-header,
+      .category .post .entry-header {
+        margin-bottom: 25px; } }
   .blog .post .entry-title,
   .category .post .entry-title {
-    font-size: 36px;
-    max-width: none; }
+    font-size: 25px;
+    max-width: none;
+    text-transform: uppercase;
+    font-weight: 400; }
     .blog .post .entry-title a,
     .category .post .entry-title a {
       text-decoration: none; }
+  @media (min-width: 48em) {
+    .blog .post .blog-content,
+    .category .post .blog-content {
+      display: grid;
+      grid-column-gap: 48px;
+      grid-template-columns: 217px 1fr; } }
   .blog .post .entry-content p,
   .category .post .entry-content p {
-    margin-top: 0; }
+    margin-top: 0;
+    font-weight: 300; }
     .blog .post .entry-content p:last-child,
     .category .post .entry-content p:last-child {
       margin-bottom: 0; }
+
+.blog .pagination .page-numbers,
+.category .pagination .page-numbers {
+  font-size: 20px;
+  line-height: 1;
+  display: inline-block;
+  padding: 5px;
+  margin: 0 5px; }
+
+.blog .pagination .current,
+.category .pagination .current {
+  color: #A9A7B3; }
 
 .nav-links .icon {
   width: 24px;
@@ -1430,6 +1454,9 @@ div.wp-block-button .wp-block-button__link {
       display: block;
       width: 24px;
       height: 24px; }
+
+.single-post .single-featured-image-header {
+  margin-bottom: 60px; }
 
 .site-content {
   margin-bottom: 50px; }
