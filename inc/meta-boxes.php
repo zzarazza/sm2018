@@ -70,3 +70,23 @@ function the_systemorph_page_attachment($post_id = null) {
 
  	echo $output;
 }
+
+function the_systemorph_case_study_link($post_id = null) {
+	$rwmbMeta = rwmb_meta( 'sm_case_study_link', null, $post_id);
+
+	if ($rwmbMeta) :
+		return $page = get_page($rwmbMeta);
+ 	endif;
+
+ 	echo null;
+}
+
+function the_systemorph_return_page_link($post_id = null) {
+	$rwmbMeta = rwmb_meta( 'sm_return_page_link', null, $post_id);
+
+	if ($rwmbMeta) :
+		return $page = get_page($rwmbMeta);
+ 	endif;
+
+ 	echo null;
+}

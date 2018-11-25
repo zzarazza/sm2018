@@ -611,6 +611,8 @@ function systemorph_scripts() {
 
 	wp_enqueue_script( 'jquery-scrollto', get_theme_file_uri( '/assets/js/jquery.scrollTo.js' ), array( 'jquery' ), '2.1.2', true );
 
+	wp_enqueue_script( 'jquery-cookie', get_theme_file_uri( '/assets/js/jquery.cookie.js' ), array( 'jquery' ), '2.1.2', true );
+
 	wp_localize_script( 'systemorph-skip-link-focus-fix', 'systemorphScreenReaderText', $systemorph_l10n );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -745,13 +747,55 @@ function white_papers_success() {
 		$post_id = $_REQUEST['post_id'];
 		ob_start();
 		include get_template_directory() . '/template-parts/page/content-white_papers_success.php';
-//       	get_template_part( 'template-parts/page/content', 'white_papers_success');
 		$content = ob_get_clean();
 
         echo $content;
 
         wp_die();
 }
+
+add_action( 'wp_ajax_nopriv_systemorph_case_studies_success', 'case_studies_success');
+add_action( 'wp_ajax_systemorph_case_studies_success', 'case_studies_success');
+function case_studies_success() {
+		$post_id = $_REQUEST['post_id'];
+		$page = $_REQUEST['page_id'];
+		$redirect_page = the_systemorph_case_study_link($post_id);
+		if ($redirect_page) {
+			$content = get_permalink($redirect_page->ID);
+		}
+
+        echo json_encode(array( 'link' => $content, 'page' => $redirect_page->post_name));
+
+        wp_die();
+}
+
+add_action( "template_redirect", "redirect_to_case_study" );
+function redirect_to_case_study() {
+    global $post;
+
+	$is_to_redirect = false;
+
+	$page = $post->post_name;
+	$query = new WP_Query(array(
+	    'post_type' => 'case-studies',
+	    'post_status' => 'publish'
+	));
+
+	while ($query->have_posts()) {
+	    $query->the_post();
+	    $post_id = get_the_ID();
+		$redirect_page = the_systemorph_case_study_link($post_id);
+		if ($redirect_page) {
+			if ($page == $redirect_page->post_name) {
+				$is_to_redirect = true;
+			}
+		}
+	}
+    if(!isset($_COOKIE[$page]) && $is_to_redirect) {
+		wp_redirect(get_permalink($post_id));
+    }
+}
+
 
 function systemorph_disable_srcset( $sources ) {
     return false;
