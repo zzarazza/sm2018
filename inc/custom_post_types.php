@@ -92,7 +92,6 @@ function sm_register_post_type_case_study() {
 		'has_archive' => true,
 		'query_var' => true,
 		'can_export' => true,
-		'rewrite_no_front' => false,
 		'supports' => array(
 			'title',
 			'editor',
@@ -100,7 +99,10 @@ function sm_register_post_type_case_study() {
 			'excerpt',
 			'revisions',
 		),
-		'rewrite' => true,
+		'rewrite' => array(
+			'slug' => 'case-studies',
+			'with_front' => false,
+		),
 	);
 
 	register_post_type( 'case-studies', $args );
@@ -137,7 +139,7 @@ function sm_register_post_type_partner() {
 		'show_in_nav_menus' => true,
 		'show_in_menu' => true,
 		'show_in_admin_bar' => false,
-		'show_in_rest' => false,
+		'show_in_rest' => true,
 		'menu_position' => 22,
 		'menu_icon' => 'dashicons-carrot',
 		'capability_type' => 'post',
@@ -145,14 +147,124 @@ function sm_register_post_type_partner() {
 		'has_archive' => true,
 		'query_var' => true,
 		'can_export' => true,
-		'rewrite_no_front' => false,
 		'supports' => array(
 			'title',
 			'revisions',
 		),
-		'rewrite' => true,
+		'rewrite' => array(
+			'slug' => 'partners',
+			'with_front' => false,
+		),
 	);
 
 	register_post_type( 'partners', $args );
 }
 add_action( 'init', 'sm_register_post_type_partner' );
+
+// Post type: News
+function sm_register_post_type_news() {
+
+	$args = array (
+		'label' => esc_html__( 'News', 'systemorph' ),
+		'labels' => array(
+			'menu_name' => esc_html__( 'News', 'systemorph' ),
+			'name_admin_bar' => esc_html__( 'News', 'systemorph' ),
+			'add_new' => esc_html__( 'Add new', 'systemorph' ),
+			'add_new_item' => esc_html__( 'Add new News', 'systemorph' ),
+			'new_item' => esc_html__( 'New News', 'systemorph' ),
+			'edit_item' => esc_html__( 'Edit News', 'systemorph' ),
+			'view_item' => esc_html__( 'View News', 'systemorph' ),
+			'update_item' => esc_html__( 'Update News', 'systemorph' ),
+			'all_items' => esc_html__( 'All News', 'systemorph' ),
+			'search_items' => esc_html__( 'Search News', 'systemorph' ),
+			'parent_item_colon' => esc_html__( 'Parent News', 'systemorph' ),
+			'not_found' => esc_html__( 'No News found', 'systemorph' ),
+			'not_found_in_trash' => esc_html__( 'No News found in Trash', 'systemorph' ),
+			'name' => esc_html__( 'News', 'systemorph' ),
+			'singular_name' => esc_html__( 'News', 'systemorph' ),
+		),
+		'public' => true,
+		'exclude_from_search' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'show_in_nav_menus' => true,
+		'show_in_admin_bar' => false,
+		'show_in_rest' => true,
+		'menu_position' => 5,
+		'menu_icon' => 'dashicons-calendar-alt',
+		'capability_type' => 'post',
+		'hierarchical' => false,
+		'has_archive' => true,
+		'query_var' => true,
+		'can_export' => true,
+		'supports' => array(
+			'title',
+			'editor',
+			'thumbnail',
+			'excerpt',
+		),
+		'rewrite' => array(
+			'with_front' => false,
+		),
+	);
+
+	register_post_type( 'news', $args );
+}
+add_action( 'init', 'sm_register_post_type_news' );
+
+// Post type: Events
+function sm_register_post_type_event() {
+
+	$args = array (
+		'label' => esc_html__( 'Events', 'systemorph' ),
+		'labels' => array(
+			'menu_name' => esc_html__( 'Events', 'systemorph' ),
+			'name_admin_bar' => esc_html__( 'Event', 'systemorph' ),
+			'add_new' => esc_html__( 'Add new', 'systemorph' ),
+			'add_new_item' => esc_html__( 'Add new Event', 'systemorph' ),
+			'new_item' => esc_html__( 'New Event', 'systemorph' ),
+			'edit_item' => esc_html__( 'Edit Event', 'systemorph' ),
+			'view_item' => esc_html__( 'View Event', 'systemorph' ),
+			'update_item' => esc_html__( 'Update Event', 'systemorph' ),
+			'all_items' => esc_html__( 'All Events', 'systemorph' ),
+			'search_items' => esc_html__( 'Search Events', 'systemorph' ),
+			'parent_item_colon' => esc_html__( 'Parent Event', 'systemorph' ),
+			'not_found' => esc_html__( 'No Events found', 'systemorph' ),
+			'not_found_in_trash' => esc_html__( 'No Events found in Trash', 'systemorph' ),
+			'name' => esc_html__( 'Events', 'systemorph' ),
+			'singular_name' => esc_html__( 'Event', 'systemorph' ),
+		),
+		'public' => true,
+		'exclude_from_search' => false,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'show_in_nav_menus' => true,
+		'show_in_menu' => true,
+		'show_in_admin_bar' => false,
+		'show_in_rest' => true,
+		'menu_position' => 6,
+		'menu_icon' => 'dashicons-awards',
+		'capability_type' => 'post',
+		'hierarchical' => false,
+		'has_archive' => true,
+		'query_var' => true,
+		'can_export' => true,
+		'supports' => array(
+			'title',
+			'editor',
+			'thumbnail',
+			'excerpt',
+			'revisions',
+		),
+		'taxonomies' => array(
+			'post_tag',
+		),
+		'rewrite' => array(
+			'slug' => 'events',
+			'with_front' => false,
+		),
+	);
+
+	register_post_type( 'event', $args );
+}
+add_action( 'init', 'sm_register_post_type_event' );
