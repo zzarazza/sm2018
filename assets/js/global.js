@@ -246,10 +246,6 @@
 		$body.addClass( 'has-header-video' );
 	});
 
-	var showCaseStudyLink = function() {
-
-	}
-
 	var wpcf7Elm = document.querySelector( '.wpcf7' );
 	if (wpcf7Elm != null) {
 		wpcf7Elm.addEventListener( 'wpcf7mailsent', function( event ) {
@@ -274,7 +270,11 @@
 							'post_id': event.detail.containerPostId 
 						};
 						responseFunc = function( response ) {
-							$('article').html(response);
+							var jsonResp = JSON.parse(response);
+							if (!$.cookie(jsonResp.page)) {
+								$.cookie(jsonResp.page, event.detail.containerPostId, { path: '/' });
+							}
+							$('article').html(jsonResp.content);
 						};
 					case 'form-swiss-re':
 					default:

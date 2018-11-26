@@ -749,6 +749,13 @@ function white_papers_success() {
 		include get_template_directory() . '/template-parts/page/content-white_papers_success.php';
 		$content = ob_get_clean();
 
+		$link = '';
+		$redirect_page = the_systemorph_case_study_link($post_id);
+		if ($redirect_page) {
+			$link = get_permalink($redirect_page->ID);
+		}
+
+        echo json_encode(array( 'link' => $link, 'page' => $redirect_page->post_name, 'content' => $content));
         echo $content;
 
         wp_die();
@@ -760,11 +767,12 @@ function case_studies_success() {
 		$post_id = $_REQUEST['post_id'];
 		$page = $_REQUEST['page_id'];
 		$redirect_page = the_systemorph_case_study_link($post_id);
+		$link = '';
 		if ($redirect_page) {
-			$content = get_permalink($redirect_page->ID);
+			$link = get_permalink($redirect_page->ID);
 		}
 
-        echo json_encode(array( 'link' => $content, 'page' => $redirect_page->post_name));
+        echo json_encode(array( 'link' => $link, 'page' => $redirect_page->post_name));
 
         wp_die();
 }
