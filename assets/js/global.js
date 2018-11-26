@@ -249,28 +249,56 @@
 	var wpcf7Elm = document.querySelector( '.wpcf7' );
 	if (wpcf7Elm != null) {
 		wpcf7Elm.addEventListener( 'wpcf7mailsent', function( event ) {
-			if ($('#' + event.detail.id).find('form#contact-form').length > 0) {
+			var forms = $('#' + event.detail.id).find('form.contact-form-actions');
+			var pageId = forms[0].id;
 
-				if (typeof ga == 'function') { 
-					ga( 'send', 'event', 'White papers request', 'submit' );
-				}
-				
-				var data = {
-					'action': 'systemorph_white_papers_success',
-					'post_id': event.detail.containerPostId 
-				};
+			if ($('#' + event.detail.id).find('form.contact-form-actions').length > 0) {
+
+				var data = {};
+				var responseFunc = function() {};
 
 				var loader = $(wpcf7Elm).find(".ajax-loader");
 				loader.css('visibility', 'visible');
 
+				switch (pageId) {
+					case 'contact-form':
+						if (typeof ga == 'function') { 
+							ga( 'send', 'event', 'White papers request', 'submit' );
+						}
+						data = {
+							'action': 'systemorph_white_papers_success',
+							'post_id': event.detail.containerPostId 
+						};
+						responseFunc = function( response ) {
+							var jsonResp = JSON.parse(response);
+							if (!$.cookie(jsonResp.page)) {
+								$.cookie(jsonResp.page, event.detail.containerPostId, { path: '/' });
+							}
+							$('article').html(jsonResp.content);
+						};
+					case 'form-swiss-re':
+					default:
+						data = {
+							'action': 'systemorph_case_studies_success',
+							'post_id': event.detail.containerPostId,
+							'page_id': pageId 
+						};
+						responseFunc = function( response ) {
+							var jsonResp = JSON.parse(response);
+							if (!$.cookie(jsonResp.page)) {
+								$.cookie(jsonResp.page, event.detail.containerPostId, { path: '/' });
+							}
+							location = jsonResp.link;
+						};
+						break;
+				}
+
 				$.post(
 					ajax_script.ajax_url,
 					data,
-					function( response ) {
-						$('article').html(response);
-					}
+					responseFunc
 				);
-	        } 
+	        } // if
 		}, false );
 	}
 
