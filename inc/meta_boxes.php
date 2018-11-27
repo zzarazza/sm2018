@@ -250,6 +250,7 @@ function sm_register_meta_boxes( $meta_boxes ) {
 				'name' => 'Page subtitle',
 			),
 		),
+		'style' => 'seamless',
 	);
 
 	// Partner settings
@@ -289,6 +290,31 @@ function sm_register_meta_boxes( $meta_boxes ) {
 				'max_file_uploads' => 1,
 			),
 		),
+		'style' => 'seamless',
+	);
+
+	$meta_boxes[] = array (
+		'title' => 'Full case study link',
+		'id' => 'link-to-the-post',
+		'post_types' => array(
+			'case-studies',
+		),
+		'context' => 'normal',
+		'priority' => 'high',
+		'fields' => array(
+
+			array (
+				'id' => 'sm_case_study_link',
+				'type' => 'post',
+				'name' => 'Page',
+				'post_type' =>
+				array (
+					0 => 'page',
+				),
+				'field_type' => 'select_advanced',
+			),
+		),
+		'style' => 'seamless',
 	);
 
 	return $meta_boxes;
