@@ -778,7 +778,8 @@ button {
 a {
   color: #101F30; }
   a:hover {
-    color: #101F30; }
+    color: #101F30;
+    text-decoration: none; }
 
 /* Text meant only for screen readers. */
 .screen-reader-text {
