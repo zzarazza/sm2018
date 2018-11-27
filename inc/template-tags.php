@@ -81,7 +81,7 @@ if ( ! function_exists( 'systemorph_entry_footer' ) ) :
 					}
 
 					if ( $tags_list && ! is_wp_error( $tags_list ) ) {
-						echo '<span class="tags-links">' . systemorph_get_svg( array( 'icon' => 'hashtag' ) ) . '<span class="screen-reader-text">' . __( 'Tags', 'systemorph' ) . '</span>' . $tags_list . '</span>';
+						echo '<span class="tags-links"><span class="screen-reader-text">' . __( 'Tags', 'systemorph' ) . '</span>' . $tags_list . '</span> ';
 					}
 
 					echo '</span>';
