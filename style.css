@@ -1474,6 +1474,7 @@ div.wp-block-button .wp-block-button__link {
   background-image: url("assets/images/icons/icon-tag.svg");
   background-size: 18px auto;
   background-position: 0 0;
+  background-repeat: no-repeat;
   line-height: 25px; }
 
 .site-content {
