@@ -100,8 +100,11 @@
 .single-post {
 	.back-to-blog-link {
 		display: inline-block;
-		margin-top: 30px;
-		margin-bottom: 20px;
+
+		@include mq($from: tablet) {
+			margin-top: 30px;
+			margin-bottom: 20px;
+		}
 	}
 
 	.single-featured-image-header {
