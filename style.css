@@ -1458,6 +1458,17 @@ div.wp-block-button .wp-block-button__link {
 .single-post .single-featured-image-header {
   margin-bottom: 60px; }
 
+.single-post .cat-tags-links {
+  margin-top: 60px; }
+
+.single-post .tags-links {
+  display: block;
+  padding-left: 28px;
+  background-image: url("assets/images/icons/icon-tag.svg");
+  background-size: 18px auto;
+  background-position: 0 0;
+  line-height: 25px; }
+
 .site-content {
   margin-bottom: 50px; }
 

@@ -101,4 +101,17 @@
 	.single-featured-image-header {
 		margin-bottom: 60px;
 	}
+
+	.cat-tags-links {
+		margin-top: 60px;
+	}
+
+	.tags-links {
+		display: block;
+		padding-left: 28px;
+		background-image: url("#{$sm-images}/icons/icon-tag.svg");
+		background-size: 18px auto;
+		background-position: 0 0;
+		line-height: 25px;
+	}
 }
