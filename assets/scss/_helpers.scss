@@ -51,7 +51,6 @@
 	border-radius: 100%;
 	background-repeat: no-repeat;
 	background-position: 0 0;
-	background-size: 100% 100%;
 }
 
 .has-icon {
@@ -88,15 +87,18 @@
 
 @each $i in $sm-icons {
 	.has-icon > .icon-#{$i} {
-		background-image: url("#{$sm-images}/icons/icon-#{$i}.svg");
+		background-position: -52px*(index($sm-icons, $i) - 1) 0;
+		background-image: url("#{$sm-images}/icons/sm-icons.svg");
 	}
 
 	.has-icon > .icon-#{$i}-white {
-		background-image: url("#{$sm-images}/icons/icon-#{$i}-white.svg");
+		background-image: url("#{$sm-images}/icons/sm-icons-white.svg");
+		background-position: -52px*(index($sm-icons, $i) - 1) 0;
 	}
 
 	.has-icon > .icon-#{$i}-primary {
-		background-image: url("#{$sm-images}/icons/icon-#{$i}-primary.svg");
+		background-image: url("#{$sm-images}/icons/sm-icons-primary.svg");
+		background-position: -52px*(index($sm-icons, $i) - 1) 0;
 	}
 }
 
