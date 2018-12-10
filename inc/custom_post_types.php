@@ -36,7 +36,8 @@ function sm_register_post_type_team() {
 		'has_archive' => true,
 		'query_var' => true,
 		'can_export' => true,
-		'rewrite_no_front' => false,
+		'description' => 'Systemorph’s team offers deep expertise in risk management, enterprise systems, mathematical modeling, information management and enterprise capital management. The global staff members all hold master degrees in computer science, physics or mathematics.',
+		'show_in_menu' => true,
 		'supports' => array(
 			'title',
 			'editor',
@@ -45,9 +46,10 @@ function sm_register_post_type_team() {
 			'revisions',
 			'page-attributes',
 		),
-		'description' => 'Systemorph’s team offers deep expertise in risk management, enterprise systems, mathematical modeling, information management and enterprise capital management. The global staff members all hold master degrees in computer science, physics or mathematics.',
-		'show_in_menu' => true,
-		'rewrite' => true,
+		'rewrite' => array(
+			'slug' => 'management-team',
+			'with_front' => false,
+		),
 	);
 
 	register_post_type( 'management-team', $args );
