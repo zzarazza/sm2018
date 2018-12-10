@@ -1343,20 +1343,20 @@ div.wp-block-button .wp-block-button__link {
     .footer-navigation .menu-item a:hover {
       opacity: 0.75; }
 
-.footer-navigation .footer-link-header {
+.footer-navigation .menu-link-header {
   margin-bottom: 72px; }
   @media (min-width: 48em) {
-    .footer-navigation .footer-link-header {
+    .footer-navigation .menu-link-header {
       margin-bottom: 50px; } }
   @media (min-width: 64em) {
-    .footer-navigation .footer-link-header {
+    .footer-navigation .menu-link-header {
       margin-bottom: 27px; } }
-  .footer-navigation .footer-link-header > a {
+  .footer-navigation .menu-link-header > a {
     font-size: 16px;
     cursor: default;
     display: block;
     margin-bottom: 21px; }
-    .footer-navigation .footer-link-header > a:hover {
+    .footer-navigation .menu-link-header > a:hover {
       opacity: 1; }
 
 .footer-extra {

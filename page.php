@@ -21,7 +21,6 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<?php
-				echo "attachment";
 				the_systemorph_page_attachment( get_the_ID() );
 			?>
 			<?php
