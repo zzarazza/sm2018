@@ -327,7 +327,7 @@ template {
   .show-for-tablet {
     display: none !important; } }
 
-.has-icon .icon, .wp-block-sm-page-card .has-icon .icon {
+.has-icon .icon {
   display: block;
   margin-bottom: 15px;
   width: 52px;
