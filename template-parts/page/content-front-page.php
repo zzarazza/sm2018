@@ -31,7 +31,7 @@
 					$linkTo = rwmb_meta( 'home_hero_link' );
 					$buttonCaption = rwmb_meta( 'home_hero_button_caption' );
 					if ($linkTo && $buttonCaption) :
-						echo '<a class="button" href=">' . get_post_permalink($linkTo) . '">' . $buttonCaption . '</a>';
+						echo '<a class="button" href="' . get_post_permalink($linkTo) . '">' . $buttonCaption . '</a>';
 					endif;
 				?>
 			</div>
