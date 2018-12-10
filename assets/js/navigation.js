@@ -32,7 +32,7 @@
 
 			if (!_this.is(menuToggle)){
 				var isTopMenuClicked = _this.is(masthead) || _this.parents("#masthead").length;
-				var isTopMenuLinkClicked = _this.is(container.find( '.top-link-header > a' ));
+				var isTopMenuLinkClicked = _this.is(container.find( '.menu-link-header > a' ));
 				var shouldOpenMenu =  isTopMenuLinkClicked && !_this.parents( '.menu-item, .page_item' ).hasClass('focus') || window.matchMedia('(max-width: 1024px)').matches;
 
 				if (!isTopMenuClicked || isTopMenuLinkClicked){
