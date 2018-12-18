@@ -62,7 +62,7 @@
 				order: -1;
 
 				&.toggled-on {
-					.menu-top-menu-container {
+					.menu-menu-container {
 						background-color: white;
 						position: absolute;
 						left: 0;
@@ -76,7 +76,7 @@
 		}
 	}
 
-	.menu-top-menu-container {
+	.menu-menu-container {
 		@include mq($until: tablet-l) {
 			display: none;
 		}

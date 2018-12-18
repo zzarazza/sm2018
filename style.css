@@ -1074,7 +1074,7 @@ div.wp-block-button .wp-block-button__link {
     @media (max-width: 63.99em) {
       .navigation-top .wrap .main-navigation {
         order: -1; }
-        .navigation-top .wrap .main-navigation.toggled-on .menu-top-menu-container {
+        .navigation-top .wrap .main-navigation.toggled-on .menu-menu-container {
           background-color: white;
           position: absolute;
           left: 0;
@@ -1083,7 +1083,7 @@ div.wp-block-button .wp-block-button__link {
           padding: 20px 33px;
           box-shadow: 0 25px 50px -25px rgba(0, 0, 0, 0.25), 0 1px 5px -1px rgba(0, 0, 0, 0.05); } }
   @media (max-width: 63.99em) {
-    .navigation-top .menu-top-menu-container {
+    .navigation-top .menu-menu-container {
       display: none; } }
   .navigation-top .menu {
     margin: 0;
@@ -1756,7 +1756,7 @@ div.wp-block-button .wp-block-button__link {
     margin: 0; }
 
 .home .hero {
-  background-color: #62a6b2;
+  background-color: #9cb3e4;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -1765,7 +1765,7 @@ div.wp-block-button .wp-block-button__link {
   min-height: 400px; }
   @media (min-width: 64em) {
     .home .hero {
-      min-height: 660px; } }
+      min-height: 56vw; } }
   .home .hero:after {
     content: "";
     position: absolute;
