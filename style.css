@@ -1520,6 +1520,12 @@ div.wp-block-button .wp-block-button__link {
     .blog .post .entry-title a,
     .category .post .entry-title a {
       text-decoration: none; }
+  .blog .post .post-thumbnail,
+  .category .post .post-thumbnail {
+    margin-bottom: 20px; }
+    .blog .post .post-thumbnail img,
+    .category .post .post-thumbnail img {
+      display: block; }
   @media (min-width: 48em) {
     .blog .post .blog-content,
     .category .post .blog-content {

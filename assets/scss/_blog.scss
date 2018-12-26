@@ -37,6 +37,14 @@
 			}
 		}
 
+		.post-thumbnail {
+			margin-bottom: 20px;
+
+			img {
+				display: block;
+			}
+		}
+
 		.blog-content {
 			@include mq($from: tablet) {
 				display: grid;

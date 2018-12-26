@@ -38,7 +38,7 @@ if ( ! function_exists( 'systemorph_time_link' ) ) :
 		$time_string = sprintf(
 			$time_string,
 			get_the_date( DATE_W3C ),
-			get_the_date("m/d/Y")
+			get_the_date("d M Y")
 		);
 
 		// Wrap the time string in a link, and preface it with 'Posted on'.
