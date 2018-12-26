@@ -31,6 +31,18 @@
 				?>
 			</div><!-- .wrap -->
 		</footer><!-- #colophon -->
+		<div class="footer-bottom">
+			<div class="wrap">
+				<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'info',
+							'menu_id'        => 'info-menu',
+						)
+					);
+				?>
+			</div>
+		</div>
 	</div><!-- .site-content-contain -->
 </div><!-- #page -->
 <?php wp_footer(); ?>
