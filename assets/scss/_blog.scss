@@ -55,6 +55,14 @@
 		}
 
 		.entry-content {
+			@include mq($from: tablet) {
+				align-self: center;
+
+				p:first-child {
+					margin-top: -0.5em;
+				}
+			}
+
 			p {
 				margin-top: 0;
 				font-weight: 300;

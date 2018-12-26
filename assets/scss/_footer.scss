@@ -30,7 +30,7 @@
 
 		.custom-logo-link {
 			margin-top: 32px;
-			opacity: 0.2;
+			opacity: 0.7;
 			background-image: url("#{$sm-images}/systemorph-white.svg");
 
 			@include mq($from: desktop) {

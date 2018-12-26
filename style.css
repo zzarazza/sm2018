@@ -1206,7 +1206,7 @@ div.wp-block-button .wp-block-button__link {
         padding-top: 59px; } }
     .site-footer .site-branding .custom-logo-link {
       margin-top: 32px;
-      opacity: 0.2;
+      opacity: 0.7;
       background-image: url("assets/images/systemorph-white.svg"); }
       @media (min-width: 73.125em) {
         .site-footer .site-branding .custom-logo-link {
@@ -1533,6 +1533,13 @@ div.wp-block-button .wp-block-button__link {
       display: grid;
       grid-column-gap: 48px;
       grid-template-columns: 217px 1fr; } }
+  @media (min-width: 48em) {
+    .blog .post .entry-content,
+    .category .post .entry-content {
+      align-self: center; }
+      .blog .post .entry-content p:first-child,
+      .category .post .entry-content p:first-child {
+        margin-top: -0.5em; } }
   .blog .post .entry-content p,
   .category .post .entry-content p {
     margin-top: 0;
