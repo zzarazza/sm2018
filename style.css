@@ -1516,7 +1516,8 @@ div.wp-block-button .wp-block-button__link {
     font-size: 25px;
     max-width: none;
     text-transform: uppercase;
-    font-weight: 400; }
+    font-weight: 400;
+    margin-bottom: 20px; }
     .blog .post .entry-title a,
     .category .post .entry-title a {
       text-decoration: none; }
