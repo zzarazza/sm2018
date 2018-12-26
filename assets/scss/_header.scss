@@ -93,6 +93,7 @@
 		}
 
 		> .menu-item {
+
 			@include mq($from: tablet-l) {
 				margin-left: 36px;
 			}
@@ -175,6 +176,7 @@
 
 			> .menu-item {
 				margin: 12px 0;
+				min-height: initial;
 
 				@include mq($from: tablet-l) {
 					margin: 17px 20px;

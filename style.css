@@ -1147,7 +1147,8 @@ div.wp-block-button .wp-block-button__link {
           .home .navigation-top .menu .sub-menu a {
             color: white; } }
       .navigation-top .menu .sub-menu > .menu-item {
-        margin: 12px 0; }
+        margin: 12px 0;
+        min-height: initial; }
         @media (min-width: 64em) {
           .navigation-top .menu .sub-menu > .menu-item {
             margin: 17px 20px; } }
@@ -1774,7 +1775,7 @@ div.wp-block-button .wp-block-button__link {
     width: 120%;
     bottom: -10vh;
     right: -20%;
-    transform: rotate(357deg); }
+    transform: rotate(357.5deg); }
   .home .hero .wrap {
     position: absolute;
     top: 50%;
