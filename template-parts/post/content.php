@@ -39,10 +39,14 @@
 	</header><!-- .entry-header -->
 
 	<div class="blog-content">
-	<?php if ( '' !== get_the_post_thumbnail() && ! is_single() ) : ?>
+	<?php if ( ! is_single() ) : ?>
 		<div class="post-thumbnail">
 			<a href="<?php the_permalink(); ?>">
-				<?php the_post_thumbnail( 'systemorph-blog-thumb' ); ?>
+				<?php if ('' !== get_the_post_thumbnail()) : ?>
+					<?php the_post_thumbnail( 'systemorph-blog-thumb' ); ?>
+				<?php else : ?>
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/default-blog-thumbnail.png" width="217" height="203" alt="<?php the_title() ?>">
+				<?php endif; ?>
 			</a>
 		</div><!-- .post-thumbnail -->
 	<?php endif; ?>
