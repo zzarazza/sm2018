@@ -259,7 +259,7 @@
 
 .home {
 	.hero {
-		background-color: #9cb3e4;
+		background-color: #91b3da;
 		background-repeat: no-repeat;
 		background-size: cover;
 		overflow: hidden;
@@ -268,7 +268,7 @@
 		min-height: 400px;
 
 		@include mq($from: tablet-l) {
-			min-height: 56vw;
+			min-height: 56.4vw;
 		}
 
 		&:after {

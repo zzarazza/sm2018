@@ -1756,7 +1756,7 @@ div.wp-block-button .wp-block-button__link {
     margin: 0; }
 
 .home .hero {
-  background-color: #9cb3e4;
+  background-color: #91b3da;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -1765,7 +1765,7 @@ div.wp-block-button .wp-block-button__link {
   min-height: 400px; }
   @media (min-width: 64em) {
     .home .hero {
-      min-height: 56vw; } }
+      min-height: 56.4vw; } }
   .home .hero:after {
     content: "";
     position: absolute;
