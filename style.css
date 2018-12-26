@@ -1846,6 +1846,11 @@ div.wp-block-button .wp-block-button__link {
     line-height: 1.08;
     margin: 1.08em 0; } }
 
+.home .homepage-main-info h3 {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 42ch; }
+
 .sm-partners {
   text-align: center;
   padding: 100px 0; }
