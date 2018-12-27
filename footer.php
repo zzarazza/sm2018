@@ -36,8 +36,8 @@
 				<?php
 					wp_nav_menu(
 						array(
-							'theme_location' => 'info',
-							'menu_id'        => 'info-menu',
+							'theme_location' => 'privacy',
+							'menu_id'        => 'privacy-menu',
 						)
 					);
 				?>
