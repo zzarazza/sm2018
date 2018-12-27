@@ -80,7 +80,7 @@ function systemorph_setup() {
 		array(
 			'top'    => __( 'Top Menu', 'systemorph' ),
 			'bottom'    => __( 'Bottom Menu', 'systemorph' ),
-			'social' => __( 'Social Links Menu', 'systemorph' ),
+			'privacy' => __( 'Privacy Menu', 'systemorph' ),
 		)
 	);
 
