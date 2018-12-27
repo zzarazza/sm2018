@@ -1408,6 +1408,10 @@ div.wp-block-button .wp-block-button__link {
       position: absolute;
       left: 0; } }
 
+.footer-bottom {
+  padding: 1px 0;
+  background-color: #0c1623; }
+
 .post-type-archive-management-team .page-header {
   text-align: center;
   margin-top: 30px;
