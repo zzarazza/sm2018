@@ -135,7 +135,8 @@
 		}
 
 		.current-menu-ancestor,
-		.current-menu-parent {
+		.current-menu-parent,
+		.current-page-ancestor {
 			> a {
 				@include mq($from: tablet-l) {
 					position: relative;

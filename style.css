@@ -1121,7 +1121,8 @@ div.wp-block-button .wp-block-button__link {
         top: 73px; } }
     @media (min-width: 64em) {
       .navigation-top .menu .current-menu-ancestor > a,
-      .navigation-top .menu .current-menu-parent > a {
+      .navigation-top .menu .current-menu-parent > a,
+      .navigation-top .menu .current-page-ancestor > a {
         position: relative;
         font-weight: 700; } }
     .navigation-top .menu .sub-menu {
