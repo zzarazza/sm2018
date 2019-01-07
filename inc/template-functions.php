@@ -15,6 +15,8 @@
  */
 function systemorph_body_classes( $classes ) {
 	// Add class of group-blog to blogs with more than 1 published author.
+	global $wp_query;
+
 
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
@@ -40,8 +42,9 @@ function systemorph_body_classes( $classes ) {
 		$classes[] = 'has-sidebar';
 	}
 
-	if ( is_page() ) {
-		$classes[] = 'page-' . get_post_field( 'post_name');
+
+	if ( is_singular() ) {
+		$classes[] = 'page-' . $wp_query->get_queried_object()->post_name;
 	}
 
 	$classes[] = rwmb_meta( 'page_settings_custom_class' );
