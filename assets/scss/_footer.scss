@@ -245,4 +245,17 @@
 .footer-bottom {
 	padding: 1px 0;
 	background-color: darken($sm-footer-bcolor,3.5%);
+
+	.menu {
+		padding-left: 0;
+
+		a {
+			color: rgba(white,0.5);
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
 }

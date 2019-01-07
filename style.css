@@ -1412,6 +1412,13 @@ div.wp-block-button .wp-block-button__link {
 .footer-bottom {
   padding: 1px 0;
   background-color: #0c1623; }
+  .footer-bottom .menu {
+    padding-left: 0; }
+    .footer-bottom .menu a {
+      color: rgba(255, 255, 255, 0.5);
+      text-decoration: none; }
+      .footer-bottom .menu a:hover {
+        text-decoration: underline; }
 
 .page-management-team .entry-header {
   margin-top: 30px;
