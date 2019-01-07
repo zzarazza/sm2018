@@ -1422,7 +1422,7 @@ div.wp-block-button .wp-block-button__link {
 .page-management-team .entry-title {
   text-align: center;
   margin-bottom: 0;
-  max-width: none; }
+  max-width: none !important; }
 
 .page-management-team .page-description {
   font-size: 20px;
