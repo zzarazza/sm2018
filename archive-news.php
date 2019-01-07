@@ -17,9 +17,9 @@ get_header(); ?>
 	<?php if ( have_posts() ) : ?>
 		<header class="page-header">
 			<?php
-				$postType = get_post_type_object(get_post_type());
-				echo '<h1 class="page-title">' . esc_html($postType->label) . '</h1> ';
-				echo '<p class="page-description">' . esc_html($postType->description) . '</p> ';
+				$postType = get_archive_post_type();
+				echo '<h1 class="page-title">' . $postType . '</h1> ';
+				echo '<p class="page-description">' . get_the_post_type_description() . '</p> ';
 			?>
 		</header><!-- .page-header -->
 	<?php endif; ?>

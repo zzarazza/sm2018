@@ -40,7 +40,9 @@ function systemorph_body_classes( $classes ) {
 		$classes[] = 'has-sidebar';
 	}
 
-	$classes[] = 'page-' . get_post_field( 'post_name');
+	if ( is_page() ) {
+		$classes[] = 'page-' . get_post_field( 'post_name');
+	}
 
 	$classes[] = rwmb_meta( 'page_settings_custom_class' );
 

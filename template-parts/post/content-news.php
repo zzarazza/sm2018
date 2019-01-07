@@ -13,23 +13,9 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php
-	if ( is_sticky() && is_home() ) :
-		echo systemorph_get_svg( array( 'icon' => 'thumb-tack' ) );
-	endif;
-	?>
+
 	<header class="entry-header">
 		<?php
-		if ( 'post' === get_post_type() ) {
-			echo '<div class="entry-meta">';
-			if ( is_single() ) {
-				systemorph_posted_on();
-			} else {
-				echo systemorph_time_link();
-				systemorph_edit_link();
-			};
-			echo '</div><!-- .entry-meta -->';
-		};
 
 		if ( is_single() ) {
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -38,42 +24,49 @@
 		} else {
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		}
+
+		if ( 'news' === get_post_type() ) {
+			echo '<div class="entry-meta">';
+				systemorph_posted_on();
+				systemorph_edit_link();
+
+			echo '</div><!-- .entry-meta -->';
+		};
 		?>
 	</header><!-- .entry-header -->
 
-	<?php if ( '' !== get_the_post_thumbnail() && ! is_single() ) : ?>
+	<div class="blog-content">
 		<div class="post-thumbnail">
 			<a href="<?php the_permalink(); ?>">
-				<?php the_post_thumbnail( 'systemorph-featured-image' ); ?>
+				<?php if ('' !== get_the_post_thumbnail()) : ?>
+					<?php the_post_thumbnail( 'systemorph-blog-thumb' ); ?>
+				<?php else : ?>
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/default-news-thumbnail.png" width="70" height="70" alt="<?php the_title() ?>">
+				<?php endif; ?>
 			</a>
 		</div><!-- .post-thumbnail -->
-	<?php endif; ?>
 
-	<div class="entry-content">
-		<?php
-		/* translators: %s: Name of current post */
-		the_content(
-			sprintf(
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'systemorph' ),
-				get_the_title()
-			)
-		);
 
-		wp_link_pages(
-			array(
-				'before'      => '<div class="page-links">' . __( 'Pages:', 'systemorph' ),
-				'after'       => '</div>',
-				'link_before' => '<span class="page-number">',
-				'link_after'  => '</span>',
-			)
-		);
-		?>
-	</div><!-- .entry-content -->
+		<div class="entry-content">
+			<?php
+			/* translators: %s: Name of current post */
+			the_content(
+				sprintf(
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'systemorph' ),
+					get_the_title()
+				)
+			);
 
-	<?php
-	if ( is_single() ) {
-		systemorph_entry_footer();
-	}
-	?>
+			wp_link_pages(
+				array(
+					'before'      => '<div class="page-links">' . __( 'Pages:', 'systemorph' ),
+					'after'       => '</div>',
+					'link_before' => '<span class="page-number">',
+					'link_after'  => '</span>',
+				)
+			);
+			?>
+		</div><!-- .entry-content -->
+	</div>
 
 </article><!-- #post-## -->

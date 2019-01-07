@@ -68,6 +68,7 @@ function systemorph_setup() {
 
 	add_image_size( 'systemorph-featured-image', 2000, 1200, true );
 	add_image_size( 'systemorph-blog-thumb', 217, 203, true );
+	add_image_size( 'systemorph-news-thumb', 70, 70, true );
 	add_image_size( 'systemorph-team-member', 310, 310, true );
 
 	add_image_size( 'systemorph-thumbnail-avatar', 100, 100, true );
@@ -498,7 +499,7 @@ function systemorph_excerpt_more( $link, $ellipsis = true ) {
 	);
 
 	if ($ellipsis) {
-		$link = '&hellip; ' . $link;
+		$link = '&hellip; ';
 	}
 
 	return $link;
@@ -843,6 +844,10 @@ function get_sm_page_icon( $id ) {
 	$output = "<i class=\"icon icon-$icon$c icon-bcolor-$b\"></i>";
 
 	return $output;
+}
+
+function get_archive_post_type() {
+    return is_archive() ? get_queried_object()->label : false;
 }
 
 /**

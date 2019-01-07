@@ -58,6 +58,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/assets/images/default-news-thumbnail.png": {
+		"ft": 32768,
+		"iS": 2204,
+		"oA": 0,
+		"oAP": "/assets/images/default-news-thumbnail.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/assets/images/featured/featured-flexible-reporting-d.jpg": {
 		"ft": 16384,
 		"iS": 70273,
