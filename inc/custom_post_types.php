@@ -33,10 +33,10 @@ function sm_register_post_type_team() {
 		'menu_icon' => 'dashicons-admin-users',
 		'capability_type' => 'page',
 		'hierarchical' => false,
-		'has_archive' => true,
+		'has_archive' => false,
 		'query_var' => true,
 		'can_export' => true,
-		'description' => 'Systemorph’s team offers deep expertise in risk management, enterprise systems, mathematical modeling, information management and enterprise capital management. The global staff members all hold master degrees in computer science, physics or mathematics.',
+		'description' => '',
 		'show_in_menu' => true,
 		'supports' => array(
 			'title',
@@ -47,7 +47,6 @@ function sm_register_post_type_team() {
 			'page-attributes',
 		),
 		'rewrite' => array(
-			'slug' => 'management-team',
 			'with_front' => false,
 		),
 	);
