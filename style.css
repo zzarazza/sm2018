@@ -1437,6 +1437,12 @@ div.wp-block-button .wp-block-button__link {
     flex-wrap: wrap;
     justify-content: space-between; } }
 
+@media (min-width: 64em) {
+  .wp-block-team-management {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; } }
+
 .team-member {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1), 3px 3px 10px rgba(0, 0, 0, 0.1);
   border-radius: 9px;

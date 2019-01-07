@@ -31,7 +31,6 @@
 				systemorph_posted_on();
 			} else {
 				systemorph_posted_on();
-				systemorph_edit_link();
 			};
 			echo '</div><!-- .entry-meta -->';
 		};

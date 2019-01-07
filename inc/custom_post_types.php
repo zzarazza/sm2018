@@ -28,7 +28,7 @@ function sm_register_post_type_team() {
 		'show_ui' => true,
 		'show_in_nav_menus' => true,
 		'show_in_admin_bar' => false,
-		'show_in_rest' => false,
+		'show_in_rest' => true,
 		'menu_position' => 20,
 		'menu_icon' => 'dashicons-admin-users',
 		'capability_type' => 'page',

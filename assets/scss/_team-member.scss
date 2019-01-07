@@ -31,6 +31,14 @@
 	}
 }
 
+.wp-block-team-management {
+	@include mq($from: tablet-l) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}
+
 .team-member {
 	box-shadow: 0 0 3px rgba(black,0.1) ,3px 3px 10px rgba(black,0.1);
 	border-radius: 9px;

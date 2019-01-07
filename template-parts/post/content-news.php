@@ -28,8 +28,6 @@
 		if ( 'news' === get_post_type() ) {
 			echo '<div class="entry-meta">';
 				systemorph_posted_on();
-				systemorph_edit_link();
-
 			echo '</div><!-- .entry-meta -->';
 		};
 		?>

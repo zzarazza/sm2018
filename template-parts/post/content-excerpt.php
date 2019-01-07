@@ -21,12 +21,7 @@
 			<div class="entry-meta">
 				<?php
 				echo systemorph_time_link();
-				systemorph_edit_link();
 				?>
-			</div><!-- .entry-meta -->
-		<?php elseif ( 'page' === get_post_type() && get_edit_post_link() ) : ?>
-			<div class="entry-meta">
-				<?php systemorph_edit_link(); ?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 

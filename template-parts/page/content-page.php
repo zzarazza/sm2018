@@ -24,5 +24,4 @@
 			the_content();
 		?>
 	</div><!-- .entry-content -->
-	<?php systemorph_edit_link( get_the_ID() ); ?>
 </article><!-- #post-## -->
