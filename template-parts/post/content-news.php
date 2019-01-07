@@ -49,22 +49,16 @@
 
 		<div class="entry-content">
 			<?php
-			/* translators: %s: Name of current post */
-			the_content(
-				sprintf(
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'systemorph' ),
-					get_the_title()
-				)
-			);
-
-			wp_link_pages(
-				array(
-					'before'      => '<div class="page-links">' . __( 'Pages:', 'systemorph' ),
-					'after'       => '</div>',
-					'link_before' => '<span class="page-number">',
-					'link_after'  => '</span>',
-				)
-			);
+				if ( is_single() ) {
+					the_content(
+						sprintf(
+							__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'systemorph' ),
+							get_the_title()
+						)
+					);
+				} else {
+					the_excerpt();
+				}
 			?>
 		</div><!-- .entry-content -->
 	</div>
