@@ -39,6 +39,8 @@ get_header(); ?>
 			    	'numberposts' => -1,
 			        'post_status' => 'publish',
 			        'post_type' => 'partners',
+			        'orderby'    => 'menu_order',
+				    'order'      => 'ASC',
 			        'tax_query' => array(
 				        array(
 				            'taxonomy' => 'partnership-type',
