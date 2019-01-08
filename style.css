@@ -1715,6 +1715,9 @@ div.wp-block-button .wp-block-button__link {
     .page-title, .entry-header .entry-title {
       font-size: 50px; } }
 
+.page-template-default article.page .entry-content {
+  padding-bottom: 77px; }
+
 .entry-header {
   margin-top: 40px;
   margin-bottom: 60px; }
