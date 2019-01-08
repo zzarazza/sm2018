@@ -28,7 +28,8 @@ get_header(); ?>
 
 		<?php
 			$terms = get_terms( 'partnership-type', array(
-			    'orderby'    => 'count',
+			    'orderby'    => 'menu_order',
+			    'order'      => 'ASC',
 			    'hide_empty' => 0
 			) );
 
