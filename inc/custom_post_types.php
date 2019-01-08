@@ -147,13 +147,14 @@ function sm_register_post_type_partner() {
 		'hierarchical' => false,
 		'has_archive' => true,
 		'query_var' => true,
+		'description' => 'Systemorph is collaborating with a variety of partners.',
 		'can_export' => true,
 		'supports' => array(
 			'title',
 			'revisions',
 		),
 		'rewrite' => array(
-			'slug' => 'partners',
+			'slug' => 'about/partners',
 			'with_front' => false,
 		),
 	);

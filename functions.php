@@ -779,7 +779,8 @@ function case_studies_success() {
         wp_die();
 }
 
-add_action( "template_redirect", "redirect_to_case_study" );
+// add_action( "template_redirect", "redirect_to_case_study" );
+
 function redirect_to_case_study() {
     global $post;
 
@@ -876,8 +877,30 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
 
 require get_parent_theme_file_path( '/inc/custom_post_types.php' );
+require get_parent_theme_file_path( '/inc/taxonomies.php' );
 require get_parent_theme_file_path( '/inc/meta_boxes.php' );
 
 require get_parent_theme_file_path( '/inc/meta-settings.php' );
 require get_parent_theme_file_path( '/inc/meta-boxes.php' );
 require get_parent_theme_file_path( '/inc/shortcodes.php' );
+
+// function debug_rewrite_rules() {
+//     global $wp, $template, $wp_rewrite;
+
+//     echo '<pre>';
+//     echo 'Request: ';
+//     echo empty($wp->request) ? "None" : esc_html($wp->request) . PHP_EOL;
+//     echo 'Matched Rewrite Rule: ';
+//     echo empty($wp->matched_rule) ? None : esc_html($wp->matched_rule) . PHP_EOL;
+//     echo 'Matched Rewrite Query: ';
+//     echo empty($wp->matched_query) ? "None" : esc_html($wp->matched_query) . PHP_EOL;
+//     echo 'Loaded Template: ';
+//     echo basename($template);
+//     echo '</pre>' . PHP_EOL;
+
+//     echo '<pre>';
+//     print_r($wp_rewrite->rules);
+//     echo '</pre>';
+// }
+
+// add_action( 'wp_head', 'debug_rewrite_rules' );
