@@ -1680,6 +1680,9 @@ div.wp-block-button .wp-block-button__link {
   grid-row-gap: 20px; }
   @media (min-width: 48em) {
     .partners .partners-grid {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 64em) {
+    .partners .partners-grid {
       grid-template-columns: repeat(3, 1fr); } }
 
 .partners .partners-grid::before {

@@ -45,8 +45,13 @@
 		grid-template-columns: 1fr;
 
 		@include mq($from: tablet) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include mq($from: tablet-l) {
 			grid-template-columns: repeat(3, 1fr);
 		}
+
 		grid-auto-rows: 1fr;
 		grid-column-gap: 18px;
 		grid-row-gap: 20px;
