@@ -90,3 +90,34 @@ function the_systemorph_return_page_link($post_id = null) {
 
  	echo null;
 }
+
+
+function the_systemorph_event_location($post_id = null) {
+	$rwmbMeta = rwmb_meta( 'event_location', null, $post_id);
+	$output = "";
+
+	if ($rwmbMeta) :
+		$output .= $rwmbMeta;
+ 	endif;
+
+ 	return $output;
+}
+
+function sm_date($d) {
+    return sprintf('<time datetime="%1$s" class="wp-block-event-date">%2$s</time>',
+    			date(DATE_W3C, strtotime($d)),
+    			date("d M Y", strtotime($d))
+    		);
+}
+
+function the_systemorph_event_dates($post_id = null) {
+	$output = "";
+
+	$rwmbMeta = rwmb_meta( 'event_dates', null, $post_id);
+
+	if ( ! empty($rwmbMeta) ) :
+		$output = join('&#8212;', array_map('sm_date', $rwmbMeta));
+ 	endif;
+
+ 	return $output;
+}

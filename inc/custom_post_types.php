@@ -204,6 +204,7 @@ function sm_register_post_type_news() {
 			'editor',
 			'thumbnail',
 			'excerpt',
+			'revisions',
 		),
 		'rewrite' => array(
 			'with_front' => false,

@@ -161,17 +161,21 @@
 }
 
 .wp-block-recent-posts,
-.wp-block-recent-news {
+.wp-block-recent-news,
+.wp-block-recent-events {
 	h2 {
 		text-transform: uppercase !important;
 	}
 
-	.wp-block-recent-posts-item {
+	.wp-block-recent-posts-item,
+	.wp-block-recent-events-item,
+	.wp-block-recent-news-item {
 		@extend %post-item;
 	}
 
 	.wp-block-recent-posts-view-all,
-	.wp-block-recent-news-view-all {
+	.wp-block-recent-news-view-all,
+	.wp-block-upcoming-events-view-all {
 		border-top: 1px solid map-get($sm-palette, light-gray);
 		text-align: right;
 		padding-top: 60px;
@@ -222,6 +226,16 @@
 
 		.blog-content {
 			grid-template-columns: 70px 1fr;
+		}
+	}
+}
+
+.post-type-archive-event {
+	.type-event {
+		@extend %post-item;
+
+		.blog-content {
+			display: block;
 		}
 	}
 }

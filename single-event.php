@@ -16,7 +16,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<a class="back-to-blog-link" href="<?= get_post_type_archive_link( 'post' ); ?>">Back to The Systemorph Blog</a>
+			<a class="back-to-events-link" href="<?= get_post_type_archive_link( 'event' ); ?>">Back to Events</a>
 
 			<?php
 

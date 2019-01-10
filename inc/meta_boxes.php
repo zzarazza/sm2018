@@ -317,5 +317,49 @@ function sm_register_meta_boxes( $meta_boxes ) {
 		'style' => 'seamless',
 	);
 
+	// Event Info
+	$meta_boxes[] = array (
+		'title' => 'Event Info',
+		'id' => 'event_info',
+		'post_types' => array(
+			'event',
+		),
+		'context' => 'side',
+		'priority' => 'high',
+		'autosave' => true,
+		'fields' => array(
+
+			array (
+				'id' => 'event_location',
+				'type' => 'text',
+				'name' => 'Location',
+			),
+
+			array (
+				'id' => 'event_dates',
+				'type' => 'group',
+				'name' => 'Date(s)',
+				'fields' =>
+				array (
+					0 =>
+					array (
+						'id' => 'event_date_start',
+						'type' => 'date',
+						'name' => 'Start',
+						'required' => 1
+					),
+					1 =>
+					array (
+						'id' => 'event_date_end',
+						'type' => 'date',
+						'name' => 'End',
+					),
+				),
+				'default_state' => 'expanded',
+			),
+		),
+		'style' => 'seamless',
+	);
+
 	return $meta_boxes;
 } // sm_register_meta_boxes

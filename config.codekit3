@@ -16,6 +16,13 @@
 		"oAP": "/404.php",
 		"oF": 0
 		},
+	"/archive-event.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/archive-event.php",
+		"oF": 0
+		},
 	"/archive-news.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1674,6 +1681,20 @@
 		"oAP": "/single-case-studies.php",
 		"oF": 0
 		},
+	"/single-event.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/single-event.php",
+		"oF": 0
+		},
+	"/single-news.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/single-news.php",
+		"oF": 0
+		},
 	"/single.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1779,6 +1800,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/template-parts/post/content-audio.php",
+		"oF": 0
+		},
+	"/template-parts/post/content-event.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/template-parts/post/content-event.php",
 		"oF": 0
 		},
 	"/template-parts/post/content-excerpt.php": {
