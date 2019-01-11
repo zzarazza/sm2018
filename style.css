@@ -1030,6 +1030,12 @@ div.wp-block-button .wp-block-button__link {
   div.wp-block-button .wp-block-button__link.has-text-color .has-primary-color {
     color: #101F30; }
 
+.spacing-large {
+  margin-bottom: 50px; }
+  @media (min-width: 64em) {
+    .spacing-large {
+      margin-bottom: 100px; } }
+
 .site-header {
   position: absolute;
   left: 0;
