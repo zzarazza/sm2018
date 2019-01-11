@@ -1030,16 +1030,16 @@ div.wp-block-button .wp-block-button__link {
   div.wp-block-button .wp-block-button__link.has-text-color .has-primary-color {
     color: #101F30; }
 
-[class~="spacing-medium"] {
+.page .spacing-medium {
   margin-bottom: 30px; }
   @media (min-width: 64em) {
-    [class~="spacing-medium"] {
+    .page .spacing-medium {
       margin-bottom: 40px; } }
 
-.spacing-large {
+.page .spacing-large {
   margin-bottom: 50px; }
   @media (min-width: 64em) {
-    .spacing-large {
+    .page .spacing-large {
       margin-bottom: 100px; } }
 
 .site-header {
