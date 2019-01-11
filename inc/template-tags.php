@@ -88,8 +88,6 @@ if ( ! function_exists( 'systemorph_entry_footer' ) ) :
 				}
 			}
 
-			systemorph_edit_link();
-
 			echo '</footer> <!-- .entry-footer -->';
 		}
 	}
