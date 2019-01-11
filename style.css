@@ -1889,6 +1889,9 @@ div.wp-block-button .wp-block-button__link {
     .wp-block-sm-custom-list:not(.wp-block-sm-custom-list-one-column) {
       display: flex;
       flex-wrap: wrap; } }
+  @media (min-width: 64em) {
+    .wp-block-sm-custom-list.wp-block-sm-custom-list-one-column .wp-block-sm-custom-list-item {
+      width: autol; } }
   .wp-block-sm-custom-list .wp-block-sm-custom-list-item {
     margin-bottom: 40px; }
     @media (min-width: 48em) {

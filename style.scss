@@ -232,6 +232,14 @@
 		}
 	}
 
+	&.wp-block-sm-custom-list-one-column {
+		.wp-block-sm-custom-list-item {
+			@include mq($from: tablet-l) {
+				width: auto;
+			}
+		}
+	}
+
 	.wp-block-sm-custom-list-item {
 		margin-bottom: 40px;
 
