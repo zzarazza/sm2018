@@ -265,6 +265,16 @@
 	}
 }
 
+.wp-block-sm-section {
+	> .wp-block-sm-custom-list {
+		margin-bottom: -40px;
+
+		@include mq($from: desktop) {
+			margin-bottom: -77px;
+		}
+	}
+}
+
 .home {
 	.hero {
 		background-color: #91b3da;
