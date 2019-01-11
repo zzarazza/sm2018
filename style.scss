@@ -225,9 +225,11 @@
 	padding: 0;
 	margin: 40px 0;
 
-	@include mq($from: tablet-l) {
-		display: flex;
-		flex-wrap: wrap;
+	&:not(.wp-block-sm-custom-list-one-column) {
+		@include mq($from: tablet-l) {
+			display: flex;
+			flex-wrap: wrap;
+		}
 	}
 
 	.wp-block-sm-custom-list-item {
