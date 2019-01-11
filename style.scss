@@ -233,9 +233,17 @@
 	}
 
 	&.wp-block-sm-custom-list-one-column {
+		@include mq($from: desktop) {
+			margin-bottom: -50px;
+		}
+
 		.wp-block-sm-custom-list-item {
 			@include mq($from: tablet-l) {
 				width: auto;
+			}
+
+			@include mq($from: desktop) {
+				margin-bottom: 50px;
 			}
 		}
 	}
