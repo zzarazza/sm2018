@@ -551,6 +551,10 @@ section.alignfull {
 	> *:last-child {
 		margin-bottom: 0;
 	}
+
+	p:empty {
+		display: none;
+	}
 }
 
 .wp-block-sm-section[class*='color'] * {
