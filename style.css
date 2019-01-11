@@ -2160,6 +2160,8 @@ section.alignfull {
       right: 0;
       height: 51px;
       border-radius: 6px 6px 0 0; }
+    .wp-block-sm-page-card .page-block p:empty {
+      display: none; }
   .wp-block-sm-page-card .has-icon .icon {
     position: absolute;
     margin: 0;

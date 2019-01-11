@@ -580,6 +580,10 @@ section.alignfull {
 			height: 51px;
 			border-radius: 6px 6px 0 0;
 		}
+
+		p:empty {
+			display: none;
+		}
 	}
 
 	.has-icon .icon {
