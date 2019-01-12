@@ -202,7 +202,7 @@
 }
 
 .list-columned {
-	padding: 0;
+	padding: 0 0 0 24px;
 
 	@include mq($from: tablet-l) {
 		display: flex;
@@ -211,7 +211,7 @@
 		li {
 			flex: 0 1 50%;
 			box-sizing: border-box;
-			padding: 0 24px;
+			padding: 0 24px 0 0;
 			margin-bottom: 22px;
 		}
 	}
@@ -563,6 +563,12 @@ section.alignfull {
 	&.bcolor-white.box-shadow {
 		box-shadow: 3px 3px 10px rgba(black,0.1);
 		padding: 50px 43px !important;
+		margin-bottom: 20px;
+
+		h3 {
+			font-size: 25px;
+			font-weight: 400;
+		}
 	}
 
 	@include mq($from: tablet-l) {

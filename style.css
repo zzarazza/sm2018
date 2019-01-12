@@ -1881,7 +1881,7 @@ div.wp-block-button .wp-block-button__link {
   border-bottom: 0 none; }
 
 .list-columned {
-  padding: 0; }
+  padding: 0 0 0 24px; }
   @media (min-width: 64em) {
     .list-columned {
       display: flex;
@@ -1889,8 +1889,8 @@ div.wp-block-button .wp-block-button__link {
       .list-columned li {
         flex: 0 1 50%;
         box-sizing: border-box;
-        padding: 0 24px;
-        margin-bottom: 21px; } }
+        padding: 0 24px 0 0;
+        margin-bottom: 22px; } }
 
 .wp-block-image img {
   height: auto; }
@@ -2153,7 +2153,11 @@ section.alignfull {
   padding-bottom: 53px; }
   .wp-block-sm-section.bcolor-white.box-shadow {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-    padding: 50px 43px !important; }
+    padding: 50px 43px !important;
+    margin-bottom: 20px; }
+    .wp-block-sm-section.bcolor-white.box-shadow h3 {
+      font-size: 25px;
+      font-weight: 400; }
   @media (min-width: 64em) {
     .wp-block-sm-section {
       padding-top: 60px;
