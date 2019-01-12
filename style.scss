@@ -204,6 +204,14 @@
 .list-columned {
 	padding: 0 0 0 24px;
 
+	.wp-block-sm-section > &:last-child {
+		margin-bottom: -22px;
+	}
+
+	li {
+		margin-bottom: 22px;
+	}
+
 	@include mq($from: tablet-l) {
 		display: flex;
 		flex-wrap: wrap;
@@ -212,7 +220,6 @@
 			flex: 0 1 50%;
 			box-sizing: border-box;
 			padding: 0 24px 0 0;
-			margin-bottom: 22px;
 		}
 	}
 }

@@ -1030,17 +1030,17 @@ div.wp-block-button .wp-block-button__link {
   div.wp-block-button .wp-block-button__link.has-text-color .has-primary-color {
     color: #101F30; }
 
-.page .spacing-medium {
-  margin-bottom: 30px; }
+.spacing-medium {
+  margin-bottom: 30px !important; }
   @media (min-width: 64em) {
-    .page .spacing-medium {
-      margin-bottom: 40px; } }
+    .spacing-medium {
+      margin-bottom: 40px !important; } }
 
-.page .spacing-large {
-  margin-bottom: 50px; }
+.spacing-large {
+  margin-bottom: 50px !important; }
   @media (min-width: 64em) {
-    .page .spacing-large {
-      margin-bottom: 100px; } }
+    .spacing-large {
+      margin-bottom: 100px !important; } }
 
 .site-header {
   position: absolute;
@@ -1882,6 +1882,10 @@ div.wp-block-button .wp-block-button__link {
 
 .list-columned {
   padding: 0 0 0 24px; }
+  .wp-block-sm-section > .list-columned:last-child {
+    margin-bottom: -22px; }
+  .list-columned li {
+    margin-bottom: 22px; }
   @media (min-width: 64em) {
     .list-columned {
       display: flex;
@@ -1889,8 +1893,7 @@ div.wp-block-button .wp-block-button__link {
       .list-columned li {
         flex: 0 1 50%;
         box-sizing: border-box;
-        padding: 0 24px 0 0;
-        margin-bottom: 22px; } }
+        padding: 0 24px 0 0; } }
 
 .wp-block-image img {
   height: auto; }
