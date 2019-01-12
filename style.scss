@@ -201,6 +201,22 @@
 	}
 }
 
+.list-columned {
+	padding: 0;
+
+	@include mq($from: tablet-l) {
+		display: flex;
+		flex-wrap: wrap;
+
+		li {
+			flex: 0 1 50%;
+			box-sizing: border-box;
+			padding: 0 24px;
+			margin-bottom: 22px;
+		}
+	}
+}
+
 .wp-block-image {
 	img {
 		height: auto;
@@ -543,6 +559,11 @@ section.alignfull {
 .wp-block-sm-section {
 	padding-top: 53px;
 	padding-bottom: 53px;
+
+	&.bcolor-white.box-shadow {
+		box-shadow: 3px 3px 10px rgba(black,0.1);
+		padding: 50px 43px !important;
+	}
 
 	@include mq($from: tablet-l) {
 		padding-top: 60px;

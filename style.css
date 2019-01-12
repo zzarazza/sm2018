@@ -1880,6 +1880,18 @@ div.wp-block-button .wp-block-button__link {
   border-top: 1px solid #e1e1e1;
   border-bottom: 0 none; }
 
+.list-columned {
+  padding: 0; }
+  @media (min-width: 64em) {
+    .list-columned {
+      display: flex;
+      flex-wrap: wrap; }
+      .list-columned li {
+        flex: 0 1 50%;
+        box-sizing: border-box;
+        padding: 0 24px;
+        margin-bottom: 21px; } }
+
 .wp-block-image img {
   height: auto; }
 
@@ -2139,6 +2151,9 @@ section.alignfull {
 .wp-block-sm-section {
   padding-top: 53px;
   padding-bottom: 53px; }
+  .wp-block-sm-section.bcolor-white.box-shadow {
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    padding: 50px 43px !important; }
   @media (min-width: 64em) {
     .wp-block-sm-section {
       padding-top: 60px;
