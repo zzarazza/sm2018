@@ -1882,7 +1882,7 @@ div.wp-block-button .wp-block-button__link {
 
 .list-columned {
   padding: 0 0 0 24px; }
-  .wp-block-sm-section > .list-columned:last-child {
+  .wp-block-sm-section > .list-columned {
     margin-bottom: -22px; }
   .list-columned li {
     margin-bottom: 22px; }
