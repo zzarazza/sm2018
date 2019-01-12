@@ -154,6 +154,14 @@ div.wp-block-button .wp-block-button__link {
 	}
 }
 
+.spacing-small {
+	margin-bottom: 5px !important;
+
+	@include mq($from: tablet-l) {
+		margin-bottom: 10px !important;
+	}
+}
+
 
 .spacing-medium {
 	margin-bottom: 30px !important;
