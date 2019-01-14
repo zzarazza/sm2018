@@ -86,3 +86,46 @@ function sm_register_taxonomy_event_timeline() {
 	register_taxonomy( 'event-timeline', array( 'event' ), $args );
 }
 add_action( 'init', 'sm_register_taxonomy_event_timeline', 0 );
+
+function sm_register_taxonomy_cs_type() {
+
+	$args = array (
+		'label' => esc_html__( 'Types', 'systemorph' ),
+		'labels' => array(
+			'menu_name' => esc_html__( 'Types', 'systemorph' ),
+			'all_items' => esc_html__( 'All Types', 'systemorph' ),
+			'edit_item' => esc_html__( 'Edit Type', 'systemorph' ),
+			'view_item' => esc_html__( 'View Type', 'systemorph' ),
+			'update_item' => esc_html__( 'Update Type', 'systemorph' ),
+			'add_new_item' => esc_html__( 'Add new Type', 'systemorph' ),
+			'new_item_name' => esc_html__( 'New Type', 'systemorph' ),
+			'parent_item' => esc_html__( 'Parent Type', 'systemorph' ),
+			'parent_item_colon' => esc_html__( 'Parent Type:', 'systemorph' ),
+			'search_items' => esc_html__( 'Search Types', 'systemorph' ),
+			'popular_items' => esc_html__( 'Popular Types', 'systemorph' ),
+			'separate_items_with_commas' => esc_html__( 'Separate Types with commas', 'systemorph' ),
+			'add_or_remove_items' => esc_html__( 'Add or remove Types', 'systemorph' ),
+			'choose_from_most_used' => esc_html__( 'Choose most used Types', 'systemorph' ),
+			'not_found' => esc_html__( 'No Types found', 'systemorph' ),
+			'name' => esc_html__( 'Types', 'systemorph' ),
+			'singular_name' => esc_html__( 'Type', 'systemorph' ),
+		),
+		'public' => true,
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'show_in_nav_menus' => true,
+		'show_tagcloud' => false,
+		'show_in_quick_edit' => true,
+		'show_admin_column' => true,
+		'show_in_rest' => false,
+		'hierarchical' => false,
+		'query_var' => true,
+		'sort' => true,
+		'rewrite' => array(
+			'with_front' => false,
+		),
+	);
+
+	register_taxonomy( 'type', array( 'case-studies' ), $args );
+}
+add_action( 'init', 'sm_register_taxonomy_cs_type', 0 );
