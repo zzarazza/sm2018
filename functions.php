@@ -779,7 +779,7 @@ function case_studies_success() {
         wp_die();
 }
 
-// add_action( "template_redirect", "redirect_to_case_study" );
+add_action( "template_redirect", "redirect_to_case_study" );
 
 function redirect_to_case_study() {
     global $post;

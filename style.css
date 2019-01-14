@@ -1470,7 +1470,8 @@ div.wp-block-button .wp-block-button__link {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1), 3px 3px 10px rgba(0, 0, 0, 0.1);
   border-radius: 9px;
   padding: 25px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  background-color: white; }
   @media (min-width: 64em) {
     .team-member {
       flex: 0 1 48%; }

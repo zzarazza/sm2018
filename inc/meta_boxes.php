@@ -306,10 +306,10 @@ function sm_register_meta_boxes( $meta_boxes ) {
 			array (
 				'id' => 'sm_case_study_link',
 				'type' => 'post',
-				'name' => 'Page',
+				'name' => 'Case Study',
 				'post_type' =>
 				array (
-					0 => 'page',
+					0 => 'case-studies',
 				),
 				'field_type' => 'select_advanced',
 			),

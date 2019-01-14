@@ -40,6 +40,7 @@
 	border-radius: 9px;
 	padding: 25px;
 	box-sizing: border-box;
+	background-color: white;
 
 	@include mq($from: tablet-l) {
 		flex: 0 1 48%;
