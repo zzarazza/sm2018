@@ -75,13 +75,13 @@ if ( ! function_exists( 'systemorph_entry_footer' ) ) :
 				if ( ( $categories_list && systemorph_categorized_blog() ) || $tags_list ) {
 					echo '<span class="cat-tags-links">';
 
-						// Make sure there's more than one category before displaying.
-					if ( $categories_list && systemorph_categorized_blog() ) {
-						echo '<span class="cat-links">' . systemorph_get_svg( array( 'icon' => 'folder-open' ) ) . '<span class="screen-reader-text">' . __( 'Categories', 'systemorph' ) . '</span>' . $categories_list . '</span>';
-					}
-
 					if ( $tags_list && ! is_wp_error( $tags_list ) ) {
 						echo '<span class="tags-links"><span class="screen-reader-text">' . __( 'Tags', 'systemorph' ) . '</span>' . $tags_list . '</span> ';
+					}
+
+					// Make sure there's more than one category before displaying.
+					if ( $categories_list && systemorph_categorized_blog() ) {
+						echo '<span class="cat-links">' . __( 'Posted in', 'systemorph' ) . ' <span class="screen-reader-text">' . __( 'Categories', 'systemorph' ) . '</span>' . $categories_list . '</span>';
 					}
 
 					echo '</span>';
