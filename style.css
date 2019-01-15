@@ -1578,6 +1578,11 @@ div.wp-block-button .wp-block-button__link {
 .category .page-title {
   margin-bottom: 62px; }
 
+.blog .post .entry-footer,
+.category .post .entry-footer {
+  padding-top: 70px;
+  padding-bottom: 100px; }
+
 .blog .pagination .page-numbers,
 .category .pagination .page-numbers {
   font-size: 20px;
