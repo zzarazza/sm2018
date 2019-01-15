@@ -45,8 +45,8 @@ get_header(); ?>
 
 			the_posts_pagination(
 				array(
-					'prev_text'          => systemorph_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous page', 'systemorph' ) . '</span>',
-					'next_text'          => '<span class="screen-reader-text">' . __( 'Next page', 'systemorph' ) . '</span>' . systemorph_get_svg( array( 'icon' => 'arrow-right' ) ),
+					'prev_text'          =>  '<span class="screen-reader-text">' . __( 'Previous page', 'systemorph' ) . '</span>',
+					'next_text'          => '<span class="screen-reader-text">' . __( 'Next page', 'systemorph' ) . '</span>',
 					'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'systemorph' ) . ' </span>',
 				)
 			);
