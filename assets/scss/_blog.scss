@@ -78,6 +78,12 @@
 		@extend %post-item;
 	}
 
+	.entry-header .entry-title {
+		@include mq($from: tablet) {
+			max-width: 80%;
+		}
+	}
+
 	.pagination {
 		border-top: 1px solid $sm-border-color;
 		text-align: right;

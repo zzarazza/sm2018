@@ -1585,6 +1585,12 @@ div.wp-block-button .wp-block-button__link {
 .archive.tag .page-title {
   margin-bottom: 62px; }
 
+@media (min-width: 48em) {
+  .blog .entry-header .entry-title,
+  .archive.category .entry-header .entry-title,
+  .archive.tag .entry-header .entry-title {
+    max-width: 80%; } }
+
 .blog .pagination,
 .archive.category .pagination,
 .archive.tag .pagination {
