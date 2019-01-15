@@ -1585,19 +1585,29 @@ div.wp-block-button .wp-block-button__link {
 .archive.tag .page-title {
   margin-bottom: 62px; }
 
-.blog .pagination .page-numbers,
-.archive.category .pagination .page-numbers,
-.archive.tag .pagination .page-numbers {
-  font-size: 20px;
-  line-height: 1;
-  display: inline-block;
-  padding: 5px;
-  margin: 0 5px; }
+.blog .pagination,
+.archive.category .pagination,
+.archive.tag .pagination {
+  border-top: 1px solid #E1E1E1;
+  text-align: right;
+  padding-top: 60px; }
+  .blog .pagination .page-numbers,
+  .archive.category .pagination .page-numbers,
+  .archive.tag .pagination .page-numbers {
+    font-size: 20px;
+    line-height: 1;
+    display: inline-block;
+    padding: 5px;
+    margin: 0 5px; }
+  .blog .pagination .current,
+  .archive.category .pagination .current,
+  .archive.tag .pagination .current {
+    color: #A9A7B3; }
 
-.blog .pagination .current,
-.archive.category .pagination .current,
-.archive.tag .pagination .current {
-  color: #A9A7B3; }
+.blog .site-main,
+.archive.category .site-main,
+.archive.tag .site-main {
+  margin-bottom: 100px; }
 
 .nav-links .icon {
   width: 24px;

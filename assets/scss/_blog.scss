@@ -79,6 +79,10 @@
 	}
 
 	.pagination {
+		border-top: 1px solid $sm-border-color;
+		text-align: right;
+		padding-top: 60px;
+
 		.page-numbers {
 			font-size: 20px;
 			line-height: 1;
@@ -90,6 +94,10 @@
 		.current {
 			color: map-get($sm-palette, lavender-gray);
 		}
+	}
+
+	.site-main {
+		margin-bottom: 100px;
 	}
 }// .blog
 
