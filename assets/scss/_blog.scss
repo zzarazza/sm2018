@@ -56,6 +56,14 @@
 				margin-bottom: 0;
 			}
 		}
+
+		@include mq($from: tablet) {
+			align-self: center;
+
+			p:first-child {
+				margin-top: -0.5em;
+			}
+		}
 	}
 }
 
