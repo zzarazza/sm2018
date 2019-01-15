@@ -1938,7 +1938,7 @@ div.wp-block-button .wp-block-button__link {
       .list-columned li {
         flex: 0 1 50%;
         box-sizing: border-box;
-        padding: 0 32px 0 0; } }
+        padding: 0 36px 0 0; } }
 
 .wp-block-image > img {
   height: auto; }
