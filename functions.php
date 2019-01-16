@@ -792,7 +792,7 @@ function redirect_to_case_study() {
 	    'post_status' => 'publish'
 	));
 
-	while ($query->have_posts()) {
+	while ($query->have_posts() && !$is_to_redirect) {
 	    $query->the_post();
 	    $post_id = get_the_ID();
 		$redirect_page = the_systemorph_case_study_link($post_id);
