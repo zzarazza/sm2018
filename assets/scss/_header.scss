@@ -197,8 +197,11 @@
 				}
 			}
 
-			&.toggled-on {
-
+			.current-menu-item,
+			.current_page_item {
+				a {
+					font-weight: 500;
+				}
 			}
 		}
 	}

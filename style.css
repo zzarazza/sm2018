@@ -1179,6 +1179,9 @@ div.wp-block-button .wp-block-button__link {
           font-size: 20px; }
           .navigation-top .menu .sub-menu > .menu-item a:hover {
             text-decoration: underline; }
+      .navigation-top .menu .sub-menu .current-menu-item a,
+      .navigation-top .menu .sub-menu .current_page_item a {
+        font-weight: 500; }
   .navigation-top .menu-item a {
     text-decoration: none;
     color: #101F30;
