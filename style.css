@@ -1818,7 +1818,7 @@ div.wp-block-button .wp-block-button__link {
 .entry-header {
   margin-top: 40px;
   margin-bottom: 60px; }
-  .entry-header article.page > .entry-header {
+  article.page > .entry-header {
     margin-bottom: 0; }
   .entry-header .entry-title {
     margin: 0; }
