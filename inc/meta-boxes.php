@@ -27,7 +27,7 @@ function the_systemorph_page_prefix () {
 	$current_item = current( wp_filter_object_list( $menu_items, array( 'object_id' => get_queried_object_id() ) ) );
 	$title = get_the_title();
 
-	if ($current_item->title !== $title ) {
+	if ( strcasecmp( $current_item->title, $title) != 0 ) {
 		echo '<h4 class="page-prefix">' . $current_item->title . '</h4>';
 	}
 }
