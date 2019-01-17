@@ -1818,11 +1818,13 @@ div.wp-block-button .wp-block-button__link {
 .entry-header {
   margin-top: 40px;
   margin-bottom: 60px; }
+  .entry-header article.page > .entry-header {
+    margin-bottom: 0; }
   .entry-header .entry-title {
     margin: 0; }
     @media (min-width: 48em) {
       .entry-header .entry-title {
-        max-width: 70%; } }
+        max-width: 80%; } }
     .entry-header .entry-title strong {
       font-weight: 300;
       font-size: 25px;
