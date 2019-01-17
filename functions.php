@@ -861,6 +861,47 @@ function sm_trim_excerpt( $text = '' ) {
 }
 add_filter( 'wp_trim_excerpt', 'sm_trim_excerpt' );
 
+function jb_verbose_date_range($start_date = '', $end_date = '') {
+    $date_range = '';
+
+	if ( empty($end_date) && ! empty($start_date) ) {
+		return date( 'j M Y', $start_date );
+	}
+
+    // If only one date, or dates are the same set to FULL verbose date
+    if ( date('jMY', $start_date) == date('jMY', $end_date) ) {
+        $start_date_pretty = date( 'j M Y', $start_date );
+        $end_date_pretty = date( 'j M Y', $end_date );
+    } else {
+         // Setup basic dates
+        $start_date_pretty = date( 'j', $start_date );
+        $end_date_pretty = date( 'j M Y', $end_date );
+
+        // If months differ add suffix and year to end_date
+        if ( date('M', $start_date) != date('M', $end_date) ) {
+        	$start_date_pretty = $start_date_pretty . date( ' M', $start_date);
+        }
+
+	    // If years differ add suffix and year to start_date
+        if ( date('Y', $start_date) != date('Y', $end_date) ) {
+            $start_date_pretty .= date( ' Y', $start_date );
+        }
+    }
+
+    // build date_range return string
+    if( ! empty( $start_date ) ) {
+          $date_range .= $start_date_pretty;
+    }
+
+    // check if there is an end date and append if not identical
+    if( ! empty( $end_date ) ) {
+        if( $end_date_pretty != $start_date_pretty ) {
+              $date_range .= '&#8211;' . $end_date_pretty;
+          }
+     }
+    return $date_range;
+}
+
 /**
  * Implement the Custom Header feature.
  */

@@ -346,13 +346,15 @@ function sm_register_meta_boxes( $meta_boxes ) {
 						'id' => 'event_date_start',
 						'type' => 'date',
 						'name' => 'Start',
-						'required' => 1
+						'required' => 1,
+						'timestamp' => 1,
 					),
 					1 =>
 					array (
 						'id' => 'event_date_end',
 						'type' => 'date',
 						'name' => 'End',
+						'timestamp' => 1,
 					),
 				),
 				'default_state' => 'expanded',
