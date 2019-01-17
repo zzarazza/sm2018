@@ -16,6 +16,9 @@
 	<?php $icon = get_sm_page_icon( get_the_ID() ); ?>
 	<header class="entry-header<?= ($icon) ? ' has-icon' : '' ?>">
 		<?php echo $icon; ?>
+		<?php
+			the_systemorph_page_prefix();
+		?>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<?php the_systemorph_page_subtitle(); ?>
 	</header><!-- .entry-header -->

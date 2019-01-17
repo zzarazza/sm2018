@@ -31,6 +31,13 @@ define( 'SMCOLORS', array(
 	'white'          => '#ffffff'
 ));
 
+if ( ! function_exists( 'rwmb_meta' ) ) {
+    function rwmb_meta( $key, $args = '', $post_id = null ) {
+        return false;
+    }
+}
+
+
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *

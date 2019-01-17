@@ -22,6 +22,16 @@ function the_systemorph_contact_info() {
 	the_systemorph_contact_email();
 }
 
+function the_systemorph_page_prefix () {
+	$menu_items = wp_get_nav_menu_items( 'menu' );
+	$current_item = current( wp_filter_object_list( $menu_items, array( 'object_id' => get_queried_object_id() ) ) );
+	$title = get_the_title();
+
+	if ($current_item->title !== $title ) {
+		echo '<h4 class="page-prefix">' . $current_item->title . '</h4>';
+	}
+}
+
 function the_systemorph_page_subtitle() {
 	$rwmbMeta = rwmb_meta( 'page_settings_subtitle');
 	if ($rwmbMeta) :
