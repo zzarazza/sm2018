@@ -206,7 +206,12 @@ function sm_register_post_type_news() {
 			'excerpt',
 			'revisions',
 		),
+		'taxonomies' => array(
+			'category',
+			'post_tag',
+		),
 		'rewrite' => array(
+			'slug' => 'learn/news',
 			'with_front' => false,
 		),
 	);
@@ -261,9 +266,10 @@ function sm_register_post_type_event() {
 		),
 		'taxonomies' => array(
 			'post_tag',
+			'category',
 		),
 		'rewrite' => array(
-			'slug' => 'events',
+			'slug' => 'learn/events',
 			'with_front' => false,
 		),
 	);

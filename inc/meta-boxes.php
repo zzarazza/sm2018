@@ -126,7 +126,17 @@ function the_systemorph_event_dates($post_id = null) {
 	$rwmbMeta = rwmb_meta( 'event_dates', null, $post_id);
 
 	if ( ! empty($rwmbMeta) ) :
-		$output = join('&#8212;', array_map('sm_date', $rwmbMeta));
+		if (count($rwmbMeta) > 1) {
+			$output = jb_verbose_date_range($rwmbMeta['event_date_start']['timestamp'], $rwmbMeta['event_date_end']['timestamp']);
+		} else {
+			if ( isset($rwmbMeta['event_date_end']['timestamp']) ) {
+				$output = jb_verbose_date_range($rwmbMeta['event_date_end']['timestamp']);
+			}
+
+			if ( isset($rwmbMeta['event_date_start']['timestamp']) ) {
+				$output = jb_verbose_date_range($rwmbMeta['event_date_start']['timestamp']);
+			}
+		}
  	endif;
 
  	return $output;
