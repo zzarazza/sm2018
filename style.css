@@ -1910,8 +1910,9 @@ div.wp-block-button .wp-block-button__link {
   @media (min-width: 73.125em) {
     .entry-content h2 {
       margin-top: 2.56em; } }
-  .homepage-main-info .entry-content h2 {
-    text-transform: none; }
+
+.entry-content .homepage-main-info h2 {
+  text-transform: none; }
 
 @media (min-width: 73.125em) {
   .entry-content .special-points {
