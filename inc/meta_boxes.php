@@ -359,6 +359,24 @@ function sm_register_meta_boxes( $meta_boxes ) {
 				),
 				'default_state' => 'expanded',
 			),
+
+			array (
+				'id' => 'divider_4',
+				'type' => 'divider',
+				'name' => 'Divider',
+			),
+
+			array (
+				'id' => 'event_speakers',
+				'type' => 'post',
+				'name' => 'Speakers',
+				'post_type' =>
+				array (
+					0 => 'management-team',
+				),
+				'field_type' => 'select_advanced',
+				'multiple' => true,
+			),
 		),
 		'style' => 'seamless',
 	);
