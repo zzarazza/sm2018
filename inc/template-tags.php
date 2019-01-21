@@ -15,7 +15,7 @@ if ( ! function_exists( 'get_systemorph_author_title' ) ) :
 
 		$output = "";
 
-		$meta = rwmb_the_value( 'user_meta_title', null, $post->ID );
+		$meta = rwmb_meta( 'user_meta_title', null, $post->ID );
 		var_dump($meta);
 
 		if ($meta) :
