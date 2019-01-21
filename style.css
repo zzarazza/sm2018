@@ -1583,6 +1583,18 @@ div.wp-block-button .wp-block-button__link {
       .post-type-archive-case-studies .case-study-item .entry-content p:first-child, .blog .post .entry-content p:first-child, .archive.category .post .entry-content p:first-child, .archive.tag .post .entry-content p:first-child, .wp-block-recent-posts .wp-block-recent-posts-item .entry-content p:first-child, .wp-block-recent-posts .wp-block-recent-events-item .entry-content p:first-child, .wp-block-recent-posts .wp-block-recent-news-item .entry-content p:first-child, .wp-block-recent-news .wp-block-recent-posts-item .entry-content p:first-child, .wp-block-recent-news .wp-block-recent-events-item .entry-content p:first-child, .wp-block-recent-news .wp-block-recent-news-item .entry-content p:first-child, .wp-block-recent-events .wp-block-recent-posts-item .entry-content p:first-child, .wp-block-recent-events .wp-block-recent-events-item .entry-content p:first-child, .wp-block-recent-events .wp-block-recent-news-item .entry-content p:first-child, .post-type-archive-news .type-news .entry-content p:first-child, .post-type-archive-event .type-event .entry-content p:first-child {
         margin-top: -0.5em; } }
 
+.post-type-archive .site-content {
+  margin-bottom: 56px; }
+
+.post-type-archive-case-studies .page-header {
+  margin-bottom: 42px; }
+  @media (min-width: 48em) {
+    .post-type-archive-case-studies .page-header {
+      margin-bottom: 82px; } }
+
+.post-type-archive-case-studies .case-study-item .entry-title {
+  margin-bottom: 19px; }
+
 .post-type-archive-case-studies .case-study-item, .blog .post,
 .archive.category .post,
 .archive.tag .post, .wp-block-recent-posts .wp-block-recent-posts-item,

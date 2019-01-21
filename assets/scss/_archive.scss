@@ -67,8 +67,26 @@
 	}
 }
 
+.post-type-archive {
+	.site-content {
+		margin-bottom: 56px;
+	}
+}
+
 .post-type-archive-case-studies {
+	.page-header {
+		margin-bottom: 42px;
+
+		@include mq($from: tablet) {
+			margin-bottom: 82px;
+		}
+	}
+
 	.case-study-item {
 		@extend %post-item;
+
+		.entry-title {
+			margin-bottom: 19px;
+		}
 	}
 }
