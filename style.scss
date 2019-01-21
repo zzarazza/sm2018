@@ -571,22 +571,17 @@ section.alignwide {
 	margin-right: -33px;
 }
 
-section.alignfull {
+section.wp-block-sm-section.alignfull {
 	@include full-width;
-	padding-top: 40px;
-	padding-bottom: 40px;
-
-	@include mq($from: tablet-l) {
-		padding-top: 60px;
-		padding-bottom: 60px;
-	}
+	padding-top: 0;
+	padding-bottom: 0;
 
 	.wp-block-image.alignfull:last-child {
-		margin-bottom: -40px;
+		// margin-bottom: -40px;
 
-		@include mq($from: tablet-l) {
-			margin-bottom: -60px;
-		}
+		// @include mq($from: tablet-l) {
+		// 	margin-bottom: -60px;
+		// }
 	}
 }
 
