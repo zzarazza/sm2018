@@ -381,5 +381,36 @@ function sm_register_meta_boxes( $meta_boxes ) {
 		'style' => 'seamless',
 	);
 
+	$meta_boxes[] = array (
+		'title' => 'User Info',
+		'id' => 'user-info',
+		'fields' => array(
+
+			array (
+				'id' => 'user_meta_title',
+				'name' => 'Title',
+				'type' => 'radio',
+				'options' =>
+				array (
+					'None' => 'None',
+					'Dr.' => 'Dr.',
+				),
+				'inline' => 1,
+			),
+
+			array (
+				'id' => 'user_team_member',
+				'type' => 'post',
+				'name' => 'Team Member',
+				'post_type' =>
+				array (
+					0 => 'management-team',
+				),
+				'field_type' => 'select_advanced',
+			),
+		),
+		'type' => 'user',
+	);
+
 	return $meta_boxes;
 } // sm_register_meta_boxes
