@@ -1,0 +1,74 @@
+%post-item {
+	border-top: 1px solid $sm-border-color;
+	padding: 40px 0;
+
+	.entry-header {
+		margin-top: 0;
+		margin-bottom: 33px;
+
+		@include mq($from: tablet) {
+			margin-bottom: 19px;
+		}
+	}
+
+	.entry-title {
+		font-size: 25px;
+		max-width: none;
+		text-transform: uppercase;
+		font-weight: 400;
+		margin-bottom: 11px;
+
+		a {
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+	.entry-meta {
+		font-size: 20px;
+	}
+
+	.post-thumbnail {
+		margin-bottom: 20px;
+
+		img {
+			display: block;
+		}
+	}
+
+	.blog-content {
+		@include mq($from: tablet) {
+			display: grid;
+			grid-column-gap: 48px;
+			grid-template-columns: 217px 1fr;
+		}
+	}
+
+	.entry-content {
+		p {
+			margin-top: 0;
+			font-weight: 300;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		@include mq($from: tablet) {
+			align-self: center;
+
+			p:first-child {
+				margin-top: -0.5em;
+			}
+		}
+	}
+}
+
+.post-type-archive-case-studies {
+	.case-study-item {
+		@extend %post-item;
+	}
+}
