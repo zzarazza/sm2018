@@ -568,6 +568,11 @@
 
 	.form-ctr {
 		margin: 62px 0 32px;
+
+		.wpcf7-submit:disabled {
+			opacity: 0.5;
+			box-shadow: none;
+		}
 	}
 
 	.wpcf7-response-output {

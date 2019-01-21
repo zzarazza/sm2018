@@ -2265,6 +2265,9 @@ div.wp-block-button .wp-block-button__link {
       margin-right: 0.5em; }
   .wpcf7-form .form-ctr {
     margin: 62px 0 32px; }
+    .wpcf7-form .form-ctr .wpcf7-submit:disabled {
+      opacity: 0.5;
+      box-shadow: none; }
   .wpcf7-form .wpcf7-response-output {
     margin: 20px 0 0;
     padding: 10px 20px; }
