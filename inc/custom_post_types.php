@@ -202,6 +202,7 @@ function sm_register_post_type_news() {
 		'supports' => array(
 			'title',
 			'editor',
+			'author',
 			'thumbnail',
 			'excerpt',
 			'revisions',
