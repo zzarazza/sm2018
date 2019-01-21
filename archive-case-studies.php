@@ -44,7 +44,7 @@ get_header(); ?>
 				        array(
 				            'taxonomy' => 'type',
 				            'field' => 'slug',
-				            'terms' => $term->slug
+				            'terms' => 'summary'
 				        )
 				    )
 			    );
