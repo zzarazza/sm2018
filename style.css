@@ -857,7 +857,8 @@ body {
   width: 100%; }
 
 a,
-button {
+button,
+.button {
   outline: none; }
 
 .site-content-contain {
