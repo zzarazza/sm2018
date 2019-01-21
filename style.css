@@ -2222,31 +2222,31 @@ div.wp-block-button .wp-block-button__link {
       display: block;
       font-size: 16px;
       margin-bottom: 8px; }
-    .wpcf7-form .form-el input,
-    .wpcf7-form .form-el textarea {
+    .wpcf7-form .form-el .wpcf7-text,
+    .wpcf7-form .form-el .wpcf7-textarea {
       font-size: 16px;
       padding: 14px 20px 12px;
       border: 1px solid #101F30;
       border-radius: 5px;
       box-sizing: border-box;
       width: 100%; }
-      .wpcf7-form .form-el input::-webkit-input-placeholder,
-      .wpcf7-form .form-el textarea::-webkit-input-placeholder {
+      .wpcf7-form .form-el .wpcf7-text::-webkit-input-placeholder,
+      .wpcf7-form .form-el .wpcf7-textarea::-webkit-input-placeholder {
         color: #a6a6a6; }
-      .wpcf7-form .form-el input:-moz-placeholder,
-      .wpcf7-form .form-el textarea:-moz-placeholder {
+      .wpcf7-form .form-el .wpcf7-text:-moz-placeholder,
+      .wpcf7-form .form-el .wpcf7-textarea:-moz-placeholder {
         color: #a6a6a6; }
-      .wpcf7-form .form-el input::-moz-placeholder,
-      .wpcf7-form .form-el textarea::-moz-placeholder {
+      .wpcf7-form .form-el .wpcf7-text::-moz-placeholder,
+      .wpcf7-form .form-el .wpcf7-textarea::-moz-placeholder {
         color: #a6a6a6; }
-      .wpcf7-form .form-el input:-ms-input-placeholder,
-      .wpcf7-form .form-el textarea:-ms-input-placeholder {
+      .wpcf7-form .form-el .wpcf7-text:-ms-input-placeholder,
+      .wpcf7-form .form-el .wpcf7-textarea:-ms-input-placeholder {
         color: #a6a6a6; }
-      .wpcf7-form .form-el input::placeholder,
-      .wpcf7-form .form-el textarea::placeholder {
+      .wpcf7-form .form-el .wpcf7-text::placeholder,
+      .wpcf7-form .form-el .wpcf7-textarea::placeholder {
         color: #a6a6a6; }
-      .wpcf7-form .form-el input.wpcf7-not-valid,
-      .wpcf7-form .form-el textarea.wpcf7-not-valid {
+      .wpcf7-form .form-el .wpcf7-text.wpcf7-not-valid,
+      .wpcf7-form .form-el .wpcf7-textarea.wpcf7-not-valid {
         border-color: #cc1300; }
     .wpcf7-form .form-el textarea {
       resize: vertical; }
