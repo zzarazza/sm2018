@@ -17,7 +17,7 @@ get_header(); ?>
 	<?php if ( have_posts() ) : ?>
 		<header class="page-header">
 			<h2 class="page-title">
-				<?php post_type_archive_title(); ?>
+				<?php post_type_archive_title( "Systemorph" ); ?>
 			</h2>
 		</header><!-- .page-header -->
 	<?php endif; ?>
@@ -26,59 +26,46 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php
-			$terms = get_terms( 'type', array(
-			    'orderby'    => 'menu_order',
+		    $args = array(
+		    	'numberposts' => -1,
+		        'post_status' => 'publish',
+		        'post_type' => 'case-studies',
+		        'orderby'    => 'menu_order',
 			    'order'      => 'ASC',
-			    'hide_empty' => 0
-			) );
+		        'tax_query' => array(
+			        array(
+			            'taxonomy' => 'type',
+			            'field' => 'slug',
+			            'terms' => 'summary'
+			        )
+			    )
+		    );
 
-			foreach( $terms as $term ) {
+		    $query = new WP_Query( $args );
 
-			    $args = array(
-			    	'numberposts' => -1,
-			        'post_status' => 'publish',
-			        'post_type' => 'case-studies',
-			        'orderby'    => 'menu_order',
-				    'order'      => 'ASC',
-			        'tax_query' => array(
-				        array(
-				            'taxonomy' => 'type',
-				            'field' => 'slug',
-				            'terms' => 'summary'
-				        )
-				    )
-			    );
+	        // Start the Loop
+	        while ( $query->have_posts() ) : $query->the_post(); ?>
 
-			    $query = new WP_Query( $args );
+	        <article id="post-<?php the_ID(); ?>" <?php post_class("case-study-item"); ?>>
 
-		        // Start the Loop
-		        while ( $query->have_posts() ) : $query->the_post(); ?>
+				<header class="entry-header">
+					<?php
+						the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+					?>
+				</header><!-- .entry-header -->
 
-		        <article id="post-<?php the_ID(); ?>" <?php post_class("case-study-item"); ?>>
+				<div class="entry-content">
+					<?php	the_excerpt();	?>
+				</div>
 
-					<header class="entry-header">
-						<?php
-							the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-						?>
-					</header><!-- .entry-header -->
+			</article><!-- #post-## -->
 
-					<div class="blog-content">
+	        <?php endwhile;
 
-						<div class="entry-content">
-							<?php
-								the_excerpt();
-							?>
-						</div><!-- .entry-content -->
-					</div>
+		    // use reset postdata to restore orginal query
+		    wp_reset_postdata();
 
-				</article><!-- #post-## -->
-
-		        <?php endwhile;
-
-			    // use reset postdata to restore orginal query
-			    wp_reset_postdata();
-
-			} ?>
+			?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
