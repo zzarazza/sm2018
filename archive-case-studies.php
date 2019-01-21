@@ -17,7 +17,7 @@ get_header(); ?>
 	<?php if ( have_posts() ) : ?>
 		<header class="page-header">
 			<h2 class="page-title">
-				<?php post_type_archive_title( "Systemorph" ); ?>
+				<?php post_type_archive_title( "Systemorph " ); ?>
 			</h2>
 		</header><!-- .page-header -->
 	<?php endif; ?>
