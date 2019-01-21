@@ -498,16 +498,16 @@ function systemorph_excerpt_more( $link, $ellipsis = true ) {
 		return $link;
 	}
 
-	$link = sprintf(
-		'<a href="%1$s" class="read-more-link">%2$s</a>',
-		esc_url( get_permalink( get_the_ID() ) ),
-		/* translators: %s: Name of current post */
-		sprintf( __( 'Read more<span class="screen-reader-text"> "%s"</span>', 'systemorph' ), get_the_title( get_the_ID() ) )
-	);
+	// $link = sprintf(
+	// 	'<a href="%1$s" class="read-more-link">%2$s</a>',
+	// 	esc_url( get_permalink( get_the_ID() ) ),
+	// 	 translators: %s: Name of current post
+	// 	sprintf( __( 'Read more<span class="screen-reader-text"> "%s"</span>', 'systemorph' ), get_the_title( get_the_ID() ) )
+	// );
 
-	if ($ellipsis) {
-		$link = '&hellip; ';
-	}
+	// if ($ellipsis) {
+	$link = '&hellip; ';
+	// }
 
 	return $link;
 }

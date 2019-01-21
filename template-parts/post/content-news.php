@@ -48,12 +48,7 @@
 		<div class="entry-content">
 			<?php
 				if ( is_single() ) {
-					the_content(
-						sprintf(
-							__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'systemorph' ),
-							get_the_title()
-						)
-					);
+					the_content();
 				} else {
 					the_excerpt();
 				}

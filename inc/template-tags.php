@@ -9,6 +9,22 @@
  * @since 1.0
  */
 
+if ( ! function_exists( 'get_systemorph_author_title' ) ) :
+	function get_systemorph_author_title() {
+		global $post;
+
+		$output = "";
+
+		$meta = rwmb_the_value( 'user_meta_title', null, $post->ID );
+
+		if ($meta) :
+			$output .= $meta . ' ';
+		endif;
+
+		return $output;
+	}
+endif;
+
 if ( ! function_exists( 'systemorph_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time and author.
@@ -19,7 +35,7 @@ if ( ! function_exists( 'systemorph_posted_on' ) ) :
 		$byline = sprintf(
 			/* translators: %s: post author */
 			__( 'by %s', 'systemorph' ),
-			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . get_the_author_meta( 'display_name' ) . '</a></span> '
+			'<span class="author vcard">' . get_systemorph_author_title() .get_the_author_meta( 'display_name' ) . '</span> '
 		);
 
 		// Finally, let's write all of this to the page.
