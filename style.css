@@ -2258,6 +2258,10 @@ div.wp-block-button .wp-block-button__link {
       bottom: -24px;
       font-size: 14px;
       color: #cc1300; }
+    .wpcf7-form .form-el .wpcf7-list-item {
+      margin: 0; }
+    .wpcf7-form .form-el .wpcf7-acceptance input[type="checkbox"] {
+      margin-right: 0.5em; }
   .wpcf7-form .form-ctr {
     margin: 62px 0 32px; }
   .wpcf7-form .wpcf7-response-output {

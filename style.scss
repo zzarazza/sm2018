@@ -554,6 +554,16 @@
 			font-size: 14px;
 			color: map-get($sm-palette, alert);
 		}
+
+		.wpcf7-list-item {
+			margin: 0;
+		}
+
+		.wpcf7-acceptance {
+			input[type="checkbox"] {
+				margin-right: 0.5em;
+			}
+		}
 	}
 
 	.form-ctr {
