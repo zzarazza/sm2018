@@ -164,7 +164,8 @@ div.wp-block-button .wp-block-button__link {
 }
 
 
-.spacing-medium {
+.spacing-medium,
+.is-style-spacing-medium {
 	margin-bottom: 30px !important;
 
 	@include mq($from: tablet-l) {
@@ -172,7 +173,8 @@ div.wp-block-button .wp-block-button__link {
 	}
 }
 
-.spacing-large {
+.spacing-large,
+.is-style-spacing-large {
 	margin-bottom: 50px !important;
 
 	@include mq($from: tablet-l) {

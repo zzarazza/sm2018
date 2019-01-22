@@ -218,7 +218,8 @@
 }
 
 
-.list-columned {
+.list-columned,
+.is-style-columned {
 	padding: 0 0 0 24px;
 
 	.wp-block-sm-section > & {
@@ -588,15 +589,12 @@ section.alignwide {
 
 section.wp-block-sm-section.alignfull {
 	@include full-width;
-	padding-top: 0;
-	padding-bottom: 0;
+	padding-top: 40px;
+	padding-bottom: 40px;
 
-	.wp-block-image.alignfull:last-child {
-		// margin-bottom: -40px;
-
-		// @include mq($from: tablet-l) {
-		// 	margin-bottom: -60px;
-		// }
+	@include mq($from: tablet-l) {
+		padding-top: 60px;
+		padding-bottom: 60px;
 	}
 }
 
@@ -604,7 +602,20 @@ section.wp-block-sm-section.alignfull {
 	padding-top: 53px;
 	padding-bottom: 53px;
 
-	&.bcolor-white.box-shadow {
+	@include mq($from: tablet-l) {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+
+	&.has-bottom-padding-0 {
+		padding-bottom: 0 !important;
+	}
+
+	&.has-border-radius {
+		border-radius: 3px;
+	}
+
+	&.has-box-shadow {
 		box-shadow: 3px 3px 10px rgba(black,0.1);
 		padding: 50px 43px !important;
 		margin-bottom: 20px;
@@ -613,11 +624,6 @@ section.wp-block-sm-section.alignfull {
 			font-size: 25px;
 			font-weight: 400;
 		}
-	}
-
-	@include mq($from: tablet-l) {
-		padding-top: 60px;
-		padding-bottom: 60px;
 	}
 
 	&.section-lined {
