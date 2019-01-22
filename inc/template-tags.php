@@ -20,7 +20,7 @@ if ( ! function_exists( 'systemorph_posted_on' ) ) :
 		$byline = sprintf(
 			/* translators: %s: post author */
 			__( 'by %s', 'systemorph' ),
-			'<span class="author vcard">' . get_systemorph_author_title() .get_the_author_meta( 'display_name' ) . '</span> '
+			'<span class="author vcard">' . get_systemorph_author_title() . get_the_author_meta( 'display_name' ) . '</span> '
 		);
 
 		// Finally, let's write all of this to the page.

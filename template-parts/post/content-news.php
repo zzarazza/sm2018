@@ -18,9 +18,12 @@
 		<?php
 
 		if ( is_single() ) {
+			if ('' !== get_the_post_thumbnail()) :
+					the_post_thumbnail( 'systemorph-blog-thumb' );
+			else : ?>
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/default-news-thumbnail.png" width="70" height="70" alt="<?php the_title() ?>">
+			<?php endif;
 			the_title( '<h1 class="entry-title">', '</h1>' );
-		} elseif ( is_front_page() && is_home() ) {
-			the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
 		} else {
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		}
@@ -34,6 +37,7 @@
 	</header><!-- .entry-header -->
 
 	<div class="blog-content">
+		<?php if ( ! is_single() ) { ?>
 		<div class="post-thumbnail">
 			<a href="<?php the_permalink(); ?>">
 				<?php if ('' !== get_the_post_thumbnail()) : ?>
@@ -43,7 +47,7 @@
 				<?php endif; ?>
 			</a>
 		</div><!-- .post-thumbnail -->
-
+		<?php } ?>
 
 		<div class="entry-content">
 			<?php
