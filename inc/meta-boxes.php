@@ -113,13 +113,6 @@ function the_systemorph_event_location($post_id = null) {
  	return $output;
 }
 
-function sm_date($d) {
-    return sprintf('<time datetime="%1$s" class="wp-block-event-date">%2$s</time>',
-    			date(DATE_W3C, strtotime($d)),
-    			date("d M Y", strtotime($d))
-    		);
-}
-
 function the_systemorph_event_dates($post_id = null) {
 	$output = "";
 
@@ -141,3 +134,20 @@ function the_systemorph_event_dates($post_id = null) {
 
  	return $output;
 }
+
+if ( ! function_exists( 'get_systemorph_author_title' ) ) :
+	function get_systemorph_author_title() {
+		global $post;
+
+		$output = "";
+
+		$meta = rwmb_the_value( 'user_meta_title',  array( 'object_type' => 'user' ), $post->post_author, false );
+		// var_dump($meta);
+
+		if ($meta) :
+			$output .= $meta . ' ';
+		endif;
+
+		return $output;
+	}
+endif;

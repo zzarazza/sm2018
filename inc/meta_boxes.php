@@ -392,7 +392,7 @@ function sm_register_meta_boxes( $meta_boxes ) {
 				'type' => 'radio',
 				'options' =>
 				array (
-					'none' => 'None',
+					'' => 'None',
 					'dr' => 'Dr.',
 				),
 				'inline' => 1,

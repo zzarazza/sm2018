@@ -9,22 +9,6 @@
  * @since 1.0
  */
 
-if ( ! function_exists( 'get_systemorph_author_title' ) ) :
-	function get_systemorph_author_title() {
-		global $post;
-
-		$output = "";
-
-		$meta = rwmb_meta( 'user_meta_title', null, $post->ID );
-		var_dump($meta);
-
-		if ($meta) :
-			$output .= $meta . ' ';
-		endif;
-
-		return $output;
-	}
-endif;
 
 if ( ! function_exists( 'systemorph_posted_on' ) ) :
 	/**
