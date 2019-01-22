@@ -16,11 +16,18 @@
 		"oAP": "/404.php",
 		"oF": 0
 		},
-	"/archive-management-team.php": {
+	"/archive-case-studies.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/archive-management-team.php",
+		"oAP": "/archive-case-studies.php",
+		"oF": 0
+		},
+	"/archive-event.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/archive-event.php",
 		"oF": 0
 		},
 	"/archive-news.php": {
@@ -28,6 +35,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/archive-news.php",
+		"oF": 0
+		},
+	"/archive-partners.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/archive-partners.php",
 		"oF": 0
 		},
 	"/archive.php": {
@@ -47,11 +61,32 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"/assets/images/.icon-logo-white~imageoptim.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/.icon-logo-white~imageoptim.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"/assets/images/default-blog-thumbnail.png": {
 		"ft": 32768,
 		"iS": 54911,
 		"oA": 0,
 		"oAP": "/assets/images/default-blog-thumbnail.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/images/default-news-thumbnail.png": {
+		"ft": 32768,
+		"iS": 2204,
+		"oA": 0,
+		"oAP": "/assets/images/default-news-thumbnail.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -1330,6 +1365,19 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/assets/scss/_archive.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/scss/_archive.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/assets/scss/_base.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1565,6 +1613,13 @@
 		"oAP": "/inc/shortcodes.php",
 		"oF": 0
 		},
+	"/inc/taxonomies.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/inc/taxonomies.php",
+		"oF": 0
+		},
 	"/inc/template-functions.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1644,6 +1699,20 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/single-case-studies.php",
+		"oF": 0
+		},
+	"/single-event.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/single-event.php",
+		"oF": 0
+		},
+	"/single-news.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/single-news.php",
 		"oF": 0
 		},
 	"/single.php": {
@@ -1751,6 +1820,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/template-parts/post/content-audio.php",
+		"oF": 0
+		},
+	"/template-parts/post/content-event.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/template-parts/post/content-event.php",
 		"oF": 0
 		},
 	"/template-parts/post/content-excerpt.php": {

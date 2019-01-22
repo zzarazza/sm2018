@@ -2402,15 +2402,16 @@ section.wp-block-sm-section.alignfull {
     margin-top: 0; }
   .wp-block-sm-page-card .page-block-excerpt p:last-child {
     margin-bottom: 0; }
-  .wp-block-sm-page-card .read-more-link {
-    margin-top: 39px;
-    display: table;
-    text-decoration: none;
-    color: #285fae;
-    font-size: 16px;
-    font-weight: 500; }
-    .wp-block-sm-page-card .read-more-link:hover {
-      text-decoration: underline; }
+  .wp-block-sm-page-card .page-block-url {
+    margin-top: 39px; }
+    .wp-block-sm-page-card .page-block-url a {
+      display: table;
+      text-decoration: none;
+      color: #285fae;
+      font-size: 16px;
+      font-weight: 500; }
+      .wp-block-sm-page-card .page-block-url a:hover {
+        text-decoration: underline; }
 
 @supports (display: grid) {
   .wp-block-sm-wrapper {
