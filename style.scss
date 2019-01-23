@@ -823,6 +823,10 @@ section.wp-block-sm-section.alignfull {
 				    h2 {
 				    	margin-bottom: 0;
 				    }
+
+				    p + p {
+				    	margin-top: 0;
+				    }
 			    }
 			}
 		}

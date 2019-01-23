@@ -2476,7 +2476,9 @@ section.wp-block-sm-section.alignfull {
     flex-direction: column;
     justify-content: center; }
     .wp-block-columns.has-2-columns .wp-block-column > .wp-block-sm-section h2 {
-      margin-bottom: 0; } }
+      margin-bottom: 0; }
+    .wp-block-columns.has-2-columns .wp-block-column > .wp-block-sm-section p + p {
+      margin-top: 0; } }
 
 @media (min-width: 600px) {
   .wp-block-columns.has-3-columns .wp-block-column {
