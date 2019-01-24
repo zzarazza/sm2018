@@ -131,3 +131,63 @@
 		}
 	}
 } // team_member
+
+
+.event-speakers {
+	box-shadow: 3px 3px 10px rgba(black,0.1);
+	border-radius: 6px;
+	background-color: white;
+	padding: 40px 50px 30px;
+
+	.event-speakers-title {
+		font-size: 25px;
+		font-weight: 400;
+		margin-top: 0;
+	}
+
+	.speaker-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.event-speaker {
+		display: flex;
+
+		+ .event-speaker {
+			margin-top: 30px;
+		}
+
+		.event-speaker-image {
+			width: 100px;
+			margin-right: 29px;
+
+			img {
+				display: block;
+				max-width: 100%;
+				height: auto;
+				border-radius: 100px;
+			}
+		}
+
+		.event-speaker-info {
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column-reverse;
+			justify-content: center;
+
+			> * {
+				font-size: 25px;
+				margin: 0;
+			}
+		}
+
+		.speaker-name {
+			font-weight: 400;
+		}
+
+		.speaker-position {
+			font-weight: 300;
+		}
+	}
+}

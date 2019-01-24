@@ -1537,6 +1537,44 @@ div.wp-block-button .wp-block-button__link {
     .team-member .t-m-info p:last-child {
       margin-bottom: 0; }
 
+.event-speakers {
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  background-color: white;
+  padding: 40px 50px 30px; }
+  .event-speakers .event-speakers-title {
+    font-size: 25px;
+    font-weight: 400;
+    margin-top: 0; }
+  .event-speakers .speaker-list {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  .event-speakers .event-speaker {
+    display: flex; }
+    .event-speakers .event-speaker + .event-speaker {
+      margin-top: 30px; }
+    .event-speakers .event-speaker .event-speaker-image {
+      width: 100px;
+      margin-right: 29px; }
+      .event-speakers .event-speaker .event-speaker-image img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border-radius: 100px; }
+    .event-speakers .event-speaker .event-speaker-info {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center; }
+      .event-speakers .event-speaker .event-speaker-info > * {
+        font-size: 25px;
+        margin: 0; }
+    .event-speakers .event-speaker .speaker-name {
+      font-weight: 400; }
+    .event-speakers .event-speaker .speaker-position {
+      font-weight: 300; }
+
 .post-type-archive-case-studies .case-study-item, .blog .post,
 .archive.category .post,
 .archive.tag .post, .wp-block-recent-posts .wp-block-recent-posts-item,

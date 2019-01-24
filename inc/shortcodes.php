@@ -30,11 +30,3 @@ function sm_shortcode_show_partners($atts) {
 	<?php return ob_get_clean(); ?>
 <?php }
 add_shortcode('sm-partners', 'sm_shortcode_show_partners');
-
-function sm_shortcode_featured($atts) {
-	ob_start();
-	?>
-	<div class="sm-featured"></div>
-	<?php return ob_get_clean(); ?>
-<?php }
-add_shortcode('sm-featured', 'sm_shortcode_featured');
