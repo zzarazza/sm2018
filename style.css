@@ -1984,6 +1984,9 @@ div.wp-block-button .wp-block-button__link {
       .entry-content .callout-inverse a:hover {
         opacity: 0.75; }
 
+.entry-content p:empty {
+  display: none; }
+
 .entry-content p,
 .entry-content ul,
 .entry-content ol {
