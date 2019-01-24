@@ -888,8 +888,14 @@ section.wp-block-sm-section.alignfull {
 	}
 }
 
-.event-dates,
-.event-location {
-	font-size: 25px;
-	font-weight: 400;
+.event-info {
+	.event-dates,
+	.event-location {
+		font-size: 25px;
+		font-weight: 400;
+	}
+
+	> .wp-block-columns {
+		align-items: center;
+	}
 }
