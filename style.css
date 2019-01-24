@@ -2334,6 +2334,11 @@ section.wp-block-sm-section.alignfull {
     section.wp-block-sm-section.alignfull {
       padding-top: 60px;
       padding-bottom: 60px; } }
+  @media (min-width: 64em) {
+    section.wp-block-sm-section.alignfull .wp-block-columns:first-child:last-child > .wp-block-column {
+      margin-bottom: 0; } }
+  section.wp-block-sm-section.alignfull .wp-block-columns:first-child:last-child > .wp-block-column .wp-block-button {
+    margin-bottom: 0; }
 
 .wp-block-sm-section {
   padding-top: 53px;
@@ -2545,3 +2550,8 @@ section.wp-block-sm-section.alignfull {
     font-size: 20px;
     line-height: 1.5;
     font-weight: 300; }
+
+.event-dates,
+.event-location {
+  font-size: 25px;
+  font-weight: 400; }

@@ -596,6 +596,18 @@ section.wp-block-sm-section.alignfull {
 		padding-top: 60px;
 		padding-bottom: 60px;
 	}
+
+	.wp-block-columns:first-child:last-child {
+		> .wp-block-column {
+			@include mq($from: tablet-l) {
+				margin-bottom: 0;
+			}
+
+			.wp-block-button {
+				margin-bottom: 0;
+			}
+		}
+	}
 }
 
 .wp-block-sm-section {
@@ -874,4 +886,10 @@ section.wp-block-sm-section.alignfull {
 		line-height: 1.5;
 		font-weight: 300;
 	}
+}
+
+.event-dates,
+.event-location {
+	font-size: 25px;
+	font-weight: 400;
 }
