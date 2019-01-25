@@ -1096,11 +1096,13 @@ div.wp-block-button .wp-block-button__link {
       margin-bottom: 70px !important; } }
 
 .spacing-xxlarge,
-.is-style-spacing-xxlarge {
+.is-style-spacing-xxlarge,
+.wp-block-team-management {
   margin-bottom: 70px !important; }
   @media (min-width: 64em) {
     .spacing-xxlarge,
-    .is-style-spacing-xxlarge {
+    .is-style-spacing-xxlarge,
+    .wp-block-team-management {
       margin-bottom: 100px !important; } }
 
 .site-header {

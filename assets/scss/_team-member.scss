@@ -28,6 +28,8 @@
 }
 
 .wp-block-team-management {
+	@extend .is-style-spacing-xxlarge;
+
 	@include mq($from: tablet-l) {
 		display: flex;
 		flex-wrap: wrap;
