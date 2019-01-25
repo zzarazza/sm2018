@@ -61,15 +61,16 @@
 		"oF": 0,
 		"oS": 3
 		},
-	"/assets/images/.icon-logo-white~imageoptim.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/images/.icon-logo-white~imageoptim.svg",
+	"/assets/images/careers-d.png": {
+		"ft": 32768,
+		"iS": 3123,
+		"oA": 0,
+		"oAP": "/assets/images/careers-d.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
+		"oT": 1,
+		"q": 100
 		},
 	"/assets/images/default-blog-thumbnail.png": {
 		"ft": 32768,
@@ -1648,6 +1649,13 @@
 		"oAP": "/LICENSE",
 		"oF": 0
 		},
+	"/page-careers.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/page-careers.php",
+		"oF": 0
+		},
 	"/page.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1799,6 +1807,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/template-parts/page/content-front-page.php",
+		"oF": 0
+		},
+	"/template-parts/page/content-page-careers.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/template-parts/page/content-page-careers.php",
 		"oF": 0
 		},
 	"/template-parts/page/content-page.php": {

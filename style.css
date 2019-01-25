@@ -2589,3 +2589,22 @@ section.wp-block-sm-section.alignfull {
 
 .event-info > .wp-block-columns {
   align-items: center; }
+
+header.careers-hero {
+  padding-bottom: 485px;
+  background-image: url("assets/images/careers-d.png");
+  background-position: 50% 70%;
+  background-repeat: no-repeat; }
+  @media (min-width: 48em) {
+    header.careers-hero {
+      padding-bottom: 0;
+      background-position: 100% 50%;
+      min-height: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      header.careers-hero > .entry-title {
+        margin-right: 320px; } }
+  @media (min-width: 64em) {
+    header.careers-hero {
+      min-height: 485px; } }
