@@ -941,6 +941,22 @@ require get_parent_theme_file_path( '/inc/meta-settings.php' );
 require get_parent_theme_file_path( '/inc/meta-boxes.php' );
 require get_parent_theme_file_path( '/inc/shortcodes.php' );
 
+
+add_action( 'template_redirect', 'redirect_post_type_single_partners' );
+function redirect_post_type_single_partners(){
+    if ( ! is_singular( 'partners' ) )
+        return;
+    wp_redirect( get_post_type_archive_link( 'partners' ), 301 );
+    exit;
+}
+
+add_action( 'template_redirect', 'redirect_post_type_single_team' );
+function redirect_post_type_single_team(){
+    if ( ! is_singular( 'management-team' ) )
+        return;
+    wp_redirect( get_page_link(get_page_by_path( 'about/management-team', OBJECT, 'page' )), 301 );
+    exit;
+}
 // function debug_rewrite_rules() {
 //     global $wp, $template, $wp_rewrite;
 
