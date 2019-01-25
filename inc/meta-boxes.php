@@ -113,6 +113,39 @@ function the_systemorph_event_location($post_id = null) {
  	return $output;
 }
 
+function the_systemorph_event_meta ( $post_id = null, $echo = false ) {
+	$output = '';
+	$delimiter = '';
+
+	$dates = the_systemorph_event_dates($post_id);
+	if ($dates) {
+		$dates = sprintf('<span class="posted-on"><span class="screen-reader-text">Event date</span> %1$s</span>', $dates);
+	}
+
+	$location = the_systemorph_event_location($post_id);
+	if ($location) {
+		$location = sprintf('<span class="location">%1$s</span>', $location);
+	}
+
+	if ($dates && $location) {
+		$delimiter = ', ';
+	}
+
+	if ($dates || $location) {
+		$output = sprintf('<div class="entry-meta">%1$s%2$s%3$s</div>',
+					$dates,
+					$delimiter,
+					$location
+				);
+	}
+
+	if ($echo) {
+		echo $output;
+	}
+
+	return $output;
+}
+
 function the_systemorph_event_dates($post_id = null) {
 	$output = "";
 
