@@ -269,6 +269,12 @@ function sm_register_meta_boxes( $meta_boxes ) {
 				'type' => 'single_image',
 				'name' => 'Logo',
 			),
+
+			array (
+				'id' => 'partner_url',
+				'type' => 'url',
+				'name' => 'URL',
+			),
 		),
 	);
 

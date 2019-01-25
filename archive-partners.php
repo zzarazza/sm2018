@@ -68,7 +68,14 @@ get_header(); ?>
 							<?php if ($partnerLogo) : ?>
 							<img src="<?php echo $partnerLogo["url"]; ?>" alt="<?php the_title(); ?>">
 							<?php endif; ?>
+							<?php $partnerURL = rwmb_meta( 'partner_url' ); ?>
+							<?php if ($partnerURL) : ?>
+							<a href="<?= $partnerURL; ?>">
+							<?php endif; ?>
 				            <?php the_title(); ?>
+				            <?php if ($partnerURL) : ?>
+				            </a>
+			            	<?php endif; ?>
 				        </div>
 			        </li>
 
