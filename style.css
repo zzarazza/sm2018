@@ -1098,13 +1098,15 @@ div.wp-block-button .wp-block-button__link {
 .spacing-xxlarge,
 .is-style-spacing-xxlarge,
 .page-management-team .page-description,
-.wp-block-team-management {
+.wp-block-team-management,
+.page-template-default article.page > .entry-content {
   margin-bottom: 70px !important; }
   @media (min-width: 64em) {
     .spacing-xxlarge,
     .is-style-spacing-xxlarge,
     .page-management-team .page-description,
-    .wp-block-team-management {
+    .wp-block-team-management,
+    .page-template-default article.page > .entry-content {
       margin-bottom: 100px !important; } }
 
 .site-header {
@@ -1968,9 +1970,6 @@ div.wp-block-button .wp-block-button__link {
   @media (min-width: 48em) {
     .page-title, .entry-header .entry-title {
       font-size: 50px; } }
-
-.page-template-default article.page > .entry-content {
-  padding-bottom: 77px; }
 
 .post-type-archive-event,
 .post-type-archive-news {

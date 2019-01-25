@@ -39,7 +39,7 @@
 .page-template-default {
 	article.page {
 		> .entry-content {
-			padding-bottom: 77px;
+			@extend .is-style-spacing-xxlarge;
 		}
 	}
 }
