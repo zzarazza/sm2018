@@ -155,14 +155,23 @@ div.wp-block-button .wp-block-button__link {
 	}
 }
 
-.spacing-small {
-	margin-bottom: 5px !important;
+.spacing-none,
+.is-style-spacing-none {
+	margin-bottom: 0 !important;
 
 	@include mq($from: tablet-l) {
-		margin-bottom: 10px !important;
+		margin-bottom: 0 !important;
 	}
 }
 
+.spacing-small,
+.is-style-spacing-small {
+	margin-bottom: 20px !important;
+
+	@include mq($from: tablet-l) {
+		margin-bottom: 30px !important;
+	}
+}
 
 .spacing-medium,
 .is-style-spacing-medium {
@@ -175,7 +184,25 @@ div.wp-block-button .wp-block-button__link {
 
 .spacing-large,
 .is-style-spacing-large {
+	margin-bottom: 40px !important;
+
+	@include mq($from: tablet-l) {
+		margin-bottom: 60px !important;
+	}
+}
+
+.spacing-xlarge,
+.is-style-spacing-xlarge {
 	margin-bottom: 50px !important;
+
+	@include mq($from: tablet-l) {
+		margin-bottom: 70px !important;
+	}
+}
+
+.spacing-xxlarge,
+.is-style-spacing-xxlarge {
+	margin-bottom: 70px !important;
 
 	@include mq($from: tablet-l) {
 		margin-bottom: 100px !important;

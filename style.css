@@ -1055,11 +1055,21 @@ div.wp-block-button .wp-block-button__link {
   div.wp-block-button .wp-block-button__link.has-text-color .has-primary-color {
     color: #101F30; }
 
-.spacing-small {
-  margin-bottom: 5px !important; }
+.spacing-none,
+.is-style-spacing-none {
+  margin-bottom: 0 !important; }
   @media (min-width: 64em) {
-    .spacing-small {
-      margin-bottom: 10px !important; } }
+    .spacing-none,
+    .is-style-spacing-none {
+      margin-bottom: 0 !important; } }
+
+.spacing-small,
+.is-style-spacing-small {
+  margin-bottom: 20px !important; }
+  @media (min-width: 64em) {
+    .spacing-small,
+    .is-style-spacing-small {
+      margin-bottom: 30px !important; } }
 
 .spacing-medium,
 .is-style-spacing-medium {
@@ -1071,10 +1081,26 @@ div.wp-block-button .wp-block-button__link {
 
 .spacing-large,
 .is-style-spacing-large {
-  margin-bottom: 50px !important; }
+  margin-bottom: 40px !important; }
   @media (min-width: 64em) {
     .spacing-large,
     .is-style-spacing-large {
+      margin-bottom: 60px !important; } }
+
+.spacing-xlarge,
+.is-style-spacing-xlarge {
+  margin-bottom: 50px !important; }
+  @media (min-width: 64em) {
+    .spacing-xlarge,
+    .is-style-spacing-xlarge {
+      margin-bottom: 70px !important; } }
+
+.spacing-xxlarge,
+.is-style-spacing-xxlarge {
+  margin-bottom: 70px !important; }
+  @media (min-width: 64em) {
+    .spacing-xxlarge,
+    .is-style-spacing-xxlarge {
       margin-bottom: 100px !important; } }
 
 .site-header {
