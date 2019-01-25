@@ -1097,11 +1097,13 @@ div.wp-block-button .wp-block-button__link {
 
 .spacing-xxlarge,
 .is-style-spacing-xxlarge,
+.page-management-team .page-description,
 .wp-block-team-management {
   margin-bottom: 70px !important; }
   @media (min-width: 64em) {
     .spacing-xxlarge,
     .is-style-spacing-xxlarge,
+    .page-management-team .page-description,
     .wp-block-team-management {
       margin-bottom: 100px !important; } }
 
@@ -1518,11 +1520,8 @@ div.wp-block-button .wp-block-button__link {
   font-size: 20px;
   line-height: 1.15;
   font-weight: 300;
-  margin: 0 auto 100px;
+  margin: 0 auto;
   max-width: 68ch; }
-  @media (min-width: 48em) {
-    .page-management-team .page-description {
-      margin-bottom: 150px; } }
 
 @media (min-width: 64em) {
   .wp-block-team-management {

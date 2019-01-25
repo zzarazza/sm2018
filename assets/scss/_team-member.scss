@@ -18,12 +18,10 @@
 		font-size: 20px;
 		line-height: 1.15;
 		font-weight: 300;
-		margin: 0 auto 100px;
+		margin: 0 auto;
 		max-width: 68ch;
 
-		@include mq($from: tablet) {
-			margin-bottom: 150px;
-		}
+		@extend .is-style-spacing-xxlarge;
 	}
 }
 
