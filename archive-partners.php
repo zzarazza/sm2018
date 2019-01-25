@@ -70,7 +70,7 @@ get_header(); ?>
 							<?php endif; ?>
 							<?php $partnerURL = rwmb_meta( 'partner_url' ); ?>
 							<?php if ($partnerURL) : ?>
-							<a href="<?= $partnerURL; ?>">
+							<a rel="nofollow" href="<?= $partnerURL; ?>">
 							<?php endif; ?>
 				            <?php the_title(); ?>
 				            <?php if ($partnerURL) : ?>
