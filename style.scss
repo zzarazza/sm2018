@@ -920,3 +920,74 @@ header.careers-hero {
 		min-height: 485px;
 	}
 }
+
+body.error404 {
+	background-image: url("#{$sm-images}/404-m.png");
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	background-size: contain;
+
+	@include mq($until: tablet, $and: '(orientation: landscape)') {
+		background-image: url("#{$sm-images}/404-d.png");
+	}
+
+	@include mq($from: tablet) {
+		background-image: url("#{$sm-images}/404-d.png");
+		background-size: 1074px auto;
+	}
+
+	@include mq($from: desktop) {
+		background-size: contain;
+	}
+
+	@include mq($from: wide) {
+		background-size: 1920px auto;
+	}
+
+	.content-area {
+		padding-bottom: 40px;
+	}
+
+	.site-main {
+		height: calc(90vh - 73px);
+		min-height: 500px;
+		max-height: 575px;
+		position: relative;
+
+		@include mq($from: desktop) {
+			max-height: 800px;
+		}
+
+		@include mq($from: wide) {
+			max-height: 1000px;
+		}
+	}
+
+	.error-404 {
+		text-align: center;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-60%);
+
+		@include mq($until: tablet, $and: '(orientation: landscape)') {
+			position: relative;
+			top: 0;
+			left: 0;
+			transform: none;
+		}
+
+		.page-title {
+			font-weight: 800;
+			font-size: 170px;
+			letter-spacing: 2px;
+			line-height: 1;
+			margin: 0;
+		}
+
+		p {
+			margin-top: -38px;
+			font-size: 32px;
+		}
+	}
+}

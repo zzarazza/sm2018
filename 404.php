@@ -16,11 +16,11 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<section class="error-404 not-found wp-block-sm-section">
+			<section class="error-404 not-found">
 
-				<h1 class="page-title"><?php _e( 'It doesn\'t look like anything to me.', 'systemorph' ); ?></h1>
-				<p><?php _e( 'These violent delights have violent ends.', 'systemorph' ); ?></p>
-
+				<h1 class="page-title"><?php _e( '404', 'systemorph' ); ?></h1>
+				<p><?php _e( 'Hold on, where are we?', 'systemorph' ); ?></p>
+				<a class="button" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php _e( 'Get me out of here!', 'systemorph' ); ?></a>
 			</section><!-- .error-404 -->
 		</main><!-- #main -->
 	</div><!-- #primary -->

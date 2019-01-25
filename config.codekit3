@@ -61,6 +61,28 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"/assets/images/404-d.png": {
+		"ft": 32768,
+		"iS": 26345,
+		"oA": 0,
+		"oAP": "/assets/images/404-d.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/images/404-m.png": {
+		"ft": 32768,
+		"iS": 20130,
+		"oA": 0,
+		"oAP": "/assets/images/404-m.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/assets/images/careers-d.png": {
 		"ft": 32768,
 		"iS": 3123,
