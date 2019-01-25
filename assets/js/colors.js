@@ -135,5 +135,7 @@ const smIcons = [
 	{ label: 'Task', value: 'task' },
 	{ label: 'Timer', value: 'timer' },
 	{ label: 'User', value: 'user' },
-	{ label: 'Users', value: 'users' }
+	{ label: 'Users', value: 'users' },
+	{ label: 'Location', value: 'location' },
+	{ label: 'Calendar', value: 'calendar' }
 ];

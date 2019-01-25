@@ -26,10 +26,29 @@
 		}
 
 		if ( ! is_single() ) {
-			echo sprintf('<div class="entry-meta"><span class="posted-on"><span class="screen-reader-text">Event date</span> %1$s</span>, <span class="location">%2$s</span></div>',
-			the_systemorph_event_dates(),
-			the_systemorph_event_location()
-			);
+			$delimiter = '';
+
+			$dates = the_systemorph_event_dates();
+			if ($dates) {
+				$dates = sprintf('<span class="posted-on"><span class="screen-reader-text">Event date</span> %1$s</span>', $dates);
+			}
+
+			$location = the_systemorph_event_location();
+			if ($location) {
+				$location = sprintf('<span class="location">%1$s</span>', $location);
+			}
+
+			if ($dates && $location) {
+				$delimiter = ', ';
+			}
+
+			if ($dates || $location) {
+				echo sprintf('<div class="entry-meta">%1$s%2$s%3$s</div>',
+				$dates,
+				$delimiter,
+				$location
+				);
+			}
 		}
 		?>
 	</header><!-- .entry-header -->

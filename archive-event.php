@@ -39,6 +39,14 @@ get_header(); ?>
 
 			endwhile;
 
+			the_posts_pagination(
+				array(
+					'prev_text'          =>  '<span class="screen-reader-text">' . __( 'Previous page', 'systemorph' ) . '</span>',
+					'next_text'          => '<span class="screen-reader-text">' . __( 'Next page', 'systemorph' ) . '</span>',
+					'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'systemorph' ) . ' </span>',
+				)
+			);
+
 		else :
 
 			get_template_part( 'template-parts/post/content', 'none' );

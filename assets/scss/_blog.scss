@@ -78,24 +78,6 @@
 		@extend %post-item;
 	}
 
-	.pagination {
-		border-top: 1px solid $sm-border-color;
-		text-align: right;
-		padding-top: 60px;
-
-		.page-numbers {
-			font-size: 20px;
-			line-height: 1;
-			display: inline-block;
-			padding: 5px;
-			margin: 0 5px;
-		}
-
-		.current {
-			color: map-get($sm-palette, lavender-gray);
-		}
-	}
-
 	.site-main {
 		margin-bottom: 100px;
 	}
@@ -235,8 +217,10 @@ body.single-post {
 	}
 }
 
-.wp-block-recent-news {
-	.wp-block-recent-posts-item {
+.wp-block-recent-news,
+.wp-block-recent-events {
+	.wp-block-recent-posts-item,
+	.wp-block-recent-events-item {
 		.blog-content {
 			@include mq($from: tablet) {
 				display: block;

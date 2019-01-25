@@ -1815,39 +1815,11 @@
 		"oAP": "/template-parts/page/content-white_papers_success.php",
 		"oF": 0
 		},
-	"/template-parts/post/content-audio.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/template-parts/post/content-audio.php",
-		"oF": 0
-		},
 	"/template-parts/post/content-event.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/template-parts/post/content-event.php",
-		"oF": 0
-		},
-	"/template-parts/post/content-excerpt.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/template-parts/post/content-excerpt.php",
-		"oF": 0
-		},
-	"/template-parts/post/content-gallery.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/template-parts/post/content-gallery.php",
-		"oF": 0
-		},
-	"/template-parts/post/content-image.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/template-parts/post/content-image.php",
 		"oF": 0
 		},
 	"/template-parts/post/content-management-team.php": {
@@ -1869,13 +1841,6 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/template-parts/post/content-none.php",
-		"oF": 0
-		},
-	"/template-parts/post/content-video.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/template-parts/post/content-video.php",
 		"oF": 0
 		},
 	"/template-parts/post/content.php": {
