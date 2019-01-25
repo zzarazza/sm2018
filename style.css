@@ -2392,13 +2392,7 @@ section.wp-block-sm-section.alignfull {
   .wp-block-sm-section.section-lined {
     border-top: 1px solid #E1E1E1;
     border-bottom: 1px solid #E1E1E1;
-    text-align: center;
-    margin-top: 60px;
-    margin-bottom: 60px; }
-    @media (min-width: 64em) {
-      .wp-block-sm-section.section-lined {
-        margin-top: 130px;
-        margin-bottom: 130px; } }
+    text-align: center; }
   .wp-block-sm-section > *:first-child {
     margin-top: 0; }
   .wp-block-sm-section > *:last-child {
