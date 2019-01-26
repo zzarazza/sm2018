@@ -495,7 +495,7 @@ ul.wp-block-sm-custom-list {
 			width: 100%;
 
 			@include placeholder {
-				color: #a6a6a6;
+				color: yellow;
 			}
 
 			&.wpcf7-not-valid {
@@ -561,10 +561,11 @@ ul.wp-block-sm-custom-list {
 
 		label {
 			position: relative;
-			padding-left: 32px;
+			padding-left: 30px;
 
 			input[type="checkbox"] {
 				position: absolute;
+				left: 0;
 			}
 		}
 	}
