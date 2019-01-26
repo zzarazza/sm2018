@@ -89,57 +89,6 @@
 }
 
 .entry-content {
-	.main-points {
-		list-style: none;
-		padding: 0;
-		margin: 10px 0 26px;
-		font-size: 20px;
-		color: map-get($sm-palette, secondary);
-
-		@include mq($from: desktop) {
-			margin-bottom: 52px;
-
-			+ .wp-block-separator {
-				margin-top: -22px;
-			}
-		}
-	}
-
-	.callout {
-		padding: 38px 35px;
-		margin-left: -33px;
-		margin-right: -33px;
-		margin-bottom: 47px;
-
-		@include mq($from: tablet-l) {
-			@include full-width;
-		}
-
-		@include mq($from: desktop) {
-			font-size: 25px;
-			padding-top: 67px;
-			padding-bottom: 67px;
-			margin-bottom: 60px;
-		}
-
-		&-inverse {
-			background-color: map-get($sm-palette, primary);
-			color: white;
-
-			a {
-				color: white;
-
-				&:hover {
-					opacity: 0.75;
-				}
-			}
-		}
-	}
-
-	p:empty {
-		display: none;
-	}
-
 	p,
 	ul,
 	ol {
@@ -215,9 +164,13 @@
 	}
 
 	.wp-block-separator {
-		margin: 30px -30px;
+		margin: map-get($spacing-mobile, medium) -30px;
 		border-top: 1px solid #e1e1e1;
 		border-bottom: 0 none;
+
+		@include mq($from: desktop) {
+			margin: map-get($spacing-tablet, medium) -30px;
+		}
 	}
 }
 
@@ -275,10 +228,29 @@
 	}
 }
 
-.wp-block-sm-custom-list {
+ul.wp-block-sm-custom-list {
 	list-style: none;
 	padding: 0;
-	margin: 40px 0;
+	margin: 0;
+	margin-top: map-get($spacing-mobile, large);
+	margin-bottom: (map-get($spacing-mobile, large) - map-get($spacing-mobile, medium));
+
+	@include mq($from: desktop) {
+		margin-top: map-get($spacing-tablet, large);
+		margin-bottom: (map-get($spacing-tablet, large) - map-get($spacing-tablet, medium));
+	}
+
+	.wp-block-sm-section:not(.has-padding-top-0) > &:first-child {
+		margin-top: 0 !important;
+	}
+
+	.wp-block-sm-section:not(.has-padding-bottom-0) > &:last-child {
+		margin-bottom: -map-get($spacing-mobile, large) !important;
+
+		@include mq($from: desktop) {
+			margin-bottom: -map-get($spacing-tablet, large) !important;
+		}
+	}
 
 	&:not(.wp-block-sm-custom-list-one-column) {
 		@include mq($from: tablet-l) {
@@ -304,7 +276,7 @@
 	}
 
 	.wp-block-sm-custom-list-item {
-		margin-bottom: 40px;
+		margin-bottom: map-get($spacing-mobile, medium);
 
 		@include mq($from: tablet) {
 			padding-left: 70px;
@@ -318,7 +290,7 @@
 		}
 
 		@include mq($from: desktop) {
-			margin-bottom: 77px;
+			margin-bottom: map-get($spacing-tablet, medium);
 		}
 	}
 
@@ -335,16 +307,6 @@
 	p {
 		font-weight: 300;
 		margin: 0;
-	}
-}
-
-.wp-block-sm-section {
-	> .wp-block-sm-custom-list {
-		margin-bottom: -40px;
-
-		@include mq($from: desktop) {
-			margin-bottom: -77px;
-		}
 	}
 }
 
@@ -593,13 +555,6 @@ section.alignwide {
 
 section.wp-block-sm-section.alignfull {
 	@include full-width;
-	padding-top: 40px;
-	padding-bottom: 40px;
-
-	@include mq($from: tablet-l) {
-		padding-top: 60px;
-		padding-bottom: 60px;
-	}
 
 	.wp-block-columns:first-child:last-child {
 		> .wp-block-column {
@@ -615,12 +570,16 @@ section.wp-block-sm-section.alignfull {
 }
 
 .wp-block-sm-section {
-	padding-top: 53px;
-	padding-bottom: 53px;
+	padding-top: map-get($spacing-mobile,large);
+	padding-bottom: map-get($spacing-mobile,large);
 
 	@include mq($from: tablet-l) {
-		padding-top: 60px;
-		padding-bottom: 60px;
+		padding-top: map-get($spacing-tablet,large);
+		padding-bottom: map-get($spacing-tablet,large);
+	}
+
+	&.has-top-padding-0 {
+		padding-top: 0 !important;
 	}
 
 	&.has-bottom-padding-0 {
@@ -633,8 +592,6 @@ section.wp-block-sm-section.alignfull {
 
 	&.has-box-shadow {
 		box-shadow: 3px 3px 10px rgba(black,0.1);
-		padding: 50px 43px !important;
-		margin-bottom: 20px;
 
 		h3 {
 			font-size: 25px;
@@ -642,23 +599,23 @@ section.wp-block-sm-section.alignfull {
 		}
 	}
 
-	&.section-lined {
+	&.section-striped {
 		border-top: 1px solid $sm-border-color;
 		border-bottom: 1px solid $sm-border-color;
 		text-align: center;
 	}
 
-	> *:first-child {
+	&:not(&.has-top-padding-0) > *:first-child {
 		margin-top: 0;
 	}
 
-	> *:last-child {
+	&:not(&.has-bottom-padding-0) > *:last-child {
 		margin-bottom: 0;
 	}
+}
 
-	p:empty {
-		display: none;
-	}
+p:empty {
+	display: none !important;
 }
 
 .wp-block-sm-section[class*='color'] * {
@@ -679,8 +636,11 @@ section.wp-block-sm-section.alignfull {
 }
 
 .wp-block-sm-page-card {
-	margin-top: 22px;
-	margin-bottom: 22px;
+	margin-bottom: map-get($spacing-mobile,small);
+
+	@include mq($from: desktop) {
+		margin-bottom: map-get($spacing-tablet,small);
+	}
 
 	.page-block {
 		box-shadow: 3px 3px 10px rgba(black,0.1);
@@ -697,10 +657,6 @@ section.wp-block-sm-section.alignfull {
 			right: 0;
 			height: 51px;
 			border-radius: 6px 6px 0 0;
-		}
-
-		p:empty {
-			display: none;
 		}
 	}
 
@@ -756,7 +712,13 @@ section.wp-block-sm-section.alignfull {
 	@supports (display: grid) {
 		display: grid;
 		grid-column-gap: 17px;
-		margin-bottom: 20px;
+		margin-top: map-get($spacing-mobile,medium);
+		margin-bottom: (map-get($spacing-mobile,xxlarge) - map-get($spacing-mobile,medium));
+
+		@include mq($from: desktop) {
+			margin-top: map-get($spacing-tablet,medium);
+			margin-bottom: (map-get($spacing-tablet,xxlarge) - map-get($spacing-tablet,medium));
+		}
 	}
 
 	@include mq($until: tablet) {
@@ -765,7 +727,11 @@ section.wp-block-sm-section.alignfull {
 	}
 
 	> .wp-block-sm-page-card {
-		margin: 30px 0;
+		margin-bottom: map-get($spacing-mobile,medium);
+
+		@include mq($from: desktop) {
+			margin-bottom: map-get($spacing-tablet,medium) 0;
+		}
 
 		.page-block {
 			@include mq($from: desktop) {
@@ -801,7 +767,6 @@ section.wp-block-sm-section.alignfull {
 				@include mq($from: desktop) {
 					grid-template-columns: repeat($i, 1fr);
 					grid-template-rows: auto;
-					margin-bottom: 72px;
 				}
 			}
 		}

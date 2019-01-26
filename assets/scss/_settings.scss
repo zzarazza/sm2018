@@ -91,3 +91,21 @@ $mq-breakpoints: (
 );
 
 $sm-max-width : 980px !default;
+
+// map-get($spacing-mobile, small);
+$spacing-mobile: (
+	small:     20px,
+	medium:    30px,
+	large:     40px,
+	xlarge:    50px,
+	xxlarge:   70px
+);
+
+// map-get($spacing-tablet, small);
+$spacing-tablet: (
+	small:     30px,
+	medium:    40px,
+	large:     60px,
+	xlarge:    70px,
+	xxlarge:   100px
+);
