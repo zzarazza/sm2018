@@ -2354,7 +2354,7 @@ ul.wp-block-sm-custom-list {
       position: absolute;
       width: 100%;
       bottom: -24px;
-      font-size: 14px;
+      font-size: 16px;
       color: #cc1300; }
     .wpcf7-form .form-el .wpcf7-list-item {
       margin: 0; }
@@ -2370,7 +2370,10 @@ ul.wp-block-sm-custom-list {
       padding-right: 40px; }
   .wpcf7-form .wpcf7-response-output {
     margin: 20px 0 0;
-    padding: 10px 20px; }
+    padding: 0; }
+    .wpcf7-form .wpcf7-response-output.wpcf7-validation-errors {
+      border: 0 none;
+      color: #cc1300; }
 
 section.alignwide {
   margin-left: -33px;

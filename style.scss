@@ -515,7 +515,7 @@ ul.wp-block-sm-custom-list {
 			position: absolute;
 			width: 100%;
 			bottom: -24px;
-			font-size: 14px;
+			font-size: 16px;
 			color: map-get($sm-palette, alert);
 		}
 
@@ -546,7 +546,12 @@ ul.wp-block-sm-custom-list {
 
 	.wpcf7-response-output {
 		margin: 20px 0 0;
-		padding: 10px 20px;
+		padding: 0;
+
+		&.wpcf7-validation-errors {
+			border: 0 none;
+			color: map-get($sm-palette, alert);
+		}
 	}
 }
 
