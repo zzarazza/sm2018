@@ -905,29 +905,7 @@ p:empty {
 	}
 }
 
-header.careers-hero {
-	padding-bottom: 485px;
-	background-image: url("#{$sm-images}/careers-d.png");
-	background-position: 50% 70%;
-	background-repeat: no-repeat;
 
-	@include mq($from: tablet) {
-		padding-bottom: 0;
-		background-position: 100% 50%;
-		min-height: 350px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-
-		> .entry-title {
-			margin-right: 320px;
-		}
-	}
-
-	@include mq($from: tablet-l) {
-		min-height: 485px;
-	}
-}
 
 body.error404 {
 	background-image: url("#{$sm-images}/404-m.png");
@@ -1029,6 +1007,29 @@ body.page-systemorph-overview {
 				background-repeat: no-repeat;
 				background-position: 0 0;
 				opacity: 0.27;
+			}
+		}
+	}
+}
+
+body.page-careers {
+	.entry-header {
+		.page-prefix,
+		.entry-title {
+			text-align: center;
+		}
+
+		.sntry-title {
+			margin-bottom: map-get($spacing-mobile,large);
+
+			@include mq($from: tablet) {
+				margin-bottom: map-get($spacing-tablet,large);
+			}
+
+			@include mq($from: desktop) {
+				max-width: 50%;
+				margin-left: auto;
+				margin-right: auto;
 			}
 		}
 	}

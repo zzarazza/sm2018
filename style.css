@@ -2608,25 +2608,6 @@ p:empty {
 .event-info > .wp-block-columns {
   align-items: center; }
 
-header.careers-hero {
-  padding-bottom: 485px;
-  background-image: url("assets/images/careers-d.png");
-  background-position: 50% 70%;
-  background-repeat: no-repeat; }
-  @media (min-width: 48em) {
-    header.careers-hero {
-      padding-bottom: 0;
-      background-position: 100% 50%;
-      min-height: 350px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center; }
-      header.careers-hero > .entry-title {
-        margin-right: 320px; } }
-  @media (min-width: 64em) {
-    header.careers-hero {
-      min-height: 485px; } }
-
 body.error404 {
   background-image: url("assets/images/404-m.png");
   background-position: 50% 0;
@@ -2698,3 +2679,18 @@ body.page-systemorph-overview section.about-company .wp-block-image.alignfull {
     background-repeat: no-repeat;
     background-position: 0 0;
     opacity: 0.27; }
+
+body.page-careers .entry-header .page-prefix,
+body.page-careers .entry-header .entry-title {
+  text-align: center; }
+
+body.page-careers .entry-header .sntry-title {
+  margin-bottom: 40px; }
+  @media (min-width: 48em) {
+    body.page-careers .entry-header .sntry-title {
+      margin-bottom: 60px; } }
+  @media (min-width: 73.125em) {
+    body.page-careers .entry-header .sntry-title {
+      max-width: 50%;
+      margin-left: auto;
+      margin-right: auto; } }
