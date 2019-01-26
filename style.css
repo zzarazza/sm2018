@@ -2714,10 +2714,10 @@ body.page-systemorph-overview section.about-company .wp-block-image.alignfull {
     position: absolute;
     top: 50%;
     margin-top: -90px;
-    right: -15%;
+    right: 0;
     width: 246px;
     height: 180px;
     background-image: url("assets/images/logo-sm-about.png");
     background-repeat: no-repeat;
     background-position: 0 0;
-    opacity: 0.25; }
+    opacity: 0.27; }
