@@ -961,3 +961,9 @@ body.error404 {
 		}
 	}
 }
+
+body.page-saas-plus {
+	.entry-header .entry-title {
+		@extend .is-style-spacing-large;
+	}
+}

@@ -1082,11 +1082,13 @@ div.wp-block-button .wp-block-button__link {
       margin-bottom: 40px !important; } }
 
 .spacing-large,
-.is-style-spacing-large {
+.is-style-spacing-large,
+body.page-saas-plus .entry-header .entry-title {
   margin-bottom: 40px !important; }
   @media (min-width: 64em) {
     .spacing-large,
-    .is-style-spacing-large {
+    .is-style-spacing-large,
+    body.page-saas-plus .entry-header .entry-title {
       margin-bottom: 60px !important; } }
 
 .spacing-xlarge,
