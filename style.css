@@ -2132,15 +2132,14 @@ ul.wp-block-sm-custom-list {
     ul.wp-block-sm-custom-list:not(.wp-block-sm-custom-list-one-column) {
       display: flex;
       flex-wrap: wrap; } }
+  ul.wp-block-sm-custom-list.wp-block-sm-custom-list-one-column:first-child:last-child {
+    margin-bottom: -map-get((small: 20px, medium: 30px, large: 40px, xlarge: 50px, xxlarge: 70px), medium); }
   @media (min-width: 73.125em) {
     ul.wp-block-sm-custom-list.wp-block-sm-custom-list-one-column {
-      margin-bottom: -50px; } }
+      margin-bottom: -map-get((small: 20px, medium: 30px, large: 40px, xlarge: 50px, xxlarge: 70px), large); } }
   @media (min-width: 64em) {
     ul.wp-block-sm-custom-list.wp-block-sm-custom-list-one-column .wp-block-sm-custom-list-item {
       width: auto; } }
-  @media (min-width: 73.125em) {
-    ul.wp-block-sm-custom-list.wp-block-sm-custom-list-one-column .wp-block-sm-custom-list-item {
-      margin-bottom: 50px; } }
   ul.wp-block-sm-custom-list .wp-block-sm-custom-list-item {
     margin-bottom: 30px; }
     @media (min-width: 48em) {
