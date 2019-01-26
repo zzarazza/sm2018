@@ -2374,6 +2374,13 @@ ul.wp-block-sm-custom-list {
     .wpcf7-form .wpcf7-response-output.wpcf7-validation-errors {
       border: 0 none;
       color: #cc1300; }
+  .wpcf7-form .form-el-acceptance .wpcf7-form-control-wrap + .wpcf7-form-control-wrap {
+    margin-top: 20px; }
+  .wpcf7-form .form-el-acceptance label {
+    position: relative;
+    padding-left: 32px; }
+    .wpcf7-form .form-el-acceptance label input[type="checkbox"] {
+      position: absolute; }
 
 section.alignwide {
   margin-left: -33px;

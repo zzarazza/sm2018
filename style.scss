@@ -553,6 +553,21 @@ ul.wp-block-sm-custom-list {
 			color: map-get($sm-palette, alert);
 		}
 	}
+
+	.form-el-acceptance {
+		.wpcf7-form-control-wrap + .wpcf7-form-control-wrap {
+			margin-top: 20px;
+		}
+
+		label {
+			position: relative;
+			padding-left: 32px;
+
+			input[type="checkbox"] {
+				position: absolute;
+			}
+		}
+	}
 }
 
 section.alignwide {
