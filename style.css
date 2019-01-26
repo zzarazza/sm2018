@@ -1982,9 +1982,6 @@ div.wp-block-button .wp-block-button__link {
     margin-bottom: 0; }
   .entry-header .entry-title {
     margin: 0; }
-    @media (min-width: 48em) {
-      .entry-header .entry-title {
-        max-width: 80%; } }
     .entry-header .entry-title strong {
       font-weight: 300;
       font-size: 25px;

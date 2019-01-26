@@ -53,10 +53,6 @@
 		@extend %main-title;
 		margin: 0;
 
-		@include mq($from: tablet) {
-			max-width: 80%;
-		}
-
 		strong {
 			font-weight: 300;
 			font-size: 25px;
