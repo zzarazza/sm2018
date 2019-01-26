@@ -2001,7 +2001,7 @@ body.page-saas-plus .entry-header .entry-title {
   .entry-header .page-subtitle {
     font-size: 20px;
     font-weight: 300;
-    margin: 0;
+    margin-top: 12px;
     margin-bottom: 40px; }
     @media (min-width: 64em) {
       .entry-header .page-subtitle {
