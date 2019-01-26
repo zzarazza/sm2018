@@ -1696,13 +1696,6 @@
 		"oAP": "/LICENSE",
 		"oF": 0
 		},
-	"/page-careers.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/page-careers.php",
-		"oF": 0
-		},
 	"/page.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1854,13 +1847,6 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/template-parts/page/content-front-page.php",
-		"oF": 0
-		},
-	"/template-parts/page/content-page-careers.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/template-parts/page/content-page-careers.php",
 		"oF": 0
 		},
 	"/template-parts/page/content-page.php": {
