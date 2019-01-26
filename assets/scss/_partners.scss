@@ -35,9 +35,11 @@
 		font-size: 25px;
 		font-weight: 400;
 		margin-top: map-get($spacing-mobile,large);
+		margin-bottom: map-get($spacing-mobile,medium);
 
 		@include mq($from: tablet-l) {
 			margin-top: map-get($spacing-tablet,large);
+			margin-bottom: map-get($spacing-tablet,medium);
 		}
 	} // .partners-title
 
