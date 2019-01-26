@@ -547,10 +547,14 @@ ul.wp-block-sm-custom-list {
 	.wpcf7-response-output {
 		margin: 20px 0 0;
 		padding: 0;
+		border: 0 none !important;
 
 		&.wpcf7-validation-errors {
-			border: 0 none;
 			color: map-get($sm-palette, alert);
+		}
+
+		&.wpcf7-mail-sent-ok {
+			display: none;
 		}
 	}
 
@@ -1006,6 +1010,20 @@ body.page-systemorph-overview {
 	.entry-header .page-subtitle {
 		@include mq($from: tablet-l) {
 			max-width: 60%;
+		}
+	}
+
+	section.about-company {
+		position: relative;
+
+		&:after {
+			content: "";
+			position: absolute;
+			width: 246px;
+			height: 179px;
+			background-image: url("#{$sm-images}/logo-sm-about.png");
+			background-repeat: no-repeat;
+			background-position: 0 0;
 		}
 	}
 }

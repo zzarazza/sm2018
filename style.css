@@ -2370,10 +2370,12 @@ ul.wp-block-sm-custom-list {
       padding-right: 40px; }
   .wpcf7-form .wpcf7-response-output {
     margin: 20px 0 0;
-    padding: 0; }
+    padding: 0;
+    border: 0 none !important; }
     .wpcf7-form .wpcf7-response-output.wpcf7-validation-errors {
-      border: 0 none;
       color: #cc1300; }
+    .wpcf7-form .wpcf7-response-output.wpcf7-mail-sent-ok {
+      display: none; }
   .wpcf7-form .form-el-acceptance .wpcf7-form-control-wrap + .wpcf7-form-control-wrap {
     margin-top: 20px; }
   .wpcf7-form .form-el-acceptance label {
@@ -2704,3 +2706,14 @@ body.error404 {
 @media (min-width: 64em) {
   body.page-systemorph-overview .entry-header .page-subtitle {
     max-width: 60%; } }
+
+body.page-systemorph-overview section.about-company {
+  position: relative; }
+  body.page-systemorph-overview section.about-company:after {
+    content: "";
+    position: absolute;
+    width: 246px;
+    height: 179px;
+    background-image: url("assets/images/logo-sm-about.png");
+    background-repeat: no-repeat;
+    background-position: 0 0; }
