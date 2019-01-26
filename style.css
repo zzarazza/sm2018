@@ -2712,10 +2712,11 @@ body.page-systemorph-overview section.about-company .wp-block-image.alignfull {
   body.page-systemorph-overview section.about-company .wp-block-image.alignfull:after {
     content: "";
     position: absolute;
-    top: 0;
-    right: -100%;
+    top: 50%;
+    margin-top: -90px;
+    right: -15%;
     width: 246px;
-    height: 179px;
+    height: 180px;
     background-image: url("assets/images/logo-sm-about.png");
     background-repeat: no-repeat;
     background-position: 0 0;

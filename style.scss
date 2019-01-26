@@ -1020,10 +1020,11 @@ body.page-systemorph-overview {
 			&:after {
 				content: "";
 				position: absolute;
-				top: 0;
-				right: -100%;
+				top: 50%;
+				margin-top: -90px;
+				right: -15%;
 				width: 246px;
-				height: 179px;
+				height: 180px;
 				background-image: url("#{$sm-images}/logo-sm-about.png");
 				background-repeat: no-repeat;
 				background-position: 0 0;
