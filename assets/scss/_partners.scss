@@ -8,6 +8,11 @@
 	}
 
 	.taxonomy-description {
+		p {
+			font-size: 20px;
+			line-height: 1.08;
+		}
+
 		p:first-child {
 			margin-top: 0;
 		}
@@ -16,11 +21,19 @@
 
 .partners {
 	&:last-child {
-		margin-bottom: 110px;
+		margin-bottom: map-get($spacing-mobile,large);
+
+		@include mq($from: tablet-l) {
+			margin-bottom: map-get($spacing-tablet,large);
+		}
 	}
 
 	+ .partners {
-		margin-top: 100px;
+		margin-top: map-get($spacing-mobile,large);
+
+		@include mq($from: tablet-l) {
+			margin-top: map-get($spacing-tablet,large);
+		}
 	}
 
 	.partners-title {

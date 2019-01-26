@@ -1905,14 +1905,24 @@ body.page-saas-plus .entry-header .entry-title {
   .post-type-archive-partners .page-header .page-title {
     margin-bottom: 0; }
 
+.post-type-archive-partners .taxonomy-description p {
+  font-size: 20px;
+  line-height: 1.08; }
+
 .post-type-archive-partners .taxonomy-description p:first-child {
   margin-top: 0; }
 
 .partners:last-child {
-  margin-bottom: 110px; }
+  margin-bottom: 40px; }
+  @media (min-width: 64em) {
+    .partners:last-child {
+      margin-bottom: 60px; } }
 
 .partners + .partners {
-  margin-top: 100px; }
+  margin-top: 40px; }
+  @media (min-width: 64em) {
+    .partners + .partners {
+      margin-top: 60px; } }
 
 .partners .partners-title {
   text-transform: uppercase;
