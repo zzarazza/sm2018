@@ -1206,7 +1206,8 @@ body.page-saas-plus .entry-header .entry-title {
     @media (min-width: 64em) {
       .navigation-top .menu .current-menu-ancestor > a,
       .navigation-top .menu .current-menu-parent > a,
-      .navigation-top .menu .current-page-ancestor > a {
+      .navigation-top .menu .current-page-ancestor > a,
+      .navigation-top .menu .current-page-grandparent > a {
         position: relative;
         font-weight: 700; } }
     .navigation-top .menu .sub-menu {

@@ -970,7 +970,7 @@ function add_menu_parent_class( $items ) {
 
     foreach ( $items as $item ) {
         if ( in_array( $item->ID, $parents ) ) {
-            $item->classes[] = 'current-menu-ancestor';
+            $item->classes[] = 'current-page-grandparent';
         }
     }
 
