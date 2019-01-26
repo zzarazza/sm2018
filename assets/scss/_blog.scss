@@ -41,16 +41,27 @@ body.single-post {
 
 		@include mq($from: tablet) {
 			margin-top: 30px;
-			margin-bottom: 20px;
 		}
 	}
 
 	.single-featured-image-header {
-		margin-bottom: 60px;
+		margin-bottom: map-get($spacing-mobile,large);
+
+		@include mq($from: tablet) {
+			margin-bottom: map-get($spacing-tablet,large);
+		}
 	}
 
 	article.post {
 		.entry-header {
+			margin-top: map-get($spacing-mobile,large);
+			margin-bottom: map-get($spacing-mobile,large);
+
+			@include mq($from: tablet) {
+				margin-top: map-get($spacing-tablet,large);
+				margin-bottom: map-get($spacing-tablet,large);
+			}
+
 			.entry-title + .entry-meta {
 				margin-top: 20px;
 			}

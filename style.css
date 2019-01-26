@@ -1763,14 +1763,23 @@ body.single-post .entry-header .entry-meta {
   display: inline-block; }
   @media (min-width: 48em) {
     .single-post .back-to-blog-link {
-      margin-top: 30px;
-      margin-bottom: 20px; } }
+      margin-top: 30px; } }
 
 .single-post .single-featured-image-header {
-  margin-bottom: 60px; }
+  margin-bottom: 40px; }
+  @media (min-width: 48em) {
+    .single-post .single-featured-image-header {
+      margin-bottom: 60px; } }
 
-.single-post article.post .entry-header .entry-title + .entry-meta {
-  margin-top: 20px; }
+.single-post article.post .entry-header {
+  margin-top: 40px;
+  margin-bottom: 40px; }
+  @media (min-width: 48em) {
+    .single-post article.post .entry-header {
+      margin-top: 60px;
+      margin-bottom: 60px; } }
+  .single-post article.post .entry-header .entry-title + .entry-meta {
+    margin-top: 20px; }
 
 .single-post article.post .entry-footer {
   padding-top: 40px;
