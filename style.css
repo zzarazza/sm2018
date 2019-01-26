@@ -1934,7 +1934,11 @@ body.page-saas-plus .entry-header .entry-title {
 .partners .partners-description {
   font-weight: 300;
   line-height: 1.15;
-  margin-bottom: 54px; }
+  font-size: 20px;
+  margin-bottom: 40px; }
+  @media (min-width: 64em) {
+    .partners .partners-description {
+      margin-bottom: 60px; } }
 
 .partners .partners-grid {
   list-style: none;

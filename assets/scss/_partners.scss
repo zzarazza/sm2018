@@ -46,7 +46,12 @@
 	.partners-description {
 		font-weight: 300;
 		line-height: 1.15;
-		margin-bottom: 54px;
+		font-size: 20px;
+		margin-bottom: map-get($spacing-mobile,large);
+
+		@include mq($from: tablet-l) {
+			margin-bottom: map-get($spacing-tablet,large);
+		}
 	}
 
 	.partners-grid {
