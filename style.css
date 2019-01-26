@@ -2543,6 +2543,8 @@ p:empty {
     justify-content: center; }
     .wp-block-columns.has-2-columns .wp-block-column > .wp-block-sm-section h2 {
       margin-bottom: 0; }
+    .wp-block-columns.has-2-columns .wp-block-column > .wp-block-sm-section > *:first-child {
+      margin-top: 0; }
     .wp-block-columns.has-2-columns .wp-block-column > .wp-block-sm-section p + p {
       margin-top: 0; } }
 

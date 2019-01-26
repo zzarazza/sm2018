@@ -798,6 +798,10 @@ p:empty {
 				    	margin-bottom: 0;
 				    }
 
+				    > *:first-child {
+				    	margin-top: 0;
+				    }
+
 				    p + p {
 				    	margin-top: 0;
 				    }
