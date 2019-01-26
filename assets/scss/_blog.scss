@@ -32,7 +32,9 @@
 	}
 
 	.post-thumbnail {
-		margin-bottom: 20px;
+		@include mq($until: tablet) {
+			margin-bottom: map-get($spacing-mobile,small);
+		}
 
 		img {
 			display: block;
