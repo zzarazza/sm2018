@@ -2372,10 +2372,20 @@ section.wp-block-sm-section.alignfull {
   .wp-block-sm-section.has-border-radius {
     border-radius: 3px; }
   .wp-block-sm-section.has-box-shadow {
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); }
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    padding-left: 30px;
+    padding-right: 30px; }
+    @media (min-width: 64em) {
+      .wp-block-sm-section.has-box-shadow {
+        padding-left: 40px;
+        padding-right: 40px; } }
     .wp-block-sm-section.has-box-shadow h3 {
       font-size: 25px;
-      font-weight: 400; }
+      font-weight: 400;
+      margin-bottom: 30px; }
+      @media (min-width: 64em) {
+        .wp-block-sm-section.has-box-shadow h3 {
+          margin-bottom: 40px; } }
   .wp-block-sm-section.section-striped {
     border-top: 1px solid #E1E1E1;
     border-bottom: 1px solid #E1E1E1;

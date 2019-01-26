@@ -581,10 +581,22 @@ section.wp-block-sm-section.alignfull {
 
 	&.has-box-shadow {
 		box-shadow: 3px 3px 10px rgba(black,0.1);
+		padding-left: map-get($spacing-mobile,medium);
+		padding-right: map-get($spacing-mobile,medium);
+
+		@include mq($from: tablet-l) {
+			padding-left: map-get($spacing-tablet,medium);
+			padding-right: map-get($spacing-tablet,medium);
+		}
 
 		h3 {
 			font-size: 25px;
 			font-weight: 400;
+			margin-bottom: map-get($spacing-mobile,medium);
+
+			@include mq($from: tablet-l) {
+				margin-bottom: map-get($spacing-tablet,medium);
+			}
 		}
 	}
 
