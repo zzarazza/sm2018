@@ -1027,7 +1027,7 @@ body.page-careers {
 			}
 
 			@include mq($from: desktop) {
-				max-width: 50%;
+				max-width: 30ch;
 				margin-left: auto;
 				margin-right: auto;
 			}
