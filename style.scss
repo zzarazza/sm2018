@@ -476,7 +476,7 @@ ul.wp-block-sm-custom-list {
 	}
 
 	.form-el {
-		margin: 40px 0;
+		margin: 48px 0;
 		position: relative;
 
 		label {
@@ -536,6 +536,11 @@ ul.wp-block-sm-custom-list {
 		.wpcf7-submit:disabled {
 			opacity: 0.5;
 			box-shadow: none;
+		}
+
+		.wpcf7-submit {
+			padding-left: 40px;
+			padding-right: 40px;
 		}
 	}
 

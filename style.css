@@ -2314,7 +2314,7 @@ ul.wp-block-sm-custom-list {
     .wpcf7-form {
       max-width: 40%; } }
   .wpcf7-form .form-el {
-    margin: 40px 0;
+    margin: 48px 0;
     position: relative; }
     .wpcf7-form .form-el label {
       display: block;
@@ -2365,6 +2365,9 @@ ul.wp-block-sm-custom-list {
     .wpcf7-form .form-ctr .wpcf7-submit:disabled {
       opacity: 0.5;
       box-shadow: none; }
+    .wpcf7-form .form-ctr .wpcf7-submit {
+      padding-left: 40px;
+      padding-right: 40px; }
   .wpcf7-form .wpcf7-response-output {
     margin: 20px 0 0;
     padding: 10px 20px; }
