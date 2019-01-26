@@ -887,6 +887,9 @@ button,
   outline: none;
   font-weight: 400; }
 
+figure {
+  margin: 0; }
+
 .site-content-contain {
   padding-top: 73px; }
   .home .site-content-contain {
@@ -1998,7 +2001,11 @@ body.page-saas-plus .entry-header .entry-title {
   .entry-header .page-subtitle {
     font-size: 20px;
     font-weight: 300;
-    margin: 0; }
+    margin: 0;
+    margin-bottom: 40px; }
+    @media (min-width: 64em) {
+      .entry-header .page-subtitle {
+        margin-bottom: 60px; } }
 
 .entry-content p,
 .entry-content ul,
@@ -2662,3 +2669,7 @@ body.error404 {
     body.error404 .error-404 p {
       margin-top: -38px;
       font-size: 32px; }
+
+@media (min-width: 64em) {
+  body.page-systemorph-overview .entry-header .page-subtitle {
+    max-width: 60%; } }
