@@ -462,9 +462,10 @@ ul.wp-block-sm-custom-list {
 } // .sm-partners
 
 .wpcf7-form {
-	margin-bottom: 62px;
+	margin-top: map-get($spacing-mobile,xlarge);
 
 	@include mq($from: tablet) {
+		margin-top: map-get($spacing-tablet,xlarge);
 		max-width: 60%;
 	}
 
