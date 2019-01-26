@@ -1014,16 +1014,21 @@ body.page-systemorph-overview {
 	}
 
 	section.about-company {
-		position: relative;
+		.wp-block-image.alignfull {
+			position: relative;
 
-		&:after {
-			content: "";
-			position: absolute;
-			width: 246px;
-			height: 179px;
-			background-image: url("#{$sm-images}/logo-sm-about.png");
-			background-repeat: no-repeat;
-			background-position: 0 0;
+			&:after {
+				content: "";
+				position: absolute;
+				top: 0;
+				right: -100%;
+				width: 246px;
+				height: 179px;
+				background-image: url("#{$sm-images}/logo-sm-about.png");
+				background-repeat: no-repeat;
+				background-position: 0 0;
+				opacity: 0.25;
+			}
 		}
 	}
 }

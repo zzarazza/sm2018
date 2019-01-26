@@ -2707,13 +2707,16 @@ body.error404 {
   body.page-systemorph-overview .entry-header .page-subtitle {
     max-width: 60%; } }
 
-body.page-systemorph-overview section.about-company {
+body.page-systemorph-overview section.about-company .wp-block-image.alignfull {
   position: relative; }
-  body.page-systemorph-overview section.about-company:after {
+  body.page-systemorph-overview section.about-company .wp-block-image.alignfull:after {
     content: "";
     position: absolute;
+    top: 0;
+    right: -100%;
     width: 246px;
     height: 179px;
     background-image: url("assets/images/logo-sm-about.png");
     background-repeat: no-repeat;
-    background-position: 0 0; }
+    background-position: 0 0;
+    opacity: 0.25; }
