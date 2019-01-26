@@ -1799,8 +1799,6 @@ body.archive .site-main {
   height: 24px; }
 
 @media (min-width: 48em) {
-  body.blog .entry-header .entry-title,
-  body.archive .entry-header .entry-title,
   body.single-post .entry-header .entry-title {
     max-width: 80%; } }
 

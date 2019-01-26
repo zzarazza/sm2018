@@ -99,8 +99,7 @@ body.archive {
 	}
 }
 
-body.blog,
-body.archive,
+
 body.single-post {
 	.entry-header .entry-title {
 		@include mq($from: tablet) {
