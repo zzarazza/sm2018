@@ -2684,13 +2684,13 @@ body.page-careers .entry-header .page-prefix,
 body.page-careers .entry-header .entry-title {
   text-align: center; }
 
-body.page-careers .entry-header .sntry-title {
+body.page-careers .entry-header .entry-title {
   margin-bottom: 40px; }
   @media (min-width: 48em) {
-    body.page-careers .entry-header .sntry-title {
+    body.page-careers .entry-header .entry-title {
       margin-bottom: 60px; } }
   @media (min-width: 73.125em) {
-    body.page-careers .entry-header .sntry-title {
+    body.page-careers .entry-header .entry-title {
       max-width: 50%;
       margin-left: auto;
       margin-right: auto; } }
