@@ -18,15 +18,6 @@ function systemorph_body_classes( $classes ) {
 	global $wp_query;
 
 
-	if ( is_multi_author() ) {
-		$classes[] = 'group-blog';
-	}
-
-	// Add class of hfeed to non-singular pages.
-	if ( ! is_singular() ) {
-		$classes[] = 'hfeed';
-	}
-
 	// Add class if we're viewing the Customizer for easier styling of theme options.
 	if ( is_customize_preview() ) {
 		$classes[] = 'systemorph-customizer';
@@ -36,12 +27,6 @@ function systemorph_body_classes( $classes ) {
 	if ( is_front_page() && 'posts' !== get_option( 'show_on_front' ) ) {
 		$classes[] = 'systemorph-front-page';
 	}
-
-	// Add class if sidebar is used.
-	if ( is_active_sidebar( 'sidebar-1' ) && ! is_page() ) {
-		$classes[] = 'has-sidebar';
-	}
-
 
 	if ( is_singular() ) {
 		$classes[] = 'page-' . $wp_query->get_queried_object()->post_name;

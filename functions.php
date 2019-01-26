@@ -546,29 +546,6 @@ function systemorph_pingback_header() {
 add_action( 'wp_head', 'systemorph_pingback_header' );
 
 /**
- * Display custom color CSS.
- */
-function systemorph_colors_css_wrap() {
-	if ( 'custom' !== get_theme_mod( 'colorscheme' ) && ! is_customize_preview() ) {
-		return;
-	}
-
-	require_once( get_parent_theme_file_path( '/inc/color-patterns.php' ) );
-	$hue = absint( get_theme_mod( 'colorscheme_hue', 250 ) );
-
-	$customize_preview_data_hue = '';
-	if ( is_customize_preview() ) {
-		$customize_preview_data_hue = 'data-hue="' . $hue . '"';
-	}
-?>
-	<style type="text/css" id="custom-theme-colors" <?php echo $customize_preview_data_hue; ?>>
-		<?php echo systemorph_custom_colors_css(); ?>
-	</style>
-<?php
-}
-add_action( 'wp_head', 'systemorph_colors_css_wrap' );
-
-/**
  * Enqueue scripts and styles.
  */
 function systemorph_scripts() {
@@ -599,20 +576,20 @@ function systemorph_scripts() {
 
 	wp_enqueue_script( 'systemorph-skip-link-focus-fix', get_theme_file_uri( '/assets/js/skip-link-focus-fix.js' ), array(), '1.0', true );
 
-	$systemorph_l10n = array(
-		'quote' => systemorph_get_svg( array( 'icon' => 'quote-right' ) ),
-	);
+	// $systemorph_l10n = array(
+	// 	'quote' => systemorph_get_svg( array( 'icon' => 'quote-right' ) ),
+	// );
 
 	if ( has_nav_menu( 'top' ) ) {
 		wp_enqueue_script( 'systemorph-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '1.0', true );
 		$systemorph_l10n['expand']   = __( 'Expand child menu', 'systemorph' );
 		$systemorph_l10n['collapse'] = __( 'Collapse child menu', 'systemorph' );
-		$systemorph_l10n['icon']     = systemorph_get_svg(
-			array(
-				'icon'     => 'angle-down',
-				'fallback' => true,
-			)
-		);
+		// $systemorph_l10n['icon']     = systemorph_get_svg(
+		// 	array(
+		// 		'icon'     => 'angle-down',
+		// 		'fallback' => true,
+		// 	)
+		// );
 	}
 
 	wp_enqueue_script( 'systemorph-global', get_theme_file_uri( '/assets/js/global.js' ), array( 'jquery' ), '1.0', true );
@@ -632,74 +609,6 @@ function systemorph_scripts() {
 add_action( 'wp_enqueue_scripts', 'systemorph_scripts' );
 
 /**
- * Add custom image sizes attribute to enhance responsive image functionality
- * for content images.
- *
- * @since Systemorph 2018 1.0
- *
- * @param string $sizes A source size value for use in a 'sizes' attribute.
- * @param array  $size  Image size. Accepts an array of width and height
- *                      values in pixels (in that order).
- * @return string A source size value for use in a content image 'sizes' attribute.
- */
-function systemorph_content_image_sizes_attr( $sizes, $size ) {
-	$width = $size[0];
-
-	if ( 740 <= $width ) {
-		$sizes = '(max-width: 706px) 89vw, (max-width: 767px) 82vw, 740px';
-	}
-
-	if ( is_active_sidebar( 'sidebar-1' ) || is_archive() || is_search() || is_home() || is_page() ) {
-		if ( ! ( is_page() && 'one-column' === get_theme_mod( 'page_options' ) ) && 767 <= $width ) {
-			$sizes = '(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px';
-		}
-	}
-
-	return $sizes;
-}
-add_filter( 'wp_calculate_image_sizes', 'systemorph_content_image_sizes_attr', 10, 2 );
-
-/**
- * Filter the `sizes` value in the header image markup.
- *
- * @since Systemorph 2018 1.0
- *
- * @param string $html   The HTML image tag markup being filtered.
- * @param object $header The custom header object returned by 'get_custom_header()'.
- * @param array  $attr   Array of the attributes for the image tag.
- * @return string The filtered header image HTML.
- */
-function systemorph_header_image_tag( $html, $header, $attr ) {
-	if ( isset( $attr['sizes'] ) ) {
-		$html = str_replace( $attr['sizes'], '100vw', $html );
-	}
-	return $html;
-}
-add_filter( 'get_header_image_tag', 'systemorph_header_image_tag', 10, 3 );
-
-/**
- * Add custom image sizes attribute to enhance responsive image functionality
- * for post thumbnails.
- *
- * @since Systemorph 2018 1.0
- *
- * @param array $attr       Attributes for the image markup.
- * @param int   $attachment Image attachment ID.
- * @param array $size       Registered image size or flat array of height and width dimensions.
- * @return array The filtered attributes for the image markup.
- */
-function systemorph_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
-	if ( is_archive() || is_search() || is_home() ) {
-		$attr['sizes'] = '(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px';
-	} else {
-		$attr['sizes'] = '100vw';
-	}
-
-	return $attr;
-}
-add_filter( 'wp_get_attachment_image_attributes', 'systemorph_post_thumbnail_sizes_attr', 10, 3 );
-
-/**
  * Use front-page.php when Front page displays is set to a static page.
  *
  * @since Systemorph 2018 1.0
@@ -712,106 +621,6 @@ function systemorph_front_page_template( $template ) {
 	return is_home() ? '' : $template;
 }
 add_filter( 'frontpage_template', 'systemorph_front_page_template' );
-
-/**
- * Modifies tag cloud widget arguments to display all tags in the same font size
- * and use list format for better accessibility.
- *
- * @since Systemorph 2018 1.4
- *
- * @param array $args Arguments for tag cloud widget.
- * @return array The filtered arguments for tag cloud widget.
- */
-function systemorph_widget_tag_cloud_args( $args ) {
-	$args['largest']  = 1;
-	$args['smallest'] = 1;
-	$args['unit']     = 'em';
-	$args['format']   = 'list';
-
-	return $args;
-}
-add_filter( 'widget_tag_cloud_args', 'systemorph_widget_tag_cloud_args' );
-
-add_action( 'pre_get_posts', 'systemorph_management_team_query' );
-
-function systemorph_management_team_query( $query ) {
-
-    if ( ! is_admin() && $query->is_main_query() ) {
-
-        if ( is_post_type_archive( 'management-team' ) ) {
-
-            $query->set('posts_per_page', -1 );
-            $query->set('orderby', 'menu_order' );
-            $query->set('order', 'ASC' );
-
-        }
-    }
-}
-
-add_action( 'wp_ajax_nopriv_systemorph_white_papers_success', 'white_papers_success');
-add_action( 'wp_ajax_systemorph_white_papers_success', 'white_papers_success');
-
-function white_papers_success() {
-		$post_id = $_REQUEST['post_id'];
-		ob_start();
-		include get_template_directory() . '/template-parts/page/content-white_papers_success.php';
-		$content = ob_get_clean();
-
-		$link = '';
-		$redirect_page = the_systemorph_case_study_link($post_id);
-		if ($redirect_page) {
-			$link = get_permalink($redirect_page->ID);
-		}
-
-        echo json_encode(array( 'link' => $link, 'page' => $redirect_page->post_name, 'content' => $content));
-        echo $content;
-
-        wp_die();
-}
-
-add_action( 'wp_ajax_nopriv_systemorph_case_studies_success', 'case_studies_success');
-add_action( 'wp_ajax_systemorph_case_studies_success', 'case_studies_success');
-function case_studies_success() {
-		$post_id = $_REQUEST['post_id'];
-		$page = $_REQUEST['page_id'];
-		$redirect_page = the_systemorph_case_study_link($post_id);
-		$link = '';
-		if ($redirect_page) {
-			$link = get_permalink($redirect_page->ID);
-		}
-
-        echo json_encode(array( 'link' => $link, 'page' => $redirect_page->post_name));
-
-        wp_die();
-}
-
-add_action( "template_redirect", "redirect_to_case_study" );
-
-function redirect_to_case_study() {
-    global $post;
-
-	$is_to_redirect = false;
-
-	$page = $post->post_name;
-	$query = new WP_Query(array(
-	    'post_type' => 'case-studies',
-	    'post_status' => 'publish'
-	));
-
-	while ($query->have_posts() && !$is_to_redirect) {
-	    $query->the_post();
-	    $post_id = get_the_ID();
-		$redirect_page = the_systemorph_case_study_link($post_id);
-		if ($redirect_page) {
-			if ($page == $redirect_page->post_name) {
-				$is_to_redirect = true;
-			}
-		}
-	}
-    if(!isset($_COOKIE[$page]) && $is_to_redirect) {
-		wp_redirect(get_permalink($post_id));
-    }
-}
 
 
 function systemorph_disable_srcset( $sources ) {
@@ -931,7 +740,7 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
 /**
  * SVG icons functions and filters.
  */
-require get_parent_theme_file_path( '/inc/icon-functions.php' );
+// require get_parent_theme_file_path( '/inc/icon-functions.php' );
 
 require get_parent_theme_file_path( '/inc/custom_post_types.php' );
 require get_parent_theme_file_path( '/inc/taxonomies.php' );
@@ -941,41 +750,11 @@ require get_parent_theme_file_path( '/inc/meta-settings.php' );
 require get_parent_theme_file_path( '/inc/meta-boxes.php' );
 require get_parent_theme_file_path( '/inc/shortcodes.php' );
 
+require get_parent_theme_file_path( '/inc/redirects.php' );
+require get_parent_theme_file_path( '/inc/nav-classes.php' );
 
-add_action( 'template_redirect', 'redirect_post_type_single_partners' );
-function redirect_post_type_single_partners(){
-    if ( ! is_singular( 'partners' ) )
-        return;
-    wp_redirect( get_post_type_archive_link( 'partners' ), 301 );
-    exit;
-}
 
-add_action( 'template_redirect', 'redirect_post_type_single_team' );
-function redirect_post_type_single_team(){
-    if ( ! is_singular( 'management-team' ) )
-        return;
-    wp_redirect( get_page_link(get_page_by_path( 'about/management-team', OBJECT, 'page' )), 301 );
-    exit;
-}
 
-add_filter( 'wp_nav_menu_objects', 'add_menu_parent_class' );
-function add_menu_parent_class( $items ) {
-
-    $parents = array();
-    foreach ( $items as $item ) {
-        if ( in_array('current-post-ancestor', $item->classes) || in_array( 'current_page_parent', $item->classes ) ) {
-            $parents[] = $item->menu_item_parent;
-        }
-    }
-
-    foreach ( $items as $item ) {
-        if ( in_array( $item->ID, $parents ) ) {
-            $item->classes[] = 'current-page-grandparent';
-        }
-    }
-
-    return $items;
-}
 // function debug_rewrite_rules() {
 //     global $wp, $template, $wp_rewrite;
 

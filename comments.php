@@ -59,7 +59,7 @@ if ( post_password_required() ) {
 						'avatar_size' => 100,
 						'style'       => 'ol',
 						'short_ping'  => true,
-						'reply_text'  => systemorph_get_svg( array( 'icon' => 'mail-reply' ) ) . __( 'Reply', 'systemorph' ),
+						'reply_text'  => __( 'Reply', 'systemorph' ),
 					)
 				);
 			?>
@@ -68,8 +68,8 @@ if ( post_password_required() ) {
 		<?php
 		the_comments_pagination(
 			array(
-				'prev_text' => systemorph_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous', 'systemorph' ) . '</span>',
-				'next_text' => '<span class="screen-reader-text">' . __( 'Next', 'systemorph' ) . '</span>' . systemorph_get_svg( array( 'icon' => 'arrow-right' ) ),
+				'prev_text' => '<span class="screen-reader-text">' . __( 'Previous', 'systemorph' ) . '</span>',
+				'next_text' => '<span class="screen-reader-text">' . __( 'Next', 'systemorph' ) . '</span>',
 			)
 		);
 
