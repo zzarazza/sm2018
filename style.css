@@ -1246,7 +1246,8 @@ body.page-saas-plus .entry-header .entry-title {
           .navigation-top .menu .sub-menu > .menu-item a:hover {
             text-decoration: underline; }
       .navigation-top .menu .sub-menu .current-menu-item a,
-      .navigation-top .menu .sub-menu .current_page_item a {
+      .navigation-top .menu .sub-menu .current_page_item a,
+      .navigation-top .menu .sub-menu .current_page_parent a {
         font-weight: 500; }
   .navigation-top .menu-item a {
     text-decoration: none;

@@ -957,6 +957,25 @@ function redirect_post_type_single_team(){
     wp_redirect( get_page_link(get_page_by_path( 'about/management-team', OBJECT, 'page' )), 301 );
     exit;
 }
+
+add_filter( 'wp_nav_menu_objects', 'add_menu_parent_class' );
+function add_menu_parent_class( $items ) {
+
+    $parents = array();
+    foreach ( $items as $item ) {
+        if ( in_array('current-post-ancestor', $item->classes) || in_array( 'current_page_parent', $item->classes ) ) {
+            $parents[] = $item->menu_item_parent;
+        }
+    }
+
+    foreach ( $items as $item ) {
+        if ( in_array( $item->ID, $parents ) ) {
+            $item->classes[] = 'current-menu-ancestor';
+        }
+    }
+
+    return $items;
+}
 // function debug_rewrite_rules() {
 //     global $wp, $template, $wp_rewrite;
 
