@@ -875,6 +875,7 @@ html {
 
 body {
   font-family: "Tajawal", Arial, sans-serif;
+  font-weight: 300;
   background-color: #fdfdfe;
   color: #101F30;
   overflow-x: hidden;
@@ -883,7 +884,8 @@ body {
 a,
 button,
 .button {
-  outline: none; }
+  outline: none;
+  font-weight: 400; }
 
 .site-content-contain {
   padding-top: 73px; }

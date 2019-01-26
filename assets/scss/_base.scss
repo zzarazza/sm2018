@@ -5,6 +5,7 @@ html {
 
 body {
 	font-family: $sm-body-font-family;
+	font-weight: 300;
 	background-color: #fdfdfe;
 	color: $sm-body-font-color;
 	overflow-x: hidden;
@@ -15,6 +16,7 @@ a,
 button,
 .button {
 	outline: none;
+	font-weight: 400;
 }
 
 .site-content-contain {
