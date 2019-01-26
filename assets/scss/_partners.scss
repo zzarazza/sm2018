@@ -15,18 +15,18 @@
 
 .partners {
 	&:last-child {
-		margin-bottom: map-get($spacing-mobile,large);
+		margin-bottom: map-get($spacing-mobile,xxlarge);
 
 		@include mq($from: tablet-l) {
-			margin-bottom: map-get($spacing-tablet,large);
+			margin-bottom: map-get($spacing-tablet,xxlarge);
 		}
 	}
 
 	+ .partners {
-		margin-top: map-get($spacing-mobile,large);
+		margin-top: map-get($spacing-mobile,xxlarge);
 
 		@include mq($from: tablet-l) {
-			margin-top: map-get($spacing-tablet,large);
+			margin-top: map-get($spacing-tablet,xxlarge);
 		}
 	}
 
