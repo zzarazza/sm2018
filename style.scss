@@ -36,14 +36,6 @@
 	@extend %main-title;
 }
 
-.page-template-default {
-	article.page {
-		> .entry-content {
-			@extend .is-style-spacing-xxlarge;
-		}
-	}
-}
-
 .post-type-archive-event,
 .post-type-archive-news {
 	padding-bottom: 77px;

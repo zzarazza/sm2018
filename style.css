@@ -1100,15 +1100,13 @@ div.wp-block-button .wp-block-button__link {
 .spacing-xxlarge,
 .is-style-spacing-xxlarge,
 .page-management-team .page-description,
-.wp-block-team-management,
-.page-template-default article.page > .entry-content {
+.wp-block-team-management {
   margin-bottom: 70px !important; }
   @media (min-width: 64em) {
     .spacing-xxlarge,
     .is-style-spacing-xxlarge,
     .page-management-team .page-description,
-    .wp-block-team-management,
-    .page-template-default article.page > .entry-content {
+    .wp-block-team-management {
       margin-bottom: 100px !important; } }
 
 .site-header {
