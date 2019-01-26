@@ -1745,9 +1745,8 @@ body.archive .site-main {
   width: 24px;
   height: 24px; }
 
-@media (min-width: 48em) {
-  body.single-post .entry-header .entry-title {
-    max-width: 80%; } }
+body.single-post .entry-header .entry-meta {
+  font-size: 20px; }
 
 .search-form {
   display: flex; }

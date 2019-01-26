@@ -7,9 +7,12 @@
 
 
 body.single-post {
-	.entry-header .entry-title {
-		@include mq($from: tablet) {
-			max-width: 80%;
+	.entry-header {
+		.entry-title {
+		}
+
+		.entry-meta {
+			font-size: 20px;
 		}
 	}
 }
