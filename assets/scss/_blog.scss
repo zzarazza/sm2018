@@ -38,9 +38,10 @@ body.single-post {
 .single-post {
 	.back-to-blog-link {
 		display: inline-block;
+		font-size: 20px;
 
 		@include mq($from: tablet) {
-			margin-top: 30px;
+			margin-top: 35px;
 		}
 	}
 
@@ -63,16 +64,17 @@ body.single-post {
 			}
 
 			.entry-title + .entry-meta {
-				margin-top: 20px;
+				margin-top: 4px;
 			}
 		}
 
 		.entry-footer {
-			padding-top: 40px;
-			padding-bottom: 100px;
+			padding-top: map-get($spacing-mobile,medium);
+			padding-bottom: map-get($spacing-mobile,xxlarge);
 
 			@include mq($from: tablet-l) {
-				padding-top: 70px;
+				padding-top: map-get($spacing-tablet,medium);
+				padding-bottom: map-get($spacing-tablet,xxlarge);
 			}
 		}
 	}

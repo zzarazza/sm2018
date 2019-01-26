@@ -1760,10 +1760,11 @@ body.single-post .entry-header .entry-meta {
       height: 24px; }
 
 .single-post .back-to-blog-link {
-  display: inline-block; }
+  display: inline-block;
+  font-size: 20px; }
   @media (min-width: 48em) {
     .single-post .back-to-blog-link {
-      margin-top: 30px; } }
+      margin-top: 35px; } }
 
 .single-post .single-featured-image-header {
   margin-bottom: 40px; }
@@ -1779,14 +1780,15 @@ body.single-post .entry-header .entry-meta {
       margin-top: 60px;
       margin-bottom: 60px; } }
   .single-post article.post .entry-header .entry-title + .entry-meta {
-    margin-top: 20px; }
+    margin-top: 4px; }
 
 .single-post article.post .entry-footer {
-  padding-top: 40px;
-  padding-bottom: 100px; }
+  padding-top: 30px;
+  padding-bottom: 70px; }
   @media (min-width: 64em) {
     .single-post article.post .entry-footer {
-      padding-top: 70px; } }
+      padding-top: 40px;
+      padding-bottom: 100px; } }
 
 .single-post .tags-links,
 .single-post .cat-links {
