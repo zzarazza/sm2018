@@ -2383,9 +2383,9 @@ section.wp-block-sm-section.alignfull {
     border-top: 1px solid #E1E1E1;
     border-bottom: 1px solid #E1E1E1;
     text-align: center; }
-  .wp-block-sm-section:not(.wp-block-sm-section.has-top-padding-0) > *:first-child {
+  .wp-block-sm-section:not(.has-top-padding-0) > *:first-child {
     margin-top: 0; }
-  .wp-block-sm-section:not(.wp-block-sm-section.has-bottom-padding-0) > *:last-child {
+  .wp-block-sm-section:not(.has-bottom-padding-0) > *:last-child {
     margin-bottom: 0; }
 
 p:empty {
