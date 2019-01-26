@@ -1,13 +1,17 @@
 %post-item {
 	border-top: 1px solid $sm-border-color;
-	padding: 40px 0;
+	padding: map-get($spacing-mobile,medium) 0;
+
+	@include mq($from: tablet-l) {
+		padding: map-get($spacing-mobile,medium) 0;
+	};
 
 	.entry-header {
 		margin-top: 0;
-		margin-bottom: 33px;
+		margin-bottom: map-get($spacing-mobile,small);
 
 		@include mq($from: tablet) {
-			margin-bottom: 19px;
+			margin-bottom: map-get($spacing-tablet,small);
 		}
 	}
 
@@ -94,7 +98,11 @@
 .pagination {
 	border-top: 1px solid $sm-border-color;
 	text-align: right;
-	padding-top: 60px;
+	padding-top: map-get($spacing-mobile,large);
+
+	@include mq($from: tablet-l) {
+		padding-top: map-get($spacing-mobile,large);
+	};
 
 	.page-numbers {
 		font-size: 20px;

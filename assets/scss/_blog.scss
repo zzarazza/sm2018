@@ -67,11 +67,14 @@
 	}
 }
 
-.blog,
-.archive.category,
-.archive.tag {
+body.blog,
+body.archive {
 	.page-title {
-		margin-bottom: 62px;
+		margin-bottom: map-get($spacing-mobile,large);
+
+		@include mq($from: tablet-l) {
+			margin-bottom: map-get($spacing-tablet,large);
+		};
 	}
 
 	.post {
@@ -79,7 +82,11 @@
 	}
 
 	.site-main {
-		margin-bottom: 100px;
+		margin-bottom: map-get($spacing-mobile,xxlarge);
+
+		@include mq($from: tablet) {
+			margin-bottom: map-get($spacing-tablet,xxlarge);
+		}
 	}
 }// .blog
 
