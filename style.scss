@@ -238,10 +238,10 @@ ul.wp-block-sm-custom-list {
 	}
 
 	.wp-block-sm-section:not(.has-padding-bottom-0) > &:last-child {
-		margin-bottom: -map-get($spacing-mobile, large) !important;
+		margin-bottom: -1 * map-get($spacing-mobile, large) !important;
 
 		@include mq($from: desktop) {
-			margin-bottom: -map-get($spacing-tablet, large) !important;
+			margin-bottom: -1 * map-get($spacing-tablet, large) !important;
 		}
 	}
 
@@ -254,11 +254,11 @@ ul.wp-block-sm-custom-list {
 
 	&.wp-block-sm-custom-list-one-column {
 		&:first-child:last-child {
-			margin-bottom: -map-get($spacing-mobile,medium);
-		}
+			margin-bottom: -1 * map-get($spacing-mobile,medium);
 
-		@include mq($from: desktop) {
-			margin-bottom: -map-get($spacing-mobile,large);
+			@include mq($from: desktop) {
+				margin-bottom: -1 * map-get($spacing-tablet,large);
+			}
 		}
 
 		.wp-block-sm-custom-list-item {
