@@ -2330,19 +2330,19 @@ ul.wp-block-sm-custom-list {
       width: 100%; }
       .wpcf7-form .form-el .wpcf7-text::-webkit-input-placeholder,
       .wpcf7-form .form-el .wpcf7-textarea::-webkit-input-placeholder {
-        color: yellow; }
+        color: #a6a6a6; }
       .wpcf7-form .form-el .wpcf7-text:-moz-placeholder,
       .wpcf7-form .form-el .wpcf7-textarea:-moz-placeholder {
-        color: yellow; }
+        color: #a6a6a6; }
       .wpcf7-form .form-el .wpcf7-text::-moz-placeholder,
       .wpcf7-form .form-el .wpcf7-textarea::-moz-placeholder {
-        color: yellow; }
+        color: #a6a6a6; }
       .wpcf7-form .form-el .wpcf7-text:-ms-input-placeholder,
       .wpcf7-form .form-el .wpcf7-textarea:-ms-input-placeholder {
-        color: yellow; }
+        color: #a6a6a6; }
       .wpcf7-form .form-el .wpcf7-text::placeholder,
       .wpcf7-form .form-el .wpcf7-textarea::placeholder {
-        color: yellow; }
+        color: #a6a6a6; }
       .wpcf7-form .form-el .wpcf7-text.wpcf7-not-valid,
       .wpcf7-form .form-el .wpcf7-textarea.wpcf7-not-valid {
         border-color: #cc1300; }
