@@ -1812,6 +1812,13 @@ body.single .tags-links {
   body.single .tags-links + .cat-links {
     margin-left: 57px; }
 
+body.single .news-source {
+  display: block;
+  margin-bottom: 20px; }
+  @media (min-width: 64em) {
+    body.single .news-source {
+      margin-bottom: 30px; } }
+
 @media (min-width: 48em) {
   .wp-block-recent-posts .wp-block-recent-posts-item .entry-content {
     align-self: center; }

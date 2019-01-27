@@ -102,6 +102,15 @@ body.single {
 			margin-left: 57px;
 		}
 	}
+
+	.news-source {
+		display: block;
+		margin-bottom: map-get($spacing-mobile,small);
+
+		@include mq($from: tablet-l) {
+			margin-bottom: map-get($spacing-tablet,small);
+		}
+	}
 }
 
 .wp-block-recent-posts {
