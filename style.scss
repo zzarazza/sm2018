@@ -316,6 +316,7 @@ ul.wp-block-sm-custom-list {
 
 		@include mq($from: tablet-l) {
 			min-height: 56.4vw;
+			height: auto;
 		}
 
 		&:after {

@@ -2194,7 +2194,8 @@ ul.wp-block-sm-custom-list {
   min-height: 400px; }
   @media (min-width: 64em) {
     .home .hero {
-      min-height: 56.4vw; } }
+      min-height: 56.4vw;
+      height: auto; } }
   .home .hero:after {
     content: "";
     position: absolute;
