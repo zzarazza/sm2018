@@ -21,6 +21,8 @@ add_filter('nav_menu_css_class', function ($classes, $item) {
         }
 
     }
+
+    $classes = array_unique($classes);
     // Return the corrected set of classes to be added to the menu item
     return $classes;
 }, 10, 4);
