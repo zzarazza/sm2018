@@ -110,7 +110,6 @@ function sm_register_post_type_case_study() {
 }
 add_action( 'init', 'sm_register_post_type_case_study' );
 
-
 // Post type: Partner
 function sm_register_post_type_partner() {
 
