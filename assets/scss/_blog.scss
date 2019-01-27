@@ -35,8 +35,10 @@ body.single-post {
 	}
 }
 
-.single-post {
-	.back-to-blog-link {
+body.single {
+	.back-to-blog-link,
+	.back-to-news-link,
+	.back-to-events-link {
 		display: inline-block;
 		font-size: 20px;
 

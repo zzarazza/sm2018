@@ -1759,53 +1759,57 @@ body.single-post .entry-header .entry-meta {
       width: 24px;
       height: 24px; }
 
-.single-post .back-to-blog-link {
+body.single .back-to-blog-link,
+body.single .back-to-news-link,
+body.single .back-to-events-link {
   display: inline-block;
   font-size: 20px; }
   @media (min-width: 48em) {
-    .single-post .back-to-blog-link {
+    body.single .back-to-blog-link,
+    body.single .back-to-news-link,
+    body.single .back-to-events-link {
       margin-top: 35px; } }
 
-.single-post .single-featured-image-header {
+body.single .single-featured-image-header {
   margin-bottom: 40px; }
   @media (min-width: 48em) {
-    .single-post .single-featured-image-header {
+    body.single .single-featured-image-header {
       margin-bottom: 60px; } }
 
-.single-post article.post .entry-header {
+body.single article.post .entry-header {
   margin-top: 40px;
   margin-bottom: 40px; }
   @media (min-width: 48em) {
-    .single-post article.post .entry-header {
+    body.single article.post .entry-header {
       margin-top: 60px;
       margin-bottom: 60px; } }
-  .single-post article.post .entry-header .entry-title + .entry-meta {
+  body.single article.post .entry-header .entry-title + .entry-meta {
     margin-top: 4px; }
 
-.single-post article.post .entry-footer {
+body.single article.post .entry-footer {
   padding-top: 30px;
   padding-bottom: 70px; }
   @media (min-width: 64em) {
-    .single-post article.post .entry-footer {
+    body.single article.post .entry-footer {
       padding-top: 40px;
       padding-bottom: 100px; } }
 
-.single-post .tags-links,
-.single-post .cat-links {
+body.single .tags-links,
+body.single .cat-links {
   display: block;
   line-height: 25px; }
   @media (min-width: 64em) {
-    .single-post .tags-links,
-    .single-post .cat-links {
+    body.single .tags-links,
+    body.single .cat-links {
       display: inline-block; } }
 
-.single-post .tags-links {
+body.single .tags-links {
   padding-left: 28px;
   background-image: url("assets/images/icons/icon-tag.svg");
   background-size: 18px auto;
   background-position: 0 0;
   background-repeat: no-repeat; }
-  .single-post .tags-links + .cat-links {
+  body.single .tags-links + .cat-links {
     margin-left: 57px; }
 
 @media (min-width: 48em) {
