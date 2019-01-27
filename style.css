@@ -2390,7 +2390,7 @@ body.page-zurich-insurance .wpcf7-form .wpcf7-response-output.wpcf7-mail-sent-ok
     width: 26px;
     height: 26px;
     left: 0;
-    top: 0;
+    top: -5px;
     border-radius: 52px;
     background-color: #5CB85C;
     background-image: url("assets/images/icons/sm-icons-white.svg");
