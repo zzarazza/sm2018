@@ -97,19 +97,16 @@ body.archive {
 }// .blog
 
 .post-type-archive-case-studies {
-	.page-header {
-		margin-bottom: 42px;
-
-		@include mq($from: tablet) {
-			margin-bottom: 82px;
-		}
-	}
 
 	.case-study-item {
 		@extend %post-item;
 
 		.entry-title {
-			margin-bottom: 19px;
+			margin-bottom: map-get($spacing-mobile,small);
+
+			@include mq($from: tablet) {
+				margin-bottom: map-get($spacing-tablet,small);
+			}
 		}
 	}
 }

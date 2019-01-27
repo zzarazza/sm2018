@@ -1718,14 +1718,11 @@ body.archive .site-main {
     body.archive .site-main {
       margin-bottom: 100px; } }
 
-.post-type-archive-case-studies .page-header {
-  margin-bottom: 42px; }
-  @media (min-width: 48em) {
-    .post-type-archive-case-studies .page-header {
-      margin-bottom: 82px; } }
-
 .post-type-archive-case-studies .case-study-item .entry-title {
-  margin-bottom: 19px; }
+  margin-bottom: 20px; }
+  @media (min-width: 48em) {
+    .post-type-archive-case-studies .case-study-item .entry-title {
+      margin-bottom: 30px; } }
 
 .pagination {
   border-top: 1px solid #E1E1E1;
