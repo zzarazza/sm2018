@@ -893,6 +893,9 @@ figure {
 strong {
   font-weight: 500; }
 
+.entry-title sup {
+  text-transform: none; }
+
 .site-content-contain {
   padding-top: 73px; }
   .home .site-content-contain {
@@ -1817,7 +1820,9 @@ body.single .tags-links {
 
 body.single .news-source {
   display: block;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  max-height: 52px;
+  width: auto; }
   @media (min-width: 64em) {
     body.single .news-source {
       margin-bottom: 30px; } }
