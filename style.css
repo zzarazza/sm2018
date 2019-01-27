@@ -2255,8 +2255,7 @@ ul.wp-block-sm-custom-list {
   @media (min-width: 48em) {
     .home .wp-block-sm-section.aligncenter h2 {
       font-size: 40px;
-      line-height: 1;
-      margin-top: 125px; } }
+      line-height: 1; } }
 
 .home .wp-block-sm-section.aligncenter h3 {
   font-size: 20px;
@@ -2274,6 +2273,9 @@ ul.wp-block-sm-custom-list {
   .home .wp-block-sm-section.aligncenter p {
     line-height: 1.08;
     margin: 1.08em 0; } }
+
+.home .homepage-main-info > h2:first-child {
+  margin-top: 0; }
 
 .home .homepage-main-info h3 {
   margin-left: auto;

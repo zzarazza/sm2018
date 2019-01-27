@@ -396,7 +396,6 @@ ul.wp-block-sm-custom-list {
 			@include mq($from: tablet) {
 				font-size: 40px;
 				line-height: 1;
-				margin-top: 125px;
 			}
 		}
 
@@ -423,6 +422,10 @@ ul.wp-block-sm-custom-list {
 	}
 
 	.homepage-main-info {
+		> h2:first-child {
+			margin-top: 0;
+		}
+
 		h3 {
 			margin-left: auto;
 			margin-right: auto;
