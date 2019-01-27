@@ -2369,7 +2369,7 @@ ul.wp-block-sm-custom-list {
     .wpcf7-form .wpcf7-response-output.wpcf7-validation-errors {
       color: #cc1300; }
     .wpcf7-form .wpcf7-response-output.wpcf7-mail-sent-ok {
-      display: none; }
+      display: none !important; }
   .wpcf7-form .form-el-acceptance .wpcf7-form-control-wrap + .wpcf7-form-control-wrap {
     margin-top: 20px; }
   .wpcf7-form .form-el-acceptance label {
@@ -2378,6 +2378,24 @@ ul.wp-block-sm-custom-list {
     .wpcf7-form .form-el-acceptance label input[type="checkbox"] {
       position: absolute;
       left: 0; }
+
+body.page-zurich-insurance .wpcf7-form .wpcf7-response-output.wpcf7-mail-sent-ok {
+  display: block !important;
+  position: relative;
+  line-height: 26px;
+  padding-left: 32px; }
+  body.page-zurich-insurance .wpcf7-form .wpcf7-response-output.wpcf7-mail-sent-ok:before {
+    position: absolute;
+    content: "";
+    width: 26px;
+    height: 26px;
+    left: 0;
+    top: 0;
+    border-radius: 52px;
+    background-color: #5CB85C;
+    background-image: url("assets/images/icons/sm-icons-white.svg");
+    background-position: -78px 0;
+    background-size: auto 26px; }
 
 section.alignwide {
   margin-left: -33px;

@@ -554,7 +554,7 @@ ul.wp-block-sm-custom-list {
 		}
 
 		&.wpcf7-mail-sent-ok {
-			display: none;
+			display: none !important;
 		}
 	}
 
@@ -570,6 +570,34 @@ ul.wp-block-sm-custom-list {
 			input[type="checkbox"] {
 				position: absolute;
 				left: 0;
+			}
+		}
+	}
+}
+
+// Temp until Case Study ready
+body.page-zurich-insurance {
+	.wpcf7-form {
+		.wpcf7-response-output {
+			&.wpcf7-mail-sent-ok {
+				display: block !important;
+				position: relative;
+				line-height: 26px;
+				padding-left: 32px;
+
+				&:before {
+					position: absolute;
+					content: "";
+					width: 26px;
+					height: 26px;
+					left: 0;
+					top: 0;
+					border-radius: 52px;
+					background-color: map-get($sm-palette, success);
+					background-image: url("#{$sm-images}/icons/sm-icons-white.svg");
+				    background-position: -78px 0;
+				    background-size: auto 26px;
+				}
 			}
 		}
 	}
