@@ -1207,7 +1207,7 @@ body.page-saas-plus .entry-header .entry-title {
       .navigation-top .menu .current-menu-ancestor > a,
       .navigation-top .menu .current-menu-parent > a,
       .navigation-top .menu .current-page-ancestor > a,
-      .navigation-top .menu .current-page-grandparent > a {
+      .navigation-top .menu .current-menu-item > a {
         position: relative;
         font-weight: 700; } }
     .navigation-top .menu .sub-menu {
@@ -1248,7 +1248,8 @@ body.page-saas-plus .entry-header .entry-title {
             text-decoration: underline; }
       .navigation-top .menu .sub-menu .current-menu-item a,
       .navigation-top .menu .sub-menu .current_page_item a,
-      .navigation-top .menu .sub-menu .current_page_parent a {
+      .navigation-top .menu .sub-menu .current_page_parent a,
+      .navigation-top .menu .sub-menu .current-case-studies-ancestor a {
         font-weight: 500; }
   .navigation-top .menu-item a {
     text-decoration: none;
