@@ -16,9 +16,10 @@ add_filter('nav_menu_css_class', function ($classes, $item) {
         $menu_slug = strtolower(trim($item->url));
 
         // If the menu item URL contains the current post types slug add the current-menu-item class
-        if (strpos($menu_slug, $current_post_type_slug) !== false) {
+        if (strpos($menu_slug, $current_post_type_slug) !== false && $item->type !== 'post_type') {
             $classes[] = 'current-menu-item';
         }
+
     }
     // Return the corrected set of classes to be added to the menu item
     return $classes;
@@ -62,9 +63,8 @@ function add_menu_parent_class( $items ) {
 
     $parents = array();
     foreach ( $items as $item ) {
-        if ( in_array('current-post-ancestor', $item->classes)
-            || in_array( 'current_page_parent', $item->classes )
-            || in_array( 'current-menu-item', $item->classes )
+        $item->classes = apply_filters( 'nav_menu_css_class', array_filter( $item->classes ), $item );
+        if ( in_array( 'current-menu-item', $item->classes )
         ) {
             $parents[] = $item->menu_item_parent;
         }
@@ -72,8 +72,10 @@ function add_menu_parent_class( $items ) {
 
     foreach ( $items as $item ) {
         if ( in_array( $item->ID, $parents ) ) {
-            $item->classes[] = 'current-page-grandparent';
+            $item->classes[] = 'current-menu-ancestor';
         }
+
+        $item->classes = array_unique($item->classes);
     }
 
     return $items;
