@@ -21,7 +21,7 @@
 			if ('' !== get_the_post_thumbnail()) :
 				the_post_thumbnail( 'systemorph-blog-thumb', ['class' => 'news-source' ] );
 			else : ?>
-				<img class="news-source"> src="<?php echo get_template_directory_uri(); ?>/assets/images/default-news-thumbnail.png" width="70" height="70" alt="<?php the_title() ?>">
+				<img class="news-source" src="<?php echo get_template_directory_uri(); ?>/assets/images/default-news-thumbnail.png" width="70" height="70" alt="<?php the_title() ?>">
 			<?php endif;
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		} else {
