@@ -129,6 +129,16 @@ body.single {
 	}
 }
 
+.wp-block-sm-section {
+	> .wp-block-recent-posts,
+	> .wp-block-recent-news,
+	> .wp-block-recent-events {
+		> h2:first-child {
+			margin-top: 0;
+		}
+	}
+}
+
 .wp-block-recent-posts,
 .wp-block-recent-news,
 .wp-block-recent-events {

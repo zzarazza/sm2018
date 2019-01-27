@@ -1833,6 +1833,11 @@ body.single .news-source {
     .wp-block-recent-posts .wp-block-recent-posts-item .entry-content p:first-child {
       margin-top: -0.5em; } }
 
+.wp-block-sm-section > .wp-block-recent-posts > h2:first-child,
+.wp-block-sm-section > .wp-block-recent-news > h2:first-child,
+.wp-block-sm-section > .wp-block-recent-events > h2:first-child {
+  margin-top: 0; }
+
 .wp-block-recent-posts h2,
 .wp-block-recent-news h2,
 .wp-block-recent-events h2 {
