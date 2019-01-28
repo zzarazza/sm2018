@@ -2737,3 +2737,8 @@ body.page-careers .entry-header .entry-title {
       max-width: 25ch;
       margin-left: auto;
       margin-right: auto; } }
+
+body.page-white-paper .sm-file-upload {
+  display: inline-block;
+  font-size: 25px;
+  font-weight: 400; }
