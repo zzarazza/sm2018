@@ -1073,5 +1073,19 @@ body.page-white-paper {
 		display: inline-block;
 		font-size: 25px;
 		font-weight: 400;
+		position: relative;
+		padding-left: 45px;
+		line-height: 40px;
+
+		&:before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: -2px;
+			background-image: url("#{$sm-images}/icon-file.svg");
+			background-repeat: no-repeat;
+			width: 30px;
+			height: 40px;
+		}
 	}
 }

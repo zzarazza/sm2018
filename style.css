@@ -2741,4 +2741,16 @@ body.page-careers .entry-header .entry-title {
 body.page-white-paper .sm-file-upload {
   display: inline-block;
   font-size: 25px;
-  font-weight: 400; }
+  font-weight: 400;
+  position: relative;
+  padding-left: 45px;
+  line-height: 40px; }
+  body.page-white-paper .sm-file-upload:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -2px;
+    background-image: url("assets/images/icon-file.svg");
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 40px; }
