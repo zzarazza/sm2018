@@ -25,14 +25,17 @@ function white_papers_success() {
 	include get_template_directory() . '/template-parts/page/content-white_papers_success.php';
 	$content = ob_get_clean();
 
+	$post = get_post($post_id);
+
+	$cookies_page = $post->post_name;
 	$link = '';
 	$redirect_page = the_systemorph_case_study_link($post_id);
 	if ($redirect_page) {
 		$link = get_permalink($redirect_page->ID);
+		$cookies_page = $redirect_page->post_name;
 	}
 
-    echo json_encode(array( 'link' => $link, 'page' => $redirect_page->post_name, 'content' => $content));
-    echo $content;
+    echo json_encode(array( 'link' => $link, 'page' => $cookies_page, 'content' => $content));
 
     wp_die();
 }
@@ -93,6 +96,12 @@ function filter_wpcf7_contact_form_properties( $properties, $instance ) {
 	if ($redirect_page && isset($_COOKIE[$redirect_page->post_name])) {
 	    $properties = array( 
 	    	'form' => '<div class="form-el"><a href="'.get_permalink($redirect_page->ID).'">'.$redirect_page->post_title.'</a></div>'
+	    );
+	}
+	else if (isset($_COOKIE[$post->post_name])) {
+		$attachment = the_systemorph_page_attachment($post->ID);
+	    $properties = array( 
+	    	'form' => '<div class="form-el">'. $attachment . '</div>'
 	    );
 	}
 

@@ -276,6 +276,7 @@
 							}
 							$('article').html(jsonResp.content);
 						};
+						break;
 					case 'form-swiss-re':
 					default:
 						data = {
