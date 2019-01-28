@@ -937,6 +937,33 @@ p:empty {
 	}
 }
 
+.event-location,
+.event-dates {
+	padding-left: 32px;
+	position: relative;
+
+	&:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: -4px;
+		width: 26px;
+		height: 26px;
+		background-image: url("#{$sm-images}/icons/sm-icons-primary.svg");
+
+		section.color-white & {
+			background-image: url("#{$sm-images}/icons/sm-icons-white.svg");
+		}
+	}
+}
+
+.event-location:before {
+	background-position: -1836px 50%;
+}
+
+.event-dates:before {
+	background-position: -1888px 50%;
+}
 
 
 body.error404 {

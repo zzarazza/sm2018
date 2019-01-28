@@ -2651,6 +2651,29 @@ p:empty {
 .event-info > .wp-block-columns {
   align-items: center; }
 
+.event-location,
+.event-dates {
+  padding-left: 32px;
+  position: relative; }
+  .event-location:before,
+  .event-dates:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -4px;
+    width: 26px;
+    height: 26px;
+    background-image: url("assets/images/icons/sm-icons-primary.svg"); }
+    section.color-white .event-location:before, section.color-white
+    .event-dates:before {
+      background-image: url("assets/images/icons/sm-icons-white.svg"); }
+
+.event-location:before {
+  background-position: -1836px 50%; }
+
+.event-dates:before {
+  background-position: -1888px 50%; }
+
 body.error404 {
   background-image: url("assets/images/404-m.png");
   background-position: 50% 0;
