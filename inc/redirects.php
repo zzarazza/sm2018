@@ -27,7 +27,7 @@ function white_papers_success() {
 
 	$post = get_post($post_id);
 	$cookies_page = $post->post_name;
-	
+
 	$link = '';
 	$redirect_page = the_systemorph_case_study_link($post_id);
 	if ($redirect_page) {
@@ -100,10 +100,21 @@ function filter_wpcf7_contact_form_properties( $properties, $instance ) {
 	}
 	else if (isset($_COOKIE[$post->post_name])) {
 		$attachment = the_systemorph_page_attachment($post->ID);
-	    $properties = array( 
+	    $properties = array(
 	    	'form' => '<div class="form-el">'. $attachment . '</div>'
 	    );
 	}
 
     return $properties;
 };
+
+add_filter( 'shortcode_atts_wpcf7', 'custom_shortcode_atts_wpcf7_filter', 10, 3 );
+function custom_shortcode_atts_wpcf7_filter( $out, $pairs, $atts ) {
+    $customAttr = 'title';
+
+    if ( isset( $atts[$customAttr] ) ) {
+        $out[$customAttr] = $atts[$customAttr];
+    }
+
+    return $out;
+}
