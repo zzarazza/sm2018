@@ -92,7 +92,7 @@ function filter_wpcf7_contact_form_properties( $properties, $instance ) {
 	$redirect_page = the_systemorph_case_study_link($post->ID);
 	if ($redirect_page && isset($_COOKIE[$redirect_page->post_name])) {
 	    $properties = array(
-	    	'form' => '<div class="form-el"><a class="link-to-full-case-study" href="'.get_permalink($redirect_page->ID).'">'.$redirect_page->post_title.'</a></div>'
+	    	'form' => '<div class="form-el"><h2>See the Full Case Study</h2> <a class="link-to-full-case-study" href="'.get_permalink($redirect_page->ID).'">'.$redirect_page->post_title.'</a></div>'
 	    );
 	}
 
