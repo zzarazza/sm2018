@@ -175,9 +175,8 @@ if ( ! function_exists( 'get_systemorph_author_title' ) ) :
 		$output = "";
 
 		$meta = rwmb_the_value( 'user_meta_title',  array( 'object_type' => 'user' ), $post->post_author, false );
-		var_dump($meta);
 
-		if ($meta) :
+		if ($meta && $meta !== 'None') :
 			$output .= $meta . ' ';
 		endif;
 
