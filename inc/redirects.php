@@ -26,8 +26,8 @@ function white_papers_success() {
 	$content = ob_get_clean();
 
 	$post = get_post($post_id);
-
 	$cookies_page = $post->post_name;
+	
 	$link = '';
 	$redirect_page = the_systemorph_case_study_link($post_id);
 	if ($redirect_page) {
