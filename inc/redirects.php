@@ -83,3 +83,19 @@ function redirect_to_case_study() {
 		wp_redirect(get_permalink($post_id));
     }
 }
+
+
+add_filter( 'wpcf7_contact_form_properties', 'filter_wpcf7_contact_form_properties', 10, 2); 
+function filter_wpcf7_contact_form_properties( $properties, $instance ) { 
+    global $post;
+
+	$redirect_page = the_systemorph_case_study_link($post->ID);
+	if ($redirect_page && isset($_COOKIE[$redirect_page->post_name])) {
+	    $properties = array( 
+	    	'form' => '<div class="form-el"><a href="'.get_permalink($redirect_page->ID).'">'.$redirect_page->post_title.'</a></div>'
+	    );
+	}
+
+    return $properties; 
+}; 
+        
