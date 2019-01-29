@@ -37,6 +37,12 @@ if ( ! function_exists( 'rwmb_meta' ) ) {
     }
 }
 
+if ( ! function_exists( 'rwmb_the_value' ) ) {
+    function rwmb_the_value( $key, $args = '', $post_id = null ) {
+        return false;
+    }
+}
+
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -752,6 +758,7 @@ require get_parent_theme_file_path( '/inc/shortcodes.php' );
 
 require get_parent_theme_file_path( '/inc/redirects.php' );
 require get_parent_theme_file_path( '/inc/nav-classes.php' );
+require get_parent_theme_file_path( '/inc/recaptcha.php' );
 
 
 
