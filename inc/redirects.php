@@ -99,10 +99,15 @@ function filter_wpcf7_contact_form_properties( $properties, $instance ) {
 	    );
 	}
 	else if (isset($_COOKIE[$post->post_name])) {
-		$attachment = the_systemorph_page_attachment($post->ID);
-	    $properties = array( 
-	    	'form' => '<div class="form-el">'. $attachment . '</div>'
-	    );
+		ob_start();
+		the_systemorph_page_attachment($post->ID);
+		$attachment = ob_get_clean();
+
+		if ($attachment) {
+		    $properties = array(
+		    	'form' => '<div class="form-el">'. $attachment . '</div>'
+		    );
+		}
 	}
 
     return $properties; 
