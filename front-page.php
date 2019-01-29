@@ -29,29 +29,6 @@ get_header(); ?>
 		endif;
 		?>
 
-		<?php
-		// Get each of our panels and show the post data.
-		if ( 0 !== systemorph_panel_count() || is_customize_preview() ) : // If we have pages to show.
-
-			/**
-			 * Filter number of front page sections in Systemorph 2018.
-			 *
-			 * @since Systemorph 2018 1.0
-			 *
-			 * @param int $num_sections Number of front page sections.
-			 */
-			$num_sections = apply_filters( 'systemorph_front_page_sections', 4 );
-			global $systemorphcounter;
-
-			// Create a setting and control for each of the sections available in the theme.
-			for ( $i = 1; $i < ( 1 + $num_sections ); $i++ ) {
-				$systemorphcounter = $i;
-				systemorph_front_page_section( null, $i );
-			}
-
-	endif; // The if ( 0 !== systemorph_panel_count() ) ends here.
-	?>
-
 	</main><!-- #main -->
 </div><!-- #primary -->
 

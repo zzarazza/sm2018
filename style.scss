@@ -316,6 +316,7 @@ ul.wp-block-sm-custom-list {
 
 		@include mq($from: tablet-l) {
 			min-height: 56.4vw;
+			height: auto;
 		}
 
 		&:after {
@@ -395,7 +396,6 @@ ul.wp-block-sm-custom-list {
 			@include mq($from: tablet) {
 				font-size: 40px;
 				line-height: 1;
-				margin-top: 125px;
 			}
 		}
 
@@ -422,6 +422,10 @@ ul.wp-block-sm-custom-list {
 	}
 
 	.homepage-main-info {
+		> h2:first-child {
+			margin-top: 0;
+		}
+
 		h3 {
 			margin-left: auto;
 			margin-right: auto;
@@ -554,7 +558,7 @@ ul.wp-block-sm-custom-list {
 		}
 
 		&.wpcf7-mail-sent-ok {
-			display: none;
+			display: none !important;
 		}
 	}
 
@@ -570,6 +574,34 @@ ul.wp-block-sm-custom-list {
 			input[type="checkbox"] {
 				position: absolute;
 				left: 0;
+			}
+		}
+	}
+}
+
+// Temp until Case Study ready
+body.page-zurich-insurance {
+	.wpcf7-form {
+		.wpcf7-response-output {
+			&.wpcf7-mail-sent-ok {
+				display: block !important;
+				position: relative;
+				line-height: 26px;
+				padding-left: 32px;
+
+				&:before {
+					position: absolute;
+					content: "";
+					width: 26px;
+					height: 26px;
+					left: 0;
+					top: -5px;
+					border-radius: 52px;
+					background-color: map-get($sm-palette, success);
+					background-image: url("#{$sm-images}/icons/sm-icons-white.svg");
+				    background-position: -78px 0;
+				    background-size: auto 26px;
+				}
 			}
 		}
 	}
@@ -905,6 +937,33 @@ p:empty {
 	}
 }
 
+.event-location,
+.event-dates {
+	padding-left: 32px;
+	position: relative;
+
+	&:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: -4px;
+		width: 26px;
+		height: 26px;
+		background-image: url("#{$sm-images}/icons/sm-icons-primary.svg");
+
+		section.color-white & {
+			background-image: url("#{$sm-images}/icons/sm-icons-white.svg");
+		}
+	}
+}
+
+.event-location:before {
+	background-position: -1836px 50%;
+}
+
+.event-dates:before {
+	background-position: -1888px 50%;
+}
 
 
 body.error404 {
@@ -1031,6 +1090,29 @@ body.page-careers {
 				margin-left: auto;
 				margin-right: auto;
 			}
+		}
+	}
+}
+
+
+body.page-white-paper {
+	.sm-file-upload {
+		display: inline-block;
+		font-size: 25px;
+		font-weight: 400;
+		position: relative;
+		padding-left: 45px;
+		line-height: 40px;
+
+		&:before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: -2px;
+			background-image: url("#{$sm-images}/icon-file.svg");
+			background-repeat: no-repeat;
+			width: 30px;
+			height: 40px;
 		}
 	}
 }

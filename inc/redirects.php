@@ -27,7 +27,7 @@ function white_papers_success() {
 
 	$post = get_post($post_id);
 	$cookies_page = $post->post_name;
-	
+
 	$link = '';
 	$redirect_page = the_systemorph_case_study_link($post_id);
 	if ($redirect_page) {
@@ -88,14 +88,14 @@ function redirect_to_case_study() {
 }
 
 
-add_filter( 'wpcf7_contact_form_properties', 'filter_wpcf7_contact_form_properties', 10, 2); 
-function filter_wpcf7_contact_form_properties( $properties, $instance ) { 
+add_filter( 'wpcf7_contact_form_properties', 'filter_wpcf7_contact_form_properties', 10, 2);
+function filter_wpcf7_contact_form_properties( $properties, $instance ) {
     global $post;
 
 	$redirect_page = the_systemorph_case_study_link($post->ID);
 	if ($redirect_page && isset($_COOKIE[$redirect_page->post_name])) {
-	    $properties = array( 
-	    	'form' => '<div class="form-el"><a href="'.get_permalink($redirect_page->ID).'">'.$redirect_page->post_title.'</a></div>'
+	    $properties = array(
+	    	'form' => '<div class="form-el"><h2>See the Full Case Study</h2> <a class="link-to-full-case-study" href="'.get_permalink($redirect_page->ID).'">'.$redirect_page->post_title.'</a></div>'
 	    );
 	}
 	else if (isset($_COOKIE[$post->post_name])) {
@@ -110,6 +110,16 @@ function filter_wpcf7_contact_form_properties( $properties, $instance ) {
 		}
 	}
 
-    return $properties; 
-}; 
-        
+    return $properties;
+};
+
+add_filter( 'shortcode_atts_wpcf7', 'custom_shortcode_atts_wpcf7_filter', 10, 3 );
+function custom_shortcode_atts_wpcf7_filter( $out, $pairs, $atts ) {
+    $customAttr = 'title';
+
+    if ( isset( $atts[$customAttr] ) ) {
+        $out[$customAttr] = $atts[$customAttr];
+    }
+
+    return $out;
+}

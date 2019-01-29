@@ -1833,6 +1833,11 @@ body.single .news-source {
     .wp-block-recent-posts .wp-block-recent-posts-item .entry-content p:first-child {
       margin-top: -0.5em; } }
 
+.wp-block-sm-section > .wp-block-recent-posts > h2:first-child,
+.wp-block-sm-section > .wp-block-recent-news > h2:first-child,
+.wp-block-sm-section > .wp-block-recent-events > h2:first-child {
+  margin-top: 0; }
+
 .wp-block-recent-posts h2,
 .wp-block-recent-news h2,
 .wp-block-recent-events h2 {
@@ -2189,7 +2194,8 @@ ul.wp-block-sm-custom-list {
   min-height: 400px; }
   @media (min-width: 64em) {
     .home .hero {
-      min-height: 56.4vw; } }
+      min-height: 56.4vw;
+      height: auto; } }
   .home .hero:after {
     content: "";
     position: absolute;
@@ -2249,8 +2255,7 @@ ul.wp-block-sm-custom-list {
   @media (min-width: 48em) {
     .home .wp-block-sm-section.aligncenter h2 {
       font-size: 40px;
-      line-height: 1;
-      margin-top: 125px; } }
+      line-height: 1; } }
 
 .home .wp-block-sm-section.aligncenter h3 {
   font-size: 20px;
@@ -2268,6 +2273,9 @@ ul.wp-block-sm-custom-list {
   .home .wp-block-sm-section.aligncenter p {
     line-height: 1.08;
     margin: 1.08em 0; } }
+
+.home .homepage-main-info > h2:first-child {
+  margin-top: 0; }
 
 .home .homepage-main-info h3 {
   margin-left: auto;
@@ -2369,7 +2377,7 @@ ul.wp-block-sm-custom-list {
     .wpcf7-form .wpcf7-response-output.wpcf7-validation-errors {
       color: #cc1300; }
     .wpcf7-form .wpcf7-response-output.wpcf7-mail-sent-ok {
-      display: none; }
+      display: none !important; }
   .wpcf7-form .form-el-acceptance .wpcf7-form-control-wrap + .wpcf7-form-control-wrap {
     margin-top: 20px; }
   .wpcf7-form .form-el-acceptance label {
@@ -2378,6 +2386,24 @@ ul.wp-block-sm-custom-list {
     .wpcf7-form .form-el-acceptance label input[type="checkbox"] {
       position: absolute;
       left: 0; }
+
+body.page-zurich-insurance .wpcf7-form .wpcf7-response-output.wpcf7-mail-sent-ok {
+  display: block !important;
+  position: relative;
+  line-height: 26px;
+  padding-left: 32px; }
+  body.page-zurich-insurance .wpcf7-form .wpcf7-response-output.wpcf7-mail-sent-ok:before {
+    position: absolute;
+    content: "";
+    width: 26px;
+    height: 26px;
+    left: 0;
+    top: -5px;
+    border-radius: 52px;
+    background-color: #5CB85C;
+    background-image: url("assets/images/icons/sm-icons-white.svg");
+    background-position: -78px 0;
+    background-size: auto 26px; }
 
 section.alignwide {
   margin-left: -33px;
@@ -2625,6 +2651,29 @@ p:empty {
 .event-info > .wp-block-columns {
   align-items: center; }
 
+.event-location,
+.event-dates {
+  padding-left: 32px;
+  position: relative; }
+  .event-location:before,
+  .event-dates:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -4px;
+    width: 26px;
+    height: 26px;
+    background-image: url("assets/images/icons/sm-icons-primary.svg"); }
+    section.color-white .event-location:before, section.color-white
+    .event-dates:before {
+      background-image: url("assets/images/icons/sm-icons-white.svg"); }
+
+.event-location:before {
+  background-position: -1836px 50%; }
+
+.event-dates:before {
+  background-position: -1888px 50%; }
+
 body.error404 {
   background-image: url("assets/images/404-m.png");
   background-position: 50% 0;
@@ -2711,3 +2760,20 @@ body.page-careers .entry-header .entry-title {
       max-width: 25ch;
       margin-left: auto;
       margin-right: auto; } }
+
+body.page-white-paper .sm-file-upload {
+  display: inline-block;
+  font-size: 25px;
+  font-weight: 400;
+  position: relative;
+  padding-left: 45px;
+  line-height: 40px; }
+  body.page-white-paper .sm-file-upload:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -2px;
+    background-image: url("assets/images/icon-file.svg");
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 40px; }

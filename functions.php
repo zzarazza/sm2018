@@ -720,7 +720,7 @@ function jb_verbose_date_range($start_date = '', $end_date = '') {
 /**
  * Implement the Custom Header feature.
  */
-require get_parent_theme_file_path( '/inc/custom-header.php' );
+// require get_parent_theme_file_path( '/inc/custom-header.php' );
 
 /**
  * Custom template tags for this theme.
