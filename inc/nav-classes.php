@@ -66,7 +66,8 @@ function add_menu_parent_class( $items ) {
     $parents = array();
     foreach ( $items as $item ) {
         $item->classes = apply_filters( 'nav_menu_css_class', array_filter( $item->classes ), $item );
-        if ( in_array( 'current-menu-item', $item->classes )
+        if ( in_array( 'current-menu-item', $item->classes ) ||
+            in_array( 'current_page_parent', $item->classes )
         ) {
             $parents[] = $item->menu_item_parent;
         }
