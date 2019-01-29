@@ -250,9 +250,9 @@
 	if (wpcf7Elm != null) {
 		wpcf7Elm.addEventListener( 'wpcf7mailsent', function( event ) {
 			var forms = $('#' + event.detail.id).find('form.contact-form-actions');
-			var pageId = forms[0].id;
 
-			if ($('#' + event.detail.id).find('form.contact-form-actions').length > 0) {
+			if (forms.length > 0) {
+				pageId = forms[0].id;
 
 				var data = {};
 				var responseFunc = function() {};
