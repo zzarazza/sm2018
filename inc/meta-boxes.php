@@ -21,7 +21,7 @@ function encode2($str) {
 
 function the_systemorph_contact_email() {
 	$rwmbMeta = rwmb_meta( 'sm_contact_info', array( 'object_type' => 'setting' ), 'sm_preferences' );
- 	echo "<a class=\"email\" href=\"mailto:" . encode2($rwmbMeta["sm_contact_email"]) . "\">"  . encode2($rwmbMeta["sm_contact_email"]) . "</a> ";
+ 	echo "<a class=\"email email-enc\" href=\"mailto:" . encode2($rwmbMeta["sm_contact_email"]) . "\">"  . encode2($rwmbMeta["sm_contact_email"]) . "</a> ";
 }
 
 function the_systemorph_contact_info() {
