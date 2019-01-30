@@ -12,9 +12,16 @@ function the_systemorph_contact_phone() {
  	echo "<span class=\"tel\">" . $rwmbMeta["sm_contact_phone"] . "</span> ";
 }
 
+function encode2($str) {
+    $str = mb_convert_encoding($str , 'UTF-32', 'UTF-8');
+    $t = unpack("N*", $str);
+    $t = array_map(function($n) { return "&#$n;"; }, $t);
+    return implode("", $t);
+}
+
 function the_systemorph_contact_email() {
 	$rwmbMeta = rwmb_meta( 'sm_contact_info', array( 'object_type' => 'setting' ), 'sm_preferences' );
- 	echo "<a class=\"email\" href=\"mailto:" . htmlentities($rwmbMeta["sm_contact_email"]) . "\">"  . htmlentities($rwmbMeta["sm_contact_email"]) . "</a> ";
+ 	echo "<a class=\"email\" href=\"mailto:" . encode2($rwmbMeta["sm_contact_email"]) . "\">"  . encode2($rwmbMeta["sm_contact_email"]) . "</a> ";
 }
 
 function the_systemorph_contact_info() {
