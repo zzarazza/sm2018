@@ -14,7 +14,7 @@ function the_systemorph_contact_phone() {
 
 function the_systemorph_contact_email() {
 	$rwmbMeta = rwmb_meta( 'sm_contact_info', array( 'object_type' => 'setting' ), 'sm_preferences' );
- 	echo "<a class=\"email\" href=\"mailto:" . $rwmbMeta["sm_contact_email"] . "\">"  . $rwmbMeta["sm_contact_email"] . "</a> ";
+ 	echo "<a class=\"email\" href=\"mailto:" . htmlentities($rwmbMeta["sm_contact_email"]) . "\">"  . htmlentities($rwmbMeta["sm_contact_email"]) . "</a> ";
 }
 
 function the_systemorph_contact_info() {
