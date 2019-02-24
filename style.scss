@@ -1127,7 +1127,7 @@ body.page-white-paper {
 	img {
 		display: block;
 
-		@include mq($until: mobile) {
+		@include mq($until: tablet) {
 			width: 100%;
 		}
 	}

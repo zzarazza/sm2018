@@ -2785,7 +2785,7 @@ body.page-white-paper .sm-file-upload {
   overflow: hidden; }
   .sm-wp-image-link img {
     display: block; }
-    @media (max-width: 19.99em) {
+    @media (max-width: 47.99em) {
       .sm-wp-image-link img {
         width: 100%; } }
   @media (min-width: 48em) {
