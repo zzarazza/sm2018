@@ -1123,4 +1123,21 @@ body.page-white-paper {
 
 .sm-wp-image-link {
 	overflow: hidden;
+
+	img {
+		display: block;
+
+		@include mq($until: mobile) {
+			width: 100%;
+		}
+	}
+
+	@include mq($from: mobile) {
+		display: flex;
+		align-items: center;
+
+		a {
+			margin-right: 18px;
+		}
+	}
 }
