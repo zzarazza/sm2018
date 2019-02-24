@@ -1136,6 +1136,10 @@ body.page-white-paper {
 		@include mq($until: tablet) {
 			width: 100%;
 		}
+
+		@include mq($from: tablet) {
+			max-width: 300px;
+		}
 	}
 
 	@include mq($from: tablet) {
@@ -1143,6 +1147,7 @@ body.page-white-paper {
 		align-items: center;
 
 		> a {
+			margin-left: 0;
 			margin-right: 18px;
 		}
 

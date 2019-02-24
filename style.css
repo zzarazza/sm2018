@@ -2792,11 +2792,15 @@ body.page-white-paper .sm-file-upload {
     @media (max-width: 47.99em) {
       .sm-wp-image-link img {
         width: 100%; } }
+    @media (min-width: 48em) {
+      .sm-wp-image-link img {
+        max-width: 300px; } }
   @media (min-width: 48em) {
     .sm-wp-image-link {
       display: flex;
       align-items: center; }
       .sm-wp-image-link > a {
+        margin-left: 0;
         margin-right: 18px; }
       .sm-wp-image-link figcaption {
         text-align: left; } }
