@@ -1124,6 +1124,12 @@ body.page-white-paper {
 .sm-wp-image-link {
 	overflow: hidden;
 
+	> a {
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+
 	img {
 		display: block;
 

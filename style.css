@@ -2783,6 +2783,10 @@ body.page-white-paper .sm-file-upload {
 
 .sm-wp-image-link {
   overflow: hidden; }
+  .sm-wp-image-link > a {
+    margin-left: auto;
+    margin-right: auto;
+    display: block; }
   .sm-wp-image-link img {
     display: block; }
     @media (max-width: 47.99em) {
