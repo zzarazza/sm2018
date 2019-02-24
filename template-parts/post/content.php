@@ -50,19 +50,6 @@
 		</div><!-- .post-thumbnail -->
 	<?php endif; ?>
 
-		<?php
-
-		/*
-		 * If a regular post or page, and not the front page, show the featured image.
-		 * Using get_queried_object_id() here since the $post global may not be set before a call to the_post().
-		 */
-		if ( '' !== get_the_post_thumbnail() && is_single() ) :
-			echo '<div class="single-featured-image-header wp-block-image alignfull">';
-			the_post_thumbnail( 'systemorph-featured-image' );
-			echo '</div><!-- .single-featured-image-header -->';
-		endif;
-		?>
-
 		<div class="entry-content">
 			<?php
 
