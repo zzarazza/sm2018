@@ -1136,7 +1136,7 @@ body.page-white-paper {
 		display: flex;
 		align-items: center;
 
-		a {
+		> a {
 			margin-right: 18px;
 		}
 
@@ -1146,8 +1146,18 @@ body.page-white-paper {
 	}
 
 	@include mq($from: tablet) {
-		a {
+		> a {
 			margin-right: 36px;
+		}
+
+		figcaption {
+			font-size: 20px;
+		}
+	}
+
+	@include mq($from: desktop) {
+		> a {
+			margin-right: 50px;
 		}
 	}
 }

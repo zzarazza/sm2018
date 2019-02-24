@@ -2792,10 +2792,15 @@ body.page-white-paper .sm-file-upload {
     .sm-wp-image-link {
       display: flex;
       align-items: center; }
-      .sm-wp-image-link a {
+      .sm-wp-image-link > a {
         margin-right: 18px; }
       .sm-wp-image-link figcaption {
         text-align: left; } }
   @media (min-width: 48em) {
-    .sm-wp-image-link a {
-      margin-right: 36px; } }
+    .sm-wp-image-link > a {
+      margin-right: 36px; }
+    .sm-wp-image-link figcaption {
+      font-size: 20px; } }
+  @media (min-width: 73.125em) {
+    .sm-wp-image-link > a {
+      margin-right: 50px; } }
