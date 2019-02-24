@@ -2788,7 +2788,7 @@ body.page-white-paper .sm-file-upload {
     @media (max-width: 19.99em) {
       .sm-wp-image-link img {
         width: 100%; } }
-  @media (min-width: 20em) {
+  @media (min-width: 48em) {
     .sm-wp-image-link {
       display: flex;
       align-items: center; }
@@ -2796,7 +2796,7 @@ body.page-white-paper .sm-file-upload {
         margin-right: 18px; }
       .sm-wp-image-link figcaption {
         text-align: left; } }
-  @media (min-width: 48em) {
+  @media (min-width: 64em) {
     .sm-wp-image-link > a {
       margin-right: 36px; }
     .sm-wp-image-link figcaption {

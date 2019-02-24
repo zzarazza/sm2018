@@ -1132,7 +1132,7 @@ body.page-white-paper {
 		}
 	}
 
-	@include mq($from: mobile) {
+	@include mq($from: tablet) {
 		display: flex;
 		align-items: center;
 
@@ -1145,7 +1145,7 @@ body.page-white-paper {
 		}
 	}
 
-	@include mq($from: tablet) {
+	@include mq($from: tablet-l) {
 		> a {
 			margin-right: 36px;
 		}
