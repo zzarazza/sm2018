@@ -1139,5 +1139,15 @@ body.page-white-paper {
 		a {
 			margin-right: 18px;
 		}
+
+		figcaption {
+			text-align: left;
+		}
+	}
+
+	@include mq($from: tablet) {
+		a {
+			margin-right: 36px;
+		}
 	}
 }

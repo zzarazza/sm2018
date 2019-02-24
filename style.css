@@ -2793,4 +2793,9 @@ body.page-white-paper .sm-file-upload {
       display: flex;
       align-items: center; }
       .sm-wp-image-link a {
-        margin-right: 18px; } }
+        margin-right: 18px; }
+      .sm-wp-image-link figcaption {
+        text-align: left; } }
+  @media (min-width: 48em) {
+    .sm-wp-image-link a {
+      margin-right: 36px; } }
