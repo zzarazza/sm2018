@@ -723,6 +723,22 @@ function jb_verbose_date_range($start_date = '', $end_date = '') {
     return $date_range;
 }
 
+// Add custom taxonomies and custom post types counts to dashboard
+add_action( 'dashboard_glance_items', 'cpt_to_at_a_glance' );
+function cpt_to_at_a_glance() {
+    // Custom post types counts
+    $post_types = get_post_types( array( '_builtin' => false ), 'objects' );
+    foreach ( $post_types as $post_type ) {
+        $num_posts = wp_count_posts( $post_type->name );
+        $num = number_format_i18n( $num_posts->publish );
+        $text = _n( $post_type->labels->singular_name, $post_type->labels->name, $num_posts->publish );
+        if ( current_user_can( 'edit_posts' ) ) {
+            $num = '<li class="post-count"><a href="edit.php?post_type=' . $post_type->name . '">' . $num . ' ' . $text . '</a></li>';
+        }
+        echo $num;
+    }
+}
+
 /**
  * Implement the Custom Header feature.
  */
