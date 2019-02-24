@@ -2777,3 +2777,9 @@ body.page-white-paper .sm-file-upload {
     background-repeat: no-repeat;
     width: 30px;
     height: 40px; }
+
+.wp-block-embed-vimeo.aligncenter {
+  text-align: center; }
+
+.sm-wp-image-link {
+  overflow: hidden; }
