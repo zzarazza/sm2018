@@ -1117,8 +1117,17 @@ body.page-white-paper {
 	}
 }
 
-.wp-block-embed-vimeo.aligncenter {
-	text-align: center;
+.wp-block-embed-vimeo {
+	&.aligncenter {
+		text-align: center;
+	}
+
+	iframe {
+		@include mq($until: tablet-l) {
+			width: 100% !important;
+			height: auto !important;
+		}
+	}
 }
 
 .sm-wp-image-link {
