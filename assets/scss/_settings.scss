@@ -83,7 +83,7 @@ $sm-footer-bcolor : map-get($sm-palette, primary)  !default;
 $sm-border-color : map-get($sm-palette, light-gray) !default;
 
 $mq-breakpoints: (
-    mobile:    320px,
+    mobile:    480px,
     tablet:    768px,
     tablet-l : 1024px,
     desktop:   1170px,
