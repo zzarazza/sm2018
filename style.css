@@ -2781,10 +2781,14 @@ body.page-white-paper .sm-file-upload {
 .wp-block-embed-vimeo.aligncenter {
   text-align: center; }
 
-@media (max-width: 63.99em) {
+@media (max-width: 19.99em) {
   .wp-block-embed-vimeo iframe {
-    width: 100% !important;
+    width: 300px !important;
     height: auto !important; } }
+
+@media (min-width: 20em) and (max-width: 63.99em) {
+  .wp-block-embed-vimeo iframe {
+    width: 600px !important; } }
 
 .sm-wp-image-link {
   overflow: hidden; }

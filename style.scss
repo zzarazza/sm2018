@@ -1123,9 +1123,13 @@ body.page-white-paper {
 	}
 
 	iframe {
-		@include mq($until: tablet-l) {
-			width: 100% !important;
+		@include mq($until: mobile) {
+			width: 300px !important;
 			height: auto !important;
+		}
+
+		@include mq($from: mobile, $until: tablet-l) {
+			width: 600px !important;
 		}
 	}
 }
