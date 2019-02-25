@@ -2795,6 +2795,10 @@ body.page-white-paper .sm-file-upload {
     @media (min-width: 48em) {
       .sm-wp-image-link img {
         max-width: 300px; } }
+  .sm-wp-image-link figcaption {
+    font-size: 20px; }
+    .sm-wp-image-link figcaption a {
+      font-size: 16px; }
   @media (min-width: 48em) {
     .sm-wp-image-link {
       display: flex;
@@ -2806,9 +2810,7 @@ body.page-white-paper .sm-file-upload {
         text-align: left; } }
   @media (min-width: 64em) {
     .sm-wp-image-link > a {
-      margin-right: 36px; }
-    .sm-wp-image-link figcaption {
-      font-size: 20px; } }
+      margin-right: 36px; } }
   @media (min-width: 73.125em) {
     .sm-wp-image-link > a {
       margin-right: 50px; } }

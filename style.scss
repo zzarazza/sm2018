@@ -1142,6 +1142,14 @@ body.page-white-paper {
 		}
 	}
 
+	figcaption {
+		font-size: 20px;
+
+		a {
+			font-size: 16px;
+		}
+	}
+
 	@include mq($from: tablet) {
 		display: flex;
 		align-items: center;
@@ -1159,10 +1167,6 @@ body.page-white-paper {
 	@include mq($from: tablet-l) {
 		> a {
 			margin-right: 36px;
-		}
-
-		figcaption {
-			font-size: 20px;
 		}
 	}
 
