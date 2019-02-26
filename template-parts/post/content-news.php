@@ -41,7 +41,7 @@
 		<div class="post-thumbnail">
 			<a href="<?php the_permalink(); ?>">
 				<?php if ('' !== get_the_post_thumbnail()) : ?>
-					<?php the_post_thumbnail( 'systemorph-blog-thumb' ); ?>
+					<?php the_post_thumbnail( 'systemorph-news-thumb' ); ?>
 				<?php else : ?>
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/default-news-thumbnail.png" width="70" height="70" alt="<?php the_title() ?>">
 				<?php endif; ?>
