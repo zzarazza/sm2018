@@ -43,8 +43,8 @@ get_header(); ?>
 		    	'posts_per_page' => $limit,
 		        'post_status' => 'publish',
 		        'post_type' => 'event',
-		        'orderby'    => 'menu_order',
-			    'order'      => 'ASC',
+		        'orderby'    => 'date',
+			    'order'      => 'DESC',
 		        'tax_query' => array(
 			        array(
 			            'taxonomy' => $term->taxonomy,
