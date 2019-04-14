@@ -36,14 +36,14 @@ get_header(); ?>
 			foreach( $terms as $term ) {
 
 			    $args = array(
-			    	'numberposts' => -1,
+			    	'posts_per_page' => -1,
 			        'post_status' => 'publish',
 			        'post_type' => 'partners',
 			        'orderby'    => 'menu_order',
 				    'order'      => 'ASC',
 			        'tax_query' => array(
 				        array(
-				            'taxonomy' => 'partnership-type',
+				            'taxonomy' => $term->taxonomy,
 				            'field' => 'slug',
 				            'terms' => $term->slug
 				        )

@@ -17,5 +17,5 @@
 		<span class="screen-reader-text"><?php echo _x( 'Search for:', 'label', 'systemorph' ); ?></span>
 	</label>
 	<input type="search" id="<?php echo $unique_id; ?>" class="search-field" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'systemorph' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
-	<button type="submit" class="search-submit"><?php echo systemorph_get_svg( array( 'icon' => 'search' ) ); ?><span class="screen-reader-text"><?php echo _x( 'Search', 'submit button', 'systemorph' ); ?></span></button>
+	<button type="submit" class="search-submit"><span><?php echo _x( 'Search', 'submit button', 'systemorph' ); ?></span></button>
 </form>

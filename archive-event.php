@@ -28,30 +28,64 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php
-		if ( have_posts() ) :
-		?>
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
 
-				get_template_part( 'template-parts/post/content', get_post_type() );
 
-			endwhile;
+		$limit = 5;
+		$terms = get_terms( 'event-timeline', array(
+			    'orderby'    => 'name',
+			    'order'      => 'DESC',
+			    'hide_empty' => 1
+			) );
 
-			the_posts_pagination(
-				array(
-					'prev_text'          =>  '<span class="screen-reader-text">' . __( 'Previous page', 'systemorph' ) . '</span>',
-					'next_text'          => '<span class="screen-reader-text">' . __( 'Next page', 'systemorph' ) . '</span>',
-					'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'systemorph' ) . ' </span>',
-				)
-			);
+		foreach( $terms as $term ) {
 
-		else :
+		    $args = array(
+		    	'posts_per_page' => $limit,
+		        'post_status' => 'publish',
+		        'post_type' => 'event',
+		        'orderby'    => 'menu_order',
+			    'order'      => 'ASC',
+		        'tax_query' => array(
+			        array(
+			            'taxonomy' => $term->taxonomy,
+			            'field' => 'slug',
+			            'terms' => $term->slug
+			        )
+			    )
+		    );
 
-			get_template_part( 'template-parts/post/content', 'none' );
+		    $query = new WP_Query( $args );
 
-		endif;
+			if ( $query->have_posts() ) :
+			?>
+				<?php
+
+				echo '<section class="term ' . $term->slug . '">';
+				echo '<header class="taxonomy-term-title">';
+			    	echo '<h2>' . $term->name . '</h2>';
+
+			    	if ($query->found_posts > $limit) {
+						echo '<a class="view-all" href="' . get_term_link( $term->term_id ) . '">View all</a>';
+					}
+				echo '</header>';
+
+				while ( $query->have_posts() ) :
+					$query->the_post();
+
+					get_template_part( 'template-parts/post/content', get_post_type() );
+
+				endwhile;
+
+				echo '</section>';
+
+			else :
+
+				get_template_part( 'template-parts/post/content', 'none' );
+
+			endif;
+
+			wp_reset_postdata();
+		}
 		?>
 
 		</main><!-- #main -->

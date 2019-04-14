@@ -132,3 +132,9 @@ body.archive {
 		color: map-get($sm-palette, lavender-gray);
 	}
 }
+
+.taxonomy-term-title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}

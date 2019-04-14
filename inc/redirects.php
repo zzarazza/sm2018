@@ -63,7 +63,7 @@ function redirect_to_case_study() {
 
 	$is_to_redirect = false;
 
-	$page = $post->post_name;
+	$page = isset($post->post_name) ? $post->post_name : false;
 	$query = new WP_Query(array(
 	    'post_type' => 'case-studies',
 	    'post_status' => 'publish'

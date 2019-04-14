@@ -27,7 +27,7 @@ get_header(); ?>
 
 		<?php
 		    $args = array(
-		    	'numberposts' => -1,
+		    	'posts_per_page' => -1,
 		        'post_status' => 'publish',
 		        'post_type' => 'case-studies',
 		        'orderby'    => 'menu_order',

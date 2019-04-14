@@ -80,6 +80,7 @@ function sm_register_taxonomy_event_timeline() {
 		'sort' => false,
 		'rewrite' => array(
 			'with_front' => false,
+			'slug' => 'learn/event',
 		),
 	);
 
