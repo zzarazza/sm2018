@@ -159,6 +159,10 @@ body.single {
 		text-align: right;
 		padding-top: 60px;
 
+		.wp-block-sm-section.bcolor-primary & {
+			border-top-color: rgba(white,0.15);
+		}
+
 		a {
 			text-decoration: none;
 			color: map-get($sm-palette, blue);

@@ -1659,6 +1659,18 @@ body.archive .post, .post-type-archive-case-studies .case-study-item, .wp-block-
 .archive.tax-event-timeline .type-event {
   border-top: 1px solid #E1E1E1;
   padding: 30px 0; }
+  .wp-block-sm-section.bcolor-primary body.blog .post, body.blog .wp-block-sm-section.bcolor-primary .post,
+  .wp-block-sm-section.bcolor-primary body.archive .post, body.archive .wp-block-sm-section.bcolor-primary .post, .wp-block-sm-section.bcolor-primary .post-type-archive-case-studies .case-study-item, .post-type-archive-case-studies .wp-block-sm-section.bcolor-primary .case-study-item, .wp-block-sm-section.bcolor-primary .wp-block-recent-posts .wp-block-recent-posts-item, .wp-block-recent-posts .wp-block-sm-section.bcolor-primary .wp-block-recent-posts-item,
+  .wp-block-sm-section.bcolor-primary .wp-block-recent-posts .wp-block-recent-events-item, .wp-block-recent-posts .wp-block-sm-section.bcolor-primary .wp-block-recent-events-item,
+  .wp-block-sm-section.bcolor-primary .wp-block-recent-posts .wp-block-recent-news-item, .wp-block-recent-posts .wp-block-sm-section.bcolor-primary .wp-block-recent-news-item,
+  .wp-block-sm-section.bcolor-primary .wp-block-recent-news .wp-block-recent-posts-item, .wp-block-recent-news .wp-block-sm-section.bcolor-primary .wp-block-recent-posts-item,
+  .wp-block-sm-section.bcolor-primary .wp-block-recent-news .wp-block-recent-events-item, .wp-block-recent-news .wp-block-sm-section.bcolor-primary .wp-block-recent-events-item,
+  .wp-block-sm-section.bcolor-primary .wp-block-recent-news .wp-block-recent-news-item, .wp-block-recent-news .wp-block-sm-section.bcolor-primary .wp-block-recent-news-item,
+  .wp-block-sm-section.bcolor-primary .wp-block-recent-events .wp-block-recent-posts-item, .wp-block-recent-events .wp-block-sm-section.bcolor-primary .wp-block-recent-posts-item,
+  .wp-block-sm-section.bcolor-primary .wp-block-recent-events .wp-block-recent-events-item, .wp-block-recent-events .wp-block-sm-section.bcolor-primary .wp-block-recent-events-item,
+  .wp-block-sm-section.bcolor-primary .wp-block-recent-events .wp-block-recent-news-item, .wp-block-recent-events .wp-block-sm-section.bcolor-primary .wp-block-recent-news-item, .wp-block-sm-section.bcolor-primary .post-type-archive-news .type-news, .post-type-archive-news .wp-block-sm-section.bcolor-primary .type-news, .wp-block-sm-section.bcolor-primary .post-type-archive-event .type-event, .post-type-archive-event .wp-block-sm-section.bcolor-primary .type-event,
+  .wp-block-sm-section.bcolor-primary .archive.tax-event-timeline .type-event, .archive.tax-event-timeline .wp-block-sm-section.bcolor-primary .type-event {
+    border-top-color: rgba(255, 255, 255, 0.15); }
   @media (min-width: 64em) {
     body.blog .post,
     body.archive .post, .post-type-archive-case-studies .case-study-item, .wp-block-recent-posts .wp-block-recent-posts-item,
@@ -1688,11 +1700,9 @@ body.archive .post, .post-type-archive-case-studies .case-study-item, .wp-block-
     body.blog .post .entry-title br, body.archive .post .entry-title br, .post-type-archive-case-studies .case-study-item .entry-title br, .wp-block-recent-posts .wp-block-recent-posts-item .entry-title br, .wp-block-recent-posts .wp-block-recent-events-item .entry-title br, .wp-block-recent-posts .wp-block-recent-news-item .entry-title br, .wp-block-recent-news .wp-block-recent-posts-item .entry-title br, .wp-block-recent-news .wp-block-recent-events-item .entry-title br, .wp-block-recent-news .wp-block-recent-news-item .entry-title br, .wp-block-recent-events .wp-block-recent-posts-item .entry-title br, .wp-block-recent-events .wp-block-recent-events-item .entry-title br, .wp-block-recent-events .wp-block-recent-news-item .entry-title br, .post-type-archive-news .type-news .entry-title br, .post-type-archive-event .type-event .entry-title br, .archive.tax-event-timeline .type-event .entry-title br {
       display: none; }
     body.blog .post .entry-title a, body.archive .post .entry-title a, .post-type-archive-case-studies .case-study-item .entry-title a, .wp-block-recent-posts .wp-block-recent-posts-item .entry-title a, .wp-block-recent-posts .wp-block-recent-events-item .entry-title a, .wp-block-recent-posts .wp-block-recent-news-item .entry-title a, .wp-block-recent-news .wp-block-recent-posts-item .entry-title a, .wp-block-recent-news .wp-block-recent-events-item .entry-title a, .wp-block-recent-news .wp-block-recent-news-item .entry-title a, .wp-block-recent-events .wp-block-recent-posts-item .entry-title a, .wp-block-recent-events .wp-block-recent-events-item .entry-title a, .wp-block-recent-events .wp-block-recent-news-item .entry-title a, .post-type-archive-news .type-news .entry-title a, .post-type-archive-event .type-event .entry-title a, .archive.tax-event-timeline .type-event .entry-title a {
-      text-decoration: none;
-      border-bottom: 1px solid #101F30; }
+      text-decoration: underline; }
       body.blog .post .entry-title a:hover, body.archive .post .entry-title a:hover, .post-type-archive-case-studies .case-study-item .entry-title a:hover, .wp-block-recent-posts .wp-block-recent-posts-item .entry-title a:hover, .wp-block-recent-posts .wp-block-recent-events-item .entry-title a:hover, .wp-block-recent-posts .wp-block-recent-news-item .entry-title a:hover, .wp-block-recent-news .wp-block-recent-posts-item .entry-title a:hover, .wp-block-recent-news .wp-block-recent-events-item .entry-title a:hover, .wp-block-recent-news .wp-block-recent-news-item .entry-title a:hover, .wp-block-recent-events .wp-block-recent-posts-item .entry-title a:hover, .wp-block-recent-events .wp-block-recent-events-item .entry-title a:hover, .wp-block-recent-events .wp-block-recent-news-item .entry-title a:hover, .post-type-archive-news .type-news .entry-title a:hover, .post-type-archive-event .type-event .entry-title a:hover, .archive.tax-event-timeline .type-event .entry-title a:hover {
-        text-decoration: none;
-        border-bottom-color: transparent; }
+        text-decoration: none; }
   body.blog .post .entry-meta, body.archive .post .entry-meta, .post-type-archive-case-studies .case-study-item .entry-meta, .wp-block-recent-posts .wp-block-recent-posts-item .entry-meta, .wp-block-recent-posts .wp-block-recent-events-item .entry-meta, .wp-block-recent-posts .wp-block-recent-news-item .entry-meta, .wp-block-recent-news .wp-block-recent-posts-item .entry-meta, .wp-block-recent-news .wp-block-recent-events-item .entry-meta, .wp-block-recent-news .wp-block-recent-news-item .entry-meta, .wp-block-recent-events .wp-block-recent-posts-item .entry-meta, .wp-block-recent-events .wp-block-recent-events-item .entry-meta, .wp-block-recent-events .wp-block-recent-news-item .entry-meta, .post-type-archive-news .type-news .entry-meta, .post-type-archive-event .type-event .entry-meta, .archive.tax-event-timeline .type-event .entry-meta {
     font-size: 20px; }
   @media (max-width: 47.99em) {
@@ -1873,6 +1883,16 @@ body.single .news-source {
   border-top: 1px solid #E1E1E1;
   text-align: right;
   padding-top: 60px; }
+  .wp-block-sm-section.bcolor-primary .wp-block-recent-posts .wp-block-recent-posts-view-all, .wp-block-sm-section.bcolor-primary
+  .wp-block-recent-posts .wp-block-recent-news-view-all, .wp-block-sm-section.bcolor-primary
+  .wp-block-recent-posts .wp-block-upcoming-events-view-all, .wp-block-sm-section.bcolor-primary
+  .wp-block-recent-news .wp-block-recent-posts-view-all, .wp-block-sm-section.bcolor-primary
+  .wp-block-recent-news .wp-block-recent-news-view-all, .wp-block-sm-section.bcolor-primary
+  .wp-block-recent-news .wp-block-upcoming-events-view-all, .wp-block-sm-section.bcolor-primary
+  .wp-block-recent-events .wp-block-recent-posts-view-all, .wp-block-sm-section.bcolor-primary
+  .wp-block-recent-events .wp-block-recent-news-view-all, .wp-block-sm-section.bcolor-primary
+  .wp-block-recent-events .wp-block-upcoming-events-view-all {
+    border-top-color: rgba(255, 255, 255, 0.15); }
   .wp-block-recent-posts .wp-block-recent-posts-view-all a,
   .wp-block-recent-posts .wp-block-recent-news-view-all a,
   .wp-block-recent-posts .wp-block-upcoming-events-view-all a,

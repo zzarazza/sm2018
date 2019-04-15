@@ -2,6 +2,10 @@
 	border-top: 1px solid $sm-border-color;
 	padding: map-get($spacing-mobile,medium) 0;
 
+	.wp-block-sm-section.bcolor-primary & {
+		border-top-color: rgba(white,0.15);
+	}
+
 	@include mq($from: tablet-l) {
 		padding: map-get($spacing-mobile,medium) 0;
 	};
@@ -28,12 +32,10 @@
 		}
 
 		a {
-			text-decoration: none;
-			border-bottom: 1px solid map-get($sm-palette, primary);
+			text-decoration: underline;
 
 			&:hover {
 				text-decoration: none;
-				border-bottom-color: transparent;
 			}
 		}
 	}
