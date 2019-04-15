@@ -17,16 +17,23 @@
 
 	.entry-title {
 		font-size: 25px;
+		line-height: 1.5;
 		max-width: none;
-		text-transform: uppercase;
+		text-transform: none;
 		font-weight: 400;
 		margin-bottom: 11px;
 
+		br {
+			display: none;
+		}
+
 		a {
-			text-decoration: underline;
+			text-decoration: none;
+			border-bottom: 1px solid map-get($sm-palette, primary);
 
 			&:hover {
 				text-decoration: none;
+				border-bottom-color: transparent;
 			}
 		}
 	}
@@ -133,8 +140,17 @@ body.archive {
 	}
 }
 
+section.term + .term {
+	margin-top: 2rem;
+}
+
 .taxonomy-term-title {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	h2 {
+		font-weight: 400;
+		text-transform: uppercase;
+	}
 }
