@@ -36,6 +36,7 @@ function sm_register_post_type_team() {
 		'query_var' => true,
 		'can_export' => true,
 		'show_in_menu' => true,
+		'rest_base' => 'management-team',
 		'supports' => array(
 			'title',
 			'editor',
@@ -45,11 +46,12 @@ function sm_register_post_type_team() {
 			'page-attributes',
 		),
 		'rewrite' => array(
+			'slug' => 'management-team',
 			'with_front' => false,
 		),
 	);
 
-	register_post_type( 'management-team', $args );
+	register_post_type( 'team-member', $args );
 }
 add_action( 'init', 'sm_register_post_type_team' );
 
