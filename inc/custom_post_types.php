@@ -51,7 +51,7 @@ function sm_register_post_type_team() {
 		),
 	);
 
-	register_post_type( 'team-member', $args );
+	register_post_type( 'management-team', $args );
 }
 add_action( 'init', 'sm_register_post_type_team' );
 

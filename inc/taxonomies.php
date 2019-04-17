@@ -170,6 +170,6 @@ function sm_register_taxonomy_management_team() {
 		),
 	);
 
-	register_taxonomy( 'management', array( 'management-team' ), $args );
+	register_taxonomy( 'management', array( 'management-team', 'team-member' ), $args );
 }
 add_action( 'init', 'sm_register_taxonomy_management_team', 0 );
