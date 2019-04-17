@@ -130,3 +130,46 @@ function sm_register_taxonomy_cs_type() {
 	register_taxonomy( 'type', array( 'case-studies' ), $args );
 }
 add_action( 'init', 'sm_register_taxonomy_cs_type', 0 );
+
+function sm_register_taxonomy_management_team() {
+
+	$args = array (
+		'label' => esc_html__( 'Management Team', 'systemorph' ),
+		'labels' => array(
+			'menu_name' => esc_html__( 'Management Team', 'systemorph' ),
+			'all_items' => esc_html__( 'All Management Team', 'systemorph' ),
+			'edit_item' => esc_html__( 'Edit Management Team', 'systemorph' ),
+			'view_item' => esc_html__( 'View Management Team', 'systemorph' ),
+			'update_item' => esc_html__( 'Update Management Team', 'systemorph' ),
+			'add_new_item' => esc_html__( 'Add new Management Team', 'systemorph' ),
+			'new_item_name' => esc_html__( 'New Management Team', 'systemorph' ),
+			'parent_item' => esc_html__( 'Parent Management Team', 'systemorph' ),
+			'parent_item_colon' => esc_html__( 'Parent Management Team:', 'systemorph' ),
+			'search_items' => esc_html__( 'Search Management Team', 'systemorph' ),
+			'popular_items' => esc_html__( 'Popular Management Team', 'systemorph' ),
+			'separate_items_with_commas' => esc_html__( 'Separate Management Team with commas', 'systemorph' ),
+			'add_or_remove_items' => esc_html__( 'Add or remove Management Team', 'systemorph' ),
+			'choose_from_most_used' => esc_html__( 'Choose most used Management Team', 'systemorph' ),
+			'not_found' => esc_html__( 'No Management Team found', 'systemorph' ),
+			'name' => esc_html__( 'Management Team', 'systemorph' ),
+			'singular_name' => esc_html__( 'Management Team', 'systemorph' ),
+		),
+		'public' => true,
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'show_in_nav_menus' => false,
+		'show_tagcloud' => false,
+		'show_in_quick_edit' => true,
+		'show_admin_column' => true,
+		'show_in_rest' => true,
+		'hierarchical' => false,
+		'query_var' => true,
+		'sort' => true,
+		'rewrite' => array(
+			'with_front' => false,
+		),
+	);
+
+	register_taxonomy( 'management', array( 'management-team' ), $args );
+}
+add_action( 'init', 'sm_register_taxonomy_management_team', 0 );

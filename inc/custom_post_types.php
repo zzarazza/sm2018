@@ -1,12 +1,11 @@
 <?php
 
-// Post type: Team
 function sm_register_post_type_team() {
 
 	$args = array (
-		'label' => esc_html__( 'Management Team', 'systemorph' ),
+		'label' => esc_html__( 'People', 'systemorph' ),
 		'labels' => array(
-			'menu_name' => esc_html__( 'Team', 'systemorph' ),
+			'menu_name' => esc_html__( 'People', 'systemorph' ),
 			'name_admin_bar' => esc_html__( 'Team Member', 'systemorph' ),
 			'add_new' => esc_html__( 'Add new', 'systemorph' ),
 			'add_new_item' => esc_html__( 'Add new Team Member', 'systemorph' ),
@@ -14,12 +13,12 @@ function sm_register_post_type_team() {
 			'edit_item' => esc_html__( 'Edit Team Member', 'systemorph' ),
 			'view_item' => esc_html__( 'View Team Member', 'systemorph' ),
 			'update_item' => esc_html__( 'Update Team Member', 'systemorph' ),
-			'all_items' => esc_html__( 'All Management Team', 'systemorph' ),
-			'search_items' => esc_html__( 'Search Management Team', 'systemorph' ),
+			'all_items' => esc_html__( 'All People', 'systemorph' ),
+			'search_items' => esc_html__( 'Search People', 'systemorph' ),
 			'parent_item_colon' => esc_html__( 'Parent Team Member', 'systemorph' ),
-			'not_found' => esc_html__( 'No Management Team found', 'systemorph' ),
-			'not_found_in_trash' => esc_html__( 'No Management Team found in Trash', 'systemorph' ),
-			'name' => esc_html__( 'Management Team', 'systemorph' ),
+			'not_found' => esc_html__( 'No People found', 'systemorph' ),
+			'not_found_in_trash' => esc_html__( 'No People found in Trash', 'systemorph' ),
+			'name' => esc_html__( 'People', 'systemorph' ),
 			'singular_name' => esc_html__( 'Team Member', 'systemorph' ),
 		),
 		'public' => true,
@@ -36,7 +35,6 @@ function sm_register_post_type_team() {
 		'has_archive' => false,
 		'query_var' => true,
 		'can_export' => true,
-		'description' => '',
 		'show_in_menu' => true,
 		'supports' => array(
 			'title',
@@ -51,7 +49,7 @@ function sm_register_post_type_team() {
 		),
 	);
 
-	register_post_type( 'management-team', $args );
+	register_post_type( 'team-member', $args );
 }
 add_action( 'init', 'sm_register_post_type_team' );
 
