@@ -739,6 +739,19 @@ function cpt_to_at_a_glance() {
     }
 }
 
+function post_featured_image_json( $data, $post, $context ) {
+	$featured_image_id = $data->data['featured_media'];
+	$featured_image_url = wp_get_attachment_image_src( $featured_image_id, 'systemorph-team-member' );
+
+	if ( $featured_image_url ) {
+		$data->data['featured_image_url'] = $featured_image_url[0];
+	}
+
+	return $data;
+}
+
+add_filter( 'rest_prepare_management-team', 'post_featured_image_json', 10, 3 );
+
 /**
  * Implement the Custom Header feature.
  */

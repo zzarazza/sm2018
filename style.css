@@ -1646,6 +1646,48 @@ body.page-saas-plus .entry-header .entry-title {
     .event-speakers .event-speaker .speaker-position {
       font-weight: 300; }
 
+@media (min-width: 48em) {
+  .wp-block-sm-team-member .author {
+    display: flex; } }
+
+.wp-block-sm-team-member .author + .author {
+  margin-top: 40px; }
+  @media (min-width: 64em) {
+    .wp-block-sm-team-member .author + .author {
+      margin-top: 92px; } }
+
+.wp-block-sm-team-member .author .author-thumb {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  overflow: hidden;
+  margin: 0 auto 10px;
+  flex-shrink: 0;
+  background-color: #E1E1E1; }
+  @media (min-width: 48em) {
+    .wp-block-sm-team-member .author .author-thumb {
+      margin-left: 0;
+      margin-right: 30px; } }
+  .wp-block-sm-team-member .author .author-thumb img {
+    display: block;
+    max-width: 100%; }
+
+.wp-block-sm-team-member .author .author-descr {
+  flex-grow: 1; }
+  .wp-block-sm-team-member .author .author-descr h3 {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0;
+    text-align: center; }
+    @media (min-width: 48em) {
+      .wp-block-sm-team-member .author .author-descr h3 {
+        text-align: left; } }
+  .wp-block-sm-team-member .author .author-descr p {
+    margin: 0; }
+    @media (max-width: 47.99em) {
+      .wp-block-sm-team-member .author .author-descr p {
+        font-size: 16px; } }
+
 body.blog .post,
 body.archive .post, .post-type-archive-case-studies .case-study-item, .wp-block-recent-posts .wp-block-recent-posts-item,
 .wp-block-recent-posts .wp-block-recent-events-item,
