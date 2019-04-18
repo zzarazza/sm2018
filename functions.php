@@ -741,7 +741,7 @@ function cpt_to_at_a_glance() {
 
 function post_featured_image_json( $data, $post, $context ) {
 	$featured_image_id = $data->data['featured_media'];
-	$featured_image_url = wp_get_attachment_image_src( $featured_image_id, 'systemorph-team-member' );
+	$featured_image_url = wp_get_attachment_image_src( $featured_image_id, 'systemorph-thumbnail-avatar' );
 
 	if ( $featured_image_url ) {
 		$data->data['featured_image_url'] = $featured_image_url[0];
