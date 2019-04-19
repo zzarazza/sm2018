@@ -2904,3 +2904,42 @@ body.page-white-paper .sm-file-upload {
   @media (min-width: 73.125em) {
     .sm-wp-image-link > a {
       margin-right: 50px; } }
+
+.wp-block-sm-article {
+  border-radius: 5px;
+  width: 315px;
+  margin-bottom: 16px; }
+  .wp-block-sm-article[class*="bcolor-"] {
+    background-repeat: no-repeat;
+    background-position: 65px 0; }
+  .wp-block-sm-article.bcolor-sm-blue {
+    background-image: url("assets/images/article/bcolor-sm-blue.svg"); }
+  .wp-block-sm-article.bcolor-blue {
+    background-image: url("assets/images/article/bcolor-blue.svg"); }
+  .wp-block-sm-article.bcolor-sm-purple {
+    background-image: url("assets/images/article/bcolor-sm-purple.svg"); }
+  .wp-block-sm-article.is-coming-soon {
+    opacity: 0.55; }
+  .wp-block-sm-article > * {
+    padding: 30px 20px 23px;
+    display: flex;
+    flex-direction: column;
+    color: white; }
+  .wp-block-sm-article a {
+    text-decoration: none; }
+    .wp-block-sm-article a:hover {
+      color: white;
+      background-color: rgba(0, 0, 0, 0.15); }
+  .wp-block-sm-article .by-author {
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0; }
+  .wp-block-sm-article h3 {
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0.7em 0 0.5em; }
+  .wp-block-sm-article .read-more {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-top: auto; }

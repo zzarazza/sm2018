@@ -89,6 +89,46 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/assets/images/article/bcolor-blue.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/article/bcolor-blue.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/article/bcolor-sm-blue.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/article/bcolor-sm-blue.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/article/bcolor-sm-purple.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/article/bcolor-sm-purple.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/article/ifrs17-landing-hero.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/article/ifrs17-landing-hero.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"/assets/images/careers-d.png": {
 		"ft": 32768,
 		"iS": 3123,
