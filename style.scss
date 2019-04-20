@@ -1247,3 +1247,49 @@ body.page-white-paper {
 		margin-top: auto;
 	}
 }
+
+body.page-ifrs-17 {
+	.hero {
+		background-image: url("#{$sm-images}/article/ifrs17-landing-hero.svg");
+		background-repeat: no-repeat;
+		background-position: 220px 0;
+		background-size: contain;
+		height: 50vh;
+		min-height: 400px;
+
+		@include mq($from: tablet) {
+			background-position: 300px 0;
+		}
+
+		@include mq($from: tablet-l) {
+			min-height: 600px;
+			height: auto;
+			background-position: 150% 0;
+		}
+
+		@include mq($from: desktop) {
+			min-height: 580px;
+			background-position: 100% 0;
+		}
+
+		.wrap {
+			padding-top: 100px;
+			padding-bottom: 100px;
+		}
+
+		.page-title {
+			margin-top: 1em;
+			margin-bottom: 0;
+
+			@include mq($from: tablet) {
+				margin-top: 2em;
+			}
+		}
+
+		.page-subtitle {
+			font-size: 25px;
+			font-weight: 300;
+			margin-top: 0.45em;
+		}
+	}
+}
