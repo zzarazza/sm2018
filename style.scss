@@ -1193,6 +1193,7 @@ body.page-white-paper {
 .wp-block-sm-article {
 	border-radius: 5px;
 	margin-bottom: 16px;
+	height: 100%;
 
 	$bgs : ( bcolor-sm-blue, bcolor-blue, bcolor-sm-purple );
 
@@ -1216,6 +1217,8 @@ body.page-white-paper {
 		display: flex;
 		flex-direction: column;
 		color: white !important;
+		box-sizing: border-box;
+		height: 100%;
 	}
 
 	a {
@@ -1294,5 +1297,20 @@ body.page-ifrs-17 {
 }
 
 .wp-block-columns.wp-block-sm-articles {
-	display: flex;
+	@include mq($from: tablet) {
+		flex-wrap: nowrap;
+
+		.wp-block-column:not(:last-child) {
+			margin-right: 11px;
+		}
+
+		.wp-block-column:not(:first-child),
+		.wp-block-column:nth-child(2n) {
+			margin-left: 11px;
+		}
+
+		.wp-block-column:last-child {
+			margin-right: 0;
+		}
+	}
 }
