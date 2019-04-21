@@ -1835,13 +1835,13 @@ body.single-post .entry-header .entry-meta {
       width: 24px;
       height: 24px; }
 
-body.single .back-to-blog-link,
+.link-back, body.single .back-to-blog-link,
 body.single .back-to-news-link,
 body.single .back-to-events-link {
   display: inline-block;
   font-size: 20px; }
   @media (min-width: 48em) {
-    body.single .back-to-blog-link,
+    .link-back, body.single .back-to-blog-link,
     body.single .back-to-news-link,
     body.single .back-to-events-link {
       margin-top: 35px; } }
@@ -3003,3 +3003,13 @@ body.page-ifrs-17 .what-is-ifrs-17 h2 {
   font-size: 40px;
   text-transform: none;
   font-weight: 400; }
+
+body.page-template-page_child article.page > .entry-header {
+  margin-top: 30px;
+  margin-bottom: 24px; }
+  @media (min-width: 48em) {
+    body.page-template-page_child article.page > .entry-header {
+      margin-top: 60px;
+      margin-bottom: 54px; } }
+  body.page-template-page_child article.page > .entry-header .entry-meta {
+    margin-top: 8px; }

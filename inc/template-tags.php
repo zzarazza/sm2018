@@ -14,17 +14,24 @@ if ( ! function_exists( 'systemorph_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time and author.
 	 */
-	function systemorph_posted_on() {
+	function systemorph_posted_on( $by = true ) {
 
+		$byline = "";
+
+		if ( $by ) :
 		// Get the author name; wrap it in a link.
-		$byline = sprintf(
-			/* translators: %s: post author */
-			__( 'by %s', 'systemorph' ),
-			'<span class="author vcard">' . get_systemorph_author_title() . get_the_author_meta( 'display_name' ) . '</span> '
-		);
+			$byline = sprintf(
+				/* translators: %s: post author */
+				__( 'by %s', 'systemorph' ),
+				'<span class="author vcard">' . get_systemorph_author_title() . get_the_author_meta( 'display_name' ) . '</span> '
+			);
+
+			$byline = ' &mdash; <span class="byline"> ' . $byline . '</span>';
+
+		endif;
 
 		// Finally, let's write all of this to the page.
-		echo '<span class="posted-on">' . systemorph_time_link() . '</span><span class="byline"> ' . $byline . '</span> ';
+		echo '<span class="posted-on">' . systemorph_time_link() . '</span> ' . $byline;
 	}
 endif;
 

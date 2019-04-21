@@ -1333,3 +1333,19 @@ body.page-ifrs-17 {
 		}
 	}
 }
+
+body.page-template-page_child {
+	article.page > .entry-header {
+		margin-top: 30px;
+		margin-bottom: 24px;
+
+		@include mq($from: tablet) {
+			margin-top: 60px;
+			margin-bottom: 54px;
+		}
+
+		.entry-meta {
+			margin-top: 8px;
+		}
+	}
+}

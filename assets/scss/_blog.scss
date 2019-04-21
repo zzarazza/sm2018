@@ -35,16 +35,20 @@ body.single-post {
 	}
 }
 
+.link-back {
+	display: inline-block;
+	font-size: 20px;
+
+	@include mq($from: tablet) {
+		margin-top: 35px;
+	}
+}
+
 body.single {
 	.back-to-blog-link,
 	.back-to-news-link,
 	.back-to-events-link {
-		display: inline-block;
-		font-size: 20px;
-
-		@include mq($from: tablet) {
-			margin-top: 35px;
-		}
+		@extend .link-back;
 	}
 
 	.single-featured-image-header {
