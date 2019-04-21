@@ -2979,6 +2979,10 @@ body.page-ifrs-17 .hero {
     font-weight: 300;
     margin-top: 0.45em; }
 
+@media (min-width: 30em) and (max-width: 47.99em) {
+  .wp-block-columns.wp-block-sm-articles .wp-block-column {
+    flex-basis: 100%; } }
+
 @media (min-width: 48em) {
   .wp-block-columns.wp-block-sm-articles {
     flex-wrap: nowrap; }

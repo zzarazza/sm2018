@@ -1297,7 +1297,7 @@ body.page-ifrs-17 {
 }
 
 .wp-block-columns.wp-block-sm-articles {
-	@include mq($from: mobile, $till: tablet) {
+	@include mq($from: mobile, $until: tablet) {
 		.wp-block-column {
 			flex-basis: 100%;
 		}
