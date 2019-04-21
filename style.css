@@ -2924,7 +2924,7 @@ body.page-white-paper .sm-file-upload {
     padding: 30px 20px 23px;
     display: flex;
     flex-direction: column;
-    color: white; }
+    color: white !important; }
   .wp-block-sm-article a {
     text-decoration: none; }
     .wp-block-sm-article a:hover {
