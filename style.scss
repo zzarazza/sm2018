@@ -1250,6 +1250,34 @@ body.page-white-paper {
 	}
 }
 
+.wp-block-columns.wp-block-sm-articles {
+	@include mq($from: mobile, $until: tablet) {
+		.wp-block-column {
+			flex-basis: 100%;
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+			max-width: 100%;
+		}
+	}
+
+	@include mq($from: tablet) {
+		flex-wrap: nowrap;
+
+		.wp-block-column:not(:last-child) {
+			margin-right: 11px;
+		}
+
+		.wp-block-column:not(:first-child),
+		.wp-block-column:nth-child(2n) {
+			margin-left: 11px;
+		}
+
+		.wp-block-column:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
 body.page-ifrs-17 {
 	.hero {
 		background-image: url("#{$sm-images}/article/ifrs17-landing-hero.svg");
@@ -1294,32 +1322,12 @@ body.page-ifrs-17 {
 			margin-top: 0.45em;
 		}
 	}
-}
 
-.wp-block-columns.wp-block-sm-articles {
-	@include mq($from: mobile, $until: tablet) {
-		.wp-block-column {
-			flex-basis: 100%;
-			margin-left: 0 !important;
-			margin-right: 0 !important;
-			max-width: 100%;
-		}
-	}
-
-	@include mq($from: tablet) {
-		flex-wrap: nowrap;
-
-		.wp-block-column:not(:last-child) {
-			margin-right: 11px;
-		}
-
-		.wp-block-column:not(:first-child),
-		.wp-block-column:nth-child(2n) {
-			margin-left: 11px;
-		}
-
-		.wp-block-column:last-child {
-			margin-right: 0;
+	.what-is-ifrs-17 {
+		h2 {
+			font-size: 40px;
+			text-transform: none;
+			font-weight: 400;
 		}
 	}
 }
