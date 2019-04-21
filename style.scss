@@ -1300,6 +1300,9 @@ body.page-ifrs-17 {
 	@include mq($from: mobile, $until: tablet) {
 		.wp-block-column {
 			flex-basis: 100%;
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+			max-width: 100%;
 		}
 	}
 
