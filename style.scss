@@ -1286,6 +1286,7 @@ body.page-ifrs-17 {
 		background-size: contain;
 		height: 50vh;
 		min-height: 400px;
+		margin-bottom: 25px;
 
 		@include mq($from: tablet) {
 			background-position: 300px 0;
@@ -1300,6 +1301,7 @@ body.page-ifrs-17 {
 		@include mq($from: desktop) {
 			min-height: 580px;
 			background-position: 100% 0;
+			margin-bottom: 55px;
 		}
 
 		.wrap {
