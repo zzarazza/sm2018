@@ -2975,3 +2975,6 @@ body.page-ifrs-17 .hero {
     font-size: 25px;
     font-weight: 300;
     margin-top: 0.45em; }
+
+.wp-block-columns.wp-block-sm-articles {
+  display: flex; }
