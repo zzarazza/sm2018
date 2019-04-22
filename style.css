@@ -2920,7 +2920,7 @@ body.page-white-paper .sm-file-upload {
   .wp-block-sm-article.bcolor-sm-purple {
     background-image: url("assets/images/article/bcolor-sm-purple.svg"); }
   .wp-block-sm-article.is-coming-soon {
-    opacity: 0.55; }
+    opacity: 0.45; }
   .wp-block-sm-article > * {
     padding: 30px 20px 23px;
     display: flex;
