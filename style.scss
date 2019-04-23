@@ -1293,7 +1293,7 @@ body.page-ifrs-17 {
 		max-width: 1260px;
 
 		@include mq($from: tablet) {
-			background-position: 100% 0;
+			background-position: 300px 0;
 		}
 
 		@include mq($from: tablet-l) {
