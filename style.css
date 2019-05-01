@@ -2965,7 +2965,7 @@ body.page-white-paper .sm-file-upload {
     .wp-block-columns.wp-block-sm-articles .wp-block-column:last-child {
       margin-right: 0; } }
 
-body.page-ifrs-17 .hero {
+body.page-ifrs-17-compliance .hero {
   background-image: url("assets/images/article/ifrs17-landing-hero.svg");
   background-repeat: no-repeat;
   background-position: 220px 0;
@@ -2977,33 +2977,33 @@ body.page-ifrs-17 .hero {
   margin-right: auto;
   max-width: 1260px; }
   @media (min-width: 48em) {
-    body.page-ifrs-17 .hero {
+    body.page-ifrs-17-compliance .hero {
       background-position: 300px 0; } }
   @media (min-width: 64em) {
-    body.page-ifrs-17 .hero {
+    body.page-ifrs-17-compliance .hero {
       min-height: 600px;
       height: auto;
       background-position: 150% 0; } }
   @media (min-width: 73.125em) {
-    body.page-ifrs-17 .hero {
+    body.page-ifrs-17-compliance .hero {
       min-height: 580px;
       background-position: 100% 0;
       margin-bottom: 55px; } }
-  body.page-ifrs-17 .hero .wrap {
+  body.page-ifrs-17-compliance .hero .wrap {
     padding-top: 100px;
     padding-bottom: 100px; }
-  body.page-ifrs-17 .hero .page-title {
+  body.page-ifrs-17-compliance .hero .page-title {
     margin-top: 1em;
     margin-bottom: 0; }
     @media (min-width: 48em) {
-      body.page-ifrs-17 .hero .page-title {
+      body.page-ifrs-17-compliance .hero .page-title {
         margin-top: 2em; } }
-  body.page-ifrs-17 .hero .page-subtitle {
+  body.page-ifrs-17-compliance .hero .page-subtitle {
     font-size: 25px;
     font-weight: 300;
     margin-top: 0.45em; }
 
-body.page-ifrs-17 .what-is-ifrs-17 h2 {
+body.page-ifrs-17-compliance .what-is-ifrs-17 h2 {
   font-size: 40px;
   text-transform: none;
   font-weight: 400; }
