@@ -819,7 +819,7 @@ p:empty {
 		}
 
 		.page-block-excerpt {
-			height: 100%;
+			// height: 100%;
 
 			@include mq($from: desktop) {
 				p {
