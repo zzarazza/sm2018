@@ -2612,7 +2612,8 @@ p:empty {
   .wp-block-sm-page-card .page-block-excerpt p:last-child {
     margin-bottom: 0; }
   .wp-block-sm-page-card .page-block-url {
-    margin-top: 39px; }
+    padding-top: 39px;
+    margin-top: auto; }
     .wp-block-sm-page-card .page-block-url a {
       display: table;
       text-decoration: none;
