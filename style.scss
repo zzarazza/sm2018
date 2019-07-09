@@ -637,6 +637,10 @@ section.wp-block-sm-section.alignfull {
 		padding-bottom: map-get($spacing-tablet,large);
 	}
 
+	&:empty {
+		display: none;
+	}
+
 	&.has-top-padding-0 {
 		padding-top: 0 !important;
 	}

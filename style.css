@@ -2508,6 +2508,8 @@ section.wp-block-sm-section.alignfull {
     .wp-block-sm-section {
       padding-top: 60px;
       padding-bottom: 60px; } }
+  .wp-block-sm-section:empty {
+    display: none; }
   .wp-block-sm-section.has-top-padding-0 {
     padding-top: 0 !important; }
   .wp-block-sm-section.has-bottom-padding-0 {
