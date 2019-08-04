@@ -1346,6 +1346,8 @@ body.page-saas-plus .entry-header .entry-title {
 
 .footer-navigation .menu-item {
   margin-bottom: 25px; }
+  .footer-navigation .menu-item.has-icon {
+    min-height: auto; }
   .footer-navigation .menu-item a {
     text-decoration: none;
     font-size: 20px;
