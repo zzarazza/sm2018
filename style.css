@@ -1852,21 +1852,21 @@ body.single .single-featured-image-header {
     body.single .single-featured-image-header {
       margin-bottom: 60px; } }
 
-body.single article.post .entry-header {
+body.single article .entry-header {
   margin-top: 40px;
   margin-bottom: 40px; }
   @media (min-width: 48em) {
-    body.single article.post .entry-header {
+    body.single article .entry-header {
       margin-top: 60px;
       margin-bottom: 60px; } }
-  body.single article.post .entry-header .entry-title + .entry-meta {
+  body.single article .entry-header .entry-title + .entry-meta {
     margin-top: 4px; }
 
-body.single article.post .entry-footer {
+body.single article .entry-footer {
   padding-top: 30px;
   padding-bottom: 70px; }
   @media (min-width: 64em) {
-    body.single article.post .entry-footer {
+    body.single article .entry-footer {
       padding-top: 40px;
       padding-bottom: 100px; } }
 
