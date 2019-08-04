@@ -101,32 +101,32 @@
 	.menu-item {
 		margin-bottom: 25px;
 
-		&.has-icon {
-			min-height: initial;
+		// &.has-icon {
+		// 	min-height: initial;
 
-			a {
-				padding-left: 35px;
-				position: relative;
+		// 	a {
+		// 		padding-left: 35px;
+		// 		position: relative;
 
-				&:before {
-					content: "";
-					background-position: 50%;
-					background-repeat: no-repeat;
-					background-size: 52px 52px;
-					position: absolute;
-					width: 24px;
-					height: 24px;
-					left: 0;
-					top: 0;
-				}
-			}
+		// 		&:before {
+		// 			content: "";
+		// 			background-position: 50%;
+		// 			background-repeat: no-repeat;
+		// 			background-size: 52px 52px;
+		// 			position: absolute;
+		// 			width: 24px;
+		// 			height: 24px;
+		// 			left: 0;
+		// 			top: 0;
+		// 		}
+		// 	}
 
-			@each $i in $sm-icons {
-				&.icon-#{$i}-white a:before {
-					background-image: url("#{$sm-images}/icons/icon-#{$i}-white.svg");
-				}
-			}
-		}
+		// 	@each $i in $sm-icons {
+		// 		&.icon-#{$i}-white a:before {
+		// 			background-image: url("#{$sm-images}/icons/icon-#{$i}-white.svg");
+		// 		}
+		// 	}
+		// }
 
 		a {
 			text-decoration: none;

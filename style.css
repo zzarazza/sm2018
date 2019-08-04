@@ -1346,95 +1346,6 @@ body.page-saas-plus .entry-header .entry-title {
 
 .footer-navigation .menu-item {
   margin-bottom: 25px; }
-  .footer-navigation .menu-item.has-icon {
-    min-height: initial; }
-    .footer-navigation .menu-item.has-icon a {
-      padding-left: 35px;
-      position: relative; }
-      .footer-navigation .menu-item.has-icon a:before {
-        content: "";
-        background-position: 50%;
-        background-repeat: no-repeat;
-        background-size: 52px 52px;
-        position: absolute;
-        width: 24px;
-        height: 24px;
-        left: 0;
-        top: 0; }
-    .footer-navigation .menu-item.has-icon.icon-add-user-white a:before {
-      background-image: url("assets/images/icons/icon-add-user-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-aggregate-white a:before {
-      background-image: url("assets/images/icons/icon-aggregate-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-chart-white a:before {
-      background-image: url("assets/images/icons/icon-chart-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-check-white a:before {
-      background-image: url("assets/images/icons/icon-check-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-cloud-white a:before {
-      background-image: url("assets/images/icons/icon-cloud-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-email-white a:before {
-      background-image: url("assets/images/icons/icon-email-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-eye-white a:before {
-      background-image: url("assets/images/icons/icon-eye-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-fire-white a:before {
-      background-image: url("assets/images/icons/icon-fire-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-flag-white a:before {
-      background-image: url("assets/images/icons/icon-flag-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-flexibility-white a:before {
-      background-image: url("assets/images/icons/icon-flexibility-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-folder-white a:before {
-      background-image: url("assets/images/icons/icon-folder-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-globe-white a:before {
-      background-image: url("assets/images/icons/icon-globe-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-graph-white a:before {
-      background-image: url("assets/images/icons/icon-graph-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-grid-white a:before {
-      background-image: url("assets/images/icons/icon-grid-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-hierarchy-white a:before {
-      background-image: url("assets/images/icons/icon-hierarchy-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-idea-white a:before {
-      background-image: url("assets/images/icons/icon-idea-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-info-white a:before {
-      background-image: url("assets/images/icons/icon-info-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-layers-white a:before {
-      background-image: url("assets/images/icons/icon-layers-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-layout-white a:before {
-      background-image: url("assets/images/icons/icon-layout-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-list-white a:before {
-      background-image: url("assets/images/icons/icon-list-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-map-white a:before {
-      background-image: url("assets/images/icons/icon-map-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-mic-white a:before {
-      background-image: url("assets/images/icons/icon-mic-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-modify-white a:before {
-      background-image: url("assets/images/icons/icon-modify-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-puzzle-white a:before {
-      background-image: url("assets/images/icons/icon-puzzle-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-refresh-white a:before {
-      background-image: url("assets/images/icons/icon-refresh-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-ruler-white a:before {
-      background-image: url("assets/images/icons/icon-ruler-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-scissors-white a:before {
-      background-image: url("assets/images/icons/icon-scissors-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-search-white a:before {
-      background-image: url("assets/images/icons/icon-search-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-settings-white a:before {
-      background-image: url("assets/images/icons/icon-settings-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-solid-graph-white a:before {
-      background-image: url("assets/images/icons/icon-solid-graph-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-streamline-white a:before {
-      background-image: url("assets/images/icons/icon-streamline-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-task-white a:before {
-      background-image: url("assets/images/icons/icon-task-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-timer-white a:before {
-      background-image: url("assets/images/icons/icon-timer-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-user-white a:before {
-      background-image: url("assets/images/icons/icon-user-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-users-white a:before {
-      background-image: url("assets/images/icons/icon-users-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-location-white a:before {
-      background-image: url("assets/images/icons/icon-location-white.svg"); }
-    .footer-navigation .menu-item.has-icon.icon-calendar-white a:before {
-      background-image: url("assets/images/icons/icon-calendar-white.svg"); }
   .footer-navigation .menu-item a {
     text-decoration: none;
     font-size: 20px;
@@ -2806,7 +2717,7 @@ body.error404 {
       line-height: 1;
       margin: 0; }
     body.error404 .error-404 p {
-      margin-top: -38px;
+      margin-top: -10px;
       font-size: 32px; }
 
 @media (min-width: 64em) {
