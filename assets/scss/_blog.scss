@@ -83,6 +83,10 @@ body.single {
 				padding-bottom: map-get($spacing-tablet,xxlarge);
 			}
 		}
+
+		h4.is-style-spacing-none + h2 {
+			margin-top: 0 !important;
+		}
 	}
 
 	.tags-links,
