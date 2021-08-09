@@ -306,17 +306,19 @@ ul.wp-block-sm-custom-list {
 
 .home {
 	.hero {
-		background-color: #91b3da;
+		background-color: #031658;
 		background-repeat: no-repeat;
 		background-size: cover;
 		overflow: hidden;
 		position: relative;
 		height: 80vh;
 		min-height: 400px;
+		background-position: center;
 
 		@include mq($from: tablet-l) {
 			min-height: 56.4vw;
 			height: auto;
+			background-position: 0 0;
 		}
 
 		&:after {
