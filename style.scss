@@ -306,7 +306,7 @@ ul.wp-block-sm-custom-list {
 
 .home {
 	.hero {
-		background-color: #031658;
+		background-color: #292F36;
 		background-repeat: no-repeat;
 		background-size: cover;
 		overflow: hidden;
@@ -378,6 +378,7 @@ ul.wp-block-sm-custom-list {
 			margin-top: 24px;
 			background-color: #0171FF;
 			color: white;
+			transition: all 0.5s ease-in;
 
 			@include mq($from: tablet) {
 				margin-top: 12px;
