@@ -1082,6 +1082,7 @@ body.page-systemorph-overview {
 				background-image: url("#{$sm-images}/logo-sm-about.png");
 				background-repeat: no-repeat;
 				background-position: 0 0;
+				background-size: cover;
 
 				@include mq($from: desktop) {
 					width: 256px;
